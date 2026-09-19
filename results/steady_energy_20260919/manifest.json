@@ -1,0 +1,66 @@
+{
+  "inputs": [
+    "results/steady_tail_20260919/tail_continuation.npz",
+    "results/steady_parameter_20260919/bordered_pilot.npz",
+    "results/steady_parameter_20260919/bordered_expanded.npz"
+  ],
+  "source_verification": {
+    "fixed_40": {
+      "steady_state.py": true,
+      "steady_energy.py": true,
+      "steady_leakage.py": true,
+      "steady_hookstep.py": true,
+      "run_energy_profiles.py": true
+    },
+    "fixed_35": {
+      "steady_state.py": true,
+      "steady_energy.py": true,
+      "steady_leakage.py": true,
+      "steady_hookstep.py": true,
+      "run_energy_profiles.py": true
+    },
+    "fixed_30": {
+      "steady_state.py": true,
+      "steady_energy.py": true,
+      "steady_leakage.py": true,
+      "steady_hookstep.py": true,
+      "run_energy_profiles.py": true
+    },
+    "fixed_final": {
+      "steady_state.py": true,
+      "steady_energy.py": true,
+      "steady_leakage.py": true,
+      "steady_hookstep.py": true,
+      "run_energy_profiles.py": true
+    },
+    "energy_09": {
+      "steady_state.py": true,
+      "steady_energy.py": true,
+      "steady_leakage.py": true,
+      "steady_hookstep.py": true,
+      "run_energy_profiles.py": true
+    }
+  },
+  "initial_control_physical_source_commit": "5474dfb",
+  "certified_stable": false,
+  "files": {
+    "energy_09.json": "688c258f217397caed147978dc523ee7e46b4352bbea6fb1407e0607f6927ab0",
+    "energy_09.npz": "943174410aa0f64a47ec4e1d5abb1ed9280332554cc26d510fe30c7af23ce827",
+    "energy_endpoint_check.json": "3921afb54588424e90e6930465d9b83999cd025695d5ce3caa32f48241c69352",
+    "executed_sources.zip": "e665a873aa44a7c39b6b6e543339bb390121a1737a5a111e52e686175ef20924",
+    "fixed_30.json": "c39ef2643dada1e2820a2c85c3550891637737af4ec88d8a0e6b987779155583",
+    "fixed_30.npz": "9a597c38f059001288506f6d8a10cae0d096e0b0035d61e06409dd08062a10db",
+    "fixed_35.json": "178619f6dd26bcf2d97cfbf6ad9ee793371eaf17155f54b747ac0eb43ef4a3cf",
+    "fixed_35.npz": "a70132090354011fc105d6ee250c754af3da78c6d736f4c06062ead6f94b35d3",
+    "fixed_40.json": "b6f8291ec0cb3fe5ebe1fd91175ba28473861b98229c3ea3769e529ad8beab78",
+    "fixed_40.npz": "ce88379e7a39c2bc69c76eedd1f7debaba5cac42bb730e00dfccf9540ceceb4b",
+    "fixed_final.json": "7a6042632c66c3455d8a174fc13e2b16e1a71f1ffea4c62588d6f4fb272bc4e6",
+    "fixed_final.npz": "dc9614bb023854a797cc0151f100ef5707949de23dd9a9bb9b2451d91a4be270",
+    "leakage_control.json": "52aecab24727a6e5e0a1b922b0bbd67f648d0409d833bae45fee4ce9430ad862",
+    "leakage_fixed_control.json": "29b200486dd44de2a107739e813d4cb4bf0cecafc1e66bd8bbbae21f5a67012e",
+    "leakage_fixed_modes.npz": "e47106c4db03fd4df9bc983a01905c4d21642d55ff7b66d97cc57c5a6575a53f",
+    "leakage_modes.npz": "90c163e88b6fa9ee56ccaf4937c0db6d872358bacd03cc70f2dc6b5b75c141fc",
+    "report_qa.json": "17b7a0af55f1bb9ad6c9e9a03f9c5cc3e4fb9f16faa84929a9bf6ed1fff70bbe"
+  },
+  "hash_basis": "Git blob bytes; executed source bytes retained in executed_sources.zip"
+}

@@ -244,3 +244,21 @@ python build_parameter_report.py
 ```
 
 The extension requires the local trial to reach the lower pump boundary and retains the original hyperplane. The large reconstructed Jacobian cache is not committed. The source archive preserves the exact local execution files separately from the configurable-bound extension. Published SHA manifests link execution logs to those sources. These are root-search diagnostics, not physical stability certification or pseudo-arclength continuation.
+
+## Leakage and fixed-energy controls
+
+The weak-mode leakage implementation in `steady_leakage.py` audits full responses before truncating or capping projected inverse weights. At the latest27.744mW endpoint, no audited mode exceeds5/10/20: these rules do not improve the120-vector solve there. `steady_energy.py` replaces the old hyperplane with a positive output-energy constraint and free pump. No solver change alone constitutes physical root or stability certification.
+
+Use a separate `LASER_OUTPUT_DIR`, with CuPy configured:
+
+```text
+python run_leakage_control.py
+python run_leakage_fixed_control.py
+python run_energy_profiles.py
+python check_energy_endpoint.py
+python build_energy_report.py
+```
+
+The fixed-pump controls have equal8-step budgets;35/30/27.744mW share the saved final guess, while40mW uses its saved earlier endpoint. Intermediate historical fields were not saved. The0.9nJ trial has20 steps and does not automatically continue to smaller energies without root certification.
+
+[Offline leakage/energy report](docs/leakage_energy_report.html) documents a negative result for the proposed weak-mode thresholds at the latest endpoint. The0.9nJ20-step trial reaches0.90256nJ but worsens physical closure to0.003273; no nonzero root or stability certification is claimed.

@@ -1,0 +1,19 @@
+{
+  "sections": 7,
+  "images": 13,
+  "broken": 0,
+  "externalAssets": 0,
+  "downloadRows": 5,
+  "embeddedJSONValid": true,
+  "mobileWidth": 430,
+  "errors": [],
+  "downloadFiles": [
+    "leakage_control.json",
+    "leakage_fixed_control.json",
+    "fixed_40.json",
+    "fixed_35.json",
+    "fixed_30.json",
+    "fixed_final.json",
+    "energy_09.json"
+  ]
+}

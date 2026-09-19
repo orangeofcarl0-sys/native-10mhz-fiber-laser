@@ -49,9 +49,10 @@ class CavityResidual:
         xp = e.xp
         a = (states[:,:2*n]+1j*states[:,2*n:4*n]).reshape(count,2,n)*self.scale
         p = states[:,4*n:-2]*np.sqrt(self.cells)
-        b,_,_,_,_ = e.step(xp.asarray(a).copy(),xp.asarray(p).copy(),
+        b,out,_,_,_ = e.step(xp.asarray(a).copy(),xp.asarray(p).copy(),
                           xp.full(count,e.c['sa_modulation'],dtype=xp.float64))
         host = xp.asnumpy if self.gpu else np.asarray
+        self.batch_output_energy_nJ = host(xp.sum(xp.abs(out)**2,axis=(1,2)))*self.dt/1000
         b,neq = host(b),host(e.rates_a/e.rates_b)
         factor=np.exp(1j*states[:,-1,None]*self.time_scale*self.omega-1j*states[:,-2,None])
         b=np.fft.ifft(np.fft.fft(b)*factor[:,None])

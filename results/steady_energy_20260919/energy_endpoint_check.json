@@ -1,0 +1,16 @@
+{
+  "batch_serial_relative": 6.226102186928937e-14,
+  "energy_directional_derivatives": [
+    2.8648751950497133,
+    2.864875195062073,
+    2.864875194913928
+  ],
+  "energy_derivative_halving_relative": 4.314285980014268e-12,
+  "physical_residual": 0.003272871385319719,
+  "energy_relative_error": 0.002842473698127204,
+  "wide_physical_residual": 0.0032728766232256717,
+  "wide_energy_relative_error": 0.002842473680287277,
+  "full_vector_relative_change": 0.0013397163798652102,
+  "root_threshold_met": false,
+  "certified_stable": false
+}
