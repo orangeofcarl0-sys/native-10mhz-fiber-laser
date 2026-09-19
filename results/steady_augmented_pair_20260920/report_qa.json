@@ -1,0 +1,17 @@
+{
+  "sections": 8,
+  "images": 9,
+  "broken": 0,
+  "externalAssets": 0,
+  "downloadName": "A",
+  "embeddedJSONValid": true,
+  "mobileWidth": 430,
+  "errors": [],
+  "downloadFiles": [
+    "A.json",
+    "B.json",
+    "protocol.json",
+    "endpoint_checks.json",
+    "linear_budget_check.json"
+  ]
+}

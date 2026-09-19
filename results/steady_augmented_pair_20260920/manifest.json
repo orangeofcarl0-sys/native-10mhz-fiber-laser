@@ -1,0 +1,46 @@
+{
+  "source_verification": {
+    "A": {
+      "run_augmented_pair.py": true,
+      "steady_augmented_outer.py": true,
+      "steady_cauchy.py": true,
+      "steady_hookstep.py": true,
+      "steady_support_lu.py": true,
+      "steady_state.py": true,
+      "steady_parameters.py": true,
+      "input": true
+    },
+    "B": {
+      "run_augmented_pair.py": true,
+      "steady_augmented_outer.py": true,
+      "steady_cauchy.py": true,
+      "steady_hookstep.py": true,
+      "steady_support_lu.py": true,
+      "steady_state.py": true,
+      "steady_parameters.py": true,
+      "input": true
+    }
+  },
+  "notes": [
+    "Inputs are prior published endpoints; A/B start identically and advance independently with a shared controller.",
+    "Raw execution source bytes preserved in executed_sources.zip; published file hashes may use Git-normalized bytes."
+  ],
+  "files": {
+    "A.json": "3460baa0822464927a7b28022ac76d1459010950779e1e6c1b6f45251b193ea3",
+    "A_final.npz": "c68bf90510b91a1ff42ecfab856754c910793e48a43cec4365d946e0c804452d",
+    "A_full_budget_direction.npz": "3e744dfbf0f997b5e1cae2a9ece13c97f0e87eaa189fa1cdbb0e3da83564cae9",
+    "B.json": "52f5fb56d8e9bd2e8928ca86d9cb1ceb294500a12af07e400ca013c508cc0868",
+    "B_final.npz": "f1e683abe50e80c3a1d13f87b2e5e3b70abbf6cb01604f77faa6b93e81d70d87",
+    "B_full_budget_direction.npz": "4e9dc31125bd17bed1ac5b5049f96e07f96bd78bb530095251fdd22d32650d8a",
+    "endpoint_checks.json": "66bd337ce74aae6337c88701955120b85e181bc23b6f2d660fc77dbd9332eca1",
+    "executed_sources.zip": "a41dc4156f920f61af589b937775e9db5ba52e4541e5df7c4c9db4eb0fb352a4",
+    "linear_budget_check.json": "38bdc3d1e628c4ca1ec42dba4e1cdbc65fe80e4356ac7b8ea16d4db99cdb1463",
+    "protocol.json": "1d852039d5a1e963779efe43b66a07306ee759f6f6b3710c85cb9cf414e1ed64",
+    "report_qa.json": "052d591a6c58c3ec0fb25f3ff715264d9bab0fc4c6557a2f799ce8df1c38453d"
+  },
+  "baseline_commit": "39a742f4432cc701cd4bc4dc95e79a7b94c8dce4",
+  "shared_inputs": {
+    "results/steady_tail_20260919/tail_continuation.npz": "ff5a6bd06e189ded6050c101346823452b9b53575f6fedb079b9a24ddaa229c8",
+    "parameters/effective_parameters.json": "6a6d9d4bdc138af7fcf15d7449f0ddbe164a39ff1408bc494b0d4069f3efc6b3"
+  }
+}

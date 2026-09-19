@@ -1,0 +1,87 @@
+[
+  {
+    "arm": "A",
+    "original_attempts": [
+      {
+        "dimension": 88,
+        "model": 0.0077170236097665506,
+        "independent": 0.029236048807629023
+      },
+      {
+        "dimension": 88,
+        "model": 0.0077308109283704685,
+        "independent": 0.03050844101131303
+      }
+    ],
+    "dimension": 240,
+    "model": 4.090155592830919e-11,
+    "independent": 0.030091790504601888,
+    "newton_norm": 27278.821531760062,
+    "gate_pass": false,
+    "coarse": {
+      "support_label": "C",
+      "coarse_dimension": 6165,
+      "factorization": "LU",
+      "coarse_difference": "forward",
+      "coarse_epsilon": 1e-06,
+      "coarse_condition_1_estimate": 475286699.7493917,
+      "factor_probe_residual": 1.7010323628764445e-10,
+      "temporal_relative": 0.0,
+      "spectral_relative": 0.15068722977116245,
+      "coarse_relative": 0.9885814881859225,
+      "orthogonality": 0.0,
+      "squared_partition": 1.0000000000000004,
+      "support_ps": 2048.0,
+      "bandwidth_GHz": 375.0
+    },
+    "newton_blocks": {
+      "field": 27278.238275828182,
+      "population_rms": 1.6118473202416979,
+      "phase_rad": 170.64245895174173,
+      "time_scaled": 51.95461394042641,
+      "shift_ps": 124.11327813727885,
+      "total": 27278.821531760062
+    },
+    "endpoint_sha256": "c68bf90510b91a1ff42ecfab856754c910793e48a43cec4365d946e0c804452d"
+  },
+  {
+    "arm": "B",
+    "original_attempts": [
+      {
+        "dimension": 71,
+        "model": 0.0077975347234470055,
+        "independent": 0.02019987579846442
+      }
+    ],
+    "dimension": 240,
+    "model": 7.678603979655973e-12,
+    "independent": 0.018608546905079282,
+    "newton_norm": 6134.015461653557,
+    "gate_pass": false,
+    "coarse": {
+      "support_label": "C",
+      "coarse_dimension": 6165,
+      "factorization": "SVD fallback",
+      "coarse_difference": "forward",
+      "coarse_epsilon": 1e-06,
+      "coarse_condition_1_estimate": 8193037941.2345295,
+      "factor_probe_residual": 2.657530539989142e-09,
+      "temporal_relative": 0.0,
+      "spectral_relative": 0.1477334797958965,
+      "coarse_relative": 0.9890272083959046,
+      "orthogonality": 0.0,
+      "squared_partition": 1.0000000000000007,
+      "support_ps": 2048.0,
+      "bandwidth_GHz": 375.0
+    },
+    "newton_blocks": {
+      "field": 6133.969680813449,
+      "population_rms": 0.1840024389735558,
+      "phase_rad": 23.48459560277854,
+      "time_scaled": 3.1746777397969907,
+      "shift_ps": 7.583920491978884,
+      "total": 6134.015461653557
+    },
+    "endpoint_sha256": "f1e683abe50e80c3a1d13f87b2e5e3b70abbf6cb01604f77faa6b93e81d70d87"
+  }
+]

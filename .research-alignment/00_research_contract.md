@@ -35,3 +35,5 @@ Newton全局化：见14_hookstep.md。先重放并独立验证第8–11步导数
 Current continuation: three fixed-state merit/curvature/coarse-difference controls; see19_merit_geometry.md. No extra nonlinear search without diagnostic justification.
 
 Current work: four fixed-state Cauchy/span controls; no long-run continuation; see20_cauchy_span.md.
+
+Current experiment: 27.5 mW paired 40-step original/augmented outer loops from identical published down_275. Shared C preconditioner, centered Jv, <1% linear gate, adaptive trust controller. Fresh full-output restricted gradient on rebuild; cheap projected gradient checked for descent between rebuilds. No pump scan or physical-root claim without residual closure.

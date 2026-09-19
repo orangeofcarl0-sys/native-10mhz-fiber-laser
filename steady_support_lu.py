@@ -7,7 +7,7 @@ from steady_support import SUPPORTS,residual_support
 from steady_preconditioner import spectral_coordinates
 from steady_window import center,embed
 
-def build_factored(residual,x,r,label='A',difference='forward',epsilon=1e-6,audit=None):
+def build_factored(residual,x,r,label='A',difference='forward',epsilon=1e-6,audit=None,descent=None):
     if difference not in ('forward','central') or epsilon<=0:
         raise ValueError('Invalid coarse difference method/step')
     localized,cutoff=SUPPORTS[label];n=residual.n//2 if localized else residual.n
@@ -15,6 +15,7 @@ def build_factored(residual,x,r,label='A',difference='forward',epsilon=1e-6,audi
     restrict=(lambda v:restrict0(center(v,n))) if localized else restrict0
     lift=(lambda v:embed(lift0(v),n)) if localized else lift0
     matrix=np.empty((size,size))
+    full_gradient=np.zeros(size) if descent is not None else None
     if audit is not None:
         gradient=np.zeros(size);projected_gradient=np.zeros(size);forward_gradient=np.zeros(size);frobenius2=0.
     for start in range(0,size,16):
@@ -26,6 +27,8 @@ def build_factored(residual,x,r,label='A',difference='forward',epsilon=1e-6,audi
             central=(plus-minus)/(2*epsilon)
         responses=central if difference=='central' else (plus-r)/epsilon
         for j,value in enumerate(responses):matrix[:,start+j]=restrict(value)
+        if descent is not None:
+            for j,value in enumerate(responses):full_gradient[start+j]=np.dot(value,r)
         if audit is not None:
             for j,value in enumerate(central):
                 gradient[start+j]=np.dot(value,r)
@@ -36,6 +39,9 @@ def build_factored(residual,x,r,label='A',difference='forward',epsilon=1e-6,audi
         audit.update(gradient=gradient,projected_gradient=projected_gradient,
                      forward_gradient=forward_gradient,frobenius_norm=float(np.sqrt(frobenius2)),
                      gradient_difference='central',gradient_epsilon=epsilon)
+    if descent is not None:
+        # Reuse full response columns before restriction; no extra map calls.
+        descent.update(matrix=matrix,restrict=restrict,lift=lift,gradient=full_gradient)
     norm1=np.linalg.norm(matrix,1)
     try:
         with warnings.catch_warnings():

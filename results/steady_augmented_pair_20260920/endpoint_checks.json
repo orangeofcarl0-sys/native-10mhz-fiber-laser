@@ -1,0 +1,52 @@
+{
+  "A": {
+    "recomputed_residual": 0.0012758381004591417,
+    "endpoint_difference": 0.0,
+    "accepted_history_continuous": true,
+    "accepted_count_matches": true,
+    "accepted_linear_gate": true,
+    "actual_merit_monotone": true,
+    "independent_acceptance": true,
+    "descent_verified": null,
+    "full_rebuild_directions": 0,
+    "cheap_directions": 0,
+    "model_fallbacks": 0,
+    "actual_fallbacks": 0,
+    "raw_model_failures": 0,
+    "initial_blocks": {
+      "field": 0.0012873265766991232,
+      "population": 0.00014103885313648855,
+      "gauge": 3.4216326124532754e-07
+    },
+    "residual_blocks": {
+      "field": 0.0012715409353748657,
+      "population": 0.00010462469761809733,
+      "gauge": 4.2532049590626426e-07
+    }
+  },
+  "B": {
+    "recomputed_residual": 0.0012180302219795991,
+    "endpoint_difference": 0.0,
+    "accepted_history_continuous": true,
+    "accepted_count_matches": true,
+    "accepted_linear_gate": true,
+    "actual_merit_monotone": true,
+    "independent_acceptance": true,
+    "descent_verified": true,
+    "full_rebuild_directions": 9,
+    "cheap_directions": 21,
+    "model_fallbacks": 0,
+    "actual_fallbacks": 0,
+    "raw_model_failures": 0,
+    "initial_blocks": {
+      "field": 0.0012873265766991232,
+      "population": 0.00014103885313648855,
+      "gauge": 3.4216326124532754e-07
+    },
+    "residual_blocks": {
+      "field": 0.0012179458853974997,
+      "population": 1.3161197102977221e-05,
+      "gauge": 5.676688276520172e-06
+    }
+  }
+}

@@ -1,0 +1,24 @@
+{
+  "pump_W": 0.0275,
+  "max_steps": 40,
+  "initial_radius": 0.003125,
+  "radius_cap": 2.0,
+  "linear_limit": 240,
+  "linear_tolerance": 0.008,
+  "independent_linear_gate": 0.01,
+  "jv_epsilon": 1e-05,
+  "check_epsilon": 1e-06,
+  "coarse_difference": "forward",
+  "coarse_epsilon": 1e-06,
+  "support": "C",
+  "root_tolerance": 1e-07,
+  "refresh_events": [
+    "initial",
+    "linear_gate",
+    "low_rho<0.25",
+    "model_discrepancy>0.05",
+    "B: non_descent"
+  ],
+  "input": "results/steady_fixed_pump_20260919/down_275.npz",
+  "input_sha256": "5cb1f426cc6fb7c381b047bbf27c9550862116e28f37ac326825beeeade263b1"
+}
