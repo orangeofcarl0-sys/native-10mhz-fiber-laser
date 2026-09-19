@@ -1,0 +1,13 @@
+{
+  "baseline_commit": "a331ad9f4901c3ccaa5b9268009f2a1f8a858f30",
+  "files": {
+    "audit.json": "ee01a19493a6e5ca2014b69a560f57dde1d601b35ceee41d2879eca330cab1a2",
+    "continuation.json": "dd00ac107fa72bb88acc8f2e081a67acf70ac9f079b46f2f32e8fa91c6669446",
+    "continuation_final.npz": "22653594ba54ec30b3dae091ce822b6baad247e7b0ab1d616146eed9d2a72227",
+    "endpoint_checks.json": "0a8c27261f34aaeb483cb1656c5975176eedf025b6f78fc713bad88934ee85e4",
+    "executed_sources.zip": "1b6384dc82ccbce8b17de58a5a7ce348b6b00e637586d341f3f2a9f87183e8df",
+    "protocol.json": "30f126580d88362d8dd21ab7c2a0e355379086e29d8a6e71169eee68f3e2b1ed",
+    "report_qa.json": "a389e25019f0ac30a1e2c6d82e3c8a7e6b5c3fe44c0f6d2e285e6ea4e6886559"
+  },
+  "note": "Source archive preserves execution bytes; Git text files may normalize line endings. Input hashes and solver source hashes verified before publication."
+}

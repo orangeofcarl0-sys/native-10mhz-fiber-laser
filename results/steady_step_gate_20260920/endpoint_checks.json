@@ -1,0 +1,15 @@
+{
+  "recomputed_residual": 0.0012081439204973431,
+  "endpoint_difference": 0.0,
+  "all_acceptance_checks_pass": true,
+  "accepted": 30,
+  "previously_blocked_but_accepted": 4,
+  "fresh": 9,
+  "cheap": 21,
+  "residual_blocks": {
+    "field": 0.0012081178776944597,
+    "population": 7.324851145248801e-06,
+    "gauge": 3.0451248619340967e-06
+  },
+  "energy_nJ": 0.9030494189638542
+}

@@ -12,13 +12,17 @@ def next_radius(radius,rho,step_norm):
 
 
 def solve_augmented(residual,initial,augmented=True,max_steps=40,radius=.003125,
-                    builder=None,observer=None,linear_limit=240):
+                    builder=None,observer=None,linear_limit=240,gate_policy="newton"):
     """Same physical equation and trust controller for both arms; D=I.
 
+    With gate_policy="step", constrained candidates require agreement within 5%
+    at two independent difference scales; the Newton gate applies only inside
+    the current radius. The legacy default preserves previous experiments.
     The 1% gate checks the unconstrained Newton direction using independent Jv.
     A fresh builder is retried before stopping on this gate. No minimum-progress
     stop is used. Model discrepancy and low rho trigger next-state rebuilding.
     """
+    if gate_policy not in {"newton","step"}:raise ValueError("Unknown gate policy")
     x=initial.copy();r=residual(x);history=[];refresh=['initial'];cache={}
     if builder is None:
         builder=lambda f,x,r,cache:build_factored(f,x,r,'C',descent=cache)
@@ -40,7 +44,12 @@ def solve_augmented(residual,initial,augmented=True,max_steps=40,radius=.003125,
             actual=float(.5*(norm**2-np.dot(rr,rr))) if feasible else None
             rho=actual/pred if feasible and pred>0 else -1.
             true_rho=actual/independent if feasible and independent>0 else -1.
-            return rr,dict(feasible=feasible,prediction=float(pred),independent_prediction=independent,
+            checks=[independent]
+            if gate_policy=='step':
+                js_medium=derivative(step,3e-6)
+                checks.append(float(-np.dot(r,js_medium)-.5*np.dot(js_medium,js_medium)))
+            model_ok=all(abs(pred-q)<.05*max(abs(pred),1e-30) and q>0 for q in checks)
+            return rr,dict(candidate_model_pass=bool(model_ok),checked_predictions=checks,feasible=feasible,prediction=float(pred),independent_prediction=independent,
                 model_discrepancy=float(abs(pred-independent)/max(abs(pred),1e-30)),
                 actual_reduction=actual,rho=float(rho),true_rho=float(true_rho),
                 residual=float(np.linalg.norm(rr)) if feasible else None,
@@ -53,7 +62,7 @@ def solve_augmented(residual,initial,augmented=True,max_steps=40,radius=.003125,
             h,z,y,linear,v=arnoldi(derivative,r,pre,limit=linear_limit,tolerance=.008,return_basis=True)
             newton=z@y;eta=float(np.linalg.norm(r+derivative(newton,1e-6))/norm)
             row.setdefault('linear_attempts',[]).append(dict(dimension=len(y),model=linear,independent=eta))
-            if eta>=.01:
+            if eta>=.01 and (gate_policy=='newton' or np.linalg.norm(newton)<=radius):
                 if not rebuilt:refresh=['linear_gate'];continue
                 status='linear_accuracy_limited';break
             if augmented:
@@ -87,14 +96,16 @@ def solve_augmented(residual,initial,augmented=True,max_steps=40,radius=.003125,
             if t['rho']<.25:refresh.append('low_rho')
             if t['model_discrepancy']>.05:refresh.append('model_discrepancy')
             radius=next_radius(radius,t['rho'],t['step_norm'])
-            if t['feasible'] and min(t['rho'],t['true_rho'])>.1 and t['actual_reduction']>0:
+            if gate_policy=='step' and not t['candidate_model_pass']:
+                refresh.append('candidate_model_gate');radius=used_radius*.25
+            if t['feasible'] and min(t['rho'],t['true_rho'])>.1 and t['actual_reduction']>0 and (gate_policy=='newton' or t['candidate_model_pass']):
                 accepted=True;break
             # Actual Cauchy descent remains available even if the augmented trials fail.
             if augmented and attempt==13:
                 rr,t=trial(sc,pc);t.update(attempt=14,radius=float(used_radius),kind='cauchy_actual_fallback',
                     alpha_cauchy=alpha,cauchy_prediction=pc,G_C=1.,G_H=float(pc/ph) if ph>0 else None)
                 row['trials'].append(t)
-                accepted=bool(t['feasible'] and min(t['rho'],t['true_rho'])>.1 and t['actual_reduction']>0)
+                accepted=bool(t['feasible'] and min(t['rho'],t['true_rho'])>.1 and t['actual_reduction']>0 and (gate_policy=='newton' or t['candidate_model_pass']))
                 if accepted:step=sc;break
             if radius==used_radius:radius*=.25
         refresh=list(dict.fromkeys(refresh))

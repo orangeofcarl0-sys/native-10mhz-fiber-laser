@@ -314,3 +314,42 @@ Configure CuPy and a fresh `LASER_OUTPUT_DIR`; run `run_augmented_pair.py`, `che
 
 
 Paired outcome: A accepts18steps (residual1.2758381e-3), B accepts30steps (1.2180302e-3); neither completes the40-step allowance because the independent linear gate fails. At the same18 accepted steps B removes3.45times as much residual norm as A. B decreases the norm5.946% overall, but its last5steps average only0.0424% per step: no rapid root-convergence regime is observed. All30 accepted B steps are raw augmentations, with9fresh full-output restricted directions and21checked cheap directions; no fallback or raw model failure. Full240-vector endpoint checks lower internal model errors to4.09e-11/7.68e-12 yet independent errors remain3.009%/1.861%. Endpoint replay matches exactly. No new root or stable pulse; no27.0mW replication/pump continuation is claimed.
+
+
+## Step-relevant trust-region gate
+
+The optional `gate_policy="step"` in `solve_augmented` verifies the selected
+constrained candidate at normalized central-difference scales 3e-6 and 1e-6.
+Both predicted reductions must agree with its subspace model within 5%; the
+full nonlinear map must decrease with rho > 0.1. The unconstrained Newton 1%
+gate is retained when its norm is inside the current radius, and otherwise
+logged without blocking a valid constrained candidate. Cauchy safeguards and
+current-state descent checks remain active. The default `"newton"` preserves
+prior paired-run reproducibility. Arnoldi stopping is unchanged in this control.
+
+With CuPy configured and a fresh `LASER_OUTPUT_DIR`, run:
+
+```text
+python run_step_gate_audit.py
+python run_step_gate_continue.py
+python check_step_gate.py
+python report_step_gate.py
+```
+
+The second command refuses to run unless the fixed-state audit admits a raw
+augmented candidate. Inputs are the published paired endpoints, saved full-budget
+Newton vectors, and original tail template. No new pump scan or stability claim.
+The report distinguishes Arnoldi's linear combination of basis responses from
+direct finite differences on its final direction, and does not assume the
+smallest difference step is most accurate.
+
+
+[Offline step-gate report](docs/step_gate_report.html) and
+[records](results/steady_step_gate_20260920): all three fixed-state raw augmented
+candidates pass, with model discrepancy about 0.049% and actual rho 0.977,
+0.917, 0.619. Thirty further B steps decrease residual 1.21803022e-3 to
+1.20814392e-3 (0.8117%); four accepted steps would fail the old Newton gate.
+There are nine fresh and twenty-one checked cheap directions, no fallback,
+and exact endpoint replay. The last five steps average only 0.004995% relative
+improvement. False stopping is repaired, but rapid root convergence is not
+obtained. The endpoint remains uncertified, at about 0.903049 nJ.

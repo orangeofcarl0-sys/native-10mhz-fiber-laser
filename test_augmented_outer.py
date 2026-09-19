@@ -59,6 +59,54 @@ class OuterTests(unittest.TestCase):
         self.assertEqual(status,'residual_converged')
         np.testing.assert_allclose(x,[1,1],atol=1e-7)
         self.assertTrue(any(len(row['trials'])>1 for row in h))
+        x,h,status=solve_augmented(F(),np.array([-1.2,1.]),max_steps=80,radius=.1,builder=builder,linear_limit=2,gate_policy='step')
+        self.assertEqual(status,'residual_converged')
+        np.testing.assert_allclose(x,[1,1],atol=1e-7)
+        self.assertTrue(all(row['trials'][row['accepted_trial']]['candidate_model_pass'] for row in h))
+
+
+    def test_step_gate_ignores_unexecuted_bad_newton(self):
+        class F:
+            def __call__(self,x):return x
+            def feasible(self,x):return True
+        def builder(f,x,r,cache):
+            cache.update(matrix=np.eye(2),restrict=lambda r:r,lift=lambda g:g,gradient=r)
+            return np.eye(2),{}
+        from steady_hookstep import arnoldi as real_arnoldi
+        def bad_newton(*args,**kwargs):
+            h,z,y,eta,v=real_arnoldi(*args,**kwargs)
+            return h,z,y*100,eta,v
+        with patch('steady_augmented_outer.arnoldi',side_effect=bad_newton):
+            _,old,status=solve_augmented(F(),np.ones(2),max_steps=1,builder=builder)
+            self.assertEqual(status,'linear_accuracy_limited')
+            x,new,status=solve_augmented(F(),np.ones(2),max_steps=1,builder=builder,gate_policy='step')
+            self.assertIn('accepted_trial',new[0])
+            self.assertLess(np.linalg.norm(x),np.sqrt(2))
+            self.assertTrue(new[0]['trials'][new[0]['accepted_trial']]['candidate_model_pass'])
+            _,near,status=solve_augmented(F(),np.ones(2),max_steps=1,radius=200,builder=builder,gate_policy='step')
+            self.assertEqual(status,'linear_accuracy_limited')
+
+    def test_step_gate_rejects_inconsistent_candidate_model(self):
+        class F:
+            def __call__(self,x):return x
+            def feasible(self,x):return True
+        def builder(f,x,r,cache):
+            cache.update(matrix=np.eye(2),restrict=lambda r:r,lift=lambda g:g,gradient=r)
+            return np.eye(2),{}
+        from steady_cauchy import augmented_step as original
+        def biased_model(*args,**kwargs):
+            step,guard,raw=original(*args,**kwargs)
+            guard['selected_prediction']*=1.2
+            return step,guard,raw
+        with patch('steady_augmented_outer.augmented_step',side_effect=biased_model):
+            x,h,status=solve_augmented(F(),np.ones(2),max_steps=1,radius=.01,builder=builder,gate_policy='step')
+        trials=h[0]['trials']
+        self.assertFalse(trials[0]['candidate_model_pass'])
+        self.assertLess(trials[1]['radius'],trials[0]['radius'])
+        if 'accepted_trial' in h[0]:
+            accepted=trials[h[0]['accepted_trial']]
+            self.assertTrue(accepted['candidate_model_pass'])
+            self.assertEqual(accepted['kind'],'cauchy_actual_fallback')
 
     def test_trust_radius_can_exceed_old_single_step_range(self):
         self.assertEqual(next_radius(.00625,.96,.00625),.0125)
