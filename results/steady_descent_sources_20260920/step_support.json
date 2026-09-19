@@ -1,0 +1,153 @@
+{
+  "partitions": [
+    {
+      "group": "S1",
+      "radius": 0.00156,
+      "field_step_norm": 0.0015599867094926883,
+      "population_step_norm": 3.7436678679296033e-06,
+      "gauge_step_norm": 5.239431216451022e-06,
+      "core_field_fraction": 0.999965842404625,
+      "annulus_field_fraction": 0.008139661184903248,
+      "outer_field_fraction": 0.0014352490389566918,
+      "orthogonal_partition": 1.0000000000000004
+    },
+    {
+      "group": "S2",
+      "radius": 0.00156,
+      "field_step_norm": 0.001559989265831203,
+      "population_step_norm": 3.7331797540501123e-06,
+      "gauge_step_norm": 4.422040876265265e-06,
+      "core_field_fraction": 0.9986402419854256,
+      "annulus_field_fraction": 0.05200167156781136,
+      "outer_field_fraction": 0.0036733147761734237,
+      "orthogonal_partition": 1.0000000000000004
+    },
+    {
+      "group": "S3",
+      "radius": 0.00156,
+      "field_step_norm": 0.0015574938459796072,
+      "population_step_norm": 9.140152410027765e-06,
+      "gauge_step_norm": 8.791687740788286e-05,
+      "core_field_fraction": 0.9999401798148879,
+      "annulus_field_fraction": 0.01077967368201476,
+      "outer_field_fraction": 0.0018534905122884176,
+      "orthogonal_partition": 1.0000000000000004
+    },
+    {
+      "group": "S4",
+      "radius": 0.00156,
+      "field_step_norm": 0.0009854134910184183,
+      "population_step_norm": 3.58745091327892e-06,
+      "gauge_step_norm": 3.218026338496768e-06,
+      "core_field_fraction": 0.9999145321671274,
+      "annulus_field_fraction": 0.012875426510666388,
+      "outer_field_fraction": 0.002269747378709112,
+      "orthogonal_partition": 1.0000000000000002
+    },
+    {
+      "group": "S1",
+      "radius": 0.003125,
+      "field_step_norm": 0.003124978958837871,
+      "population_step_norm": 3.781856116137521e-06,
+      "gauge_step_norm": 1.082619100591442e-05,
+      "core_field_fraction": 0.9999914589966405,
+      "annulus_field_fraction": 0.00407017435955275,
+      "outer_field_fraction": 0.000718062987289014,
+      "orthogonal_partition": 1.0000000000000009
+    },
+    {
+      "group": "S2",
+      "radius": 0.003125,
+      "field_step_norm": 0.003124981637389819,
+      "population_step_norm": 3.7714268926149605e-06,
+      "gauge_step_norm": 1.0027202699614107e-05,
+      "core_field_fraction": 0.9996612395893304,
+      "annulus_field_fraction": 0.02596228846988676,
+      "outer_field_fraction": 0.0018345681045481503,
+      "orthogonal_partition": 1.0000000000000004
+    },
+    {
+      "group": "S3",
+      "radius": 0.003125,
+      "field_step_norm": 0.0031239051702597297,
+      "population_step_norm": 9.128889075032282e-06,
+      "gauge_step_norm": 8.220802700127769e-05,
+      "core_field_fraction": 0.9999851169879078,
+      "annulus_field_fraction": 0.005376666167842377,
+      "outer_field_fraction": 0.0009258853061232347,
+      "orthogonal_partition": 1.0000000000000002
+    },
+    {
+      "group": "S4",
+      "radius": 0.003125,
+      "field_step_norm": 0.0019751125483459964,
+      "population_step_norm": 3.4690044742385233e-06,
+      "gauge_step_norm": 6.75631397068019e-06,
+      "core_field_fraction": 0.9999786706660738,
+      "annulus_field_fraction": 0.006432075667271396,
+      "outer_field_fraction": 0.001134290757701851,
+      "orthogonal_partition": 1.0000000000000007
+    },
+    {
+      "group": "S1",
+      "radius": 0.00625,
+      "field_step_norm": 0.006249960079514578,
+      "population_step_norm": 3.858411752652586e-06,
+      "gauge_step_norm": 2.200284611162251e-05,
+      "core_field_fraction": 0.9999978513598323,
+      "annulus_field_fraction": 0.002041405338287006,
+      "outer_field_fraction": 0.00036047186301170936,
+      "orthogonal_partition": 1.0000000000000004
+    },
+    {
+      "group": "S2",
+      "radius": 0.00625,
+      "field_step_norm": 0.00624996281754686,
+      "population_step_norm": 3.8480368740475405e-06,
+      "gauge_step_norm": 2.1212775067216028e-05,
+      "core_field_fraction": 0.9999152751405381,
+      "annulus_field_fraction": 0.012984592097492005,
+      "outer_field_fraction": 0.0009181005850099817,
+      "orthogonal_partition": 1.0000000000000004
+    },
+    {
+      "group": "S3",
+      "radius": 0.00625,
+      "field_step_norm": 0.00624958593123758,
+      "population_step_norm": 9.105807505033628e-06,
+      "gauge_step_norm": 7.1363662551885e-05,
+      "core_field_fraction": 0.999996277794409,
+      "annulus_field_fraction": 0.0026886272458306383,
+      "outer_field_fraction": 0.0004644145352514146,
+      "orthogonal_partition": 1.0000000000000004
+    },
+    {
+      "group": "S4",
+      "radius": 0.00625,
+      "field_step_norm": 0.003955775210994921,
+      "population_step_norm": 3.233179440643529e-06,
+      "gauge_step_norm": 1.3872528840527212e-05,
+      "core_field_fraction": 0.9999946605948711,
+      "annulus_field_fraction": 0.003218123826441964,
+      "outer_field_fraction": 0.0005678563084060078,
+      "orthogonal_partition": 1.0000000000000007
+    }
+  ],
+  "overlaps": [
+    {
+      "radius": 0.00156,
+      "state_cosine": 0.8852339475120568,
+      "annulus_cosine": 0.2683176424173427
+    },
+    {
+      "radius": 0.003125,
+      "state_cosine": 0.9725939841597453,
+      "annulus_cosine": 0.2689389385107547
+    },
+    {
+      "radius": 0.00625,
+      "state_cosine": 0.9932144983797403,
+      "annulus_cosine": 0.27026038574173417
+    }
+  ]
+}

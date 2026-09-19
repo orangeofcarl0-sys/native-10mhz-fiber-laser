@@ -65,6 +65,21 @@ class OuterTests(unittest.TestCase):
         self.assertTrue(all(row['trials'][row['accepted_trial']]['candidate_model_pass'] for row in h))
 
 
+    def test_enrichment_uses_current_responses_and_reaches_known_root(self):
+        class F:
+            def __call__(self,x):return np.array([10*(x[1]-x[0]**2),1-x[0]])
+            def feasible(self,x):return True
+        def builder(f,x,r,cache):
+            a=np.array([[-20*x[0],10.],[-1.,0.]])
+            cache.update(matrix=a,restrict=lambda r:r,lift=lambda g:g,gradient=a.T@r)
+            return np.linalg.inv(a),{}
+        x,h,status=solve_augmented(F(),np.array([-1.2,1.]),max_steps=80,radius=.1,builder=builder,linear_limit=2,gate_policy='step',enrichment=lambda f,x,r,d,rebuilt:np.eye(2))
+        self.assertEqual(status,'residual_converged')
+        np.testing.assert_allclose(x,[1,1],atol=1e-7)
+        self.assertTrue(all(row['extra_direction_count']==2 for row in h))
+        self.assertTrue(all(row['trials'][row['accepted_trial']]['candidate_model_pass'] for row in h))
+        self.assertFalse(np.allclose(h[0]['extra_response_slopes'],h[-1]['extra_response_slopes']))
+
     def test_step_gate_ignores_unexecuted_bad_newton(self):
         class F:
             def __call__(self,x):return x

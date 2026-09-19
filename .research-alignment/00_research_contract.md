@@ -39,3 +39,5 @@ Current work: four fixed-state Cauchy/span controls; no long-run continuation; s
 Current experiment: 27.5 mW paired 40-step original/augmented outer loops from identical published down_275. Shared C preconditioner, centered Jv, <1% linear gate, adaptive trust controller. Fresh full-output restricted gradient on rebuild; cheap projected gradient checked for descent between rebuilds. No pump scan or physical-root claim without residual closure.
 
 Step-relevant gate audit and conditional B continuation: see22_step_gate.md.
+
+Current: single-state descent-source controls and thresholded continuation; see23_descent_sources.md.

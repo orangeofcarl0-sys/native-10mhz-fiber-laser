@@ -12,17 +12,20 @@ def next_radius(radius,rho,step_norm):
 
 
 def solve_augmented(residual,initial,augmented=True,max_steps=40,radius=.003125,
-                    builder=None,observer=None,linear_limit=240,gate_policy="newton"):
+                    builder=None,observer=None,linear_limit=240,gate_policy="newton",enrichment=None):
     """Same physical equation and trust controller for both arms; D=I.
 
     With gate_policy="step", constrained candidates require agreement within 5%
     at two independent difference scales; the Newton gate applies only inside
     the current radius. The legacy default preserves previous experiments.
+    Optional enrichment returns extra state directions; their responses are
+    recomputed at every current state, and the same Cauchy safeguard is retained.
     The 1% gate checks the unconstrained Newton direction using independent Jv.
     A fresh builder is retried before stopping on this gate. No minimum-progress
     stop is used. Model discrepancy and low rho trigger next-state rebuilding.
     """
     if gate_policy not in {"newton","step"}:raise ValueError("Unknown gate policy")
+    if enrichment is not None and not augmented:raise ValueError('Enrichment requires augmentation')
     x=initial.copy();r=residual(x);history=[];refresh=['initial'];cache={}
     if builder is None:
         builder=lambda f,x,r,cache:build_factored(f,x,r,'C',descent=cache)
@@ -80,13 +83,28 @@ def solve_augmented(residual,initial,augmented=True,max_steps=40,radius=.003125,
             break
         row.update(precondition_rebuilt=rebuilt,newton_norm=float(np.linalg.norm(newton)),linear_gate=eta)
         if status!='iteration_budget_reached':save();break
+        enriched=None
+        if enrichment is not None:
+            from steady_descent_sources import enriched_model,guarded_step
+            extra=np.asarray(enrichment(residual,x,r,d,rebuilt))
+            if extra.ndim!=2 or extra.shape[0]!=len(x):raise ValueError('Extra directions have wrong shape')
+            responses=np.column_stack([derivative(column) for column in extra.T])
+            enriched=enriched_model(h,z,v,r,np.column_stack([d,extra]),np.column_stack([jd,responses]))
+            row.update(extra_direction_count=extra.shape[1],extra_response_slopes=(r@responses).tolist())
         accepted=False;weights=np.ones_like(x)
         for attempt in range(14):
             used_radius=radius
             sh,ph,_=hookstep(h,z,norm,radius,weights)
             if augmented:
                 sc,pc,alpha=cauchy_step(r,d,jd,radius,weights)
-                step,guard,raw=augmented_step(h,z,v,r,d,jd,radius,weights)
+                if enriched is None:
+                    step,guard,raw=augmented_step(h,z,v,r,d,jd,radius,weights)
+                else:
+                    raw,info=guarded_step(enriched,r,radius,pc)
+                    passed=info['raw_model_pass'];step=raw if passed else sc
+                    guard=dict(raw_model_pass=passed,raw_prediction=info['prediction'],cauchy_prediction=pc,
+                        selected_prediction=info['prediction'] if passed else pc,fallback=not passed,
+                        alpha_cauchy=alpha,lambda_value=info['lambda_value'])
                 pred=guard['selected_prediction'];kind='cauchy_model_fallback' if guard['fallback'] else 'augmented'
             else:step,pred,kind=sh,ph,'original'
             rr,t=trial(step,pred);t.update(attempt=attempt,radius=float(used_radius),kind=kind,hookstep_prediction=ph)

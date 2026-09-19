@@ -1,0 +1,77 @@
+{
+  "checks": [
+    {
+      "group": "S1",
+      "radius": 0.00156,
+      "endpoint_difference": 0.0,
+      "feasible": true
+    },
+    {
+      "group": "S2",
+      "radius": 0.00156,
+      "endpoint_difference": 0.0,
+      "feasible": true
+    },
+    {
+      "group": "S3",
+      "radius": 0.00156,
+      "endpoint_difference": 0.0,
+      "feasible": true
+    },
+    {
+      "group": "S4",
+      "radius": 0.00156,
+      "endpoint_difference": 0.0,
+      "feasible": true
+    },
+    {
+      "group": "S1",
+      "radius": 0.003125,
+      "endpoint_difference": 0.0,
+      "feasible": true
+    },
+    {
+      "group": "S2",
+      "radius": 0.003125,
+      "endpoint_difference": 0.0,
+      "feasible": true
+    },
+    {
+      "group": "S3",
+      "radius": 0.003125,
+      "endpoint_difference": 0.0,
+      "feasible": true
+    },
+    {
+      "group": "S4",
+      "radius": 0.003125,
+      "endpoint_difference": 0.0,
+      "feasible": true
+    },
+    {
+      "group": "S1",
+      "radius": 0.00625,
+      "endpoint_difference": 0.0,
+      "feasible": true
+    },
+    {
+      "group": "S2",
+      "radius": 0.00625,
+      "endpoint_difference": 0.0,
+      "feasible": true
+    },
+    {
+      "group": "S3",
+      "radius": 0.00625,
+      "endpoint_difference": 0.0,
+      "feasible": true
+    },
+    {
+      "group": "S4",
+      "radius": 0.00625,
+      "endpoint_difference": 0.0,
+      "feasible": true
+    }
+  ],
+  "decision_rule_verified": true
+}

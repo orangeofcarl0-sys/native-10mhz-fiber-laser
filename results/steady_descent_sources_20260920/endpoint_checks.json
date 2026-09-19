@@ -1,0 +1,24 @@
+{
+  "fresh_source_outer_steps": [
+    1,
+    7,
+    11,
+    14,
+    17,
+    18,
+    28
+  ],
+  "accepted": 30,
+  "all_acceptance_checks_pass": true,
+  "endpoint_difference": 0.0,
+  "output_difference": 0.0,
+  "fresh": 7,
+  "cheap": 23,
+  "fallbacks": 0,
+  "residual_blocks": {
+    "field": 0.0011882997153127898,
+    "population": 1.4937657976522567e-05,
+    "gauge": 1.5280189964887642e-06
+  },
+  "output_energy_nJ": 0.902976486858347
+}

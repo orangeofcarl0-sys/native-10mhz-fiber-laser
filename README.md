@@ -353,3 +353,50 @@ There are nine fresh and twenty-one checked cheap directions, no fallback,
 and exact endpoint replay. The last five steps average only 0.004995% relative
 improvement. False stopping is repaired, but rapid root convergence is not
 obtained. The endpoint remains uncertified, at about 0.903049 nJ.
+
+
+## Single-state descent-source audit and rolling history
+
+[Offline report](docs/descent_sources_report.html) and
+[records](results/steady_descent_sources_20260920) compare S1=current C direction,
+S2=plus375--750GHz optical-envelope annulus, S3=plus last3fresh historical directions,
+and S4=plus the physical parameter selected by a prespecified scalar trust model.
+All share one current C preconditioner/Arnoldi basis and three radii. C is NOT a hard
+cutoff on Krylov search: its complement inverse remains -I. Saved steps verify this.
+Annular full-output central gradients stream without a larger dense factorization.
+All physical probes keep the current27.5mW pump except the pump coordinate itself.
+
+Copy the published `history_directions.npz` and `history_recovery.json` into a fresh
+`LASER_OUTPUT_DIR`, configure CuPy, then run:
+
+```text
+python run_descent_sources.py
+python check_descent_sources.py
+python check_descent_support.py
+python run_descent_continue.py
+python check_descent_continue.py
+python report_descent_sources.py
+```
+
+To independently reconstruct the historical vectors instead of using the verified
+archive, run `recover_descent_history.py` first. It checks every previous residual
+and the final state, and is a replay rather than a further nonlinear search.
+
+`solve_augmented(..., gate_policy="step", enrichment=callback)` accepts extra state
+directions as columns and recomputes their responses at each current state. It uses
+the same metric whitening, Cauchy lower bound and independent candidate gate. The
+S3 driver rolls the last3fresh directions and archives new fresh vectors and states.
+No added energy/hyperplane equation or physical-parameter change occurs in S3.
+
+At the audit state, S2/S3 actual merit reductions are about5.3--5.5e-9, versus
+3.1--7.8e-11 for S1. All12 candidates replay exactly. Ratios68--176 depend on radius
+and the weak baseline; they are not long-run speedup factors. S4 selects Psat by its
+bounded scalar model and is weaker in these radii; this does not test all joint
+parameter optima or larger parameter steps. Only candidates with >=25% actual
+improvement over a valid same-radius S1 qualify for continuation.
+
+S3 achieves99.56% of the best one-step reduction without recurring annulus sweeps,
+so it is selected for30steps. All30are accepted with no fallback; residual falls
+1.2081439205e-3 to1.1883945817e-3 (1.634684%). Final5steps average0.015245% norm
+improvement. Endpoint residual and output replay exactly. No period-one root or
+stable-pulse certificate is obtained; S2 has not received a matched long-run trial.
