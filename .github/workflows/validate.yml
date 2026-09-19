@@ -12,6 +12,6 @@ jobs:
       - run: python self_check.py
       - run: python validate_batch.py
       - run: python energy_budget.py
-      - run: python -m unittest test_adaptive test_shared_gain test_spectral test_gain_age test_steady_state test_steady_preconditioner test_steady_hookstep test_steady_window -v
+      - run: python -m unittest test_adaptive test_shared_gain test_spectral test_gain_age test_steady_state test_steady_preconditioner test_steady_hookstep test_steady_window test_steady_parameters -v
       - run: python validate_edf_mesh.py
       - run: python validate_search_paths.py

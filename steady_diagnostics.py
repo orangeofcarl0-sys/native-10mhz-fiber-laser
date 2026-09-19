@@ -3,6 +3,8 @@ import numpy as np
 
 
 def blocks(residual, step):
+    if hasattr(residual,'step_blocks'):
+        return residual.step_blocks(step)
     n=residual.n
     return dict(field=float(np.linalg.norm(step[:4*n])),
                 population_rms=float(np.linalg.norm(step[4*n:-2])),

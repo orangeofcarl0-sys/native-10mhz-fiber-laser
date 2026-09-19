@@ -1,0 +1,14 @@
+{
+  "sections": 8,
+  "images": 12,
+  "broken": 0,
+  "externalAssets": 0,
+  "downloadStatus": "progress_stagnated",
+  "mobileWidth": 430,
+  "errors": [],
+  "downloadFiles": [
+    "bordered_pilot.json",
+    "parameter_geometry.json",
+    "bordered_expanded.json"
+  ]
+}

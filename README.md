@@ -226,3 +226,21 @@ python run_full_maps.py
 宽窗追加23步，因五步下降1.923%且5/5接受rho>0.5触发预设停止。残差0.0046037→0.0037820、输出1.81364 nJ，仍不是认证稳态。新末态扩展至4.096 ns，全残差向量变化0.0087%。PTC同态方向试验最好只再下降0.264%；大移位压小方向却增加原残差，未运行多步PTC或multiple shooting。
 
 复现：设置独立 `LASER_OUTPUT_DIR`，依次运行 `run_tail_diagnostics.py`、`continue_tail_hookstep.py`、`check_tail_final_window.py`、`check_tail_derivative.py`；若停止原因为停滞，再运行 `check_tail_ptc.py`，最后 `build_tail_report.py`。数值脚本需要CuPy。输入是已发布 `results/steady_hookstep_20260919/hookstep.npz`。`steady_window.py`只改变预条件逆的局域表示，完整宽窗残差与Krylov保持全维；`steady_ptc.py`使用场负、反转正、规范零质量的人工流符号，不等于真实慢增益动力学。44项CPU测试通过。结果见 `results/steady_tail_20260919/`。
+
+## Parameter coupling and bordered root diagnostic (2026-09-19)
+
+[Offline report](docs/parameter_geometry_report.html) and [numerical records](results/steady_parameter_20260919) extend the previous tail endpoint. No certified nonzero root or stable single pulse was obtained. The weakest projected mode has a full response 244 times its projected singular value; this is not evidence of a full-system fold. The separate 5–60 mW trial ends at 27.744 mW with residual 0.001793 after 25 steps. Late linear solves reach the 120-vector cap.
+
+With CuPy configured, set `LASER_OUTPUT_DIR` to a separate output directory and run in order:
+
+```text
+python run_parameter_geometry.py
+python run_bordered_pilot.py
+python audit_parameter_modes.py
+python check_bordered_endpoint.py
+python extend_bordered_pump.py
+python check_expanded_endpoint.py
+python build_parameter_report.py
+```
+
+The extension requires the local trial to reach the lower pump boundary and retains the original hyperplane. The large reconstructed Jacobian cache is not committed. The source archive preserves the exact local execution files separately from the configurable-bound extension. Published SHA manifests link execution logs to those sources. These are root-search diagnostics, not physical stability certification or pseudo-arclength continuation.

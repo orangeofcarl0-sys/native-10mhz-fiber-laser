@@ -1,0 +1,1654 @@
+{
+  "name": "pump",
+  "value": 0.040000077316653726,
+  "unit": "W",
+  "q": -1.9999845366692546,
+  "status": "progress_stagnated",
+  "seconds": 813.0213260999881,
+  "evaluations": 22881,
+  "augmented_residual": 0.002725778324443019,
+  "physical_residual": 0.002725778324443016,
+  "hyperplane_residual": 1.3376130369235379e-10,
+  "output_energy_nJ": 1.4022039726100033,
+  "peaks": 1,
+  "time_edge": 9.544745774768487e-10,
+  "spectral_edge": 3.864950482598097e-11,
+  "history": [
+    {
+      "step": 0,
+      "residual": 0.003781983499560045,
+      "calls": 1,
+      "gauge": {
+        "matrix": [
+          [
+            0.8451479912322806,
+            0.030034429239841873
+          ],
+          [
+            -0.1236985910358838,
+            0.24858004570364722
+          ]
+        ],
+        "condition": 3.4125927096398145,
+        "smallest_singular": 0.25030169899295723
+      },
+      "radius": 0.05,
+      "progress_window": null,
+      "coarse_dimension": 3094,
+      "cutoff": 384,
+      "coarse_rank": 3094,
+      "coarse_condition": 14122.57506273683,
+      "residual_outside_subspace": 0.168499333773107,
+      "preconditioner_scope": "center-window Fourier subspace; outer field -I",
+      "center_window_ps": 1024.0,
+      "precondition_rebuilt": true,
+      "krylov_dimension": 46,
+      "arnoldi_linear_residual": 0.029140471459907186,
+      "true_newton_linear_residual": 0.029140260698620413,
+      "newton_blocks": {
+        "field": 1.4920384952072085,
+        "population_rms": 0.003248389526356427,
+        "phase_rad": 0.19664085985009386,
+        "time_scaled": 0.0024268258921449097,
+        "shift_ps": 0.0057973930340027655,
+        "total": 7.532903090147985,
+        "parameter_scaled": 7.381040985193069,
+        "parameter_physical": 0.03690520492596534
+      },
+      "trials": [
+        {
+          "radius": 0.05,
+          "alpha": null,
+          "lambda_value": 3.7550822799560694e-05,
+          "feasible": true,
+          "predicted_reduction": 1.3592702899602524e-07,
+          "step_blocks": {
+            "field": 0.009053232048707846,
+            "population_rms": 2.135263955570928e-05,
+            "phase_rad": 0.001280856019949294,
+            "time_scaled": 5.206872086235338e-05,
+            "shift_ps": 0.00012438586574912695,
+            "total": 0.04999999999999899,
+            "parameter_scaled": 0.04915684316798018,
+            "parameter_physical": 0.0002457842158399009
+          },
+          "actual_reduction": 1.329232924051903e-07,
+          "rho": 0.9779018447396304,
+          "residual": 0.0037466722042546054,
+          "true_predicted_reduction": 1.359271359705563e-07,
+          "true_rho": 0.9779010751317775
+        }
+      ],
+      "accepted_trial": 0
+    },
+    {
+      "step": 1,
+      "residual": 0.0037466722042546054,
+      "calls": 3144,
+      "gauge": {
+        "matrix": [
+          [
+            0.8438892277077397,
+            0.02806500220258967
+          ],
+          [
+            -0.12528954503441628,
+            0.24573016481455595
+          ]
+        ],
+        "condition": 3.4517446949831347,
+        "smallest_singular": 0.24717458346185872
+      },
+      "radius": 0.1,
+      "progress_window": null,
+      "coarse_dimension": 3094,
+      "cutoff": 384,
+      "coarse_rank": 3094,
+      "coarse_condition": 14122.57506273683,
+      "residual_outside_subspace": 0.168499333773107,
+      "preconditioner_scope": "center-window Fourier subspace; outer field -I",
+      "center_window_ps": 1024.0,
+      "precondition_rebuilt": false,
+      "krylov_dimension": 46,
+      "arnoldi_linear_residual": 0.029213292050082825,
+      "true_newton_linear_residual": 0.0292135283397312,
+      "newton_blocks": {
+        "field": 1.484492433753491,
+        "population_rms": 0.0032697204468743603,
+        "phase_rad": 0.19611011245257534,
+        "time_scaled": 0.0021199524651601452,
+        "shift_ps": 0.005064309596216616,
+        "total": 7.518521743244095,
+        "parameter_scaled": 7.367901808268515,
+        "parameter_physical": 0.036839509041342575
+      },
+      "trials": [
+        {
+          "radius": 0.1,
+          "alpha": null,
+          "lambda_value": 1.8356353303111808e-05,
+          "feasible": true,
+          "predicted_reduction": 2.092803115195032e-07,
+          "step_blocks": {
+            "field": 0.018952839779622314,
+            "population_rms": 4.429113650453305e-05,
+            "phase_rad": 0.002577260311869504,
+            "time_scaled": 4.574730208583541e-05,
+            "shift_ps": 0.00010928476216414375,
+            "total": 0.09999999999999827,
+            "parameter_scaled": 0.09815367307977864,
+            "parameter_physical": 0.0004907683653988932
+          },
+          "actual_reduction": 1.9780481475212198e-07,
+          "rho": 0.9451668592995582,
+          "residual": 0.0036935000983660225,
+          "true_predicted_reduction": 2.092799835898481e-07,
+          "true_rho": 0.9451683403214738
+        }
+      ],
+      "accepted_trial": 0
+    },
+    {
+      "step": 2,
+      "residual": 0.0036935000983660225,
+      "calls": 3193,
+      "gauge": {
+        "matrix": [
+          [
+            0.8415976763604793,
+            0.024823337751358632
+          ],
+          [
+            -0.12792019488759795,
+            0.24277383736157487
+          ]
+        ],
+        "condition": 3.4931514194984725,
+        "smallest_singular": 0.24372121632459687
+      },
+      "radius": 0.2,
+      "progress_window": null,
+      "coarse_dimension": 3094,
+      "cutoff": 384,
+      "coarse_rank": 3094,
+      "coarse_condition": 14122.57506273683,
+      "residual_outside_subspace": 0.168499333773107,
+      "preconditioner_scope": "center-window Fourier subspace; outer field -I",
+      "center_window_ps": 1024.0,
+      "precondition_rebuilt": false,
+      "krylov_dimension": 50,
+      "arnoldi_linear_residual": 0.02923237289300215,
+      "true_newton_linear_residual": 0.029231919038676116,
+      "newton_blocks": {
+        "field": 1.5584171881410778,
+        "population_rms": 0.0034845445001138475,
+        "phase_rad": 0.2055899681188557,
+        "time_scaled": 0.00045560396806704277,
+        "shift_ps": 0.0010883826809682706,
+        "total": 7.877213119170163,
+        "parameter_scaled": 7.7187785826461255,
+        "parameter_physical": 0.03859389291323063
+      },
+      "trials": [
+        {
+          "radius": 0.2,
+          "alpha": null,
+          "lambda_value": 8.396915119195124e-06,
+          "feasible": true,
+          "predicted_reduction": 3.7960195850266857e-07,
+          "step_blocks": {
+            "field": 0.040457128609303984,
+            "population_rms": 8.843386992546462e-05,
+            "phase_rad": 0.005161816917388356,
+            "time_scaled": 0.00026501483183768884,
+            "shift_ps": 0.0006330883253620285,
+            "total": 0.20000000000000012,
+            "parameter_scaled": 0.195797084598804,
+            "parameter_physical": 0.00097898542299402
+          },
+          "actual_reduction": 3.072828481344538e-07,
+          "rho": 0.8094869935511506,
+          "residual": 0.003609345824434244,
+          "true_predicted_reduction": 3.796025147233646e-07,
+          "true_rho": 0.8094858074330362
+        }
+      ],
+      "accepted_trial": 0
+    },
+    {
+      "step": 3,
+      "residual": 0.003609345824434244,
+      "calls": 3246,
+      "gauge": {
+        "matrix": [
+          [
+            0.8362717881857252,
+            0.017790524465936926
+          ],
+          [
+            -0.13324327149811346,
+            0.23538174206688736
+          ]
+        ],
+        "condition": 3.601737042231586,
+        "smallest_singular": 0.23518166825275577
+      },
+      "radius": 0.4,
+      "progress_window": null,
+      "coarse_dimension": 3094,
+      "cutoff": 384,
+      "coarse_rank": 3094,
+      "coarse_condition": 13951.469595988025,
+      "residual_outside_subspace": 0.1599007337230663,
+      "preconditioner_scope": "center-window Fourier subspace; outer field -I",
+      "center_window_ps": 1024.0,
+      "precondition_rebuilt": true,
+      "krylov_dimension": 52,
+      "arnoldi_linear_residual": 0.029985575703180493,
+      "true_newton_linear_residual": 0.029985737322590085,
+      "newton_blocks": {
+        "field": 1.4582476423662112,
+        "population_rms": 0.003397927431338783,
+        "phase_rad": 0.1931174477911829,
+        "time_scaled": 0.0010513420316978915,
+        "shift_ps": 0.002511528738278241,
+        "total": 7.4231604017105965,
+        "parameter_scaled": 7.275954725201727,
+        "parameter_physical": 0.03637977362600863
+      },
+      "trials": [
+        {
+          "radius": 0.4,
+          "alpha": null,
+          "lambda_value": 4.1322787940867355e-06,
+          "feasible": true,
+          "predicted_reduction": 7.036493814617784e-07,
+          "step_blocks": {
+            "field": 0.07944219999215543,
+            "population_rms": 0.00018321264826094265,
+            "phase_rad": 0.010418788201481266,
+            "time_scaled": 0.0001151989975330783,
+            "shift_ps": 0.0002751964481605635,
+            "total": 0.3999999999999999,
+            "parameter_scaled": 0.3918932748531614,
+            "parameter_physical": 0.001959466374265807
+          },
+          "actual_reduction": -5.30382166809921e-07,
+          "rho": -0.753759160148897,
+          "residual": 0.0037534173247829442
+        },
+        {
+          "radius": 0.1,
+          "alpha": null,
+          "lambda_value": 1.724211163824656e-05,
+          "feasible": true,
+          "predicted_reduction": 1.9714332785432625e-07,
+          "step_blocks": {
+            "field": 0.02066391389416314,
+            "population_rms": 4.587773121544923e-05,
+            "phase_rad": 0.002613653534977357,
+            "time_scaled": 7.461192514300591e-05,
+            "shift_ps": 0.00017823884955145753,
+            "total": 0.09999999999999994,
+            "parameter_scaled": 0.09780676769052388,
+            "parameter_physical": 0.0004890338384526194
+          },
+          "actual_reduction": 1.609264151992029e-07,
+          "rho": 0.8162914613986588,
+          "residual": 0.003564480950988868,
+          "true_predicted_reduction": 1.9714349703236419e-07,
+          "true_rho": 0.8162907609008494
+        }
+      ],
+      "accepted_trial": 1
+    },
+    {
+      "step": 4,
+      "residual": 0.003564480950988868,
+      "calls": 6396,
+      "gauge": {
+        "matrix": [
+          [
+            0.8332128543514598,
+            0.01379721852242563
+          ],
+          [
+            -0.13623458049967885,
+            0.23165017771909124
+          ]
+        ],
+        "condition": 3.66053029837138,
+        "smallest_singular": 0.23074204956224179
+      },
+      "radius": 0.2,
+      "progress_window": null,
+      "coarse_dimension": 3094,
+      "cutoff": 384,
+      "coarse_rank": 3094,
+      "coarse_condition": 13951.469595988025,
+      "residual_outside_subspace": 0.1599007337230663,
+      "preconditioner_scope": "center-window Fourier subspace; outer field -I",
+      "center_window_ps": 1024.0,
+      "precondition_rebuilt": false,
+      "krylov_dimension": 53,
+      "arnoldi_linear_residual": 0.029133665824711625,
+      "true_newton_linear_residual": 0.029133247963614224,
+      "newton_blocks": {
+        "field": 1.4513970508573506,
+        "population_rms": 0.0034528402489631075,
+        "phase_rad": 0.19214663698534185,
+        "time_scaled": 0.0007682612909808106,
+        "shift_ps": 0.001835283145380325,
+        "total": 7.421223005846158,
+        "parameter_scaled": 7.275373850244872,
+        "parameter_physical": 0.03637686925122436
+      },
+      "trials": [
+        {
+          "radius": 0.2,
+          "alpha": null,
+          "lambda_value": 8.196885887925702e-06,
+          "feasible": true,
+          "predicted_reduction": 4.353053560067604e-07,
+          "step_blocks": {
+            "field": 0.04058755473528599,
+            "population_rms": 9.492818060986011e-05,
+            "phase_rad": 0.005162443636608148,
+            "time_scaled": 7.454668727398374e-05,
+            "shift_ps": 0.00017808300418626404,
+            "total": 0.20000000000000034,
+            "parameter_scaled": 0.19577023524463846,
+            "parameter_physical": 0.0009788511762231923
+          },
+          "actual_reduction": 3.859372645067676e-07,
+          "rho": 0.8865897448336791,
+          "residual": 0.003454511531454045,
+          "true_predicted_reduction": 4.3530559475547594e-07,
+          "true_rho": 0.8865892585726126
+        }
+      ],
+      "accepted_trial": 0
+    },
+    {
+      "step": 5,
+      "residual": 0.003454511531454045,
+      "calls": 6452,
+      "gauge": {
+        "matrix": [
+          [
+            0.8277249033003884,
+            0.0046501557162572415
+          ],
+          [
+            -0.1433774115286774,
+            0.22645691327192313
+          ]
+        ],
+        "condition": 3.758078153395395,
+        "smallest_singular": 0.22372983805453414
+      },
+      "radius": 0.4,
+      "progress_window": {
+        "relative_decrease": 0.08658736034784253,
+        "good_rho_count": 5,
+        "label": "slow",
+        "stop": false
+      },
+      "coarse_dimension": 3094,
+      "cutoff": 384,
+      "coarse_rank": 3094,
+      "coarse_condition": 13951.469595988025,
+      "residual_outside_subspace": 0.1599007337230663,
+      "preconditioner_scope": "center-window Fourier subspace; outer field -I",
+      "center_window_ps": 1024.0,
+      "precondition_rebuilt": false,
+      "krylov_dimension": 56,
+      "arnoldi_linear_residual": 0.029897592819990153,
+      "true_newton_linear_residual": 0.029898572382238035,
+      "newton_blocks": {
+        "field": 1.4559120194632453,
+        "population_rms": 0.003627160958271614,
+        "phase_rad": 0.19504412038852156,
+        "time_scaled": 0.0006542436995164011,
+        "shift_ps": 0.0015629089331844418,
+        "total": 7.513778295317072,
+        "parameter_scaled": 7.368794248011734,
+        "parameter_physical": 0.03684397124005867
+      },
+      "trials": [
+        {
+          "radius": 0.4,
+          "alpha": null,
+          "lambda_value": 3.6142392860933676e-06,
+          "feasible": true,
+          "predicted_reduction": 8.821641887054877e-07,
+          "step_blocks": {
+            "field": 0.09773115704553147,
+            "population_rms": 0.00019207433403449923,
+            "phase_rad": 0.01070290871155911,
+            "time_scaled": 0.0013495044952847183,
+            "shift_ps": 0.003223802739884351,
+            "total": 0.39999999998190117,
+            "parameter_scaled": 0.3877269794820088,
+            "parameter_physical": 0.001938634897410044
+          },
+          "actual_reduction": -1.6654946814748569e-06,
+          "rho": -1.8879645113670394,
+          "residual": 0.003906998756577571
+        },
+        {
+          "radius": 0.1,
+          "alpha": null,
+          "lambda_value": 1.7244168594655045e-05,
+          "feasible": true,
+          "predicted_reduction": 4.2489398640463775e-07,
+          "step_blocks": {
+            "field": 0.05218013767013041,
+            "population_rms": 4.386189082693585e-05,
+            "phase_rad": 0.002695769894465961,
+            "time_scaled": 0.0010511972309527402,
+            "shift_ps": 0.002511182826841423,
+            "total": 0.09999999999999865,
+            "parameter_scaled": 0.08525760445800848,
+            "parameter_physical": 0.0004262880222900424
+          },
+          "actual_reduction": 1.6009377812515128e-07,
+          "rho": 0.3767852293694026,
+          "residual": 0.003407853043295539,
+          "true_predicted_reduction": 4.2489463796142885e-07,
+          "true_rho": 0.3767846515862229
+        }
+      ],
+      "accepted_trial": 1
+    },
+    {
+      "step": 6,
+      "residual": 0.003407853043295539,
+      "calls": 6512,
+      "gauge": {
+        "matrix": [
+          [
+            0.8316225884545535,
+            0.0032770521853486122
+          ],
+          [
+            -0.14525082750558832,
+            0.23534786155923207
+          ]
+        ],
+        "condition": 3.6402068949282773,
+        "smallest_singular": 0.23215748806441924
+      },
+      "radius": 0.1,
+      "progress_window": {
+        "relative_decrease": 0.09043202673943918,
+        "good_rho_count": 4,
+        "label": "slow",
+        "stop": false
+      },
+      "coarse_dimension": 3094,
+      "cutoff": 384,
+      "coarse_rank": 3094,
+      "coarse_condition": 13420.61356673304,
+      "residual_outside_subspace": 0.1683340934632372,
+      "preconditioner_scope": "center-window Fourier subspace; outer field -I",
+      "center_window_ps": 1024.0,
+      "precondition_rebuilt": true,
+      "krylov_dimension": 60,
+      "arnoldi_linear_residual": 0.02914452919240525,
+      "true_newton_linear_residual": 0.029145003473110942,
+      "newton_blocks": {
+        "field": 1.3486537486848584,
+        "population_rms": 0.0033349299942240633,
+        "phase_rad": 0.17630232082254976,
+        "time_scaled": 0.0026961211066053505,
+        "shift_ps": 0.006440706674860368,
+        "total": 6.857149766611228,
+        "parameter_scaled": 6.720902847738554,
+        "parameter_physical": 0.03360451423869277
+      },
+      "trials": [
+        {
+          "radius": 0.1,
+          "alpha": null,
+          "lambda_value": 1.652813068340639e-05,
+          "feasible": true,
+          "predicted_reduction": 2.1943574438432175e-07,
+          "step_blocks": {
+            "field": 0.020513366978615742,
+            "population_rms": 4.8666221684671127e-05,
+            "phase_rad": 0.002576691987139525,
+            "time_scaled": 9.060262563184625e-05,
+            "shift_ps": 0.00021643869566439496,
+            "total": 0.10000000000000007,
+            "parameter_scaled": 0.0978394187245977,
+            "parameter_physical": 0.0004891970936229885
+          },
+          "actual_reduction": 1.6802561798437933e-07,
+          "rho": 0.7657167179203846,
+          "residual": 0.0033581856900311378,
+          "true_predicted_reduction": 2.1943589027258487e-07,
+          "true_rho": 0.7657162088464957
+        }
+      ],
+      "accepted_trial": 0
+    },
+    {
+      "step": 7,
+      "residual": 0.0033581856900311378,
+      "calls": 9669,
+      "gauge": {
+        "matrix": [
+          [
+            0.8293879555122443,
+            -0.0011604942716024838
+          ],
+          [
+            -0.14873653054028718,
+            0.2345734970520976
+          ]
+        ],
+        "condition": 3.6627440867901617,
+        "smallest_singular": 0.2303680816043246
+      },
+      "radius": 0.2,
+      "progress_window": {
+        "relative_decrease": 0.0907850005156966,
+        "good_rho_count": 4,
+        "label": "slow",
+        "stop": false
+      },
+      "coarse_dimension": 3094,
+      "cutoff": 384,
+      "coarse_rank": 3094,
+      "coarse_condition": 13420.61356673304,
+      "residual_outside_subspace": 0.1683340934632372,
+      "preconditioner_scope": "center-window Fourier subspace; outer field -I",
+      "center_window_ps": 1024.0,
+      "precondition_rebuilt": false,
+      "krylov_dimension": 58,
+      "arnoldi_linear_residual": 0.029969482402123625,
+      "true_newton_linear_residual": 0.029969479982539227,
+      "newton_blocks": {
+        "field": 1.3445385836970583,
+        "population_rms": 0.0034186332932238253,
+        "phase_rad": 0.17662632627490715,
+        "time_scaled": 0.002445946024453667,
+        "shift_ps": 0.005843068713586862,
+        "total": 6.912966087347746,
+        "parameter_scaled": 6.778650425632745,
+        "parameter_physical": 0.03389325212816373
+      },
+      "trials": [
+        {
+          "radius": 0.2,
+          "alpha": null,
+          "lambda_value": 7.633692518819223e-06,
+          "feasible": true,
+          "predicted_reduction": 5.218412029479061e-07,
+          "step_blocks": {
+            "field": 0.0408734657589066,
+            "population_rms": 0.00010253840415488237,
+            "phase_rad": 0.005069600161606669,
+            "time_scaled": 1.0712932817481868e-05,
+            "shift_ps": 2.5591898574527194e-05,
+            "total": 0.20000000005524943,
+            "parameter_scaled": 0.19571317877001906,
+            "parameter_physical": 0.0009785658938500953
+          },
+          "actual_reduction": 4.6299370570241053e-07,
+          "rho": 0.8872310256203166,
+          "residual": 0.003217362851362135,
+          "true_predicted_reduction": 5.218409331378622e-07,
+          "true_rho": 0.8872314843498389
+        }
+      ],
+      "accepted_trial": 0
+    },
+    {
+      "step": 8,
+      "residual": 0.003217362851362135,
+      "calls": 9730,
+      "gauge": {
+        "matrix": [
+          [
+            0.8270297010725921,
+            -0.01049734897162157
+          ],
+          [
+            -0.15628163586355048,
+            0.23885946819548162
+          ]
+        ],
+        "condition": 3.6325913855943788,
+        "smallest_singular": 0.23222695981621003
+      },
+      "radius": 0.4,
+      "progress_window": {
+        "relative_decrease": 0.10860222105027895,
+        "good_rho_count": 4,
+        "label": "progress",
+        "stop": false
+      },
+      "coarse_dimension": 3094,
+      "cutoff": 384,
+      "coarse_rank": 3094,
+      "coarse_condition": 13420.61356673304,
+      "residual_outside_subspace": 0.1683340934632372,
+      "preconditioner_scope": "center-window Fourier subspace; outer field -I",
+      "center_window_ps": 1024.0,
+      "precondition_rebuilt": false,
+      "krylov_dimension": 64,
+      "arnoldi_linear_residual": 0.029687768398853717,
+      "true_newton_linear_residual": 0.029687544063689616,
+      "newton_blocks": {
+        "field": 1.4140169854754399,
+        "population_rms": 0.0037577133447626427,
+        "phase_rad": 0.18794488549403363,
+        "time_scaled": 0.000818406733860284,
+        "shift_ps": 0.0019550745330432864,
+        "total": 7.298002389339804,
+        "parameter_scaled": 7.157238068515949,
+        "parameter_physical": 0.035786190342579745
+      },
+      "trials": [
+        {
+          "radius": 0.4,
+          "alpha": null,
+          "lambda_value": 3.2963703305945473e-06,
+          "feasible": true,
+          "predicted_reduction": 6.282676244864068e-07,
+          "step_blocks": {
+            "field": 0.08004606250631005,
+            "population_rms": 0.00020906905188154554,
+            "phase_rad": 0.01049252399927228,
+            "time_scaled": 0.00036969426121793086,
+            "shift_ps": 0.000883154799704788,
+            "total": 0.3999999999777771,
+            "parameter_scaled": 0.391768240693228,
+            "parameter_physical": 0.00195884120346614
+          },
+          "actual_reduction": -2.8700492144933523e-07,
+          "rho": -0.45681953082327714,
+          "residual": 0.0033053643611898158
+        },
+        {
+          "radius": 0.1,
+          "alpha": null,
+          "lambda_value": 1.3966306368330483e-05,
+          "feasible": true,
+          "predicted_reduction": 2.2281171793177928e-07,
+          "step_blocks": {
+            "field": 0.02634562155966978,
+            "population_rms": 5.424263116002231e-05,
+            "phase_rad": 0.0027503276257524545,
+            "time_scaled": 0.0003844704373727405,
+            "shift_ps": 0.0009184532943295421,
+            "total": 0.0999999999999997,
+            "parameter_scaled": 0.09642713914041719,
+            "parameter_physical": 0.00048213569570208596
+          },
+          "actual_reduction": 1.9547035544579196e-07,
+          "rho": 0.8772893870224603,
+          "residual": 0.003156023289906699,
+          "true_predicted_reduction": 2.2281154852616816e-07,
+          "true_rho": 0.8772900540334196
+        }
+      ],
+      "accepted_trial": 1
+    },
+    {
+      "step": 9,
+      "residual": 0.003156023289906699,
+      "calls": 9798,
+      "gauge": {
+        "matrix": [
+          [
+            0.8280035303931531,
+            -0.013704275677762206
+          ],
+          [
+            -0.15912242107097438,
+            0.24570538207560977
+          ]
+        ],
+        "condition": 3.551545746450697,
+        "smallest_singular": 0.23805353263260426
+      },
+      "radius": 0.2,
+      "progress_window": {
+        "relative_decrease": 0.11459106296215549,
+        "good_rho_count": 4,
+        "label": "progress",
+        "stop": false
+      },
+      "coarse_dimension": 3094,
+      "cutoff": 384,
+      "coarse_rank": 3094,
+      "coarse_condition": 13667.625184327093,
+      "residual_outside_subspace": 0.15744994495133519,
+      "preconditioner_scope": "center-window Fourier subspace; outer field -I",
+      "center_window_ps": 1024.0,
+      "precondition_rebuilt": true,
+      "krylov_dimension": 66,
+      "arnoldi_linear_residual": 0.029830018567160534,
+      "true_newton_linear_residual": 0.02983103274646552,
+      "newton_blocks": {
+        "field": 1.4118380565899635,
+        "population_rms": 0.003782814614988696,
+        "phase_rad": 0.18584863354074807,
+        "time_scaled": 0.001264924109301539,
+        "shift_ps": 0.0030217504451155795,
+        "total": 7.212347663195753,
+        "parameter_scaled": 7.070368907805387,
+        "parameter_physical": 0.035351844539026935
+      },
+      "trials": [
+        {
+          "radius": 0.2,
+          "alpha": null,
+          "lambda_value": 6.692132501118228e-06,
+          "feasible": true,
+          "predicted_reduction": 2.830918903190577e-07,
+          "step_blocks": {
+            "field": 0.03918126455811825,
+            "population_rms": 0.0001048992376003284,
+            "phase_rad": 0.005152903030715691,
+            "time_scaled": 1.760571399750358e-05,
+            "shift_ps": 4.205791771801223e-05,
+            "total": 0.1999999999946989,
+            "parameter_scaled": 0.1960567896861803,
+            "parameter_physical": 0.0009802839484309015
+          },
+          "actual_reduction": 1.876423350369684e-07,
+          "rho": 0.6628318982415453,
+          "residual": 0.003095997147343577,
+          "true_predicted_reduction": 2.830916439495783e-07,
+          "true_rho": 0.6628324750920218
+        }
+      ],
+      "accepted_trial": 0
+    },
+    {
+      "step": 10,
+      "residual": 0.003095997147343577,
+      "calls": 12961,
+      "gauge": {
+        "matrix": [
+          [
+            0.8241443778182933,
+            -0.023548073790977803
+          ],
+          [
+            -0.16680757474157937,
+            0.24579809249625054
+          ]
+        ],
+        "condition": 3.587495145745571,
+        "smallest_singular": 0.2353115735489746
+      },
+      "radius": 0.2,
+      "progress_window": {
+        "relative_decrease": 0.10378149872887088,
+        "good_rho_count": 4,
+        "label": "progress",
+        "stop": false
+      },
+      "coarse_dimension": 3094,
+      "cutoff": 384,
+      "coarse_rank": 3094,
+      "coarse_condition": 13667.625184327093,
+      "residual_outside_subspace": 0.15744994495133519,
+      "preconditioner_scope": "center-window Fourier subspace; outer field -I",
+      "center_window_ps": 1024.0,
+      "precondition_rebuilt": false,
+      "krylov_dimension": 65,
+      "arnoldi_linear_residual": 0.029999868277467614,
+      "true_newton_linear_residual": 0.0299996435310901,
+      "newton_blocks": {
+        "field": 1.3585655366536629,
+        "population_rms": 0.0038458592385022554,
+        "phase_rad": 0.18002274398992113,
+        "time_scaled": 0.0002771297742415512,
+        "shift_ps": 0.0006620294549778084,
+        "total": 7.084271391750464,
+        "parameter_scaled": 6.9504516240891245,
+        "parameter_physical": 0.03475225812044563
+      },
+      "trials": [
+        {
+          "radius": 0.2,
+          "alpha": null,
+          "lambda_value": 6.420718753632178e-06,
+          "feasible": true,
+          "predicted_reduction": 3.757294968691946e-07,
+          "step_blocks": {
+            "field": 0.04080533678327766,
+            "population_rms": 0.00011218888772618082,
+            "phase_rad": 0.005092082264735736,
+            "time_scaled": 7.496564648987686e-05,
+            "shift_ps": 0.00017908384699398742,
+            "total": 0.20000000004241156,
+            "parameter_scaled": 0.19572679172505328,
+            "parameter_physical": 0.0009786339586252664
+          },
+          "actual_reduction": 3.3384444073677333e-07,
+          "rho": 0.8885233752435385,
+          "residual": 0.0029862199274142587,
+          "true_predicted_reduction": 3.757289398423028e-07,
+          "true_rho": 0.8885246925001071
+        }
+      ],
+      "accepted_trial": 0
+    },
+    {
+      "step": 11,
+      "residual": 0.0029862199274142587,
+      "calls": 13029,
+      "gauge": {
+        "matrix": [
+          [
+            0.823109110647183,
+            -0.032932335105143706
+          ],
+          [
+            -0.17407543907273398,
+            0.2550981039572429
+          ]
+        ],
+        "condition": 3.504120183331266,
+        "smallest_singular": 0.24142476740846397
+      },
+      "radius": 0.4,
+      "progress_window": {
+        "relative_decrease": 0.12372397240273703,
+        "good_rho_count": 5,
+        "label": "progress",
+        "stop": false
+      },
+      "coarse_dimension": 3094,
+      "cutoff": 384,
+      "coarse_rank": 3094,
+      "coarse_condition": 13667.625184327093,
+      "residual_outside_subspace": 0.15744994495133519,
+      "preconditioner_scope": "center-window Fourier subspace; outer field -I",
+      "center_window_ps": 1024.0,
+      "precondition_rebuilt": false,
+      "krylov_dimension": 67,
+      "arnoldi_linear_residual": 0.029558121108544687,
+      "true_newton_linear_residual": 0.029557885048822657,
+      "newton_blocks": {
+        "field": 1.3419811304127423,
+        "population_rms": 0.0039398876988180455,
+        "phase_rad": 0.1780520737562892,
+        "time_scaled": 0.0006542819063525167,
+        "shift_ps": 0.0015630002046869691,
+        "total": 6.963291586990337,
+        "parameter_scaled": 6.830431749113503,
+        "parameter_physical": 0.03415215874556751
+      },
+      "trials": [
+        {
+          "radius": 0.4,
+          "alpha": null,
+          "lambda_value": 2.9449480542221268e-06,
+          "feasible": true,
+          "predicted_reduction": 5.91763937247276e-07,
+          "step_blocks": {
+            "field": 0.07469863733310185,
+            "population_rms": 0.00022826973423297807,
+            "phase_rad": 0.010448454175169514,
+            "time_scaled": 6.421394671987712e-05,
+            "shift_ps": 0.000153399338866709,
+            "total": 0.3999999999979132,
+            "parameter_scaled": 0.39282424461043025,
+            "parameter_physical": 0.0019641212230521515
+          },
+          "actual_reduction": -2.575150554537697e-09,
+          "rho": -0.004351651718617044,
+          "residual": 0.0029870821475137064
+        },
+        {
+          "radius": 0.1,
+          "alpha": null,
+          "lambda_value": 1.2445982399814488e-05,
+          "feasible": true,
+          "predicted_reduction": 2.2951789480359455e-07,
+          "step_blocks": {
+            "field": 0.02077720232484708,
+            "population_rms": 5.82532366112487e-05,
+            "phase_rad": 0.0027666711571612723,
+            "time_scaled": 8.703421863075694e-05,
+            "shift_ps": 0.00020791420366949638,
+            "total": 0.09999999999970732,
+            "parameter_scaled": 0.09777853765426836,
+            "parameter_physical": 0.0004888926882713418
+          },
+          "actual_reduction": 2.2480414546143142e-07,
+          "rho": 0.9794623885593025,
+          "residual": 0.0029099658355319497,
+          "true_predicted_reduction": 2.295180566088722e-07,
+          "true_rho": 0.979461698059452
+        }
+      ],
+      "accepted_trial": 1
+    },
+    {
+      "step": 12,
+      "residual": 0.0029099658355319497,
+      "calls": 13100,
+      "gauge": {
+        "matrix": [
+          [
+            0.8241002894126312,
+            -0.03610962111556701
+          ],
+          [
+            -0.1766799760833125,
+            0.2578968651526657
+          ]
+        ],
+        "condition": 3.488034395359727,
+        "smallest_singular": 0.24311093085014043
+      },
+      "radius": 0.2,
+      "progress_window": {
+        "relative_decrease": 0.1334708368955715,
+        "good_rho_count": 5,
+        "label": "progress",
+        "stop": false
+      },
+      "coarse_dimension": 3094,
+      "cutoff": 384,
+      "coarse_rank": 3094,
+      "coarse_condition": 13255.46865910569,
+      "residual_outside_subspace": 0.1621561601049931,
+      "preconditioner_scope": "center-window Fourier subspace; outer field -I",
+      "center_window_ps": 1024.0,
+      "precondition_rebuilt": true,
+      "krylov_dimension": 70,
+      "arnoldi_linear_residual": 0.02955374607703601,
+      "true_newton_linear_residual": 0.029553648902409437,
+      "newton_blocks": {
+        "field": 1.3602261927276786,
+        "population_rms": 0.003938031890904657,
+        "phase_rad": 0.17458237658068218,
+        "time_scaled": 0.0010319790062267254,
+        "shift_ps": 0.0024652728163568945,
+        "total": 6.829835846751972,
+        "parameter_scaled": 6.690735895169333,
+        "parameter_physical": 0.03345367947584667
+      },
+      "trials": [
+        {
+          "radius": 0.2,
+          "alpha": null,
+          "lambda_value": 5.993763250969786e-06,
+          "feasible": true,
+          "predicted_reduction": 2.565292073882373e-07,
+          "step_blocks": {
+            "field": 0.039579850833878875,
+            "population_rms": 0.0001153102802869683,
+            "phase_rad": 0.0051072638389610655,
+            "time_scaled": 1.5418370525016367e-05,
+            "shift_ps": 3.683261917005542e-05,
+            "total": 0.19999999995024906,
+            "parameter_scaled": 0.1959779010755036,
+            "parameter_physical": 0.0009798895053775181
+          },
+          "actual_reduction": 1.85980963691511e-07,
+          "rho": 0.7249894294104416,
+          "residual": 0.0028453364013030402,
+          "true_predicted_reduction": 2.5652928681421776e-07,
+          "true_rho": 0.7249892049409591
+        }
+      ],
+      "accepted_trial": 0
+    },
+    {
+      "step": 13,
+      "residual": 0.0028453364013030402,
+      "calls": 16267,
+      "gauge": {
+        "matrix": [
+          [
+            0.8225053213162298,
+            -0.04506401131211145
+          ],
+          [
+            -0.18377223408677715,
+            0.26593598418391623
+          ]
+        ],
+        "condition": 3.429129614414275,
+        "smallest_singular": 0.24773355462235627
+      },
+      "radius": 0.2,
+      "progress_window": {
+        "relative_decrease": 0.11563086516697674,
+        "good_rho_count": 5,
+        "label": "progress",
+        "stop": false
+      },
+      "coarse_dimension": 3094,
+      "cutoff": 384,
+      "coarse_rank": 3094,
+      "coarse_condition": 13255.46865910569,
+      "residual_outside_subspace": 0.1621561601049931,
+      "preconditioner_scope": "center-window Fourier subspace; outer field -I",
+      "center_window_ps": 1024.0,
+      "precondition_rebuilt": false,
+      "krylov_dimension": 68,
+      "arnoldi_linear_residual": 0.029578660579836918,
+      "true_newton_linear_residual": 0.0295784087609326,
+      "newton_blocks": {
+        "field": 1.3113102646134729,
+        "population_rms": 0.003974622956353128,
+        "phase_rad": 0.16752576224209484,
+        "time_scaled": 0.00025175258647630507,
+        "shift_ps": 0.0006014064279823335,
+        "total": 6.644257512936629,
+        "parameter_scaled": 6.511416324127368,
+        "parameter_physical": 0.03255708162063684
+      },
+      "trials": [
+        {
+          "radius": 0.2,
+          "alpha": null,
+          "lambda_value": 5.794944610269596e-06,
+          "feasible": true,
+          "predicted_reduction": 3.1464818728484777e-07,
+          "step_blocks": {
+            "field": 0.0411249543718733,
+            "population_rms": 0.00012200983514181802,
+            "phase_rad": 0.004950038121752796,
+            "time_scaled": 6.647831976746232e-05,
+            "shift_ps": 0.00015880865173704907,
+            "total": 0.19999999999999965,
+            "parameter_scaled": 0.19566352737477039,
+            "parameter_physical": 0.0009783176368738519
+          },
+          "actual_reduction": 2.802954405116461e-07,
+          "rho": 0.8908217235585009,
+          "residual": 0.002745058898376653,
+          "true_predicted_reduction": 3.14648168351878e-07,
+          "true_rho": 0.890821777160913
+        }
+      ],
+      "accepted_trial": 0
+    },
+    {
+      "step": 14,
+      "residual": 0.002745058898376653,
+      "calls": 16338,
+      "gauge": {
+        "matrix": [
+          [
+            0.8245905649989962,
+            -0.05229819146469892
+          ],
+          [
+            -0.18929836810278278,
+            0.2842402410975721
+          ]
+        ],
+        "condition": 3.2533146518695757,
+        "smallest_singular": 0.26268035241277987
+      },
+      "radius": 0.4,
+      "progress_window": {
+        "relative_decrease": 0.13021589316034332,
+        "good_rho_count": 5,
+        "label": "progress",
+        "stop": false
+      },
+      "coarse_dimension": 3094,
+      "cutoff": 384,
+      "coarse_rank": 3094,
+      "coarse_condition": 13255.46865910569,
+      "residual_outside_subspace": 0.1621561601049931,
+      "preconditioner_scope": "center-window Fourier subspace; outer field -I",
+      "center_window_ps": 1024.0,
+      "precondition_rebuilt": false,
+      "krylov_dimension": 68,
+      "arnoldi_linear_residual": 0.0296802967924952,
+      "true_newton_linear_residual": 0.02968094696116336,
+      "newton_blocks": {
+        "field": 1.2898250969561909,
+        "population_rms": 0.0039758643629522385,
+        "phase_rad": 0.1614718426355946,
+        "time_scaled": 0.0005631744960728439,
+        "shift_ps": 0.0013453556396561504,
+        "total": 6.371274419881925,
+        "parameter_scaled": 6.23725898709334,
+        "parameter_physical": 0.0311862949354667
+      },
+      "trials": [
+        {
+          "radius": 0.4,
+          "alpha": null,
+          "lambda_value": 2.7384140891472987e-06,
+          "feasible": false,
+          "predicted_reduction": 4.944924576057304e-07,
+          "step_blocks": {
+            "field": 0.08378508183873577,
+            "population_rms": 0.0002526399480651785,
+            "phase_rad": 0.01017359698177242,
+            "time_scaled": 5.267541147017929e-05,
+            "shift_ps": 0.00012583517610756235,
+            "total": 0.4,
+            "parameter_scaled": 0.3909942344639963,
+            "parameter_physical": 0.0019549711723199814
+          }
+        },
+        {
+          "radius": 0.1,
+          "alpha": null,
+          "lambda_value": 1.1532320487001762e-05,
+          "feasible": false,
+          "predicted_reduction": 1.5745828541465435e-07,
+          "step_blocks": {
+            "field": 0.02380728900615813,
+            "population_rms": 6.545080014625056e-05,
+            "phase_rad": 0.0025674851403353384,
+            "time_scaled": 2.683477836212621e-05,
+            "shift_ps": 6.410503433688815e-05,
+            "total": 0.10000000000000002,
+            "parameter_scaled": 0.09709076169398845,
+            "parameter_physical": 0.00048545380846994225
+          }
+        },
+        {
+          "radius": 0.025,
+          "alpha": null,
+          "lambda_value": 4.8515178832889136e-05,
+          "feasible": false,
+          "predicted_reduction": 6.976861137208835e-08,
+          "step_blocks": {
+            "field": 0.009911286419371767,
+            "population_rms": 1.816396722142654e-05,
+            "phase_rad": 0.0006483311688720676,
+            "time_scaled": 1.9644201411738474e-05,
+            "shift_ps": 4.692761717747474e-05,
+            "total": 0.02499999999999995,
+            "parameter_scaled": 0.022942217686707816,
+            "parameter_physical": 0.00011471108843353909
+          }
+        },
+        {
+          "radius": 0.00625,
+          "alpha": null,
+          "lambda_value": 0.00043048493531159523,
+          "feasible": true,
+          "predicted_reduction": 4.305114281337659e-08,
+          "step_blocks": {
+            "field": 0.0058498719312376855,
+            "population_rms": 4.3702776382683035e-06,
+            "phase_rad": 0.00010750210194839741,
+            "time_scaled": 1.2890144966356919e-05,
+            "shift_ps": 3.079299461783607e-05,
+            "total": 0.00625,
+            "parameter_scaled": 0.002197670683025614,
+            "parameter_physical": 1.098835341512807e-05
+          },
+          "actual_reduction": 4.293243767847834e-08,
+          "rho": 0.997242694917233,
+          "residual": 0.0027293741920447418,
+          "true_predicted_reduction": 4.3051106439709567e-08,
+          "true_rho": 0.9972435374826565
+        }
+      ],
+      "accepted_trial": 3
+    },
+    {
+      "step": 15,
+      "residual": 0.0027293741920447418,
+      "calls": 16409,
+      "gauge": {
+        "matrix": [
+          [
+            0.8257870397492405,
+            -0.05248641437304166
+          ],
+          [
+            -0.1892880495796658,
+            0.28869063847440846
+          ]
+        ],
+        "condition": 3.20668657411937,
+        "smallest_singular": 0.26691849676804197
+      },
+      "radius": 0.0125,
+      "progress_window": {
+        "relative_decrease": 0.11841837632615537,
+        "good_rho_count": 5,
+        "label": "progress",
+        "stop": false
+      },
+      "coarse_dimension": 3094,
+      "cutoff": 384,
+      "coarse_rank": 3094,
+      "coarse_condition": 12787.567806678571,
+      "residual_outside_subspace": 0.16164241882100538,
+      "preconditioner_scope": "center-window Fourier subspace; outer field -I",
+      "center_window_ps": 1024.0,
+      "precondition_rebuilt": true,
+      "krylov_dimension": 67,
+      "arnoldi_linear_residual": 0.029725698564889845,
+      "true_newton_linear_residual": 0.02972603048631432,
+      "newton_blocks": {
+        "field": 1.2972208094924715,
+        "population_rms": 0.0039658245102147235,
+        "phase_rad": 0.16187936673425102,
+        "time_scaled": 0.0004849095814000446,
+        "shift_ps": 0.001158390240696325,
+        "total": 6.340582879129076,
+        "parameter_scaled": 6.204352385724785,
+        "parameter_physical": 0.031021761928623923
+      },
+      "trials": [
+        {
+          "radius": 0.0125,
+          "alpha": null,
+          "lambda_value": 9.367281802113243e-05,
+          "feasible": false,
+          "predicted_reduction": 1.8400247294419602e-08,
+          "step_blocks": {
+            "field": 0.0025886590869710403,
+            "population_rms": 7.818072688293078e-06,
+            "phase_rad": 0.00031925734892886826,
+            "time_scaled": 1.6380403715729638e-06,
+            "shift_ps": 3.913079990744288e-06,
+            "total": 0.012500000000000022,
+            "parameter_scaled": 0.012224845809709048,
+            "parameter_physical": 6.112422904854525e-05
+          }
+        },
+        {
+          "radius": 0.003125,
+          "alpha": null,
+          "lambda_value": 0.0003775311079587807,
+          "feasible": true,
+          "predicted_reduction": 7.400749334626074e-09,
+          "step_blocks": {
+            "field": 0.0007300990715381345,
+            "population_rms": 1.945311089927454e-06,
+            "phase_rad": 7.952240462981325e-05,
+            "time_scaled": 2.3435561731774526e-06,
+            "shift_ps": 5.598471763940563e-06,
+            "total": 0.0031250000000000097,
+            "parameter_scaled": 0.003037473828102941,
+            "parameter_physical": 1.5187369140514705e-05
+          },
+          "actual_reduction": 7.403278136280778e-09,
+          "rho": 1.0003416953527764,
+          "residual": 0.0027266603976159784,
+          "true_predicted_reduction": 7.400758592905405e-09,
+          "true_rho": 1.0003404439347323
+        }
+      ],
+      "accepted_trial": 1
+    },
+    {
+      "step": 16,
+      "residual": 0.0027266603976159784,
+      "calls": 19573,
+      "gauge": {
+        "matrix": [
+          [
+            0.8258228250425907,
+            -0.052596460080829306
+          ],
+          [
+            -0.18937395847172023,
+            0.2889347660780382
+          ]
+        ],
+        "condition": 3.2046889598460657,
+        "smallest_singular": 0.26711068426177575
+      },
+      "radius": 0.00625,
+      "progress_window": {
+        "relative_decrease": 0.08691909373970008,
+        "good_rho_count": 5,
+        "label": "slow",
+        "stop": false
+      },
+      "coarse_dimension": 3094,
+      "cutoff": 384,
+      "coarse_rank": 3094,
+      "coarse_condition": 12787.567806678571,
+      "residual_outside_subspace": 0.16164241882100538,
+      "preconditioner_scope": "center-window Fourier subspace; outer field -I",
+      "center_window_ps": 1024.0,
+      "precondition_rebuilt": false,
+      "krylov_dimension": 68,
+      "arnoldi_linear_residual": 0.02986411378792495,
+      "true_newton_linear_residual": 0.02986367751941611,
+      "newton_blocks": {
+        "field": 1.2964037867404061,
+        "population_rms": 0.003963113083747762,
+        "phase_rad": 0.16167035667528312,
+        "time_scaled": 0.0004598085739543139,
+        "shift_ps": 0.0010984269750235185,
+        "total": 6.332259821705068,
+        "parameter_scaled": 6.196022792839669,
+        "parameter_physical": 0.030980113964198343
+      },
+      "trials": [
+        {
+          "radius": 0.00625,
+          "alpha": null,
+          "lambda_value": 0.0001877792438853141,
+          "feasible": false,
+          "predicted_reduction": 7.610384373417138e-09,
+          "step_blocks": {
+            "field": 0.0012945689954399796,
+            "population_rms": 3.9933428017629015e-06,
+            "phase_rad": 0.0001578988808864641,
+            "time_scaled": 2.0445335292370435e-06,
+            "shift_ps": 4.884142895684981e-06,
+            "total": 0.006249999999999881,
+            "parameter_scaled": 0.006112416783282595,
+            "parameter_physical": 3.056208391641297e-05
+          }
+        },
+        {
+          "radius": 0.0015625,
+          "alpha": null,
+          "lambda_value": 0.000764879574094648,
+          "feasible": true,
+          "predicted_reduction": 2.0856199790709616e-09,
+          "step_blocks": {
+            "field": 0.0004162150556584244,
+            "population_rms": 1.0388629519737722e-06,
+            "phase_rad": 3.7984021396155146e-05,
+            "time_scaled": 1.897927112799681e-06,
+            "shift_ps": 4.533917928931031e-06,
+            "total": 0.0015624999999998988,
+            "parameter_scaled": 0.0015055642829842758,
+            "parameter_physical": 7.527821414921379e-06
+          },
+          "actual_reduction": 2.0831327977328324e-09,
+          "rho": 0.9988074618755632,
+          "residual": 0.002725896303664514,
+          "true_predicted_reduction": 2.085622460454404e-09,
+          "true_rho": 0.9988062735376233
+        }
+      ],
+      "accepted_trial": 1
+    },
+    {
+      "step": 17,
+      "residual": 0.002725896303664514,
+      "calls": 19644,
+      "gauge": {
+        "matrix": [
+          [
+            0.825873174622075,
+            -0.05262940689939206
+          ],
+          [
+            -0.18938475439430963,
+            0.28916769911226214
+          ]
+        ],
+        "condition": 3.2023729615356467,
+        "smallest_singular": 0.2673241602535207
+      },
+      "radius": 0.003125,
+      "progress_window": {
+        "relative_decrease": 0.06325487729782486,
+        "good_rho_count": 5,
+        "label": "slow",
+        "stop": false
+      },
+      "coarse_dimension": 3094,
+      "cutoff": 384,
+      "coarse_rank": 3094,
+      "coarse_condition": 12787.567806678571,
+      "residual_outside_subspace": 0.16164241882100538,
+      "preconditioner_scope": "center-window Fourier subspace; outer field -I",
+      "center_window_ps": 1024.0,
+      "precondition_rebuilt": false,
+      "krylov_dimension": 68,
+      "arnoldi_linear_residual": 0.029613176919183075,
+      "true_newton_linear_residual": 0.02961268288873236,
+      "newton_blocks": {
+        "field": 1.2962991364272138,
+        "population_rms": 0.0039628601183230175,
+        "phase_rad": 0.16164621301886042,
+        "time_scaled": 0.0004590135474151764,
+        "shift_ps": 0.0010965277529430383,
+        "total": 6.3292186877713075,
+        "parameter_scaled": 6.192937294482685,
+        "parameter_physical": 0.030964686472413426
+      },
+      "trials": [
+        {
+          "radius": 0.003125,
+          "alpha": null,
+          "lambda_value": 0.00037664318911881606,
+          "feasible": false,
+          "predicted_reduction": 3.799568403225365e-09,
+          "step_blocks": {
+            "field": 0.0006919970258472776,
+            "population_rms": 2.044658475829052e-06,
+            "phase_rad": 7.981084762520197e-05,
+            "time_scaled": 1.675414285038217e-06,
+            "shift_ps": 4.002361741972589e-06,
+            "total": 0.003124999999999875,
+            "parameter_scaled": 0.0030463729839233043,
+            "parameter_physical": 1.5231864919616522e-05
+          }
+        },
+        {
+          "radius": 0.00078125,
+          "alpha": null,
+          "lambda_value": 0.0015544490886707694,
+          "feasible": false,
+          "predicted_reduction": 1.0188086359130646e-09,
+          "step_blocks": {
+            "field": 0.0002534508444597531,
+            "population_rms": 5.460680229616539e-07,
+            "phase_rad": 1.958603463865532e-05,
+            "time_scaled": 1.1849203703608266e-06,
+            "shift_ps": 2.830631205647136e-06,
+            "total": 0.0007812499999999118,
+            "parameter_scaled": 0.0007387346729124495,
+            "parameter_physical": 3.6936733645622476e-06
+          }
+        },
+        {
+          "radius": 0.0001953125,
+          "alpha": null,
+          "lambda_value": 0.006863397939074196,
+          "feasible": false,
+          "predicted_reduction": 2.8260361820394504e-10,
+          "step_blocks": {
+            "field": 0.00010085347704966211,
+            "population_rms": 1.4480719993626884e-07,
+            "phase_rad": 4.628934815767482e-06,
+            "time_scaled": 4.0885040214067416e-07,
+            "shift_ps": 9.766940764030886e-07,
+            "total": 0.00019531250000002774,
+            "parameter_scaled": 0.00016719429911916557,
+            "parameter_physical": 8.359714955958278e-07
+          }
+        },
+        {
+          "radius": 4.8828125e-05,
+          "alpha": null,
+          "lambda_value": 0.030223976680892096,
+          "feasible": true,
+          "predicted_reduction": 7.795297180753803e-11,
+          "step_blocks": {
+            "field": 3.0883436744854294e-05,
+            "population_rms": 3.725231761509528e-08,
+            "phase_rad": 1.1287582643439885e-06,
+            "time_scaled": 9.247459418259465e-08,
+            "shift_ps": 2.2091060173359763e-07,
+            "total": 4.8828124999990326e-05,
+            "parameter_scaled": 3.780363859916399e-05,
+            "parameter_physical": 1.8901819299581996e-07
+          },
+          "actual_reduction": 7.795052756479621e-11,
+          "rho": 0.9999686446496503,
+          "residual": 0.0027258677072221848,
+          "true_predicted_reduction": 7.79530506912929e-11,
+          "true_rho": 0.9999676327420888
+        }
+      ],
+      "accepted_trial": 3
+    },
+    {
+      "step": 18,
+      "residual": 0.0027258677072221848,
+      "calls": 19715,
+      "gauge": {
+        "matrix": [
+          [
+            0.8258778627792632,
+            -0.052631363404068494
+          ],
+          [
+            -0.18938502326836584,
+            0.2891837992129374
+          ]
+        ],
+        "condition": 3.2022142413273555,
+        "smallest_singular": 0.2673391185492411
+      },
+      "radius": 9.765625e-05,
+      "progress_window": {
+        "relative_decrease": 0.041987546367503015,
+        "good_rho_count": 5,
+        "label": "slow",
+        "stop": false
+      },
+      "coarse_dimension": 3094,
+      "cutoff": 384,
+      "coarse_rank": 3094,
+      "coarse_condition": 12776.976457827577,
+      "residual_outside_subspace": 0.15701510363118967,
+      "preconditioner_scope": "center-window Fourier subspace; outer field -I",
+      "center_window_ps": 1024.0,
+      "precondition_rebuilt": true,
+      "krylov_dimension": 68,
+      "arnoldi_linear_residual": 0.029610555018978912,
+      "true_newton_linear_residual": 0.029610096097924914,
+      "newton_blocks": {
+        "field": 1.2963156126192728,
+        "population_rms": 0.003962770125070461,
+        "phase_rad": 0.1616450490810686,
+        "time_scaled": 0.0004587126171687851,
+        "shift_ps": 0.0010958088670436432,
+        "total": 6.328977696700417,
+        "parameter_scaled": 6.1926875814911,
+        "parameter_physical": 0.0309634379074555
+      },
+      "trials": [
+        {
+          "radius": 9.765625e-05,
+          "alpha": null,
+          "lambda_value": 0.013467557705778108,
+          "feasible": true,
+          "predicted_reduction": 2.436908928488527e-10,
+          "step_blocks": {
+            "field": 5.517887078053688e-05,
+            "population_rms": 5.4487374430842406e-08,
+            "phase_rad": 2.572923975358815e-06,
+            "time_scaled": 1.850857103692228e-07,
+            "shift_ps": 4.4214733799449434e-07,
+            "total": 9.765625000000086e-05,
+            "parameter_scaled": 8.053184599939548e-05,
+            "parameter_physical": 4.026592299969774e-07
+          },
+          "actual_reduction": 2.436416366683246e-10,
+          "rho": 0.9997978743483096,
+          "residual": 0.002725778324443019,
+          "true_predicted_reduction": 2.4369071488680694e-10,
+          "true_rho": 0.9997986044790211
+        }
+      ],
+      "accepted_trial": 0
+    },
+    {
+      "step": 19,
+      "residual": 0.002725778324443019,
+      "calls": 22880,
+      "gauge": {
+        "matrix": [
+          [
+            0.8258827498674556,
+            -0.052639585457341743
+          ],
+          [
+            -0.1893923010940667,
+            0.2892174948719344
+          ]
+        ],
+        "condition": 3.201900697421486,
+        "smallest_singular": 0.267368153847665
+      },
+      "radius": 0.0001953125,
+      "progress_window": {
+        "relative_decrease": 0.007023737794855878,
+        "good_rho_count": 5,
+        "label": "stagnating",
+        "stop": true
+      }
+    }
+  ],
+  "code_sha256": {
+    "steady_parameters.py": "6ff080631ea3043c9ce8c61ea277a050cdae90ff898e846412d26abb51bd13b3",
+    "steady_bordered.py": "b4adbf083d1f680838d8d88f74cd9fcbc34527a812b26cbbff78fad6f5ae62c1",
+    "steady_hookstep.py": "55716e9e64bead400e04e60ed8fd2046130391b2554c02aa2f4846bcb5da58e0",
+    "steady_diagnostics.py": "41de26bc9b6a10926f5ab01a8ba476efd51c3c45db8009bf4ca4771682f7ca91",
+    "run_bordered_pilot.py": "a27eeb828a32462300135785f935d356f23f188066cc10fe98d3a638bc20355c"
+  },
+  "selected": {
+    "name": "pump",
+    "base": 0.05,
+    "scale": 0.005,
+    "unit": "W",
+    "derivative_norm_per_scaled_parameter": 0.010223544676131709,
+    "derivative_norm_per_physical_unit": 2.0447089352263417,
+    "halving_relative_difference": 2.928140403247316e-09,
+    "left_soft_coupling": 0.0003142743584524704,
+    "eta_projected": 0.030740253836439697,
+    "eta_full_denominator": 0.030740253836439697,
+    "soft20_coupling": [
+      0.000307085672193866,
+      0.0004848663083794797,
+      0.0004425066824011144,
+      0.0002983767644586564,
+      4.908593016327331e-05,
+      0.0004781567892678354,
+      0.00010227102799241662,
+      0.0005127354322074698,
+      0.0002393260946473561,
+      0.0002950529453637371,
+      7.912221764952643e-05,
+      0.0001711720142255506,
+      0.00011957974022191477,
+      0.00012169647075459603,
+      0.00014994435457063297,
+      0.00015369040071132862,
+      9.252850615732e-06,
+      0.00015917115914851614,
+      0.00012761027729583493,
+      0.00031427435845247047
+    ],
+    "bordered_sigma_min": 0.00029635887251910047,
+    "bordered_condition": 14122.573814888294,
+    "linear_parameter_change": -7.319218463784708,
+    "linear_state_step_norm": 1.5069603987498699
+  },
+  "certified_stable": false,
+  "bounds_scaled": [
+    -2,
+    2
+  ],
+  "selection": "largest normalized weakest-left coupling among reliable derivatives; full linear parameter step exceeds local bounds, so trust-region trial retains explicit bounds"
+}

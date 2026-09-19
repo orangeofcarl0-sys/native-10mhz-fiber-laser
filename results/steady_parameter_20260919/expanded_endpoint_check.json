@@ -1,0 +1,11 @@
+{
+  "physical_residual": 0.0017928006366390965,
+  "relative_field_residual": 0.002502403720851892,
+  "field_energy_nJ": 0.15817270652579277,
+  "population_gap": 0.00027995415120063427,
+  "wide_residual": 0.0017928065722655109,
+  "full_vector_relative_change": 0.0025777908076583572,
+  "outer_residual_norm": 3.267869397891411e-06,
+  "parameter_lower_margin_scaled": 4.548733730648976,
+  "parameter_upper_margin_scaled": 6.451266269351024
+}

@@ -1,0 +1,10 @@
+{
+  "physical_residual": 0.002725778324443016,
+  "wide_residual": 0.0027257784536932517,
+  "full_vector_relative_change": 0.00030455860242847524,
+  "outer_residual_norm": 5.870124716010128e-07,
+  "parameter_bound_margin_scaled": 1.5463330745424386e-05,
+  "population_min": 0.4698925317361471,
+  "population_max": 0.943602926733553,
+  "field_block_fraction": 0.9971944929798258
+}

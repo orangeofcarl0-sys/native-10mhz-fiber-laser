@@ -1,0 +1,40 @@
+{
+  "input": "results/steady_tail_20260919/tail_continuation.npz",
+  "source_verification": {
+    "bordered_pilot.json": {
+      "steady_parameters.py": true,
+      "steady_bordered.py": true,
+      "steady_hookstep.py": true,
+      "steady_diagnostics.py": true,
+      "run_bordered_pilot.py": true
+    },
+    "bordered_expanded.json": {
+      "steady_parameters.py": true,
+      "steady_bordered.py": true,
+      "steady_hookstep.py": true,
+      "steady_diagnostics.py": true,
+      "extend_bordered_pump.py": true
+    }
+  },
+  "excluded": "parameter_geometry_cache.npz: large reconstructable local cache",
+  "certified_stable": false,
+  "files": {
+    "bordered_endpoint_check.json": "129b510b83d952ce9746c89cc08699f1558404497d168185c17dbda2164ce75d",
+    "bordered_expanded.json": "1324b7be68f249abc2ec4b9a3df4dd0a6ec44939eca51dc64fe16df070401747",
+    "bordered_expanded.npz": "53ea05cfb0915e69b359344c75b9564196ab22772984b70d7b852c55b3e8e7ef",
+    "bordered_last_direction.npz": "b6d882d40e035d00faf2c03b7b5460c5745f85a42259e8544ec62b4b90f719d1",
+    "bordered_pilot.json": "f85bc70aa6913ad2c3c17265e06e3f8a66644416e7196e830bc658f509875ddb",
+    "bordered_pilot.npz": "a0e0721bdb0fa26cdcef5f7101d8f0d92738d1bfa64fcd0f1ca95a7a59ea5b17",
+    "executed_sources.zip": "73eb4cb45233ca8adba488e1e2c25205878f7d4171fb184af41cb81d344cf1c5",
+    "expanded_endpoint_check.json": "62a28e7038847f14e3e0537799edd296d5a8af81a7f742f47440cb974cb079a3",
+    "expanded_parameter_trace.json": "3023f85463945ce7d29622f86f5b31e67745570fc6430a0a3fa02bf62cc9b1d5",
+    "gdd_parameter_column.npz": "cee7704258ae38ebfdbed7e079c0d853601e1e0dde841d4063a50a274e091ef2",
+    "oc_parameter_column.npz": "86d3f119dd9152d08ebc899045a35ef9a41cd964df011f36312fea01a5b1bb38",
+    "parameter_geometry.json": "3c26176cb76dfcb4a472bc82c7e96ec5963f7407867e012a14e0fc71faf21194",
+    "parameter_geometry_modes.npz": "3521ea80a4e4e946954f606e226825b002ab8a78200cbb1547724cc0bf8326db",
+    "psat_parameter_column.npz": "fde92ea2cbd92ef67d39263b35bfb55830ab90e195fb4b22753c0cfb0a72c70e",
+    "pump_parameter_column.npz": "430a771fc723e2745cfbc7c00da597e656a35df56eb91183bedbb99833f56fec",
+    "report_qa.json": "46cd347b328dd500b1ef953d0ce2ff934e2e9e0e28f39f13894c470dcf86a569"
+  },
+  "hash_basis": "Git blob bytes; exact executed source bytes are preserved inside executed_sources.zip"
+}
