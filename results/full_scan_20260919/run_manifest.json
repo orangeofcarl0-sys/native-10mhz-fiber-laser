@@ -1,0 +1,55 @@
+{
+  "started_utc": "2026-09-19T01:48:16.886988+00:00",
+  "git_commit": "33fea24be4a9f5f6bf6025897c34e560e5a9cbad",
+  "code_sha256": {
+    "scan.py": "84a6fee5646d368b362ab0896ce1b290c1616cf14fcb56499330b9c187af6146",
+    "gpu_engine.py": "c1527d90c9f7eb0b070dd0fae7e0cfc0a56c15cbdc5a3f0a128c37cf622d30bb",
+    "spectral_engine.py": "ce4c4f3710b97b42fa26271dcbc72a02fda2d42ff8bc1d90cda43f80705923d7",
+    "gpu_kernels.py": "dfa4bc677bdca14aae8e9c08028d5092101344811536f148aca129850b4ed86f",
+    "config.py": "a7ef73098103a48e56f788e9da446546e20fb80efe903486f93f761ce95c5d1b",
+    "parameters/effective_parameters.json": "6a6d9d4bdc138af7fcf15d7449f0ddbe164a39ff1408bc494b0d4069f3efc6b3"
+  },
+  "backend": "GPU spectral FP64",
+  "case_count_per_grid": 640,
+  "grids": [
+    {
+      "tag": "",
+      "dt_ps": 0.5,
+      "n": 2048
+    },
+    {
+      "tag": "fine_",
+      "dt_ps": 0.125,
+      "n": 8192
+    }
+  ],
+  "round_limit": 600,
+  "completed_groups": [
+    "group_00",
+    "group_01",
+    "group_02",
+    "group_03",
+    "group_04",
+    "group_05",
+    "group_06",
+    "group_07",
+    "group_08",
+    "group_09",
+    "fine_group_00",
+    "fine_group_01",
+    "fine_group_02",
+    "fine_group_03",
+    "fine_group_04",
+    "fine_group_05",
+    "fine_group_06",
+    "fine_group_07",
+    "fine_group_08",
+    "fine_group_09"
+  ],
+  "status": "complete",
+  "scope": "Same paired initialization and fixed-grid stop criteria as previous map; not full-cavity certification",
+  "current_group": "fine_group_09",
+  "last_update_utc": "2026-09-19T02:20:36.796620+00:00",
+  "finished_utc": "2026-09-19T02:20:36.841142+00:00",
+  "last_invocation_seconds": 1939.8510378000065
+}

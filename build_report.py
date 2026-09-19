@@ -28,6 +28,27 @@ def read(path):
     return json.loads(path.read_text(encoding="utf8"))
 
 
+def readmat(path):
+    # Plotting does not need the large saved 16-round complex-field history.
+    return loadmat(
+        path,
+        simplify_cells=True,
+        variable_names=[
+            "trace",
+            "completed",
+            "c",
+            "oc",
+            "pumps",
+            "out",
+            "t",
+            "dt",
+            "source_group",
+            "source_index",
+            "factors",
+        ],
+    )
+
+
 coarse = sum([read(ROOT / f"group_{g:02d}.json") for g in range(10)], [])
 best = []
 datasets = {}
@@ -491,7 +512,7 @@ section(
 )
 plt.figure(figsize=(12, 5.5))
 for g, idx in [(2, 41), (3, 52), (8, 52)]:
-    m = loadmat(ROOT / f"group_{g:02d}.mat", simplify_cells=True)
+    m = readmat(ROOT / f"group_{g:02d}.mat")
     tr = m["trace"][: int(m["completed"][idx]), idx]
     plt.plot(
         np.arange(1, len(tr) + 1) / 10,
@@ -511,7 +532,7 @@ section(
     + "<p>保留从初态到600圈的完整历史。能量穿过目标带而没有停留，是未收敛的直接证据；不能只截取目标带内的一圈作为锁模输出结果。</p>",
 )
 for g in [3, 8]:
-    m = loadmat(ROOT / f"group_{g:02d}.mat", simplify_cells=True)
+    m = readmat(ROOT / f"group_{g:02d}.mat")
     idx = 52
     p = np.sum(abs(m["out"][idx]) ** 2, axis=0)
     t = m["t"]
@@ -521,7 +542,9 @@ for g in [3, 8]:
     plt.xlim(-150, 150)
     plt.xlabel("相对主峰时间 / ps")
     plt.ylabel("瞬时输出功率 / W")
-    plt.title(f'{topo(m["c"]["topology"])}：+0.2 ps²、OC 80%、pump 30 mW，第600圈快照')
+    plt.title(
+        f'{topo(m["c"]["topology"])}：+0.2 ps²、OC 80%、pump 30 mW，第{int(m["completed"][idx])}圈快照'
+    )
     plt.grid(alpha=0.2)
     section(
         f'{topo(m["c"]["topology"])} 的输出脉冲快照',
@@ -560,7 +583,7 @@ if longfiles:
         + f"<p>目前有{len(late_targets)}条延续轨迹在最后500圈同时保持目标能量和单主峰。若波形重复性未通过，只能列为末段目标单峰状态；确认呼吸态还需检查多周期重复性、场分布与更长记录，不能仅凭能量周期性命名。</p>",
     )
     for path in longfiles:
-        m = loadmat(path.with_suffix(".mat"), simplify_cells=True)
+        m = readmat(path.with_suffix(".mat"))
         g = int(m["source_group"])
         plt.figure(figsize=(12, 5.5))
         for i, factor in enumerate(m["factors"]):
@@ -660,6 +683,12 @@ if (ROOT / "best_candidate_validation.html").exists():
         "最低短时波动候选：延长演化、时间窗与网格验证",
         (ROOT / "best_candidate_validation.html").read_text(encoding="utf8"),
     )
+if (ROOT / "historical_sections.json").exists():
+    if longfiles or (ROOT / "best_candidate_validation.html").exists():
+        raise ValueError(
+            "Do not mix embedded historical sections with regenerated continuation sections"
+        )
+    sections.extend(read(ROOT / "historical_sections.json"))
 budget = read(ROOT / "steady_energy_budget.json")
 budgettable = []
 for fraction in OC:
@@ -719,7 +748,7 @@ for topology in TOPOLOGIES:
     )
 plt.figure(figsize=(12, 5.5))
 for g in [2, 7]:
-    m = loadmat(ROOT / f"group_{g:02d}.mat", simplify_cells=True)
+    m = readmat(ROOT / f"group_{g:02d}.mat")
     values = m["trace"][0, np.arange(8) * 8 + 1, 8]
     plt.plot(OC * 100, values, marker="o", lw=2, label=topo(TOPOLOGIES[g // 5]))
 plt.axhline(40, color="#955025", ls="--", label="Esat/τ = 40 W（模型尺度）")
@@ -786,21 +815,49 @@ if (ROOT / "adaptive_algorithm_validation.html").exists():
         (ROOT / "adaptive_algorithm_validation.html").read_text(encoding="utf8"),
     )
 if (ROOT / "p1p2_algorithm_validation.html").exists():
-    sections.append(("共享增益卫星扰动与 GPU 计算路径验证", (ROOT / "p1p2_algorithm_validation.html").read_text(encoding="utf8")))
+    sections.append(
+        (
+            "共享增益卫星扰动与 GPU 计算路径验证",
+            (ROOT / "p1p2_algorithm_validation.html").read_text(encoding="utf8"),
+        )
+    )
 if (ROOT / "gpu_optimization_validation.html").exists():
-    sections.append(("GPU频谱传播、融合内核与工作流验证", (ROOT / "gpu_optimization_validation.html").read_text(encoding="utf8")))
+    sections.append(
+        (
+            "GPU频谱传播、融合内核与工作流验证",
+            (ROOT / "gpu_optimization_validation.html").read_text(encoding="utf8"),
+        )
+    )
+if (ROOT / "full_run_validation.html").exists():
+    sections.append(
+        (
+            "新GPU算法的完整重算与历史结果对照",
+            (ROOT / "full_run_validation.html").read_text(encoding="utf8"),
+        )
+    )
+    title, content = sections[0]
+    sections[0] = (
+        title,
+        '<p class="callout">当前主地图、汇总与数据导出已更新为新GPU算法的完整重算结果。第12–20节保留历史长程验证并标注来源；本次计算覆盖与新旧对照见末节。</p>'
+        + content,
+    )
 css = """*{box-sizing:border-box}body{margin:0;background:#edf2f6;color:#182d3d;font-family:"Microsoft YaHei",sans-serif;line-height:1.75}header{background:#123d54;color:white;padding:26px max(5vw,20px)}main{max-width:1250px;margin:auto;padding:22px}section{background:white;border-radius:12px;padding:34px;margin:0 0 24px;box-shadow:0 2px 14px #18364a08}h1{font-size:27px;margin:0}h2{font-size:26px;line-height:1.4}h3{font-size:22px;margin:0 0 20px;border-left:5px solid #087fa7;padding-left:14px}p{margin:15px 0}img{width:100%;height:auto;display:block}table{border-collapse:collapse;width:100%;font-size:14px}td,th{padding:10px;border-bottom:1px solid #dce5eb;text-align:left}th{background:#e9f1f6;color:#17445c}td{vertical-align:top}.scroll{overflow:auto}.cards{display:grid;grid-template-columns:repeat(4,1fr);gap:12px}.cards div{padding:17px;background:#f0f6fa;border-radius:8px}.cards b{display:block;font-size:30px;color:#087fa7}.callout{padding:18px;border-left:4px solid #d98a2d;background:#fff4e4}.routes,.formula{background:#edf6fa;padding:16px}.controls{display:flex;gap:18px;flex-wrap:wrap;position:sticky;top:0;background:white;padding:12px;z-index:2}select,input,button{font:inherit;padding:8px;border:1px solid #b9cbd5;border-radius:5px}input{max-width:100%}button{background:#0a6b8c;color:white;cursor:pointer;margin:10px}nav{display:flex;gap:15px;flex-wrap:wrap}nav a{color:#d8f1ff}a{color:#087fa7}.eyebrow{color:#547082}footer{text-align:center;padding:20px;color:#637886}[hidden]{display:none!important}@media(max-width:650px){main{padding:10px}section{padding:18px}.cards{grid-template-columns:repeat(2,1fr)}h2{font-size:22px}.controls{position:static;gap:6px}}@media print{body{background:white}section{box-shadow:none;break-inside:avoid}.controls,button,input{display:none}.map[hidden]{display:block!important}}"""
 script = """const data=JSON.parse(document.getElementById('payload').textContent);function update(){const g=Number(document.getElementById('topo').value)*5+Number(document.getElementById('gdd').value),m=document.getElementById('metric').value;document.querySelectorAll('.map').forEach(x=>x.hidden=x.dataset.map!==g+'_'+m)}['topo','gdd','metric'].forEach(x=>document.getElementById(x).onchange=update);update();function rows(){const q=document.getElementById('search').value.toLowerCase();const d=data.filter(r=>(r.id+' '+r.topology+' '+(r.GDD_ps2>=0?'+':'')+r.GDD_ps2.toFixed(1)).toLowerCase().includes(q));document.getElementById('data-table').innerHTML='<div class="scroll"><table><tr>'+['编号','顺序','OC','GDD/ps²','pump/mW','平均能量/nJ','末圈峰数','CV','状态'].map(x=>'<th>'+x+'</th>').join('')+'</tr>'+d.map(r=>'<tr>'+[r.id,r.topology,Math.round(r.oc*100)+'%',r.GDD_ps2,r.pump_mW,r.numerical_pass?(r.energy_mean_pJ/1000).toFixed(4):'未解析',r.numerical_pass?r.peaks:'—',r.numerical_pass?r.energy_cv.toExponential(2):'—',r.screen_candidate?'初筛通过':r.numerical_pass?'未通过稳定目标组合':r.status].map(x=>'<td>'+x+'</td>').join('')+'</tr>').join('')+'</table></div>'}document.getElementById('search').oninput=rows;rows();document.getElementById('download').onclick=()=>{const keys=Object.keys(data[0]);const text='\\uFEFF'+[keys.join(','),...data.map(r=>keys.map(k=>JSON.stringify(r[k])).join(','))].join('\\r\\n');const a=document.createElement('a');a.href=URL.createObjectURL(new Blob([text],{type:'text/csv;charset=utf-8'}));a.download='map_results.csv';a.click();URL.revokeObjectURL(a.href)};"""
 body = "".join(
     f'<section id="s{i+1}"><h3>{i+1:02d}　{title}</h3>{content}</section>'
     for i, (title, content) in enumerate(sections)
 )
+data_section = next(
+    i + 1 for i, (title, _) in enumerate(sections) if title == "完整参数表与数据导出"
+)
 page = (
     '<!doctype html><html lang="zh-CN"><meta charset="utf-8"><meta name="viewport" content="width=device-width,initial-scale=1"><title>20.42m 双拓扑色散能量地图</title><style>'
     + css
     + '</style><header><h1>原生10 MHz｜0.1–0.5 nJ 双拓扑搜索</h1><nav><a href="#s1">结果</a><a href="#s2">腔长</a><a href="#s6">地图</a><a href="#s'
+    + str(data_section)
+    + '">数据</a><a href="#s'
     + str(len(sections))
-    + '">数据</a></nav></header><main>'
+    + '">最新验证</a></nav></header><main>'
     + body
     + '</main><footer>可离线分发 · 图像与结果数据全部内嵌 · 仿真结果不等同实物认证</footer><script type="application/json" id="payload">'
     + json.dumps(best, ensure_ascii=False)
