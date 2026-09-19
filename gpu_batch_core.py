@@ -86,9 +86,13 @@ def absorber(a, q, c, dt):
             hostnp.float64(dt),
         ),
     )
-    assert np.min(transmission) > 0
+    # Invalid transmission becomes NaN and is checked on device by the resident runner.
     metrics = np.stack([power.sum(axis=1) * dt, power.max(axis=1), minimum], axis=1)
-    return a * np.sqrt(transmission[:, None, :]), q, metrics
+    return (
+        a * np.sqrt(np.where(transmission > 0, transmission, np.nan)[:, None, :]),
+        q,
+        metrics,
+    )
 
 
 class BatchEngine:
@@ -124,8 +128,9 @@ class BatchEngine:
         taus = []
         for j in range(steps):
             inv = pop[:, j].copy()
+            spectrum_in = fft(R.T @ a, axis=-1)
             old = (
-                np.sum(np.sum(abs(fft(a, axis=-1)) ** 2, axis=1) * e.profile, axis=1)
+                np.sum(np.sum(abs(spectrum_in) ** 2, axis=1) * e.profile, axis=1)
                 * self.dt
                 * 1e-12
                 * e.rep
@@ -135,12 +140,13 @@ class BatchEngine:
                 :, None
             ] * e.profile
             hh = half[None, :, :] * np.exp(gain[:, None, :] * dz / 4)
-            a = R @ ifft(hh * fft(R.T @ a, axis=-1), axis=-1)
+            a = R @ ifft(hh * spectrum_in, axis=-1)
             a = kerr(a, gamma * dz)
-            a = R @ ifft(hh * fft(R.T @ a, axis=-1), axis=-1)
+            spectrum_out = hh * fft(R.T @ a, axis=-1)
+            a = R @ ifft(spectrum_out, axis=-1)
             pmid = pump * np.exp(-c["alpha_p_m"] * (1 - inv) * dz / 2)
             new = (
-                np.sum(np.sum(abs(fft(a, axis=-1)) ** 2, axis=1) * e.profile, axis=1)
+                np.sum(np.sum(abs(spectrum_out) ** 2, axis=1) * e.profile, axis=1)
                 * self.dt
                 * 1e-12
                 * e.rep
@@ -157,7 +163,8 @@ class BatchEngine:
                 / e.ions
             )
             equilibrium = A / B
-            pop[:, j] = inv + (equilibrium - inv) * (-np.expm1(-B / e.rep))
+            if c.get("gain_mode", "dynamic") != "frozen":
+                pop[:, j] = inv + (equilibrium - inv) * (-np.expm1(-B / e.rep))
             pump *= np.exp(-c["alpha_p_m"] * (1 - inv) * dz)
             gaps.append(abs(inv - equilibrium))
             taus.append(1 / B)

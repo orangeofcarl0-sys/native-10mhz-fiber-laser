@@ -11,6 +11,7 @@ import numpy as np
 from scipy.signal import find_peaks
 from scipy.io import savemat
 from diagnostics import align
+from shared_gain import integrated_stokes
 from adaptive_solver import (
     AdaptiveSolver,
     NumericalLimit,
@@ -76,6 +77,12 @@ def classify(fields, populations, dt, relaxation_age=0.0, max_period=16):
         ]
     )
     metrics = dict(
+        integrated_stokes_mean=np.mean(
+            [integrated_stokes(a) for a in f], axis=0
+        ).tolist(),
+        integrated_stokes_span=np.ptp(
+            [integrated_stokes(a) for a in f], axis=0
+        ).tolist(),
         energy_mean_pJ=float(energy.mean()),
         energy_cv=float(energy.std() / max(energy.mean(), 1e-250)),
         energy_min_pJ=float(energy.min()),

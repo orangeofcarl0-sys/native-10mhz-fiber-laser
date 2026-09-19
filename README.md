@@ -80,6 +80,34 @@ python build_report.py
 
 ## 可选 GPU
 
+### P1/P2 新增验证路径
+
+`shared_gain.py` 把多个远端时间窗口接到同一份 EDF 纵向反转上；原 `BatchEngine`
+仍表示互不相关的独立腔，二者不可混用。`close_satellite` 提供同窗相干扰动。
+`attractor_search.classify` 新增积分 Stokes 均值与跨度，保留复场、周期和纵向反转判据。
+
+```sh
+python -m unittest test_adaptive test_shared_gain -v
+python validate_satellites.py
+python validate_gpu.py
+python validate_resident.py
+python build_p1p2_report.py
+```
+
+`validate_gpu.py` 和 `validate_resident.py` 需要可用 CuPy/CUDA（`build_p1p2_report.py` 本身不需要 GPU，但读取其结果）。
+`ResidentEngine(c, dt, a, pop, q, pumps, oc).run(rounds)` 返回紧凑诊断，
+`checkpoint()` 显式取回场；检查 `failed` 后才能使用结果。它是 FP64 固定网格初筛接口，
+没有替代 CPU 自适应回放，也尚未自动接入原 `scan.py`。
+
+`floquet.multipliers` 是有收敛门槛的通用实返回映射工具：状态必须无量纲化，
+返回映射须固定网格、去除共同相位/时间规范，周期轨道需组成完整一周期。
+通过 `neutral_vectors` 提供相位/时间切向量；正式使用需比较差分步长和 Arnoldi 子空间。
+目前仅完成已知线性映射验证，**没有激光腔 Floquet 稳定性结果**。
+
+32圈共享增益扰动只观察到卫星比例短时下降，不能认证长期单脉冲。
+小批量 GPU 常驻计时没有显著一致加速；记录见 `results/p1p2_validation/`。
+CNT prefix、FP32、自动多保真调度尚未实施。
+
 自行安装与显卡、CUDA 驱动/运行时匹配的 CuPy。CPU 安装不包含 CuPy，也不依赖任何本机 MATLAB CUDA DLL。
 
 ```powershell

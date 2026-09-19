@@ -1,0 +1,26 @@
+[
+  {
+    "topology": "OC_CNT",
+    "field_relative_error": 0.0,
+    "seconds_median": {
+      "host": 1.013805599999614,
+      "resident": 0.9698578999959864
+    },
+    "cases": 8,
+    "rounds": 10,
+    "samples": 2048,
+    "note": "Resident timing includes boundary diagnostics and final checkpoint"
+  },
+  {
+    "topology": "CNT_OC",
+    "field_relative_error": 0.0,
+    "seconds_median": {
+      "host": 0.9216442000033567,
+      "resident": 0.9652424000087194
+    },
+    "cases": 8,
+    "rounds": 10,
+    "samples": 2048,
+    "note": "Resident timing includes boundary diagnostics and final checkpoint"
+  }
+]
