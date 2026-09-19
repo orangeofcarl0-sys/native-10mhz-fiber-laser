@@ -7,16 +7,35 @@ from steady_support import SUPPORTS,residual_support
 from steady_preconditioner import spectral_coordinates
 from steady_window import center,embed
 
-def build_factored(residual,x,r,label='A'):
+def build_factored(residual,x,r,label='A',difference='forward',epsilon=1e-6,audit=None):
+    if difference not in ('forward','central') or epsilon<=0:
+        raise ValueError('Invalid coarse difference method/step')
     localized,cutoff=SUPPORTS[label];n=residual.n//2 if localized else residual.n
     restrict0,lift0,size=spectral_coordinates(n,residual.cells,cutoff)
     restrict=(lambda v:restrict0(center(v,n))) if localized else restrict0
     lift=(lambda v:embed(lift0(v),n)) if localized else lift0
     matrix=np.empty((size,size))
+    if audit is not None:
+        gradient=np.zeros(size);projected_gradient=np.zeros(size);forward_gradient=np.zeros(size);frobenius2=0.
     for start in range(0,size,16):
         count=min(16,size-start);basis=np.zeros((count,size));basis[np.arange(count),start+np.arange(count)]=1.
-        response=residual.batch(np.array([x+1e-6*lift(v) for v in basis]))
-        for j,value in enumerate(response):matrix[:,start+j]=restrict((value-r)/1e-6)
+        perturbations=np.array([epsilon*lift(v) for v in basis])
+        plus=residual.batch(x+perturbations)
+        if difference=='central' or audit is not None:
+            minus=residual.batch(x-perturbations)
+            central=(plus-minus)/(2*epsilon)
+        responses=central if difference=='central' else (plus-r)/epsilon
+        for j,value in enumerate(responses):matrix[:,start+j]=restrict(value)
+        if audit is not None:
+            for j,value in enumerate(central):
+                gradient[start+j]=np.dot(value,r)
+                projected_gradient[start+j]=np.dot(restrict(value),restrict(r))
+                forward_gradient[start+j]=np.dot((plus[j]-r)/epsilon,r)
+                frobenius2+=np.dot(value,value)
+    if audit is not None:
+        audit.update(gradient=gradient,projected_gradient=projected_gradient,
+                     forward_gradient=forward_gradient,frobenius_norm=float(np.sqrt(frobenius2)),
+                     gradient_difference='central',gradient_epsilon=epsilon)
     norm1=np.linalg.norm(matrix,1)
     try:
         with warnings.catch_warnings():
@@ -39,5 +58,6 @@ def build_factored(residual,x,r,label='A'):
         c=restrict(v);return lift(solve(c))-(v-lift(c))
     return LinearOperator((len(x),len(x)),matvec=apply,dtype=float),dict(
         support_label=label,coarse_dimension=size,factorization=mode,
+        coarse_difference=difference,coarse_epsilon=epsilon,
         coarse_condition_1_estimate=float(1/max(rcond,1e-300)),factor_probe_residual=probe,
         **residual_support(residual,r,label))

@@ -1,0 +1,48 @@
+{
+  "source_verification": {
+    "down_270": {
+      "run_merit_geometry.py": true,
+      "steady_support_lu.py": true,
+      "steady_support.py": true,
+      "steady_hookstep.py": true,
+      "steady_state.py": true,
+      "steady_parameters.py": true,
+      "input": true
+    },
+    "down_275": {
+      "run_merit_geometry.py": true,
+      "steady_support_lu.py": true,
+      "steady_support.py": true,
+      "steady_hookstep.py": true,
+      "steady_state.py": true,
+      "steady_parameters.py": true,
+      "input": true
+    },
+    "up_2775": {
+      "run_merit_geometry.py": true,
+      "steady_support_lu.py": true,
+      "steady_support.py": true,
+      "steady_hookstep.py": true,
+      "steady_state.py": true,
+      "steady_parameters.py": true,
+      "input": true
+    }
+  },
+  "notes": [
+    "Inputs are prior published endpoints; this experiment never advances states.",
+    "Raw execution source bytes preserved in executed_sources.zip; published file hashes may use Git-normalized bytes."
+  ],
+  "files": {
+    "down_270.json": "a0b61215c741747036b505deda054c3a190c9e00797d8526285243bbae823b68",
+    "down_270_directions.npz": "6667de6a44dbfb346984cc06b13baa1674d7f27654ee216c930ec5723fd00ac9",
+    "down_275.json": "edee4209f25a035a49d9a40afbbe775ed4b1754062e2e851d782a51d258c2ba7",
+    "down_275_directions.npz": "4889c14ad8f711238e5d3146f464b317002bb9efdf589f0fb4419874c6bdc47f",
+    "executed_sources.zip": "047b245ee72e2f3be460cec5fef18f36cb4d08e26c9421a1928d5383f893b078",
+    "report_qa.json": "256f13638dc568d8310c4a73ab70b601eb0c1b0fc9232ee166258cef03e9d748",
+    "step_checks.json": "e76b5c1810161922bdeb395c0912a8f49ae71511bf414bb84c7e26a95a88f044",
+    "up_2775.json": "3603d44a19712137d33f0e094bc939f235829f20d62a6e289d93ae1176cbd4ef",
+    "up_2775_directions.npz": "2bd4937c392bf615beef9510dd7847c6ae3af851960f1ee19f0c519b97fd6f16",
+    "up_2775_forward.json": "82dba9e842492aaa7b05c9eda4c82528debbf11e3c9593b7e3757a54bbe00f4a"
+  },
+  "hash_scope": "Published Git blobs; code_sha256 records refer to raw execution bytes retained in executed_sources.zip."
+}

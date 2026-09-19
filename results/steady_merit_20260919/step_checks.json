@@ -1,0 +1,56 @@
+[
+  {
+    "name": "down_270",
+    "probe": "initial",
+    "residual": 0.001288440518770633,
+    "replay_difference": 0.0,
+    "field_squared": 1.6382192748612884e-06,
+    "population_squared": 2.1859692467935066e-08,
+    "gauge_squared": 3.0807145958466776e-15
+  },
+  {
+    "name": "down_270",
+    "probe": "gradient",
+    "residual": 0.0012820642729866754,
+    "replay_difference": 0.0,
+    "field_squared": 1.6141291679178125e-06,
+    "population_squared": 2.955862577646155e-08,
+    "gauge_squared": 1.0063745783790109e-12
+  },
+  {
+    "name": "down_270",
+    "probe": "hookstep",
+    "residual": 0.0012862956864708728,
+    "replay_difference": 0.0,
+    "field_squared": 1.6324161445922198e-06,
+    "population_squared": 2.2140442651957276e-08,
+    "gauge_squared": 5.789396926387498e-15
+  },
+  {
+    "name": "down_275",
+    "probe": "initial",
+    "residual": 0.001295029648404096,
+    "replay_difference": 0.0,
+    "field_squared": 1.6572097150758833e-06,
+    "population_squared": 1.9891958094055985e-08,
+    "gauge_squared": 1.1707569734603827e-13
+  },
+  {
+    "name": "down_275",
+    "probe": "gradient",
+    "residual": 0.0012830449721369418,
+    "replay_difference": 0.0,
+    "field_squared": 1.6114523787751052e-06,
+    "population_squared": 3.4750482631728605e-08,
+    "gauge_squared": 1.5391190520755877e-12
+  },
+  {
+    "name": "down_275",
+    "probe": "hookstep",
+    "residual": 0.00129134651559024,
+    "replay_difference": 0.0,
+    "field_squared": 1.6472116296408772e-06,
+    "population_squared": 2.036399583767783e-08,
+    "gauge_squared": 1.9784849895107056e-13
+  }
+]

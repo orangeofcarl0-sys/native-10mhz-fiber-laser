@@ -1,0 +1,16 @@
+{
+  "sections": 9,
+  "images": 7,
+  "broken": 0,
+  "externalAssets": 0,
+  "downloadName": "down_270",
+  "embeddedJSONValid": true,
+  "mobileWidth": 430,
+  "errors": [],
+  "downloadFiles": [
+    "down_270.json",
+    "down_275.json",
+    "up_2775.json",
+    "step_checks.json"
+  ]
+}

@@ -1,0 +1,128 @@
+{
+  "name": "up_2775",
+  "pump_W": 0.02775,
+  "physical_residual": 0.0014278544988169197,
+  "input": "results/steady_fixed_pump_20260919/up_2775.npz",
+  "input_sha256": "1362ba6f183c538512bacd562762b7e506547235fe7f5e85f0258d8b1d0ba397",
+  "code_sha256": {
+    "run_merit_geometry.py": "8c6fa11dbe301ba879a247e9b9a9349ad73a986e19b70a045a072c8e1e243c8f",
+    "steady_support_lu.py": "72e8e7a5a43ce15c29ff229097acbf6b5ffba133541032d9a71ef015e01727f3",
+    "steady_support.py": "b70ce6a855d8ba77ee4ca2e48de77875c13fcd385a475a3d0130e264d379ab90",
+    "steady_hookstep.py": "fed4093e3f98f35308b9b202f87267e0f4cfa2477f9468852fe13b578206db92",
+    "steady_state.py": "b9982d4795a7a0afd66ca6825f96ad53501c28306985922272c21773322b0c3b",
+    "steady_parameters.py": "6ff080631ea3043c9ce8c61ea277a050cdae90ff898e846412d26abb51bd13b3"
+  },
+  "build_seconds": 309.0493417000107,
+  "coarse": {
+    "support_label": "C",
+    "coarse_dimension": 6165,
+    "factorization": "SVD fallback",
+    "coarse_difference": "forward",
+    "coarse_epsilon": 1e-06,
+    "coarse_condition_1_estimate": 1574181396.4996605,
+    "factor_probe_residual": 1.1302645121067071e-10,
+    "temporal_relative": 0.0,
+    "spectral_relative": 0.1257249767924062,
+    "coarse_relative": 0.9920651340565035,
+    "orthogonality": 0.0,
+    "squared_partition": 0.9999999999999996,
+    "support_ps": 2048.0,
+    "bandwidth_GHz": 375.0
+  },
+  "linear": {
+    "krylov": 80,
+    "predicted_relative": 0.007468391079548401,
+    "newton_norm": 18563.06288271974,
+    "checks": [
+      {
+        "epsilon": 0.0001,
+        "relative": 0.07125676760667912
+      },
+      {
+        "epsilon": 1e-05,
+        "relative": 0.02269394371951576
+      },
+      {
+        "epsilon": 1e-06,
+        "relative": 0.02877212890149814
+      }
+    ]
+  },
+  "forward_control": {
+    "coarse": {
+      "support_label": "C",
+      "coarse_dimension": 6165,
+      "factorization": "SVD fallback",
+      "coarse_difference": "forward",
+      "coarse_epsilon": 1e-06,
+      "coarse_condition_1_estimate": 1574181396.4996605,
+      "factor_probe_residual": 1.1302645121067071e-10,
+      "temporal_relative": 0.0,
+      "spectral_relative": 0.1257249767924062,
+      "coarse_relative": 0.9920651340565035,
+      "orthogonality": 0.0,
+      "squared_partition": 0.9999999999999996,
+      "support_ps": 2048.0,
+      "bandwidth_GHz": 375.0
+    },
+    "linear": {
+      "krylov": 80,
+      "predicted_relative": 0.007468391079548401,
+      "newton_norm": 18563.06288271974,
+      "checks": [
+        {
+          "epsilon": 0.0001,
+          "relative": 0.07125676760667912
+        },
+        {
+          "epsilon": 1e-05,
+          "relative": 0.02269394371951576
+        },
+        {
+          "epsilon": 1e-06,
+          "relative": 0.02877212890149814
+        }
+      ]
+    },
+    "build_seconds": 309.0493417000107
+  },
+  "central_control": {
+    "coarse": {
+      "support_label": "C",
+      "coarse_dimension": 6165,
+      "factorization": "SVD fallback",
+      "coarse_difference": "central",
+      "coarse_epsilon": 1e-06,
+      "coarse_condition_1_estimate": 1576823071.623298,
+      "factor_probe_residual": 1.184409171582083e-10,
+      "temporal_relative": 0.0,
+      "spectral_relative": 0.1257249767924062,
+      "coarse_relative": 0.9920651340565035,
+      "orthogonality": 0.0,
+      "squared_partition": 0.9999999999999996,
+      "support_ps": 2048.0,
+      "bandwidth_GHz": 375.0
+    },
+    "linear": {
+      "krylov": 80,
+      "predicted_relative": 0.007464192249686336,
+      "newton_norm": 18552.660759444927,
+      "checks": [
+        {
+          "epsilon": 0.0001,
+          "relative": 0.0714682467740406
+        },
+        {
+          "epsilon": 1e-05,
+          "relative": 0.022673918719156926
+        },
+        {
+          "epsilon": 1e-06,
+          "relative": 0.028492711452494036
+        }
+      ]
+    },
+    "build_seconds": 401.59772359998897
+  },
+  "evaluations": 18828
+}

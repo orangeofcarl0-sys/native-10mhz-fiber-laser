@@ -31,3 +31,5 @@ Newton全局化：见14_hookstep.md。先重放并独立验证第8–11步导数
 2026-09-19: leakage controls, fixed-pump profiles and positive 0.9 nJ energy closure; see 17_leakage_energy.md.
 
 2026-09-19: fixed-pump linear support benchmark and narrow warm-start search; energy stays outside merit. See18_fixed_pump_linear.md.
+
+Current continuation: three fixed-state merit/curvature/coarse-difference controls; see19_merit_geometry.md. No extra nonlinear search without diagnostic justification.
