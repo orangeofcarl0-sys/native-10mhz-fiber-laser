@@ -1,0 +1,21 @@
+{
+  "support": "C",
+  "factor_seconds": 122.54567760002101,
+  "evaluations": 6409,
+  "LU_linear_relative": 0.00044232409982784213,
+  "SVD_linear_relative": 0.0004462364284529256,
+  "LU_central_relative": 0.0006295816273644109,
+  "SVD_central_relative": 0.0006297168032860696,
+  "support_label": "C",
+  "coarse_dimension": 6165,
+  "factorization": "LU",
+  "coarse_condition_1_estimate": 2006008.3662492405,
+  "factor_probe_residual": 4.305901337314796e-12,
+  "temporal_relative": 0.0,
+  "spectral_relative": 0.13926708671802535,
+  "coarse_relative": 0.9902548553564756,
+  "orthogonality": 0.0,
+  "squared_partition": 1.0000000000000004,
+  "support_ps": 2048.0,
+  "bandwidth_GHz": 375.0
+}

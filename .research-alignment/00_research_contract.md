@@ -29,3 +29,5 @@ Newton全局化：见14_hookstep.md。先重放并独立验证第8–11步导数
 当前2.048 ns末态作为唯一入口。先重建3093维局域投影雅可比并保存最弱20个左右模、残差系数、Newton系数；同时通过完整输出列计算原始merit的子空间梯度，不能只用Jc^T Rc判断全系统驻点。四个参数为pump、GDD、OC、CNT Psat=Esat/tau，固定tau；GDD通过SMF/NDF长度分配改变并保持20.42 m。尺度分别5mW、0.02ps²、0.05、4W；中心差分q步长1e-3及5e-4核对。比较归一化耦合与带边框矩阵条件，不按不同单位的裸导数排序。参数释放仅在±2尺度内，先作局部求根试验，不把未认证末态当作分支种子，也不把有耦合当作fold证明。
 
 2026-09-19: leakage controls, fixed-pump profiles and positive 0.9 nJ energy closure; see 17_leakage_energy.md.
+
+2026-09-19: fixed-pump linear support benchmark and narrow warm-start search; energy stays outside merit. See18_fixed_pump_linear.md.

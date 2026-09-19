@@ -262,3 +262,25 @@ python build_energy_report.py
 The fixed-pump controls have equal8-step budgets;35/30/27.744mW share the saved final guess, while40mW uses its saved earlier endpoint. Intermediate historical fields were not saved. The0.9nJ trial has20 steps and does not automatically continue to smaller energies without root certification.
 
 [Offline leakage/energy report](docs/leakage_energy_report.html) documents a negative result for the proposed weak-mode thresholds at the latest endpoint. The0.9nJ20-step trial reaches0.90256nJ but worsens physical closure to0.003273; no nonzero root or stability certification is claimed.
+
+
+## Fixed-pump support and directional-derivative controls
+
+[Offline report](docs/fixed_pump_linear_report.html) and [records](results/steady_fixed_pump_20260919) separate energy tuning from physical period-one closure. The fixed-pump residual has no output-energy row. A/B/C preconditioners compare localized time support, wider bandwidth, and full time support on the identical saved state. At 240 vectors, independently checked linear residuals are 2.193%, 2.012%, and 0.063%, respectively. These are linear benchmarks, not nonlinear roots.
+
+A subsequent forward-difference pilot exposed inconsistent large Newton directions: a 0.78% Arnoldi prediction became approximately 14% under centered directional verification. At that same state, centered differences with normalized perturbation 1e-5 give 0.78–0.96% across three verification scales. The formal inner solve therefore uses centered Jv and a separate 1e-6 verification step, with a 1% acceptance gate for the linear solve. Stale coarse factors are refreshed at the same state; failed verification after refresh stops explicitly. LU factors the same projected Jacobian as the SVD baseline, with condition estimation, backsolve checks, and an SVD fallback.
+
+With CuPy available, use a fresh `LASER_OUTPUT_DIR`:
+
+```text
+python run_support_benchmark.py
+python run_fixed_pump_deep.py
+python check_fixed_deep.py
+python build_fixed_pump_report.py
+```
+
+The report also requires `jvp_consistency.json`: copy the published `forward_quality_gate/` into the output directory and run `run_jvp_consistency.py` to reproduce that same-state control. The input is the archived forward pilot anchor, never the newly overwritten central-run anchor. To reproduce the historical forward pilot itself, use its archived execution sources; the current driver uses centered differences. Input states are the published tail template and `steady_energy_20260919/fixed_final.npz`.
+
+Each formal pump point permits 30 nonlinear steps and 240 Arnoldi vectors; the old 2% progress stop is disabled. The supplied warm path and finite budgets do not establish a stationary branch or residual minima. Root threshold remains 1e-7; no outer energy secant/Brent solve is permitted on unconverged states. Numerical root closure and physical stability certification remain distinct.
+
+Formal result: four points complete30steps with independently checked linear errors below1%, but physical residuals remain1.29e-3–1.43e-3. The27.75/28mW points stop for linear-accuracy limits. No period-one root was obtained. Endpoint recomputation is exact; doubling the window changes full residual vectors by0.026–0.049%.

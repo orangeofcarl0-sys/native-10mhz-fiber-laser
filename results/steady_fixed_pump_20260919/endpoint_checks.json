@@ -1,0 +1,56 @@
+[
+  {
+    "name": "anchor",
+    "physical_residual": 0.0014306562121223494,
+    "wide_residual": 0.0014306563148824085,
+    "full_vector_relative_change": 0.0003697455249456178,
+    "recorded_difference": 0.0,
+    "numerical_root": false,
+    "certified_stable": false
+  },
+  {
+    "name": "down_275",
+    "physical_residual": 0.001295029648404096,
+    "wide_residual": 0.0012950298039199803,
+    "full_vector_relative_change": 0.0004883274811322721,
+    "recorded_difference": 0.0,
+    "numerical_root": false,
+    "certified_stable": false
+  },
+  {
+    "name": "down_2725",
+    "physical_residual": 0.0013125337412164292,
+    "wide_residual": 0.0013125337976401675,
+    "full_vector_relative_change": 0.0003675412801328616,
+    "recorded_difference": 0.0,
+    "numerical_root": false,
+    "certified_stable": false
+  },
+  {
+    "name": "down_270",
+    "physical_residual": 0.001288440518770633,
+    "wide_residual": 0.0012884405494121415,
+    "full_vector_relative_change": 0.0002619555650504037,
+    "recorded_difference": 0.0,
+    "numerical_root": false,
+    "certified_stable": false
+  },
+  {
+    "name": "up_2775",
+    "physical_residual": 0.0014278544988169197,
+    "wide_residual": 0.0014278546799316712,
+    "full_vector_relative_change": 0.00047237879013404545,
+    "recorded_difference": 0.0,
+    "numerical_root": false,
+    "certified_stable": false
+  },
+  {
+    "name": "up_280",
+    "physical_residual": 0.001693161943905231,
+    "wide_residual": 0.0016931620966478549,
+    "full_vector_relative_change": 0.00039836011142732283,
+    "recorded_difference": 0.0,
+    "numerical_root": false,
+    "certified_stable": false
+  }
+]

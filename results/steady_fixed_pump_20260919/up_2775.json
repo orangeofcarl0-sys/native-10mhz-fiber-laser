@@ -1,0 +1,574 @@
+{
+  "name": "up_2775",
+  "pump_W": 0.02775,
+  "parent": "anchor",
+  "status": "linear_accuracy_limited",
+  "physical_residual": 0.0014278544988169197,
+  "output_energy_nJ": 0.9138511869589141,
+  "relative_field_residual": 0.0020066748475415456,
+  "population_gap": 4.3042454848429834e-05,
+  "peaks": 1,
+  "time_edge": 5.68620956336334e-10,
+  "spectral_edge": 1.420257724629235e-12,
+  "linear_fraction_below_one_percent": 0.8571428571428571,
+  "seconds": 554.0293269999966,
+  "evaluations": 13132,
+  "history": [
+    {
+      "step": 0,
+      "residual": 0.001430271644214251,
+      "calls": 1,
+      "gauge": {
+        "matrix": [
+          [
+            0.6895992296250285,
+            -0.1172454237565403
+          ],
+          [
+            -0.2060119344501059,
+            0.19157432610729375
+          ]
+        ],
+        "condition": 5.068145367060943,
+        "smallest_singular": 0.1459479361328133
+      },
+      "radius": 0.05,
+      "support_label": "C",
+      "coarse_dimension": 6165,
+      "factorization": "LU",
+      "coarse_condition_1_estimate": 2706040.8165187924,
+      "factor_probe_residual": 8.114567133838493e-14,
+      "temporal_relative": 0.0,
+      "spectral_relative": 0.13227493802716953,
+      "coarse_relative": 0.9912130652740149,
+      "orthogonality": 0.0,
+      "squared_partition": 1.0000000000000002,
+      "support_ps": 2048.0,
+      "bandwidth_GHz": 375.0,
+      "precondition_rebuilt": true,
+      "linear_attempts": [
+        {
+          "krylov_dimension": 33,
+          "true_relative": 0.007129698429399696
+        }
+      ],
+      "krylov_dimension": 33,
+      "arnoldi_linear_residual": 0.0071298760751585194,
+      "true_newton_linear_residual": 0.007129698429399696,
+      "newton_blocks": {
+        "field": 32.59364335728427,
+        "population_rms": 0.0021891957156267724,
+        "phase_rad": 0.21391477319152424,
+        "time_scaled": 0.074751995340731,
+        "shift_ps": 0.1785734602836041,
+        "total": 32.59443111154751
+      },
+      "trials": [
+        {
+          "radius": 0.05,
+          "alpha": null,
+          "lambda_value": 1.252382864348534e-06,
+          "feasible": true,
+          "predicted_reduction": 3.83648077529503e-09,
+          "step_blocks": {
+            "field": 0.04999878859998565,
+            "population_rms": 3.3542424125051765e-06,
+            "phase_rad": 0.0003278504661725462,
+            "time_scaled": 0.00011679780192072046,
+            "shift_ps": 0.0002790157981393366,
+            "total": 0.050000000003716995
+          },
+          "actual_reduction": -1.676348477344633e-07,
+          "rho": -43.69495314923662,
+          "residual": 0.0015430316496145707
+        },
+        {
+          "radius": 0.0125,
+          "alpha": null,
+          "lambda_value": 5.0154653463038375e-06,
+          "feasible": true,
+          "predicted_reduction": 1.4868948663035867e-09,
+          "step_blocks": {
+            "field": 0.012499694787884997,
+            "population_rms": 8.355388535333262e-07,
+            "phase_rad": 8.173827445556217e-05,
+            "time_scaled": 3.079593888126257e-05,
+            "shift_ps": 7.356776690230972e-05,
+            "total": 0.012500000000950683
+          },
+          "actual_reduction": 5.990428705090587e-10,
+          "rho": 0.40288179351797504,
+          "residual": 0.0014298527513357166,
+          "true_predicted_reduction": 1.4868939083590865e-09,
+          "true_rho": 0.40288205307812
+        }
+      ],
+      "accepted_trial": 1
+    },
+    {
+      "step": 1,
+      "residual": 0.0014298527513357166,
+      "calls": 6238,
+      "gauge": {
+        "matrix": [
+          [
+            0.6868402730328653,
+            -0.11980281814753736
+          ],
+          [
+            -0.20733157743453867,
+            0.189420608422071
+          ]
+        ],
+        "condition": 5.173946271786251,
+        "smallest_singular": 0.14263512654681684
+      },
+      "radius": 0.0125,
+      "support_label": "C",
+      "coarse_dimension": 6165,
+      "factorization": "LU",
+      "coarse_condition_1_estimate": 2706040.8165187924,
+      "factor_probe_residual": 8.114567133838493e-14,
+      "temporal_relative": 0.0,
+      "spectral_relative": 0.13227493802716953,
+      "coarse_relative": 0.9912130652740149,
+      "orthogonality": 0.0,
+      "squared_partition": 1.0000000000000002,
+      "support_ps": 2048.0,
+      "bandwidth_GHz": 375.0,
+      "precondition_rebuilt": false,
+      "linear_attempts": [
+        {
+          "krylov_dimension": 36,
+          "true_relative": 0.007824481464160265
+        }
+      ],
+      "krylov_dimension": 36,
+      "arnoldi_linear_residual": 0.007824499267643148,
+      "true_newton_linear_residual": 0.007824481464160265,
+      "newton_blocks": {
+        "field": 55.800868080299125,
+        "population_rms": 0.0037276481380658375,
+        "phase_rad": 0.36009519328461526,
+        "time_scaled": 0.1160712659626103,
+        "shift_ps": 0.27728019175894747,
+        "total": 55.80215079633862
+      },
+      "trials": [
+        {
+          "radius": 0.0125,
+          "alpha": null,
+          "lambda_value": 3.565462461769706e-06,
+          "feasible": true,
+          "predicted_reduction": 2.2992641540996894e-09,
+          "step_blocks": {
+            "field": 0.012497936931305926,
+            "population_rms": 1.3528478309866633e-07,
+            "phase_rad": 2.3036183134136586e-05,
+            "time_scaled": 0.00022592425581063167,
+            "shift_ps": 0.0005397056752560008,
+            "total": 0.01249999999969198
+          },
+          "actual_reduction": 1.5091065427737408e-09,
+          "rho": 0.6563432653368415,
+          "residual": 0.0014287969335832057,
+          "true_predicted_reduction": 2.299263890512989e-09,
+          "true_rho": 0.6563433405797731
+        }
+      ],
+      "accepted_trial": 0
+    },
+    {
+      "step": 2,
+      "residual": 0.0014287969335832057,
+      "calls": 6315,
+      "gauge": {
+        "matrix": [
+          [
+            0.6828705674883783,
+            -0.12041200505061615
+          ],
+          [
+            -0.20726044399915228,
+            0.1841123604326407
+          ]
+        ],
+        "condition": 5.347121730765578,
+        "smallest_singular": 0.13727828911964382
+      },
+      "radius": 0.0125,
+      "support_label": "C",
+      "coarse_dimension": 6165,
+      "factorization": "LU",
+      "coarse_condition_1_estimate": 2706040.8165187924,
+      "factor_probe_residual": 8.114567133838493e-14,
+      "temporal_relative": 0.0,
+      "spectral_relative": 0.13227493802716953,
+      "coarse_relative": 0.9912130652740149,
+      "orthogonality": 0.0,
+      "squared_partition": 1.0000000000000002,
+      "support_ps": 2048.0,
+      "bandwidth_GHz": 375.0,
+      "precondition_rebuilt": false,
+      "linear_attempts": [
+        {
+          "krylov_dimension": 42,
+          "true_relative": 0.007090263072247379
+        }
+      ],
+      "krylov_dimension": 42,
+      "arnoldi_linear_residual": 0.007088246895025436,
+      "true_newton_linear_residual": 0.007090263072247379,
+      "newton_blocks": {
+        "field": 99.88797037113403,
+        "population_rms": 0.005929434602208585,
+        "phase_rad": 0.5784960302238729,
+        "time_scaled": 0.054085946777103634,
+        "shift_ps": 0.12920477406225972,
+        "total": 99.88966034064471
+      },
+      "trials": [
+        {
+          "radius": 0.0125,
+          "alpha": null,
+          "lambda_value": 2.1798562878586077e-06,
+          "feasible": true,
+          "predicted_reduction": 1.0936926591996499e-09,
+          "step_blocks": {
+            "field": 0.012499270067203217,
+            "population_rms": 1.7541695068018823e-06,
+            "phase_rad": 0.0001283878227819105,
+            "time_scaled": 4.196820302069604e-05,
+            "shift_ps": 0.00010025695235464748,
+            "total": 0.012500000002123857
+          },
+          "actual_reduction": -4.5933080691248756e-10,
+          "rho": -0.41998161279478635,
+          "residual": 0.001429118378242543
+        },
+        {
+          "radius": 0.003125,
+          "alpha": null,
+          "lambda_value": 1.1865318746084352e-05,
+          "feasible": true,
+          "predicted_reduction": 8.09625755541671e-10,
+          "step_blocks": {
+            "field": 0.003124457147805677,
+            "population_rms": 7.69891209117283e-07,
+            "phase_rad": 4.869626909264848e-05,
+            "time_scaled": 3.1947020813270904e-05,
+            "shift_ps": 7.631756217843211e-05,
+            "total": 0.003124999999995016
+          },
+          "actual_reduction": 8.556137143197095e-10,
+          "rho": 1.0568015017596257,
+          "residual": 0.0014281979729673796,
+          "true_predicted_reduction": 8.096254720424964e-10,
+          "true_rho": 1.0568018718101784
+        }
+      ],
+      "accepted_trial": 1
+    },
+    {
+      "step": 3,
+      "residual": 0.0014281979729673796,
+      "calls": 6405,
+      "gauge": {
+        "matrix": [
+          [
+            0.6824895297470633,
+            -0.11947822012360074
+          ],
+          [
+            -0.20660504500680882,
+            0.18390807308018428
+          ]
+        ],
+        "condition": 5.332369868172349,
+        "smallest_singular": 0.13751051066556108
+      },
+      "radius": 0.00625,
+      "support_label": "C",
+      "coarse_dimension": 6165,
+      "factorization": "LU",
+      "coarse_condition_1_estimate": 2706040.8165187924,
+      "factor_probe_residual": 8.114567133838493e-14,
+      "temporal_relative": 0.0,
+      "spectral_relative": 0.13227493802716953,
+      "coarse_relative": 0.9912130652740149,
+      "orthogonality": 0.0,
+      "squared_partition": 1.0000000000000002,
+      "support_ps": 2048.0,
+      "bandwidth_GHz": 375.0,
+      "precondition_rebuilt": false,
+      "linear_attempts": [
+        {
+          "krylov_dimension": 39,
+          "true_relative": 0.007408380641971101
+        }
+      ],
+      "krylov_dimension": 39,
+      "arnoldi_linear_residual": 0.00740795909206849,
+      "true_newton_linear_residual": 0.007408380641971101,
+      "newton_blocks": {
+        "field": 70.90276851737174,
+        "population_rms": 0.004001121385630854,
+        "phase_rad": 0.3987539402255755,
+        "time_scaled": 0.015017579997174018,
+        "shift_ps": 0.03587517915685616,
+        "total": 70.90389149877126
+      },
+      "trials": [
+        {
+          "radius": 0.00625,
+          "alpha": null,
+          "lambda_value": 5.242815387755934e-06,
+          "feasible": true,
+          "predicted_reduction": 2.436821682394541e-10,
+          "step_blocks": {
+            "field": 0.006249654864203908,
+            "population_rms": 4.0027631198903976e-07,
+            "phase_rad": 3.7623639959194994e-05,
+            "time_scaled": 5.383660341247123e-05,
+            "shift_ps": 0.00012860912297337295,
+            "total": 0.006250000000003157
+          },
+          "actual_reduction": 2.7112092778576116e-11,
+          "rho": 0.1112600604896721,
+          "residual": 0.001428178989413643,
+          "true_predicted_reduction": 2.4368252651681485e-10,
+          "true_rho": 0.11125989690814084
+        }
+      ],
+      "accepted_trial": 0
+    },
+    {
+      "step": 4,
+      "residual": 0.001428178989413643,
+      "calls": 6488,
+      "gauge": {
+        "matrix": [
+          [
+            0.6838025093295053,
+            -0.11833694548749038
+          ],
+          [
+            -0.20604401386797633,
+            0.1855904877158546
+          ]
+        ],
+        "condition": 5.257131917548488,
+        "smallest_singular": 0.13964958545399442
+      },
+      "radius": 0.0015625,
+      "support_label": "C",
+      "coarse_dimension": 6165,
+      "factorization": "LU",
+      "coarse_condition_1_estimate": 2706040.8165187924,
+      "factor_probe_residual": 8.114567133838493e-14,
+      "temporal_relative": 0.0,
+      "spectral_relative": 0.13227493802716953,
+      "coarse_relative": 0.9912130652740149,
+      "orthogonality": 0.0,
+      "squared_partition": 1.0000000000000002,
+      "support_ps": 2048.0,
+      "bandwidth_GHz": 375.0,
+      "precondition_rebuilt": false,
+      "linear_attempts": [
+        {
+          "krylov_dimension": 37,
+          "true_relative": 0.007933576358597752
+        }
+      ],
+      "krylov_dimension": 37,
+      "arnoldi_linear_residual": 0.00793278641359302,
+      "true_newton_linear_residual": 0.007933576358597752,
+      "newton_blocks": {
+        "field": 95.02807511849622,
+        "population_rms": 0.0053987476521980444,
+        "phase_rad": 0.543387690068079,
+        "time_scaled": 0.10044336782914803,
+        "shift_ps": 0.23994703651765292,
+        "total": 95.02968193635552
+      },
+      "trials": [
+        {
+          "radius": 0.0015625,
+          "alpha": null,
+          "lambda_value": 2.0343383591984763e-05,
+          "feasible": true,
+          "predicted_reduction": 4.672201613332314e-10,
+          "step_blocks": {
+            "field": 0.0015621353847799229,
+            "population_rms": 3.2686081040970425e-07,
+            "phase_rad": 2.0538498333005634e-05,
+            "time_scaled": 2.6783443935844073e-05,
+            "shift_ps": 6.398240261192761e-05,
+            "total": 0.0015625000000007508
+          },
+          "actual_reduction": 4.0718974761749323e-10,
+          "rho": 0.8715157891636376,
+          "residual": 0.001427893849803738,
+          "true_predicted_reduction": 4.672197963336054e-10,
+          "true_rho": 0.8715164700058013
+        }
+      ],
+      "accepted_trial": 0
+    },
+    {
+      "step": 5,
+      "residual": 0.001427893849803738,
+      "calls": 6567,
+      "gauge": {
+        "matrix": [
+          [
+            0.6840974844635647,
+            -0.11897942419919533
+          ],
+          [
+            -0.20648059391977977,
+            0.18592456943943614
+          ]
+        ],
+        "condition": 5.260378019337072,
+        "smallest_singular": 0.1396738551559682
+      },
+      "radius": 0.003125,
+      "support_label": "C",
+      "coarse_dimension": 6165,
+      "factorization": "LU",
+      "coarse_condition_1_estimate": 2706040.8165187924,
+      "factor_probe_residual": 8.114567133838493e-14,
+      "temporal_relative": 0.0,
+      "spectral_relative": 0.13227493802716953,
+      "coarse_relative": 0.9912130652740149,
+      "orthogonality": 0.0,
+      "squared_partition": 1.0000000000000002,
+      "support_ps": 2048.0,
+      "bandwidth_GHz": 375.0,
+      "precondition_rebuilt": false,
+      "linear_attempts": [
+        {
+          "krylov_dimension": 35,
+          "true_relative": 0.0074896713528726025
+        }
+      ],
+      "krylov_dimension": 35,
+      "arnoldi_linear_residual": 0.0074897022702141575,
+      "true_newton_linear_residual": 0.0074896713528726025,
+      "newton_blocks": {
+        "field": 59.671538282407084,
+        "population_rms": 0.003426465301565345,
+        "phase_rad": 0.3453108078358705,
+        "time_scaled": 0.015834691836609165,
+        "shift_ps": 0.03782716034400086,
+        "total": 59.67253960592689
+      },
+      "trials": [
+        {
+          "radius": 0.003125,
+          "alpha": null,
+          "lambda_value": 1.114899993615388e-05,
+          "feasible": true,
+          "predicted_reduction": 1.2716694529965323e-10,
+          "step_blocks": {
+            "field": 0.0031249209015734095,
+            "population_rms": 2.3678974760136507e-07,
+            "phase_rad": 2.0528847891656223e-05,
+            "time_scaled": 8.536348449400133e-06,
+            "shift_ps": 2.039230222347471e-05,
+            "total": 0.003125000000000058
+          },
+          "actual_reduction": 5.618825781131659e-11,
+          "rho": 0.4418464065399691,
+          "residual": 0.0014278544988169197,
+          "true_predicted_reduction": 1.2716709345609186e-10,
+          "true_rho": 0.4418458917653663
+        }
+      ],
+      "accepted_trial": 0
+    },
+    {
+      "step": 6,
+      "residual": 0.0014278544988169197,
+      "calls": 6642,
+      "gauge": {
+        "matrix": [
+          [
+            0.6846872649003326,
+            -0.11826243394884442
+          ],
+          [
+            -0.20609693231278883,
+            0.1864686389319954
+          ]
+        ],
+        "condition": 5.2302328865983325,
+        "smallest_singular": 0.14053610678479558
+      },
+      "radius": 0.003125,
+      "support_label": "C",
+      "coarse_dimension": 6165,
+      "factorization": "SVD fallback",
+      "coarse_condition_1_estimate": 1574181396.4996603,
+      "factor_probe_residual": 1.1302645121067071e-10,
+      "temporal_relative": 0.0,
+      "spectral_relative": 0.1257249767924062,
+      "coarse_relative": 0.9920651340565035,
+      "orthogonality": 0.0,
+      "squared_partition": 0.9999999999999996,
+      "support_ps": 2048.0,
+      "bandwidth_GHz": 375.0,
+      "precondition_rebuilt": false,
+      "refreshed_for_accuracy": true,
+      "linear_attempts": [
+        {
+          "krylov_dimension": 80,
+          "true_relative": 0.02072360778706882
+        },
+        {
+          "krylov_dimension": 80,
+          "true_relative": 0.02877212890149814
+        }
+      ],
+      "krylov_dimension": 80,
+      "arnoldi_linear_residual": 0.007468391079548401,
+      "true_newton_linear_residual": 0.02877212890149814,
+      "newton_blocks": {
+        "field": 18562.74454471912,
+        "population_rms": 1.066153427809501,
+        "phase_rad": 107.75011351325463,
+        "time_scaled": 14.399016030966074,
+        "shift_ps": 34.397504783764,
+        "total": 18563.06288271974
+      },
+      "trials": []
+    }
+  ],
+  "protocol": {
+    "support": "C",
+    "linear_limit": 240,
+    "linear_tolerance": 0.008,
+    "max_steps": 30,
+    "rebuild_every": 30,
+    "linear_refresh_threshold": 0.01,
+    "stop_window": null,
+    "initial_radius": 0.05,
+    "root_tolerance": 1e-07,
+    "jv_method": "central",
+    "jv_epsilon": 1e-05,
+    "jv_check_epsilon": 1e-06,
+    "selection": "smallest verified 240-vector linear residual at benchmark state; not globally optimal",
+    "benchmark_below_one_percent": true
+  },
+  "code_sha256": {
+    "steady_hookstep.py": "fed4093e3f98f35308b9b202f87267e0f4cfa2477f9468852fe13b578206db92",
+    "steady_support.py": "b70ce6a855d8ba77ee4ca2e48de77875c13fcd385a475a3d0130e264d379ab90",
+    "steady_support_lu.py": "c934e7ef05b25989f6ec4b0de62dbe6b74efe705e1551c99e1d997e54a473016",
+    "steady_state.py": "b9982d4795a7a0afd66ca6825f96ad53501c28306985922272c21773322b0c3b",
+    "steady_parameters.py": "6ff080631ea3043c9ce8c61ea277a050cdae90ff898e846412d26abb51bd13b3",
+    "run_fixed_pump_deep.py": "b1890305c56d40a12dd433d714bac7414f6ae4a8e3815dc6c35421a6f74ba200"
+  },
+  "numerical_root": false,
+  "certified_stable": false
+}

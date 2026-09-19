@@ -1,0 +1,10 @@
+{
+  "input": "forward_quality_gate/anchor.npz",
+  "input_sha256": "8d5ea681077e7793445b15dcde2c80658856ce4090bf11daa9e08f4d7bac310f",
+  "source_sha256": {
+    "run_jvp_consistency.py": "66b99918ae2994bbea8858cb30f025f5f83daddc58a7909c2f6a7eec86932eb3",
+    "steady_hookstep.py": "fed4093e3f98f35308b9b202f87267e0f4cfa2477f9468852fe13b578206db92",
+    "steady_support_lu.py": "c934e7ef05b25989f6ec4b0de62dbe6b74efe705e1551c99e1d997e54a473016"
+  },
+  "note": "Executed driver read anchor at output root before the central run overwrote it. Current replay driver reads the identical archived forward anchor explicitly."
+}

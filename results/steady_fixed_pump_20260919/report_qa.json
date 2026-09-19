@@ -1,0 +1,24 @@
+{
+  "sections": 9,
+  "images": 12,
+  "broken": 0,
+  "externalAssets": 0,
+  "downloadRows": 9,
+  "embeddedJSONValid": true,
+  "mobileWidth": 430,
+  "errors": [],
+  "downloadFiles": [
+    "support_benchmark.json",
+    "factor_validation.json",
+    "jvp_consistency.json",
+    "deep_protocol.json",
+    "deep_summary.json",
+    "endpoint_checks.json",
+    "anchor.json",
+    "down_275.json",
+    "down_2725.json",
+    "down_270.json",
+    "up_2775.json",
+    "up_280.json"
+  ]
+}

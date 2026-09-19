@@ -1,0 +1,172 @@
+{
+  "inputs": [
+    "results/steady_energy_20260919/fixed_final.npz",
+    "results/steady_tail_20260919/tail_continuation.npz"
+  ],
+  "source_verification": {
+    "formal": {
+      "anchor": {
+        "steady_hookstep.py": true,
+        "steady_support.py": true,
+        "steady_support_lu.py": true,
+        "steady_state.py": true,
+        "steady_parameters.py": true,
+        "run_fixed_pump_deep.py": true
+      },
+      "down_275": {
+        "steady_hookstep.py": true,
+        "steady_support.py": true,
+        "steady_support_lu.py": true,
+        "steady_state.py": true,
+        "steady_parameters.py": true,
+        "run_fixed_pump_deep.py": true
+      },
+      "down_2725": {
+        "steady_hookstep.py": true,
+        "steady_support.py": true,
+        "steady_support_lu.py": true,
+        "steady_state.py": true,
+        "steady_parameters.py": true,
+        "run_fixed_pump_deep.py": true
+      },
+      "down_270": {
+        "steady_hookstep.py": true,
+        "steady_support.py": true,
+        "steady_support_lu.py": true,
+        "steady_state.py": true,
+        "steady_parameters.py": true,
+        "run_fixed_pump_deep.py": true
+      },
+      "up_2775": {
+        "steady_hookstep.py": true,
+        "steady_support.py": true,
+        "steady_support_lu.py": true,
+        "steady_state.py": true,
+        "steady_parameters.py": true,
+        "run_fixed_pump_deep.py": true
+      },
+      "up_280": {
+        "steady_hookstep.py": true,
+        "steady_support.py": true,
+        "steady_support_lu.py": true,
+        "steady_state.py": true,
+        "steady_parameters.py": true,
+        "run_fixed_pump_deep.py": true
+      }
+    },
+    "forward_quality_gate": {
+      "anchor": {
+        "steady_hookstep.py": true,
+        "steady_support.py": true,
+        "steady_support_lu.py": true,
+        "steady_state.py": true,
+        "steady_parameters.py": true,
+        "run_fixed_pump_deep.py": true
+      },
+      "down_275": {
+        "steady_hookstep.py": true,
+        "steady_support.py": true,
+        "steady_support_lu.py": true,
+        "steady_state.py": true,
+        "steady_parameters.py": true,
+        "run_fixed_pump_deep.py": true
+      },
+      "down_2725": {
+        "steady_hookstep.py": true,
+        "steady_support.py": true,
+        "steady_support_lu.py": true,
+        "steady_state.py": true,
+        "steady_parameters.py": true,
+        "run_fixed_pump_deep.py": true
+      },
+      "down_270": {
+        "steady_hookstep.py": true,
+        "steady_support.py": true,
+        "steady_support_lu.py": true,
+        "steady_state.py": true,
+        "steady_parameters.py": true,
+        "run_fixed_pump_deep.py": true
+      },
+      "up_2775": {
+        "steady_hookstep.py": true,
+        "steady_support.py": true,
+        "steady_support_lu.py": true,
+        "steady_state.py": true,
+        "steady_parameters.py": true,
+        "run_fixed_pump_deep.py": true
+      },
+      "up_280": {
+        "steady_hookstep.py": true,
+        "steady_support.py": true,
+        "steady_support_lu.py": true,
+        "steady_state.py": true,
+        "steady_parameters.py": true,
+        "run_fixed_pump_deep.py": true
+      }
+    },
+    "benchmark": {
+      "steady_hookstep.py": true,
+      "steady_support.py": true,
+      "run_support_benchmark.py": true
+    }
+  },
+  "notes": [
+    "Raw execution bytes preserved in executed_sources.zip; Git may normalize working-file newlines.",
+    "forward_quality_gate retains all histories and the anchor needed for Jv replay; identical other endpoint fields are omitted.",
+    "static_rebuild_pilot was intentionally interrupted; never mixed into formal histories."
+  ],
+  "files": {
+    "anchor.json": "d50ebd54512867de3753d5173fdb6cc7dcccf38e32dcaa81d85eba127a3d6259",
+    "anchor.npz": "d1de6c0358d2daafe266fcbbb5a2781f08bfd39b1092978668588f7cc4411d87",
+    "deep_protocol.json": "89008fcc8f2609bfbd4a590bfbad0e37ed2025a74c1ef4fc24ad2e05f717e822",
+    "deep_summary.json": "ffebe0ed12e7d53e9aa11f18616571b71a39a0cdee018d70997c7131ecd3ef69",
+    "down_270.json": "95e7b17f876488d1b315a5bf69175cb7ff3d08a3630b18ff67ba36e6fc200f88",
+    "down_270.npz": "84ce2b1e49bd2497fde012837b29c41adebc5f13f91366b24bf428a5b0c00d95",
+    "down_2725.json": "6f76f559b0f421d78a33a2d92df0f4c27a1589cb8cb3a07ccbad71618836df43",
+    "down_2725.npz": "a34eebe13bcb33845827b67c64555dd29ae6e102c4a1c550307ae6f02bdfe658",
+    "down_275.json": "c9a24f9ea95b9c70d01e42376ebc9874d36ad3446dc9d7d6da3f1849193dc6ab",
+    "down_275.npz": "5cb1f426cc6fb7c381b047bbf27c9550862116e28f37ac326825beeeade263b1",
+    "endpoint_checks.json": "91d6ca7e0063de8a2925eaccc3dd8d7c7af3f699b46e6fa5947931c99bfd23a6",
+    "executed_sources.zip": "2fe5725c6f5262403df4b96e13969df492e5d3c80362f39c4221767f0e8a567c",
+    "factor_validation.json": "a462da56524248495c34f10dbc1758537d6fe97e98f7cdbd8abf3fe42dda3b4d",
+    "jvp_consistency.json": "3de5e51cf7e2cd4ed92b71e55a398c40b999d0110336a6dfc096b8be54a91cc6",
+    "report_qa.json": "8ea216cd22a603938c213ee2b33ffa489435cd25a225ec08ba8e76e2ff66d681",
+    "support_benchmark.json": "d0487b10ab7853e47205b751da2b1ec211c3e6e0454cd8aa8457aa7a4de55b08",
+    "up_2775.json": "07c39b19fa1415df1477c4262a154436046b4f410b8a152a167af14c0b2121fe",
+    "up_2775.npz": "1362ba6f183c538512bacd562762b7e506547235fe7f5e85f0258d8b1d0ba397",
+    "up_280.json": "109a411264a2c96c7712960b18d0b74cee9b9a08957aa96f845d4c67234fe6bb",
+    "up_280.npz": "1362ba6f183c538512bacd562762b7e506547235fe7f5e85f0258d8b1d0ba397",
+    "forward_quality_gate/anchor.json": "7097927bda2d9c608437a5362b2eb559069114d215e62821222b3499359263be",
+    "forward_quality_gate/anchor.npz": "8d5ea681077e7793445b15dcde2c80658856ce4090bf11daa9e08f4d7bac310f",
+    "forward_quality_gate/deep_protocol.json": "3ae0c9cdf8aa0644497e5e613aef01365159dfe3d92ecee5f4efd34a1aaa903b",
+    "forward_quality_gate/deep_summary.json": "401d04cfa5f3415babe89fdda7c2064436f951682c6c0963038ad2a951510ab9",
+    "forward_quality_gate/down_270.json": "4225052cb2d01281dfc2087f2d8a871fe060b169dce71fae8ee686c54fa8fa36",
+    "forward_quality_gate/down_2725.json": "4e8128f79a439e67eb0db75d800a48f10d7e689592c0de1cd1de032157609449",
+    "forward_quality_gate/down_275.json": "ac5d46fd61918fad0cf4f0f246eb9b9823eecd57ae3d800b0040198a32827a0a",
+    "forward_quality_gate/factor_validation.json": "c765cd378eedb6f49cffbf3124f9f7b7f26f74a2b0a8c5f530b46c8779f83409",
+    "forward_quality_gate/run_fixed_pump_deep.py": "6358336822d85380a8fefe82c80bf98fbf21c08fce3cefb95d6945582a483d21",
+    "forward_quality_gate/steady_hookstep.py": "2ba18219c66f49e5d0a4b28cb8c15d69c86ba116706ef47d6b3ded5fc494b492",
+    "forward_quality_gate/steady_parameters.py": "6ff080631ea3043c9ce8c61ea277a050cdae90ff898e846412d26abb51bd13b3",
+    "forward_quality_gate/steady_state.py": "b1483b2d6a0fa49311c2af460e5df0657ffdff3da0f1a3350aa167dc7c3fbd73",
+    "forward_quality_gate/steady_support.py": "e3da0f04b2a0f45edf1600fcbab76bc894d31a84d658fa55bee77dbfd3fb96c7",
+    "forward_quality_gate/steady_support_lu.py": "a0500fc1cb659e1ef2d6ec7ae513c58fac4b5bcfba8a20a7efb5bc34d25267bb",
+    "forward_quality_gate/support_benchmark.json": "d0487b10ab7853e47205b751da2b1ec211c3e6e0454cd8aa8457aa7a4de55b08",
+    "forward_quality_gate/up_2775.json": "6c961fc328b75497237d8bc132e7eb76fb787002903394f48e346d0833841dd6",
+    "forward_quality_gate/up_280.json": "d475f893482ff9e5703d8c0585b51c93a20df621b71acfc9767c226796f60a30",
+    "jvp_probe/central_1e-05_direction.npz": "3816fcba5a9ebfe82a2cd3a6ddbce8a483a8b80435f5fad5bc8644b8814d362c",
+    "jvp_probe/central_1e-06_direction.npz": "c550a9630a164f0ae234b6806a767c7fa3458f626e5a3480c2628e4195df60b0",
+    "jvp_probe/forward_1e-07_direction.npz": "5ac55151a6a58ada92680ee228049b86f38657f22f5acb08aa60bc8ed8a829a8",
+    "jvp_probe/jvp_consistency.json": "3de5e51cf7e2cd4ed92b71e55a398c40b999d0110336a6dfc096b8be54a91cc6",
+    "jvp_probe/provenance.json": "928612107a73018b84ae5a2854eca1fb970396c1dda8da494ecfcb2689666029",
+    "jvp_probe/run_jvp_consistency.py": "bde5bbd450fb9b34185a495fdf52b6e014f1e556d7372a847f797c72d7a076f4",
+    "jvp_probe/steady_hookstep.py": "bc12d4633671bac935a7ab3dabf52cbd860c82ff92beb621884015e4eb36d720",
+    "jvp_probe/steady_support_lu.py": "a0500fc1cb659e1ef2d6ec7ae513c58fac4b5bcfba8a20a7efb5bc34d25267bb",
+    "static_rebuild_pilot/anchor_checkpoint.npz": "331f7368a3f0076a7acf2531b76eb1122a27531de96d9fe815867fd6c8b0777f",
+    "static_rebuild_pilot/anchor_progress.json": "4f606a8b2f14d87bc711912c10890248d9f2f7eb94813c0bb37a70f8e2278945",
+    "static_rebuild_pilot/deep_protocol.json": "481d52d38e635786f347b9b2ac5c6e41beb775109c2b5fb381251092f9ddb50d",
+    "static_rebuild_pilot/factor_validation.json": "d452d10f8d2600db44079193a314a9212e1106bcb8a7cca337ce8aea9aa68687",
+    "static_rebuild_pilot/run_fixed_pump_deep.py": "ff732c4ce41b3a683b0909a7fe99cf1825a9b7a3615352cc3cc09f65e18e38a5",
+    "static_rebuild_pilot/steady_hookstep.py": "db5ba273c3da8c732206516ccdd1be902cf99e5a841a638a6b3a85ff84c5b594"
+  },
+  "hash_scope": "files hashes refer to published Git blobs; execution code_sha256 values refer to raw bytes in executed_sources.zip."
+}

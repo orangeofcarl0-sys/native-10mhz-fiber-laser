@@ -1,0 +1,92 @@
+{
+  "name": "up_280",
+  "pump_W": 0.028,
+  "parent": "up_2775",
+  "status": "linear_accuracy_limited",
+  "physical_residual": 0.0018683167069063853,
+  "output_energy_nJ": 0.9145440780553549,
+  "relative_field_residual": 0.0023486866464112557,
+  "population_gap": 0.0011648230503964463,
+  "peaks": 1,
+  "time_edge": 1.0267856691111194e-08,
+  "spectral_edge": 2.1674766494113188e-11,
+  "linear_fraction_below_one_percent": 0.0,
+  "seconds": 134.12692189999507,
+  "evaluations": 6235,
+  "history": [
+    {
+      "step": 0,
+      "residual": 0.0018683167069063853,
+      "calls": 1,
+      "gauge": {
+        "matrix": [
+          [
+            0.834927803231587,
+            -0.05213592549425863
+          ],
+          [
+            -0.1858053500164071,
+            0.28996586427720455
+          ]
+        ],
+        "condition": 3.209887448527404,
+        "smallest_singular": 0.26908265619769006
+      },
+      "radius": 0.05,
+      "support_label": "C",
+      "coarse_dimension": 6165,
+      "factorization": "LU",
+      "coarse_condition_1_estimate": 110975090.13502108,
+      "factor_probe_residual": 1.9334812151161938e-10,
+      "temporal_relative": 0.0,
+      "spectral_relative": 0.13048979113330686,
+      "coarse_relative": 0.99144965298798,
+      "orthogonality": 0.0,
+      "squared_partition": 1.0000000000000002,
+      "support_ps": 2048.0,
+      "bandwidth_GHz": 375.0,
+      "precondition_rebuilt": true,
+      "linear_attempts": [
+        {
+          "krylov_dimension": 67,
+          "true_relative": 0.07984068892288876
+        }
+      ],
+      "krylov_dimension": 67,
+      "arnoldi_linear_residual": 0.007968340493711616,
+      "true_newton_linear_residual": 0.07984068892288876,
+      "newton_blocks": {
+        "field": 2436.1226565616676,
+        "population_rms": 0.04240599661900533,
+        "phase_rad": 13.349425921054069,
+        "time_scaled": 22.277765933813654,
+        "shift_ps": 53.21888375094173,
+        "total": 2436.2610914347356
+      },
+      "trials": []
+    }
+  ],
+  "protocol": {
+    "support": "C",
+    "linear_limit": 240,
+    "linear_tolerance": 0.008,
+    "max_steps": 30,
+    "rebuild_every": 30,
+    "linear_refresh_threshold": 0.01,
+    "stop_window": null,
+    "initial_radius": 0.05,
+    "root_tolerance": 1e-07,
+    "selection": "smallest verified 240-vector linear residual at benchmark state; not globally optimal",
+    "benchmark_below_one_percent": true
+  },
+  "code_sha256": {
+    "steady_hookstep.py": "080bb81717d0aaf5154919435e87e1f88fb1420a07b42e57eebf7395b49adc11",
+    "steady_support.py": "b70ce6a855d8ba77ee4ca2e48de77875c13fcd385a475a3d0130e264d379ab90",
+    "steady_support_lu.py": "c934e7ef05b25989f6ec4b0de62dbe6b74efe705e1551c99e1d997e54a473016",
+    "steady_state.py": "b9982d4795a7a0afd66ca6825f96ad53501c28306985922272c21773322b0c3b",
+    "steady_parameters.py": "6ff080631ea3043c9ce8c61ea277a050cdae90ff898e846412d26abb51bd13b3",
+    "run_fixed_pump_deep.py": "3b0724d03316596f2983a375bbdb9bf179ae3cf0bccc733fb2103d7922f4a62f"
+  },
+  "numerical_root": false,
+  "certified_stable": false
+}

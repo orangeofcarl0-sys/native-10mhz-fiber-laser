@@ -1,0 +1,95 @@
+{
+  "name": "up_280",
+  "pump_W": 0.028,
+  "parent": "up_2775",
+  "status": "linear_accuracy_limited",
+  "physical_residual": 0.001693161943905231,
+  "output_energy_nJ": 0.9138511869589141,
+  "relative_field_residual": 0.0020066748475415456,
+  "population_gap": 0.0012656373027918333,
+  "peaks": 1,
+  "time_edge": 5.68620956336334e-10,
+  "spectral_edge": 1.420257724629235e-12,
+  "linear_fraction_below_one_percent": 0.0,
+  "seconds": 297.46544359999825,
+  "evaluations": 6327,
+  "history": [
+    {
+      "step": 0,
+      "residual": 0.001693161943905231,
+      "calls": 1,
+      "gauge": {
+        "matrix": [
+          [
+            0.6846872649003326,
+            -0.11826243394884442
+          ],
+          [
+            -0.20609693231278883,
+            0.1864686389319954
+          ]
+        ],
+        "condition": 5.2302328865983325,
+        "smallest_singular": 0.14053610678479558
+      },
+      "radius": 0.05,
+      "support_label": "C",
+      "coarse_dimension": 6165,
+      "factorization": "SVD fallback",
+      "coarse_condition_1_estimate": 1577320269.7164865,
+      "factor_probe_residual": 1.1309590193764832e-10,
+      "temporal_relative": 0.0,
+      "spectral_relative": 0.10602469206970193,
+      "coarse_relative": 0.9943634972541604,
+      "orthogonality": 0.0,
+      "squared_partition": 0.9999999999999997,
+      "support_ps": 2048.0,
+      "bandwidth_GHz": 375.0,
+      "precondition_rebuilt": true,
+      "linear_attempts": [
+        {
+          "krylov_dimension": 79,
+          "true_relative": 0.020947463611067384
+        }
+      ],
+      "krylov_dimension": 79,
+      "arnoldi_linear_residual": 0.007208085536555481,
+      "true_newton_linear_residual": 0.020947463611067384,
+      "newton_blocks": {
+        "field": 18854.330142305327,
+        "population_rms": 1.0832909340564216,
+        "phase_rad": 109.44428010863597,
+        "time_scaled": 14.625171211515632,
+        "shift_ps": 34.93776211024358,
+        "total": 18854.653490177006
+      },
+      "trials": []
+    }
+  ],
+  "protocol": {
+    "support": "C",
+    "linear_limit": 240,
+    "linear_tolerance": 0.008,
+    "max_steps": 30,
+    "rebuild_every": 30,
+    "linear_refresh_threshold": 0.01,
+    "stop_window": null,
+    "initial_radius": 0.05,
+    "root_tolerance": 1e-07,
+    "jv_method": "central",
+    "jv_epsilon": 1e-05,
+    "jv_check_epsilon": 1e-06,
+    "selection": "smallest verified 240-vector linear residual at benchmark state; not globally optimal",
+    "benchmark_below_one_percent": true
+  },
+  "code_sha256": {
+    "steady_hookstep.py": "fed4093e3f98f35308b9b202f87267e0f4cfa2477f9468852fe13b578206db92",
+    "steady_support.py": "b70ce6a855d8ba77ee4ca2e48de77875c13fcd385a475a3d0130e264d379ab90",
+    "steady_support_lu.py": "c934e7ef05b25989f6ec4b0de62dbe6b74efe705e1551c99e1d997e54a473016",
+    "steady_state.py": "b9982d4795a7a0afd66ca6825f96ad53501c28306985922272c21773322b0c3b",
+    "steady_parameters.py": "6ff080631ea3043c9ce8c61ea277a050cdae90ff898e846412d26abb51bd13b3",
+    "run_fixed_pump_deep.py": "b1890305c56d40a12dd433d714bac7414f6ae4a8e3815dc6c35421a6f74ba200"
+  },
+  "numerical_root": false,
+  "certified_stable": false
+}

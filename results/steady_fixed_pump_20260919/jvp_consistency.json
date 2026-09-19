@@ -1,0 +1,89 @@
+{
+  "state": "anchor.npz from forward-quality-gate pilot",
+  "physical_residual": 0.0016763467170499667,
+  "rows": [
+    {
+      "method": "forward",
+      "epsilon": 1e-07,
+      "krylov": 68,
+      "predicted": 0.007815078181435545,
+      "step_norm": 2418.600152493236,
+      "own_relative": 0.1105800904354612,
+      "checks": [
+        {
+          "epsilon": 0.0001,
+          "relative": 0.13957417629368826
+        },
+        {
+          "epsilon": 1e-05,
+          "relative": 0.1398872119994456
+        },
+        {
+          "epsilon": 1e-06,
+          "relative": 0.13996376143588718
+        }
+      ],
+      "seconds": 8.583635899994988
+    },
+    {
+      "method": "central",
+      "epsilon": 1e-06,
+      "krylov": 68,
+      "predicted": 0.007814228737829651,
+      "step_norm": 2418.53750651056,
+      "own_relative": 0.009756800153299832,
+      "checks": [
+        {
+          "epsilon": 0.0001,
+          "relative": 0.011025444844582255
+        },
+        {
+          "epsilon": 1e-05,
+          "relative": 0.009575423160465873
+        },
+        {
+          "epsilon": 1e-06,
+          "relative": 0.009756800153299832
+        }
+      ],
+      "seconds": 13.3160504999978
+    },
+    {
+      "method": "central",
+      "epsilon": 1e-05,
+      "krylov": 68,
+      "predicted": 0.007813413677737451,
+      "step_norm": 2418.287992505458,
+      "own_relative": 0.007834776164837466,
+      "checks": [
+        {
+          "epsilon": 0.0001,
+          "relative": 0.009551268606081314
+        },
+        {
+          "epsilon": 1e-05,
+          "relative": 0.007834776164837466
+        },
+        {
+          "epsilon": 1e-06,
+          "relative": 0.008056070705503803
+        }
+      ],
+      "seconds": 13.895884800003842
+    }
+  ],
+  "coarse": {
+    "support_label": "C",
+    "coarse_dimension": 6165,
+    "factorization": "LU",
+    "coarse_condition_1_estimate": 110974123.94427383,
+    "factor_probe_residual": 1.6878550458567317e-10,
+    "temporal_relative": 0.0,
+    "spectral_relative": 0.14543307442037667,
+    "coarse_relative": 0.9893680916952181,
+    "orthogonality": 0.0,
+    "squared_partition": 1.0000000000000002,
+    "support_ps": 2048.0,
+    "bandwidth_GHz": 375.0
+  }
+}

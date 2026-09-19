@@ -1,0 +1,13 @@
+{
+  "support": "C",
+  "linear_limit": 240,
+  "linear_tolerance": 0.008,
+  "max_steps": 30,
+  "rebuild_every": 30,
+  "linear_refresh_threshold": 0.01,
+  "stop_window": null,
+  "initial_radius": 0.05,
+  "root_tolerance": 1e-07,
+  "selection": "smallest verified 240-vector linear residual at benchmark state; not globally optimal",
+  "benchmark_below_one_percent": true
+}

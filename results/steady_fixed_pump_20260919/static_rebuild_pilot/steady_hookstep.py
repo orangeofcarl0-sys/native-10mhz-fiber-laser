@@ -73,17 +73,12 @@ def progress_window(history,window=5):
 def solve_globalized(residual,x,mode='hookstep',max_steps=12,cutoff=384,
                      radius=.1,rebuild_every=3,reanchor_threshold=None,progress=None,
                      stop_window=None,preconditioner_builder=None,observer=None,
-                     linear_limit=120,linear_tolerance=.03,linear_refresh_threshold=None,
-                     jv_method="forward",jv_epsilon=1e-7,jv_check_epsilon=None):
+                     linear_limit=120,linear_tolerance=.03):
     """Shared Arnoldi/preconditioner control; mode changes only globalization.
 
     Field normalized by initial template norm; population uses RMS units;
     phase uses rad, time uses the fixed initial derivative scale. Thus D=I.
-    Difference steps specify the norm of the state perturbation. An optional
-    second step independently checks the assembled Newton direction.
     """
-    if jv_method not in ('forward','central') or jv_epsilon<=0 or (jv_check_epsilon is not None and jv_check_epsilon<=0):
-        raise ValueError('Invalid Jv difference method/step')
     if mode not in ('hookstep','line_search'):
         raise ValueError('Unknown globalization method')
     x=x.copy();r=residual(x);history=[];weights=np.ones_like(x)
@@ -106,29 +101,15 @@ def solve_globalized(residual,x,mode='hookstep',max_steps=12,cutoff=384,
             preconditioner,diagnostics=(preconditioner_builder or build_coarse)(residual,x,r,cutoff=cutoff)
         row.update(diagnostics);row['precondition_rebuilt']=rebuild
         force_rebuild=False
-        def derivative(v,step,method):
-            epsilon=step/max(np.linalg.norm(v),1e-100)
-            if method=='central':return (residual(x+epsilon*v)-residual(x-epsilon*v))/(2*epsilon)
+        def jv(v):
+            epsilon=1e-7/max(np.linalg.norm(v),1e-100)
             return (residual(x+epsilon*v)-r)/epsilon
-        def jv(v):return derivative(v,jv_epsilon,jv_method)
-        def check_jv(v):return derivative(v,jv_check_epsilon or jv_epsilon,jv_method)
         h,z,y,linear=arnoldi(jv,r,preconditioner,limit=linear_limit,tolerance=linear_tolerance)
-        newton=z@y;jn=check_jv(newton)
-        true_linear=float(np.linalg.norm(r+jn)/norm)
-        attempts=[dict(krylov_dimension=len(y),true_relative=true_linear)]
-        if linear_refresh_threshold is not None and true_linear>linear_refresh_threshold and not rebuild:
-            preconditioner,diagnostics=(preconditioner_builder or build_coarse)(residual,x,r,cutoff=cutoff)
-            row.update(diagnostics);row['refreshed_for_accuracy']=True
-            h,z,y,linear=arnoldi(jv,r,preconditioner,limit=linear_limit,tolerance=linear_tolerance)
-            newton=z@y;jn=check_jv(newton);true_linear=float(np.linalg.norm(r+jn)/norm)
-            attempts.append(dict(krylov_dimension=len(y),true_relative=true_linear))
-        row['linear_attempts']=attempts
+        newton=z@y;jn=jv(newton)
         row.update(krylov_dimension=len(y),arnoldi_linear_residual=linear,
                    true_newton_linear_residual=float(np.linalg.norm(r+jn)/norm),
                    newton_blocks=blocks(residual,newton),trials=[])
         if observer:observer(iteration,x.copy(),r.copy(),newton.copy())
-        if linear_refresh_threshold is not None and true_linear>linear_refresh_threshold:
-            return x,history,'linear_accuracy_limited'
         accepted=False
         for attempt in range(14):
             if mode=='hookstep':
@@ -156,7 +137,7 @@ def solve_globalized(residual,x,mode='hookstep',max_steps=12,cutoff=384,
             if accept:
                 row['accepted_trial']=attempt
                 # Independent full-map directional check, not only Hessenberg prediction.
-                true_prediction=.5*(norm*norm-np.linalg.norm(r+check_jv(step))**2)
+                true_prediction=.5*(norm*norm-np.linalg.norm(r+jv(step))**2)
                 trial['true_predicted_reduction']=float(true_prediction)
                 trial['true_rho']=float(actual/true_prediction) if true_prediction>0 else None
                 x=x+step;r=rr;accepted=True
