@@ -1,0 +1,7 @@
+{
+  "cpu_tests": 27,
+  "trial_count": 5,
+  "certified_stable_count": 0,
+  "raw_fields": "NPZ states retained in local run directory; not distributed",
+  "source_archive_sha256": "8cdb6564144bbf6971b8f2973be8289a8918e1a0a8185a5cb348e3eb09da75b6"
+}

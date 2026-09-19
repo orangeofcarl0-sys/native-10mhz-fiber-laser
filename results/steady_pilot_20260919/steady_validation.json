@@ -1,0 +1,12 @@
+[
+  {
+    "topology": "OC_CNT",
+    "cpu_gpu_relative": 2.402507278465688e-14,
+    "jv_relative_discrepancy": 5.111858952416868e-08
+  },
+  {
+    "topology": "CNT_OC",
+    "cpu_gpu_relative": 2.3832760404983855e-14,
+    "jv_relative_discrepancy": 5.2542180293016985e-08
+  }
+]

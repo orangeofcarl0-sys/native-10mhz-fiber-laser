@@ -15,11 +15,17 @@ def advance(age, rates_b, round_trip_s):
         raise ValueError("Gain age and rates must have identical cell shapes")
     if not (np.isfinite(age).all() and np.isfinite(rates_b).all()):
         raise ValueError("Nonfinite age or rate")
-    if np.any(age < 0) or np.any(rates_b <= 0) or not np.isfinite(round_trip_s) or round_trip_s <= 0:
+    if (
+        np.any(age < 0)
+        or np.any(rates_b <= 0)
+        or not np.isfinite(round_trip_s)
+        or round_trip_s <= 0
+    ):
         raise ValueError("Positive physical rates and time, nonnegative age required")
     return age + rates_b * round_trip_s
 
 
 def summary(age):
+    """Worst retained cell; for a batch this is also the worst case in the batch."""
     minimum = float(np.min(age))
     return dict(gain_age_min=minimum, gain_memory_max=float(np.exp(-minimum)))

@@ -1,0 +1,5 @@
+{
+  "execution_code_commit": "54851e58a7b20f13cf27d05b2b2e9dbc673ae763",
+  "snapshot_sha256": "a52f6f0a463ad677f71f9bd5aca975b8ff218e88ccca245250060e416e3d6b5e",
+  "note": "Snapshot preserves exact hashed runtime files before formatting. Terminal grid audit is separate from the original manifest; use terminal_grid_probe.json. Original MAT and checkpoint NPZ retained locally."
+}

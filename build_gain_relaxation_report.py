@@ -69,6 +69,7 @@ def main():
         certified_stable=False,
     )
     result["slow_energy_correlation_candidates"] = slow_peaks
+    result["terminal_grid_probe"] = manifest["final_grid_probe"]
     (ROOT / "summary.json").write_text(json.dumps(result, indent=2), encoding="utf8")
     plt.rcParams.update(
         {
@@ -86,9 +87,14 @@ def main():
         return f'<figure><img alt="{caption}" src="data:image/png;base64,{data}"><figcaption>{caption}</figcaption></figure>'
 
     x = np.array([r["round"] for r in trace])
+    status_text = {
+        "time_budget_complete_gain_age_reached": "本轮观察预算完成，条件年龄已达到7",
+        "maximum_budget_reached": "达到最大观察预算",
+        "numerical_boundary_unresolved": "受数值边界限制，未解析",
+    }.get(manifest["status"], manifest["status"])
     body = f"""<h1>g08_c53：累计增益年龄与长程验证</h1>
 <p>固定CNT→OC、OC80%、净GDD+0.2 ps²、pump50 mW。由本轮完整地图第600圈的复场、逐段EDF反转和CNT状态直接续算；不使用增益加速，不改变器件参数，不开展参数支路追踪。</p>
-<aside>本次接受{len(trace):,}个新增真实往返，总圈数{manifest['total_rounds']:,}。累计增益年龄最小值为{age.min():.4f}，条件松弛系数上界为{np.exp(-age.min()):.4g}。运行状态：{manifest['status']}。当前不认证稳定单脉冲。</aside>
+<aside>本次接受{len(trace):,}个新增真实往返，总圈数{manifest['total_rounds']:,}。累计增益年龄最小值为{age.min():.4f}，条件松弛系数上界为{np.exp(-age.min()):.4g}。{status_text}。末500圈能量CV为{result['tail500_energy_cv']*100:.2f}%，当前不认证稳定单脉冲。</aside>
 <h2>1. 累计增益年龄的定义和适用范围</h2>
 <p>逐EDF单元累积 Γⱼ=ΣₖBⱼ,ₖTᴿ，再取Γ_min=minⱼΓⱼ；M_max=exp(−Γ_min)。先按单元求和再取最小值，不能用每圈最小B的和替代。这里的M是沿已实现A、B历史的齐次反转松弛系数；完整耦合敏感度还包含光场与反转对A、B的反馈，不能把M叫作整个激光器已忘记初态的百分比。</p>
 <p>前600圈未保存逐段B历史，因此Γ从续算开始的零计起，不用末态τ倒推过去。只累计接受的物理圈，触边失败的试探圈、冻结搜索与加速迭代均不计。当前时间网格变化不改变EDF单元身份，因此保留年龄；自适应入口若改变认证网格则保守重置。</p>
@@ -132,6 +138,17 @@ def main():
     plt.ylabel("输出强度局部峰数")
     plt.grid(alpha=0.2)
     body += figure("peaks.png", "局部峰结构随演化变化；该窗口不是整个约100 ns腔周期。")
+    plt.figure(figsize=(10, 5))
+    plt.plot(
+        (np.arange(a.shape[-1]) - a.shape[-1] / 2) * dt, np.sum(abs(a[0]) ** 2, axis=0)
+    )
+    plt.xlabel("局部窗口时间 / ps")
+    plt.ylabel("末态腔内返回场功率 / W")
+    plt.grid(alpha=0.2)
+    body += figure(
+        "cavity_state.png",
+        "完整检查点中的腔内返回场；此处不是OC输出截面，峰形只用于辅助检查局部结构。",
+    )
     plt.figure(figsize=(10, 5))
     plt.plot(x, [r["inversion_gap"] for r in trace])
     plt.xlabel("总往返圈数")

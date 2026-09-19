@@ -1,0 +1,16 @@
+[
+  {
+    "topology": "OC_CNT",
+    "cases": 3,
+    "rounds": 8,
+    "rates_max_relative": 2.8843594179761567e-13,
+    "age_max_relative": 1.5520917884259688e-13
+  },
+  {
+    "topology": "CNT_OC",
+    "cases": 3,
+    "rounds": 8,
+    "rates_max_relative": 2.8821389719269064e-13,
+    "age_max_relative": 1.5565326805244695e-13
+  }
+]

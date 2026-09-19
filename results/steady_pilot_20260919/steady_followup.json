@@ -1,0 +1,365 @@
+{
+  "source_sha256": {
+    "steady_state.py": "ab09a43e806592ca22b3d3d4cb4007fdfee4ed524748f854136e2ef2781a04b6",
+    "spectral_engine.py": "4862a61a2fbb1ede96db62991e741e7ab75cbcb22c6cb5501d43dd8f1cd37a45",
+    "continue_steady_pilot.py": "d86f4a7f5ced3fcbb1540015e8b1247a6300a572311469347228088a147ab15e"
+  },
+  "trials": [
+    {
+      "name": "best_pilot_larger_krylov",
+      "status": "line_search_stalled",
+      "residual": 0.01087560634587804,
+      "relative_field_residual": 0.008211223949981328,
+      "population_gap": 0.00034576722618490097,
+      "output_energy_nJ": 1.8075655687237386,
+      "peaks": 2,
+      "time_edge": 7.054163615481275e-09,
+      "spectral_edge": 1.6474978165568893e-13,
+      "seconds": 212.14633009998943,
+      "evaluations": 3303,
+      "history": [
+        {
+          "step": 0,
+          "residual": 0.06004647767954615,
+          "calls": 1,
+          "linear_info": 2,
+          "linear_relative_residual": 0.6807905633114733,
+          "alpha": 0.5
+        },
+        {
+          "step": 1,
+          "residual": 0.04111129176260431,
+          "calls": 166,
+          "linear_info": 2,
+          "linear_relative_residual": 0.5168582128406463,
+          "alpha": 0.5
+        },
+        {
+          "step": 2,
+          "residual": 0.02715457890656328,
+          "calls": 331,
+          "linear_info": 2,
+          "linear_relative_residual": 0.4792270789468086,
+          "alpha": 0.5
+        },
+        {
+          "step": 3,
+          "residual": 0.020922115528143524,
+          "calls": 496,
+          "linear_info": 2,
+          "linear_relative_residual": 0.5496895125758242,
+          "alpha": 0.5
+        },
+        {
+          "step": 4,
+          "residual": 0.01625292844924554,
+          "calls": 661,
+          "linear_info": 2,
+          "linear_relative_residual": 0.7053525848653249,
+          "alpha": 1.0
+        },
+        {
+          "step": 5,
+          "residual": 0.01214462320147134,
+          "calls": 825,
+          "linear_info": 2,
+          "linear_relative_residual": 0.9324699397823784,
+          "alpha": 1.0
+        },
+        {
+          "step": 6,
+          "residual": 0.011141085865400078,
+          "calls": 989,
+          "linear_info": 2,
+          "linear_relative_residual": 0.9916034389481982,
+          "alpha": 1.0
+        },
+        {
+          "step": 7,
+          "residual": 0.011015457164329587,
+          "calls": 1153,
+          "linear_info": 2,
+          "linear_relative_residual": 0.9982709556148646,
+          "alpha": 1.0
+        },
+        {
+          "step": 8,
+          "residual": 0.010993123367808413,
+          "calls": 1317,
+          "linear_info": 2,
+          "linear_relative_residual": 0.9989022240330712,
+          "alpha": 1.0
+        },
+        {
+          "step": 9,
+          "residual": 0.010980567265880117,
+          "calls": 1481,
+          "linear_info": 2,
+          "linear_relative_residual": 0.99947059939687,
+          "alpha": 1.0
+        },
+        {
+          "step": 10,
+          "residual": 0.01097469863609669,
+          "calls": 1645,
+          "linear_info": 2,
+          "linear_relative_residual": 0.9951427536583224,
+          "alpha": 1.0
+        },
+        {
+          "step": 11,
+          "residual": 0.0109212394360267,
+          "calls": 1809,
+          "linear_info": 2,
+          "linear_relative_residual": 0.9977227713434011,
+          "alpha": 1.0
+        },
+        {
+          "step": 12,
+          "residual": 0.010896592628131214,
+          "calls": 1973,
+          "linear_info": 2,
+          "linear_relative_residual": 0.9998369954948277,
+          "alpha": 1.0
+        },
+        {
+          "step": 13,
+          "residual": 0.010894806254924963,
+          "calls": 2137,
+          "linear_info": 2,
+          "linear_relative_residual": 0.9998729664668315,
+          "alpha": 1.0
+        },
+        {
+          "step": 14,
+          "residual": 0.010893424922743042,
+          "calls": 2301,
+          "linear_info": 2,
+          "linear_relative_residual": 0.9998395674770304,
+          "alpha": 1.0
+        },
+        {
+          "step": 15,
+          "residual": 0.010891671576461443,
+          "calls": 2465,
+          "linear_info": 2,
+          "linear_relative_residual": 0.9989146431493742,
+          "alpha": 1.0
+        },
+        {
+          "step": 16,
+          "residual": 0.010879540708084152,
+          "calls": 2629,
+          "linear_info": 2,
+          "linear_relative_residual": 0.9997038615946319,
+          "alpha": 1.0
+        },
+        {
+          "step": 17,
+          "residual": 0.010876419664188237,
+          "calls": 2793,
+          "linear_info": 2,
+          "linear_relative_residual": 0.9999176250079675,
+          "alpha": 0.5
+        },
+        {
+          "step": 18,
+          "residual": 0.010875748715126374,
+          "calls": 2958,
+          "linear_info": 2,
+          "linear_relative_residual": 0.9999441484196464,
+          "alpha": 0.125
+        },
+        {
+          "step": 19,
+          "residual": 0.01087560634587804,
+          "calls": 3125,
+          "linear_info": 2,
+          "linear_relative_residual": 0.9999650162240015
+        }
+      ],
+      "certified_stable": false
+    },
+    {
+      "name": "saved_RT600",
+      "status": "iteration_budget_reached",
+      "residual": 0.02556579143099555,
+      "relative_field_residual": 1.8788985269595961,
+      "population_gap": 0.024037000538000064,
+      "output_energy_nJ": 0.0014974598886333128,
+      "peaks": 4,
+      "time_edge": 6.986768663063739e-08,
+      "spectral_edge": 2.6635721785789235e-12,
+      "seconds": 188.15007590001915,
+      "evaluations": 3148,
+      "history": [
+        {
+          "step": 0,
+          "residual": 1.6753965592406523,
+          "calls": 1,
+          "linear_info": 0,
+          "linear_relative_residual": 0.029729938893507155,
+          "alpha": 0.25
+        },
+        {
+          "step": 1,
+          "residual": 0.9125356206070363,
+          "calls": 31,
+          "linear_info": 2,
+          "linear_relative_residual": 0.029979024402910615,
+          "alpha": 0.25
+        },
+        {
+          "step": 2,
+          "residual": 0.6187706433858915,
+          "calls": 195,
+          "linear_info": 2,
+          "linear_relative_residual": 0.09239867992972986,
+          "alpha": 0.5
+        },
+        {
+          "step": 3,
+          "residual": 0.3004026291914189,
+          "calls": 359,
+          "linear_info": 2,
+          "linear_relative_residual": 0.11523734286703344,
+          "alpha": 1.0
+        },
+        {
+          "step": 4,
+          "residual": 0.043284737148731114,
+          "calls": 523,
+          "linear_info": 2,
+          "linear_relative_residual": 0.7425928094614751,
+          "alpha": 1.0
+        },
+        {
+          "step": 5,
+          "residual": 0.032137387515622236,
+          "calls": 687,
+          "linear_info": 2,
+          "linear_relative_residual": 0.9598769394416704,
+          "alpha": 1.0
+        },
+        {
+          "step": 6,
+          "residual": 0.030846097604042246,
+          "calls": 851,
+          "linear_info": 2,
+          "linear_relative_residual": 0.9699490842492304,
+          "alpha": 1.0
+        },
+        {
+          "step": 7,
+          "residual": 0.029918227957708408,
+          "calls": 1015,
+          "linear_info": 2,
+          "linear_relative_residual": 0.9765223706115869,
+          "alpha": 1.0
+        },
+        {
+          "step": 8,
+          "residual": 0.02921504432749049,
+          "calls": 1179,
+          "linear_info": 2,
+          "linear_relative_residual": 0.9798597214212674,
+          "alpha": 1.0
+        },
+        {
+          "step": 9,
+          "residual": 0.02862611399381478,
+          "calls": 1343,
+          "linear_info": 2,
+          "linear_relative_residual": 0.982974950475944,
+          "alpha": 1.0
+        },
+        {
+          "step": 10,
+          "residual": 0.028138320314084395,
+          "calls": 1507,
+          "linear_info": 2,
+          "linear_relative_residual": 0.9848653709479033,
+          "alpha": 1.0
+        },
+        {
+          "step": 11,
+          "residual": 0.027712080430405735,
+          "calls": 1671,
+          "linear_info": 2,
+          "linear_relative_residual": 0.986601502676555,
+          "alpha": 1.0
+        },
+        {
+          "step": 12,
+          "residual": 0.027340475966009834,
+          "calls": 1835,
+          "linear_info": 2,
+          "linear_relative_residual": 0.9881462387814054,
+          "alpha": 1.0
+        },
+        {
+          "step": 13,
+          "residual": 0.02701613167841139,
+          "calls": 1999,
+          "linear_info": 2,
+          "linear_relative_residual": 0.9892947062039246,
+          "alpha": 1.0
+        },
+        {
+          "step": 14,
+          "residual": 0.02672669490780555,
+          "calls": 2163,
+          "linear_info": 2,
+          "linear_relative_residual": 0.9903726174571711,
+          "alpha": 1.0
+        },
+        {
+          "step": 15,
+          "residual": 0.026469184152460738,
+          "calls": 2327,
+          "linear_info": 2,
+          "linear_relative_residual": 0.991536178866693,
+          "alpha": 1.0
+        },
+        {
+          "step": 16,
+          "residual": 0.026244983483011446,
+          "calls": 2491,
+          "linear_info": 2,
+          "linear_relative_residual": 0.9923472531009015,
+          "alpha": 1.0
+        },
+        {
+          "step": 17,
+          "residual": 0.026043997894132656,
+          "calls": 2655,
+          "linear_info": 2,
+          "linear_relative_residual": 0.9931370568650749,
+          "alpha": 1.0
+        },
+        {
+          "step": 18,
+          "residual": 0.025865124310351918,
+          "calls": 2819,
+          "linear_info": 2,
+          "linear_relative_residual": 0.9939119603203276,
+          "alpha": 1.0
+        },
+        {
+          "step": 19,
+          "residual": 0.025707543611291357,
+          "calls": 2983,
+          "linear_info": 2,
+          "linear_relative_residual": 0.994490258308406,
+          "alpha": 1.0
+        },
+        {
+          "step": 20,
+          "residual": 0.02556579143099555,
+          "calls": 3147
+        }
+      ],
+      "certified_stable": false
+    }
+  ]
+}

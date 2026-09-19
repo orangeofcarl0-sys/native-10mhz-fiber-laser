@@ -1,0 +1,10 @@
+{
+  "rounds": 8,
+  "intensity": 7.629320006061056e-06,
+  "field": 0.0001734001955639086,
+  "stokes": 0.00017014762835652582,
+  "population": 1.518214038339733e-06,
+  "population_abs": 1.9015093302154895e-06,
+  "energy": 8.621207839176748e-06,
+  "below_screen_tolerances": true
+}

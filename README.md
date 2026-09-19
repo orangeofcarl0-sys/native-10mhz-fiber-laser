@@ -190,3 +190,13 @@ python run_full_maps.py
 原有自适应入口也改为逐单元累计，并采用年龄7门槛。`continuation` 默认遇到未收敛点就停止该方向；探索性传递需显式 `allow_unconverged=True`，不能作为稳定支路。历史报告保持原口径。
 
 机制复核见 `docs/mechanism_review.html`：CNT调制偏弱与EDF慢暂态均有证据，尚未将前者认定为唯一根因。
+
+本轮已实际续算10586圈（总11186圈），Gamma_min=7.00024，条件系数9.1166e-4。末500圈能量0.909–3.486 nJ、CV42.04%、两个局部峰；1–16圈复场递归均未通过。约250圈的能量自相关线索尚未作长周期复场认证。末态8圈双网格复核通过当前筛选误差要求，但不是全程误差证明。报告见 `docs/gain_relaxation_report.html`，数据与执行源码快照见 `results/gain_relaxation_20260919/`；未继续泵浦支路追踪。
+
+## 周期一联合自洽求解试验
+
+`steady_state.py` 在固定网格上联合求解复光场、纵向反转及整体相位/时间位移，采用平滑模板约束、矩阵无关Newton–LGMRES和反转边界线搜索。用 `N-Neq=0` 替换带有微小恢复因子的动态增益残差，只对周期一固定点等价；不改变物理寿命，不归一化演化能量。CNT未充分恢复时明确拒绝消去其状态。
+
+设置独立 `LASER_OUTPUT_DIR` 后运行 `python run_steady_pilot.py`（需要CuPy）。`continue_steady_pilot.py` 还需 `LASER_SCAN_DIR/fine_group_08.mat` 的已有原始状态；运行后用 `build_steady_report.py` 生成离线报告。CPU检查为 `python -m unittest test_steady_state`，GPU残差/方向导数对照为 `python validate_steady_gpu.py`。
+
+本次五次求解均未取得合格稳态锚点。较好的重启结果相对光场残差约0.82%，仍为两个局部峰、1.81 nJ；无预条件线性求解后期停滞。没有将求解失败解释为物理无解，也没有运行不满足前提的Floquet认证。见 `docs/steady_state_report.html`、`results/steady_pilot_20260919/`。

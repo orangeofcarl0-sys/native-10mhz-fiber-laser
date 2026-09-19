@@ -44,6 +44,8 @@ class SpectralEngine:
         )
         self.last_gap, self.last_tau = xp.zeros(len(oc)), xp.zeros(len(oc))
         self.rates_b = xp.zeros((len(oc), self.ops[1][0]), dtype=xp.float64)
+        # Available in the unfused path for joint optical/inversion root solving.
+        self.rates_a = None if self.fused_edf else xp.zeros_like(self.rates_b)
         self.transform_count = 0
 
     def forward(self, a):
@@ -81,6 +83,8 @@ class SpectralEngine:
             self.last_gap = xp.zeros(len(pop))
             self.last_tau = xp.zeros(len(pop))
             self.rates_b = xp.empty_like(pop)
+            if not self.fused_edf:
+                self.rates_a = xp.empty_like(pop)
         self.last_gap.fill(0)
         self.last_tau.fill(0)
         for j in range(steps):
@@ -92,7 +96,16 @@ class SpectralEngine:
                 )
                 new = self.weighted(f)
                 self.rate_update(
-                    old, new, pump, pop, self.last_gap, self.last_tau, j, c, e, dz,
+                    old,
+                    new,
+                    pump,
+                    pop,
+                    self.last_gap,
+                    self.last_tau,
+                    j,
+                    c,
+                    e,
+                    dz,
                     rates_b=self.rates_b,
                 )
                 old = new
@@ -118,6 +131,7 @@ class SpectralEngine:
                 / e.ions
             )
             self.rates_b[:, j] = B
+            self.rates_a[:, j] = A
             if c.get("gain_mode", "dynamic") != "frozen":
                 pop[:, j] = inv + (A / B - inv) * (-xp.expm1(-B / e.rep))
             pump *= xp.exp(-c["alpha_p_m"] * (1 - inv) * dz)

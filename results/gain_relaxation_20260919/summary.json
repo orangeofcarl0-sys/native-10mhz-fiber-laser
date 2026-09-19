@@ -1,0 +1,90 @@
+{
+  "total_rounds": 11186,
+  "additional_rounds": 10586,
+  "elapsed_physical_ms": 1.0586493719731935,
+  "gain_age_min": 7.000243879345026,
+  "gain_memory_max": 0.0009116596034938744,
+  "tail500_energy_min_nJ": 0.9094116063599236,
+  "tail500_energy_max_nJ": 3.4856748570564076,
+  "tail500_energy_cv": 0.42039939911520086,
+  "tail500_peaks_min": 2,
+  "tail500_peaks_max": 2,
+  "minimum_field_residual_over_periods": 0.11929641363221631,
+  "gain_age_cells": [
+    10.636627447260137,
+    10.346868674189759,
+    10.031074472063613,
+    9.690582543284055,
+    9.329284389547226,
+    8.954551919486986,
+    8.577834175659676,
+    8.21433498659359,
+    7.8812228081834155,
+    7.594399228276164,
+    7.364862757896586,
+    7.196356926901242,
+    7.085435051408968,
+    7.023613519861978,
+    7.000243879345026
+  ],
+  "inversion_cells": [
+    0.9442119650050586,
+    0.9299825329427828,
+    0.9118042557001645,
+    0.8888665890708468,
+    0.8604098088582659,
+    0.825909171461021,
+    0.7853491526004607,
+    0.7395435779042441,
+    0.6903626280806368,
+    0.6406478855098074,
+    0.5936681540977099,
+    0.5522631752241459,
+    0.5181198173194274,
+    0.4915669602686103,
+    0.4718853394016
+  ],
+  "events": [
+    {
+      "at_total_round": 1851,
+      "action": "rollback_finer_dt",
+      "dt_ps": 0.0625,
+      "n": 16384
+    },
+    {
+      "at_total_round": 1853,
+      "action": "rollback_finer_dt",
+      "dt_ps": 0.03125,
+      "n": 32768
+    },
+    {
+      "at_total_round": 4784,
+      "action": "rollback_widen",
+      "dt_ps": 0.03125,
+      "n": 65536
+    }
+  ],
+  "status": "time_budget_complete_gain_age_reached",
+  "classification": "no_period_1_to_16_recurrence_detected",
+  "certified_stable": false,
+  "slow_energy_correlation_candidates": [
+    {
+      "lag_rounds": 250,
+      "energy_correlation": 0.6411595239680925
+    },
+    {
+      "lag_rounds": 495,
+      "energy_correlation": 0.18766837517440693
+    }
+  ],
+  "terminal_grid_probe": {
+    "rounds": 8,
+    "intensity": 7.629320006061056e-06,
+    "field": 0.0001734001955639086,
+    "stokes": 0.00017014762835652582,
+    "population": 1.518214038339733e-06,
+    "population_abs": 1.9015093302154895e-06,
+    "energy": 8.621207839176748e-06,
+    "below_screen_tolerances": true
+  }
+}

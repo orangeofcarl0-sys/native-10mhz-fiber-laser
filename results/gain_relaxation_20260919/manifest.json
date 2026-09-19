@@ -1,0 +1,4051 @@
+{
+  "status": "time_budget_complete_gain_age_reached",
+  "case": "g08_c53",
+  "start_round": 600,
+  "source_sha256": "76858e14f773105a1a72dd22a4c5f0ad15268d1727cb5d104acafa1baaa04ff5",
+  "code_sha256": {
+    "spectral_engine.py": "56b1491763c39aa3f259a94b7c5ffa7a99c1aa54dc0c8e329c7ae0e77df81631",
+    "gpu_kernels.py": "8626257d11ea04bc6281ad4fdf37c7464e7f20b96ca108b2489f84cb5f796184",
+    "gpu_engine.py": "9b774e2406ea468c2bf57999caf7ae3a25a8e9a8c5a9f7c4a932a77e19788c9e",
+    "gain_age.py": "ebaa867492e34bc24ca14efde1fb1576c1550fc9e411f3ec187474f6038f24e6",
+    "run_gain_relaxation.py": "d6d6a43a96891accacb020b6a12134a5e7b30711f7d5048c64a853be04aea2c4",
+    "parameters/effective_parameters.json": "6a6d9d4bdc138af7fcf15d7449f0ddbe164a39ff1408bc494b0d4069f3efc6b3"
+  },
+  "age_origin": "restart at RT600; earlier rate history unknown and not imputed",
+  "memory_meaning": "conditional frozen-rate homogeneous coefficient, not coupled sensitivity",
+  "primary_budget": 10000,
+  "maximum_budget": 20000,
+  "gain_age_gate": 7,
+  "recurrence_screen_limits": {
+    "field": 0.001,
+    "intensity": 0.001,
+    "stokes": 0.001,
+    "population": 0.0001,
+    "population_abs": 1e-05,
+    "energy": 0.0001,
+    "cnt": 1e-08
+  },
+  "events": [
+    {
+      "at_total_round": 1851,
+      "action": "rollback_finer_dt",
+      "dt_ps": 0.0625,
+      "n": 16384
+    },
+    {
+      "at_total_round": 1853,
+      "action": "rollback_finer_dt",
+      "dt_ps": 0.03125,
+      "n": 32768
+    },
+    {
+      "at_total_round": 4784,
+      "action": "rollback_widen",
+      "dt_ps": 0.03125,
+      "n": 65536
+    }
+  ],
+  "period_checks": [
+    {
+      "round": 1100,
+      "periods": [
+        {
+          "period": 1,
+          "intensity": 0.04543662924718974,
+          "field": 0.4908234883865815,
+          "stokes": 0.045456931581534944,
+          "population": 0.00015953902177192011,
+          "population_abs": 0.00019267410819623354,
+          "energy": 0.02869011006363631,
+          "cnt": 0.0,
+          "passes_screen": false
+        },
+        {
+          "period": 2,
+          "intensity": 0.08897697983803764,
+          "field": 0.8979414577351073,
+          "stokes": 0.08901835048936307,
+          "population": 0.00031373036261340894,
+          "population_abs": 0.0003796256584979174,
+          "energy": 0.056555606943963554,
+          "cnt": 0.0,
+          "passes_screen": false
+        },
+        {
+          "period": 3,
+          "intensity": 0.13023278066993166,
+          "field": 1.1509216317106457,
+          "stokes": 0.13029585087871232,
+          "population": 0.0004626902044236855,
+          "population_abs": 0.0005609474061643027,
+          "energy": 0.08359682560680093,
+          "cnt": 0.0,
+          "passes_screen": false
+        },
+        {
+          "period": 4,
+          "intensity": 0.16894758839761045,
+          "field": 1.1716769135886962,
+          "stokes": 0.1690326305255097,
+          "population": 0.0006065505016626055,
+          "population_abs": 0.00073674665828527,
+          "energy": 0.10985337959128627,
+          "cnt": 0.0,
+          "passes_screen": false
+        },
+        {
+          "period": 5,
+          "intensity": 0.20496506299037592,
+          "field": 1.1280247180224603,
+          "stokes": 0.2050717568931721,
+          "population": 0.0007454559375576731,
+          "population_abs": 0.0009071424427289365,
+          "energy": 0.1353207988350308,
+          "cnt": 0.0,
+          "passes_screen": false
+        },
+        {
+          "period": 6,
+          "intensity": 0.2327416070870158,
+          "field": 1.352405998444768,
+          "stokes": 0.23284903184420414,
+          "population": 0.0008795611107776139,
+          "population_abs": 0.0010722628956661984,
+          "energy": 0.16002768551186508,
+          "cnt": 0.0,
+          "passes_screen": false
+        },
+        {
+          "period": 7,
+          "intensity": 0.25400904307932715,
+          "field": 1.3245165211724597,
+          "stokes": 0.25414013608834213,
+          "population": 0.0010090280038358148,
+          "population_abs": 0.001232242914125714,
+          "energy": 0.1840000485831551,
+          "cnt": 0.0,
+          "passes_screen": false
+        },
+        {
+          "period": 8,
+          "intensity": 0.27707330391239277,
+          "field": 1.3058418029744572,
+          "stokes": 0.2772209039262361,
+          "population": 0.001134023725820774,
+          "population_abs": 0.0013872220627800802,
+          "energy": 0.20721852630124116,
+          "cnt": 0.0,
+          "passes_screen": false
+        },
+        {
+          "period": 9,
+          "intensity": 0.30132247910064963,
+          "field": 1.2793446981019378,
+          "stokes": 0.30148493678875093,
+          "population": 0.0012547185210351431,
+          "population_abs": 0.001537342724900248,
+          "energy": 0.2297710768871043,
+          "cnt": 0.0,
+          "passes_screen": false
+        },
+        {
+          "period": 10,
+          "intensity": 0.3261946204662203,
+          "field": 1.2571167414663067,
+          "stokes": 0.3263700380826803,
+          "population": 0.0013712840481322859,
+          "population_abs": 0.0016827485027059996,
+          "energy": 0.2516131522687929,
+          "cnt": 0.0,
+          "passes_screen": false
+        },
+        {
+          "period": 11,
+          "intensity": 0.3511476696920682,
+          "field": 1.249435206104614,
+          "stokes": 0.35133395657169736,
+          "population": 0.0014838919169924782,
+          "population_abs": 0.0018235828548619493,
+          "energy": 0.27276776236285916,
+          "cnt": 0.0,
+          "passes_screen": false
+        },
+        {
+          "period": 12,
+          "intensity": 0.3755598230579259,
+          "field": 1.2458102255906582,
+          "stokes": 0.37575208017221956,
+          "population": 0.0015927124670094908,
+          "population_abs": 0.001959987955730269,
+          "energy": 0.2933152350213818,
+          "cnt": 0.0,
+          "passes_screen": false
+        },
+        {
+          "period": 13,
+          "intensity": 0.3970250986445172,
+          "field": 1.2282266189403068,
+          "stokes": 0.3972106331278938,
+          "population": 0.0016979137803652552,
+          "population_abs": 0.0020921037732680725,
+          "energy": 0.31320560248955265,
+          "cnt": 0.0,
+          "passes_screen": false
+        },
+        {
+          "period": 14,
+          "intensity": 0.41648240786759594,
+          "field": 1.2049226458859073,
+          "stokes": 0.4166728226309953,
+          "population": 0.001799660906940908,
+          "population_abs": 0.002220067345036103,
+          "energy": 0.3324598798824455,
+          "cnt": 0.0,
+          "passes_screen": false
+        },
+        {
+          "period": 15,
+          "intensity": 0.4356288428960978,
+          "field": 1.1881585025661963,
+          "stokes": 0.4358245944343426,
+          "population": 0.0018981152718179207,
+          "population_abs": 0.002344012225133585,
+          "energy": 0.3511681222813585,
+          "cnt": 0.0,
+          "passes_screen": false
+        },
+        {
+          "period": 16,
+          "intensity": 0.45463996584758204,
+          "field": 1.1761725433458021,
+          "stokes": 0.45484037159194957,
+          "population": 0.00199343425485321,
+          "population_abs": 0.0024640680957598304,
+          "energy": 0.36928524687044817,
+          "cnt": 0.0,
+          "passes_screen": false
+        }
+      ]
+    },
+    {
+      "round": 1600,
+      "periods": [
+        {
+          "period": 1,
+          "intensity": 0.08568858115824605,
+          "field": 0.28686595808227805,
+          "stokes": 0.08581853653655686,
+          "population": 0.00028646733994126643,
+          "population_abs": 0.00027271866427169833,
+          "energy": 0.05737912104824461,
+          "cnt": 0.0,
+          "passes_screen": false
+        },
+        {
+          "period": 2,
+          "intensity": 0.15435865257833467,
+          "field": 0.5604980775174232,
+          "stokes": 0.15451298966311822,
+          "population": 0.0005628684596864239,
+          "population_abs": 0.0005367026153184629,
+          "energy": 0.11145727523272675,
+          "cnt": 0.0,
+          "passes_screen": false
+        },
+        {
+          "period": 3,
+          "intensity": 0.21151445106744454,
+          "field": 0.8686786773731344,
+          "stokes": 0.21158815144619425,
+          "population": 0.0008289174631162501,
+          "population_abs": 0.0007917152094147895,
+          "energy": 0.162430469086418,
+          "cnt": 0.0,
+          "passes_screen": false
+        },
+        {
+          "period": 4,
+          "intensity": 0.2597261123335885,
+          "field": 1.0810175691518482,
+          "stokes": 0.25979186051784403,
+          "population": 0.001084343680678976,
+          "population_abs": 0.0010375265002228184,
+          "energy": 0.21046033830759914,
+          "cnt": 0.0,
+          "passes_screen": false
+        },
+        {
+          "period": 5,
+          "intensity": 0.3043357952911552,
+          "field": 1.1412449259342146,
+          "stokes": 0.3043604694223638,
+          "population": 0.0013288869343057337,
+          "population_abs": 0.0012739144095007537,
+          "energy": 0.25572540148938916,
+          "cnt": 0.0,
+          "passes_screen": false
+        },
+        {
+          "period": 6,
+          "intensity": 0.3502609413318355,
+          "field": 1.1566414701563779,
+          "stokes": 0.35028936464075094,
+          "population": 0.0015623665509937501,
+          "population_abs": 0.0015007274833447326,
+          "energy": 0.2983770398527871,
+          "cnt": 0.0,
+          "passes_screen": false
+        },
+        {
+          "period": 7,
+          "intensity": 0.3914762864147608,
+          "field": 1.2391671577657588,
+          "stokes": 0.3915058533382067,
+          "population": 0.0017846935497328334,
+          "population_abs": 0.0017184808987089628,
+          "energy": 0.3385584009712087,
+          "cnt": 0.0,
+          "passes_screen": false
+        },
+        {
+          "period": 8,
+          "intensity": 0.4274807681444322,
+          "field": 1.2567203281144448,
+          "stokes": 0.4275087929075043,
+          "population": 0.001995846454588491,
+          "population_abs": 0.0019270838396674428,
+          "energy": 0.3764301634807785,
+          "cnt": 0.0,
+          "passes_screen": false
+        },
+        {
+          "period": 9,
+          "intensity": 0.4596855671889783,
+          "field": 1.2450894708282731,
+          "stokes": 0.45971150653388265,
+          "population": 0.0021958531255099594,
+          "population_abs": 0.0021263210091179152,
+          "energy": 0.41209285765165626,
+          "cnt": 0.0,
+          "passes_screen": false
+        },
+        {
+          "period": 10,
+          "intensity": 0.4899888077636268,
+          "field": 1.229095517790691,
+          "stokes": 0.49001406490369614,
+          "population": 0.002384791439417623,
+          "population_abs": 0.002316256186726706,
+          "energy": 0.44571183620651844,
+          "cnt": 0.0,
+          "passes_screen": false
+        },
+        {
+          "period": 11,
+          "intensity": 0.5188324556432493,
+          "field": 1.2193572066961968,
+          "stokes": 0.5188585918089317,
+          "population": 0.0025627926134051703,
+          "population_abs": 0.002496995023557047,
+          "energy": 0.47736527620176106,
+          "cnt": 0.0,
+          "passes_screen": false
+        },
+        {
+          "period": 12,
+          "intensity": 0.5458562561088042,
+          "field": 1.1960147300090012,
+          "stokes": 0.5458844973327479,
+          "population": 0.0027300337434662996,
+          "population_abs": 0.0026686783037539463,
+          "energy": 0.5071978986484682,
+          "cnt": 0.0,
+          "passes_screen": false
+        },
+        {
+          "period": 13,
+          "intensity": 0.570148297160022,
+          "field": 1.2089675071291353,
+          "stokes": 0.5701785075331426,
+          "population": 0.002886729740907717,
+          "population_abs": 0.0028314743058526215,
+          "energy": 0.5352869927190214,
+          "cnt": 0.0,
+          "passes_screen": false
+        },
+        {
+          "period": 14,
+          "intensity": 0.5925130423978148,
+          "field": 1.2169715101881942,
+          "stokes": 0.5925424112171841,
+          "population": 0.0030331237078393405,
+          "population_abs": 0.0029855719034823647,
+          "energy": 0.5617594687031682,
+          "cnt": 0.0,
+          "passes_screen": false
+        },
+        {
+          "period": 15,
+          "intensity": 0.6137051058409408,
+          "field": 1.219208066750906,
+          "stokes": 0.6137339541795401,
+          "population": 0.003169487200119225,
+          "population_abs": 0.0031311810373279014,
+          "energy": 0.5866804369891871,
+          "cnt": 0.0,
+          "passes_screen": false
+        },
+        {
+          "period": 16,
+          "intensity": 0.6338108307031389,
+          "field": 1.2005499737037502,
+          "stokes": 0.6338381210035926,
+          "population": 0.0032961180174165138,
+          "population_abs": 0.003268530813707815,
+          "energy": 0.6101734384076472,
+          "cnt": 0.0,
+          "passes_screen": false
+        }
+      ]
+    },
+    {
+      "round": 2100,
+      "periods": [
+        {
+          "period": 1,
+          "intensity": 0.023363161596248967,
+          "field": 0.0234350986644472,
+          "stokes": 0.023368462209690518,
+          "population": 0.0001039215474937548,
+          "population_abs": 0.00010333363575654175,
+          "energy": 0.022672356340168287,
+          "cnt": 0.0,
+          "passes_screen": false
+        },
+        {
+          "period": 2,
+          "intensity": 0.04673119796375874,
+          "field": 0.0463603557137661,
+          "stokes": 0.0467348102509964,
+          "population": 0.00020785087207073966,
+          "population_abs": 0.00020666691056081543,
+          "energy": 0.04526720198294587,
+          "cnt": 0.0,
+          "passes_screen": false
+        },
+        {
+          "period": 3,
+          "intensity": 0.07007855543917241,
+          "field": 0.06883577088818203,
+          "stokes": 0.07007901463880632,
+          "population": 0.00031178678273707013,
+          "population_abs": 0.0003099999014595234,
+          "energy": 0.06775632082335625,
+          "cnt": 0.0,
+          "passes_screen": false
+        },
+        {
+          "period": 4,
+          "intensity": 0.09338203719618617,
+          "field": 0.09091590496611471,
+          "stokes": 0.09338324870698379,
+          "population": 0.00041572812866658566,
+          "population_abs": 0.0004133317844200457,
+          "energy": 0.09011320591567462,
+          "cnt": 0.0,
+          "passes_screen": false
+        },
+        {
+          "period": 5,
+          "intensity": 0.11661765333908196,
+          "field": 0.11251743472586537,
+          "stokes": 0.11661966123727904,
+          "population": 0.0005196737815969195,
+          "population_abs": 0.0005166631558938262,
+          "energy": 0.11231169121762408,
+          "cnt": 0.0,
+          "passes_screen": false
+        },
+        {
+          "period": 6,
+          "intensity": 0.13975813381379168,
+          "field": 0.133593699625203,
+          "stokes": 0.1397590254967727,
+          "population": 0.0006236226414788358,
+          "population_abs": 0.0006199925959285979,
+          "energy": 0.1343226164487339,
+          "cnt": 0.0,
+          "passes_screen": false
+        },
+        {
+          "period": 7,
+          "intensity": 0.16277818333695016,
+          "field": 0.1541787777869668,
+          "stokes": 0.16277913985698644,
+          "population": 0.0007275736435911504,
+          "population_abs": 0.0007233213914172865,
+          "energy": 0.15611793121398687,
+          "cnt": 0.0,
+          "passes_screen": false
+        },
+        {
+          "period": 8,
+          "intensity": 0.18565339315024448,
+          "field": 0.17426035860452202,
+          "stokes": 0.185655147134058,
+          "population": 0.0008315257433235301,
+          "population_abs": 0.000826647301934269,
+          "energy": 0.17767125651062532,
+          "cnt": 0.0,
+          "passes_screen": false
+        },
+        {
+          "period": 9,
+          "intensity": 0.20835559538637552,
+          "field": 0.19380615720668612,
+          "stokes": 0.2083568805816362,
+          "population": 0.0009354779150066852,
+          "population_abs": 0.0009299725818541216,
+          "energy": 0.19895330549595736,
+          "cnt": 0.0,
+          "passes_screen": false
+        },
+        {
+          "period": 10,
+          "intensity": 0.23085749636000563,
+          "field": 0.21284203350768194,
+          "stokes": 0.2308586243599943,
+          "population": 0.0010394291620281415,
+          "population_abs": 0.001033293432368132,
+          "energy": 0.21993492536675197,
+          "cnt": 0.0,
+          "passes_screen": false
+        },
+        {
+          "period": 11,
+          "intensity": 0.25313430482693117,
+          "field": 0.23186271044343043,
+          "stokes": 0.25313611546556225,
+          "population": 0.0011433785063437328,
+          "population_abs": 0.0011366089562641069,
+          "energy": 0.24058977340764365,
+          "cnt": 0.0,
+          "passes_screen": false
+        },
+        {
+          "period": 12,
+          "intensity": 0.2751577922337817,
+          "field": 0.2524715196421478,
+          "stokes": 0.2751594577068027,
+          "population": 0.0012473249817507319,
+          "population_abs": 0.001239918267103235,
+          "energy": 0.26088925902196625,
+          "cnt": 0.0,
+          "passes_screen": false
+        },
+        {
+          "period": 13,
+          "intensity": 0.2968990121315383,
+          "field": 0.2729212079717168,
+          "stokes": 0.296900431479993,
+          "population": 0.0013512676438699725,
+          "population_abs": 0.0013432204978750528,
+          "energy": 0.28080374933610264,
+          "cnt": 0.0,
+          "passes_screen": false
+        },
+        {
+          "period": 14,
+          "intensity": 0.31833265613279327,
+          "field": 0.2931990391953948,
+          "stokes": 0.31833466730868315,
+          "population": 0.0014552055652642612,
+          "population_abs": 0.0014465147967488434,
+          "energy": 0.3003071502507906,
+          "cnt": 0.0,
+          "passes_screen": false
+        },
+        {
+          "period": 15,
+          "intensity": 0.33943116128814177,
+          "field": 0.3132860170049205,
+          "stokes": 0.3394332362566582,
+          "population": 0.0015591378253163556,
+          "population_abs": 0.0015498003182805586,
+          "energy": 0.3193723274672662,
+          "cnt": 0.0,
+          "passes_screen": false
+        },
+        {
+          "period": 16,
+          "intensity": 0.3601645666896261,
+          "field": 0.3331647841479257,
+          "stokes": 0.36016631789962555,
+          "population": 0.0016630635176732725,
+          "population_abs": 0.0016530762298656576,
+          "energy": 0.33796995724565426,
+          "cnt": 0.0,
+          "passes_screen": false
+        }
+      ]
+    },
+    {
+      "round": 2600,
+      "periods": [
+        {
+          "period": 1,
+          "intensity": 0.011632150664749314,
+          "field": 0.15091155511292,
+          "stokes": 0.011666174904520836,
+          "population": 5.147273610767254e-05,
+          "population_abs": 5.5400058500909566e-05,
+          "energy": 0.012334597463825592,
+          "cnt": 0.0,
+          "passes_screen": false
+        },
+        {
+          "period": 2,
+          "intensity": 0.023387017103493942,
+          "field": 0.2772531063631001,
+          "stokes": 0.023408047528702167,
+          "population": 0.00010294552328246559,
+          "population_abs": 0.00011079478646147667,
+          "energy": 0.024815619224879626,
+          "cnt": 0.0,
+          "passes_screen": false
+        },
+        {
+          "period": 3,
+          "intensity": 0.035271145651852694,
+          "field": 0.3598558555700511,
+          "stokes": 0.035291489277830615,
+          "population": 0.00015440296423207015,
+          "population_abs": 0.0001661774636327884,
+          "energy": 0.03744349909659461,
+          "cnt": 0.0,
+          "passes_screen": false
+        },
+        {
+          "period": 4,
+          "intensity": 0.047266960596854805,
+          "field": 0.38874877008562997,
+          "stokes": 0.04731237555238723,
+          "population": 0.00020585503189010307,
+          "population_abs": 0.00022154332066071092,
+          "energy": 0.05020905684975174,
+          "cnt": 0.0,
+          "passes_screen": false
+        },
+        {
+          "period": 5,
+          "intensity": 0.05939208884869826,
+          "field": 0.4180757563261629,
+          "stokes": 0.05945958553187477,
+          "population": 0.00025727505949605566,
+          "population_abs": 0.00027688610416543025,
+          "energy": 0.06312532482262534,
+          "cnt": 0.0,
+          "passes_screen": false
+        },
+        {
+          "period": 6,
+          "intensity": 0.07162125712504003,
+          "field": 0.4370547677734056,
+          "stokes": 0.07167341072967251,
+          "population": 0.0003086830757582468,
+          "population_abs": 0.00033219934070694013,
+          "energy": 0.07616899093541973,
+          "cnt": 0.0,
+          "passes_screen": false
+        },
+        {
+          "period": 7,
+          "intensity": 0.08398498239559944,
+          "field": 0.4450988037450934,
+          "stokes": 0.08402815933358151,
+          "population": 0.0003600435707705679,
+          "population_abs": 0.00038747971510122436,
+          "energy": 0.08936136525795169,
+          "cnt": 0.0,
+          "passes_screen": false
+        },
+        {
+          "period": 8,
+          "intensity": 0.09643162891343728,
+          "field": 0.4545421128044585,
+          "stokes": 0.09648891579641987,
+          "population": 0.00041138405588134495,
+          "population_abs": 0.00044271642330573346,
+          "energy": 0.10266921605169821,
+          "cnt": 0.0,
+          "passes_screen": false
+        },
+        {
+          "period": 9,
+          "intensity": 0.10901880972477702,
+          "field": 0.4756405114420606,
+          "stokes": 0.10908189023688317,
+          "population": 0.0004626635738576101,
+          "population_abs": 0.000497912550700752,
+          "energy": 0.11612159773108233,
+          "cnt": 0.0,
+          "passes_screen": false
+        },
+        {
+          "period": 10,
+          "intensity": 0.12167380395316599,
+          "field": 0.511861064761763,
+          "stokes": 0.12176119386557567,
+          "population": 0.00051391212958312,
+          "population_abs": 0.0005530478736025524,
+          "energy": 0.12967526415033293,
+          "cnt": 0.0,
+          "passes_screen": false
+        },
+        {
+          "period": 11,
+          "intensity": 0.13446507842189107,
+          "field": 0.5591335897715243,
+          "stokes": 0.13458005621523356,
+          "population": 0.0005650895004152711,
+          "population_abs": 0.0006081381804258212,
+          "energy": 0.1433789365372915,
+          "cnt": 0.0,
+          "passes_screen": false
+        },
+        {
+          "period": 12,
+          "intensity": 0.1473142641144354,
+          "field": 0.6091727610695812,
+          "stokes": 0.14742102398834084,
+          "population": 0.0006162212789069147,
+          "population_abs": 0.0006631467809866676,
+          "energy": 0.15716645025874265,
+          "cnt": 0.0,
+          "passes_screen": false
+        },
+        {
+          "period": 13,
+          "intensity": 0.16030418667022545,
+          "field": 0.6533959040477997,
+          "stokes": 0.16040072400204905,
+          "population": 0.00066727520752627,
+          "population_abs": 0.000718109544350698,
+          "energy": 0.1711065418720814,
+          "cnt": 0.0,
+          "passes_screen": false
+        },
+        {
+          "period": 14,
+          "intensity": 0.17333065010619475,
+          "field": 0.6855775682854884,
+          "stokes": 0.17343312215371856,
+          "population": 0.0007182652354542355,
+          "population_abs": 0.0007729659256007215,
+          "energy": 0.18510982771655393,
+          "cnt": 0.0,
+          "passes_screen": false
+        },
+        {
+          "period": 15,
+          "intensity": 0.18649733692707612,
+          "field": 0.7033903237886804,
+          "stokes": 0.1866059380391003,
+          "population": 0.000769174951890048,
+          "population_abs": 0.0008277799279051701,
+          "energy": 0.1992647284960294,
+          "cnt": 0.0,
+          "passes_screen": false
+        },
+        {
+          "period": 16,
+          "intensity": 0.19968161399789724,
+          "field": 0.7089131159889963,
+          "stokes": 0.19981745114661775,
+          "population": 0.0008199972787934996,
+          "population_abs": 0.0008824575576040772,
+          "energy": 0.21345893547775585,
+          "cnt": 0.0,
+          "passes_screen": false
+        }
+      ]
+    },
+    {
+      "round": 3100,
+      "periods": [
+        {
+          "period": 1,
+          "intensity": 0.04270779231260658,
+          "field": 0.6011285934739108,
+          "stokes": 0.042802102333786674,
+          "population": 0.00019530793724510548,
+          "population_abs": 0.0001863156004151545,
+          "energy": 0.04043154959981354,
+          "cnt": 0.0,
+          "passes_screen": false
+        },
+        {
+          "period": 2,
+          "intensity": 0.08343993847153237,
+          "field": 0.9233582302328804,
+          "stokes": 0.08356892142998354,
+          "population": 0.00039051469980517584,
+          "population_abs": 0.0003724892893809395,
+          "energy": 0.07914987692998476,
+          "cnt": 0.0,
+          "passes_screen": false
+        },
+        {
+          "period": 3,
+          "intensity": 0.12191010013001127,
+          "field": 1.0887295516194921,
+          "stokes": 0.12208451003995863,
+          "population": 0.0005848820379206163,
+          "population_abs": 0.0005580462203416126,
+          "energy": 0.11629873754817754,
+          "cnt": 0.0,
+          "passes_screen": false
+        },
+        {
+          "period": 4,
+          "intensity": 0.15762440104730407,
+          "field": 1.1631041574235992,
+          "stokes": 0.15784296955611174,
+          "population": 0.0007790134349471491,
+          "population_abs": 0.0007431757628921787,
+          "energy": 0.15174214610863346,
+          "cnt": 0.0,
+          "passes_screen": false
+        },
+        {
+          "period": 5,
+          "intensity": 0.18887631719283585,
+          "field": 1.2307191363828307,
+          "stokes": 0.18911345911378868,
+          "population": 0.0009715243578933858,
+          "population_abs": 0.0009270893845327866,
+          "energy": 0.18573265435475472,
+          "cnt": 0.0,
+          "passes_screen": false
+        },
+        {
+          "period": 6,
+          "intensity": 0.21840087436877811,
+          "field": 1.2102004360037084,
+          "stokes": 0.21868901433801793,
+          "population": 0.001163654972990026,
+          "population_abs": 0.0011102858493293732,
+          "energy": 0.2180743837159106,
+          "cnt": 0.0,
+          "passes_screen": false
+        },
+        {
+          "period": 7,
+          "intensity": 0.247876140984583,
+          "field": 1.1995199571862405,
+          "stokes": 0.2482052360376289,
+          "population": 0.0013534270733098525,
+          "population_abs": 0.0012917007089130461,
+          "energy": 0.24904665086416589,
+          "cnt": 0.0,
+          "passes_screen": false
+        },
+        {
+          "period": 8,
+          "intensity": 0.27683266339935875,
+          "field": 1.275945491390658,
+          "stokes": 0.27719938117654636,
+          "population": 0.0015426604234262335,
+          "population_abs": 0.0014721033740979772,
+          "energy": 0.27848119741529054,
+          "cnt": 0.0,
+          "passes_screen": false
+        },
+        {
+          "period": 9,
+          "intensity": 0.30506426586590235,
+          "field": 1.279772423494784,
+          "stokes": 0.305473824369758,
+          "population": 0.0017288568984431532,
+          "population_abs": 0.0016502051606854806,
+          "energy": 0.30658663324992097,
+          "cnt": 0.0,
+          "passes_screen": false
+        },
+        {
+          "period": 10,
+          "intensity": 0.3318171615517937,
+          "field": 1.2490086066708987,
+          "stokes": 0.3322640781242969,
+          "population": 0.0019143403761463832,
+          "population_abs": 0.0018269957941664527,
+          "energy": 0.3333209423748894,
+          "cnt": 0.0,
+          "passes_screen": false
+        },
+        {
+          "period": 11,
+          "intensity": 0.3570691522060275,
+          "field": 1.3264034880849838,
+          "stokes": 0.35753409083452614,
+          "population": 0.0020961804140626093,
+          "population_abs": 0.002001021624370658,
+          "energy": 0.3587180205919779,
+          "cnt": 0.0,
+          "passes_screen": false
+        },
+        {
+          "period": 12,
+          "intensity": 0.3808303243615833,
+          "field": 1.3110214278555052,
+          "stokes": 0.38133095257765615,
+          "population": 0.002277118969459009,
+          "population_abs": 0.002173437518000809,
+          "energy": 0.38296404142493623,
+          "cnt": 0.0,
+          "passes_screen": false
+        },
+        {
+          "period": 13,
+          "intensity": 0.4038020124313798,
+          "field": 1.2867982478054305,
+          "stokes": 0.4043278524781179,
+          "population": 0.002453886292360461,
+          "population_abs": 0.0023426845036882415,
+          "energy": 0.40581416242128243,
+          "cnt": 0.0,
+          "passes_screen": false
+        },
+        {
+          "period": 14,
+          "intensity": 0.42587720967070486,
+          "field": 1.361115983203526,
+          "stokes": 0.4264240706274612,
+          "population": 0.0026295541392561696,
+          "population_abs": 0.002510029583210782,
+          "energy": 0.42778311464961905,
+          "cnt": 0.0,
+          "passes_screen": false
+        },
+        {
+          "period": 15,
+          "intensity": 0.44715549155121864,
+          "field": 1.3117266316497251,
+          "stokes": 0.44773475175037547,
+          "population": 0.002800603686958671,
+          "population_abs": 0.0026738616495279866,
+          "energy": 0.4484187920018693,
+          "cnt": 0.0,
+          "passes_screen": false
+        },
+        {
+          "period": 16,
+          "intensity": 0.46750915519413627,
+          "field": 1.3007021684115085,
+          "stokes": 0.46810006586297304,
+          "population": 0.002970353819563105,
+          "population_abs": 0.002835515474835737,
+          "energy": 0.4681447300253827,
+          "cnt": 0.0,
+          "passes_screen": false
+        }
+      ]
+    },
+    {
+      "round": 3600,
+      "periods": [
+        {
+          "period": 1,
+          "intensity": 0.05336962549080028,
+          "field": 0.09378036384577769,
+          "stokes": 0.053380947779638976,
+          "population": 7.862110748222624e-05,
+          "population_abs": 8.227789078762981e-05,
+          "energy": 0.025238008399160128,
+          "cnt": 0.0,
+          "passes_screen": false
+        },
+        {
+          "period": 2,
+          "intensity": 0.10447534008279252,
+          "field": 0.18578313770325092,
+          "stokes": 0.10449664894148203,
+          "population": 0.00015724572685638688,
+          "population_abs": 0.00016454960467227053,
+          "energy": 0.04960885064832932,
+          "cnt": 0.0,
+          "passes_screen": false
+        },
+        {
+          "period": 3,
+          "intensity": 0.15249406071556543,
+          "field": 0.2764245318324488,
+          "stokes": 0.15252374521784107,
+          "population": 0.00023586804130002294,
+          "population_abs": 0.0002468210137066551,
+          "energy": 0.07313583348856822,
+          "cnt": 0.0,
+          "passes_screen": false
+        },
+        {
+          "period": 4,
+          "intensity": 0.19680930003522168,
+          "field": 0.3676253154349909,
+          "stokes": 0.19684174021530954,
+          "population": 0.00031448923789462467,
+          "population_abs": 0.00032907387403047217,
+          "energy": 0.09583694406891585,
+          "cnt": 0.0,
+          "passes_screen": false
+        },
+        {
+          "period": 5,
+          "intensity": 0.23670744636798485,
+          "field": 0.46337421765060016,
+          "stokes": 0.23674435974086955,
+          "population": 0.0003930999723894465,
+          "population_abs": 0.0004113261492549869,
+          "energy": 0.11772817428342353,
+          "cnt": 0.0,
+          "passes_screen": false
+        },
+        {
+          "period": 6,
+          "intensity": 0.27156391676423886,
+          "field": 0.566144137759357,
+          "stokes": 0.27160361697815655,
+          "population": 0.00047170496110799883,
+          "population_abs": 0.0004935474485879832,
+          "energy": 0.13882595992367486,
+          "cnt": 0.0,
+          "passes_screen": false
+        },
+        {
+          "period": 7,
+          "intensity": 0.3025095374586734,
+          "field": 0.6681872245881058,
+          "stokes": 0.3025499280033564,
+          "population": 0.0005502912927467792,
+          "population_abs": 0.0005757679255552484,
+          "energy": 0.1591469809004893,
+          "cnt": 0.0,
+          "passes_screen": false
+        },
+        {
+          "period": 8,
+          "intensity": 0.33073397033293683,
+          "field": 0.7584418439085168,
+          "stokes": 0.3307761503339031,
+          "population": 0.0006288672379521598,
+          "population_abs": 0.0006579449067122267,
+          "energy": 0.1787068863888801,
+          "cnt": 0.0,
+          "passes_screen": false
+        },
+        {
+          "period": 9,
+          "intensity": 0.3545447300327272,
+          "field": 0.8505288235199393,
+          "stokes": 0.35458888161273483,
+          "population": 0.0007074162887770864,
+          "population_abs": 0.0007401208810321469,
+          "energy": 0.19752071517848735,
+          "cnt": 0.0,
+          "passes_screen": false
+        },
+        {
+          "period": 10,
+          "intensity": 0.3723997128937271,
+          "field": 0.9873702911084141,
+          "stokes": 0.37244518642939745,
+          "population": 0.000785950273989548,
+          "population_abs": 0.0008222407155420441,
+          "energy": 0.21560555822680094,
+          "cnt": 0.0,
+          "passes_screen": false
+        },
+        {
+          "period": 11,
+          "intensity": 0.38625777317008486,
+          "field": 1.2512559351564285,
+          "stokes": 0.3863062215050085,
+          "population": 0.0008644490893747225,
+          "population_abs": 0.0009043594127600141,
+          "energy": 0.2329832475394542,
+          "cnt": 0.0,
+          "passes_screen": false
+        },
+        {
+          "period": 12,
+          "intensity": 0.3951966095218023,
+          "field": 1.2560151360711695,
+          "stokes": 0.3952401430110166,
+          "population": 0.0009429280905618555,
+          "population_abs": 0.0009864091799743901,
+          "energy": 0.24968043084478453,
+          "cnt": 0.0,
+          "passes_screen": false
+        },
+        {
+          "period": 13,
+          "intensity": 0.39343815398682946,
+          "field": 1.2548407130829649,
+          "stokes": 0.39348059078752656,
+          "population": 0.0010213636182013698,
+          "population_abs": 0.0010684577290275277,
+          "energy": 0.26572548526288153,
+          "cnt": 0.0,
+          "passes_screen": false
+        },
+        {
+          "period": 14,
+          "intensity": 0.39327482362780963,
+          "field": 1.2535753129921103,
+          "stokes": 0.3933112258124704,
+          "population": 0.0010997744849180885,
+          "population_abs": 0.0011504231435868206,
+          "energy": 0.28114441488307484,
+          "cnt": 0.0,
+          "passes_screen": false
+        },
+        {
+          "period": 15,
+          "intensity": 0.3945838459278428,
+          "field": 1.2543144268174096,
+          "stokes": 0.3946197398631399,
+          "population": 0.001178098195447609,
+          "population_abs": 0.001232292308860794,
+          "energy": 0.2959587091448459,
+          "cnt": 0.0,
+          "passes_screen": false
+        },
+        {
+          "period": 16,
+          "intensity": 0.39718042981740115,
+          "field": 1.256897280697287,
+          "stokes": 0.3972154699013892,
+          "population": 0.0012563213353250513,
+          "population_abs": 0.0013140519632536263,
+          "energy": 0.31018630816534964,
+          "cnt": 0.0,
+          "passes_screen": false
+        }
+      ]
+    },
+    {
+      "round": 4100,
+      "periods": [
+        {
+          "period": 1,
+          "intensity": 0.036811072806754774,
+          "field": 0.09420206132488161,
+          "stokes": 0.03681483698875606,
+          "population": 9.30451861520601e-05,
+          "population_abs": 9.675959550070612e-05,
+          "energy": 0.020360190121236466,
+          "cnt": 0.0,
+          "passes_screen": false
+        },
+        {
+          "period": 2,
+          "intensity": 0.07180008570354439,
+          "field": 0.18845286315071305,
+          "stokes": 0.07180465642982235,
+          "population": 0.00018609755357815283,
+          "population_abs": 0.00019351695281166759,
+          "energy": 0.03993308995649236,
+          "cnt": 0.0,
+          "passes_screen": false
+        },
+        {
+          "period": 3,
+          "intensity": 0.10462670569614868,
+          "field": 0.28384828021679215,
+          "stokes": 0.10463037318751786,
+          "population": 0.0002791543170464783,
+          "population_abs": 0.0002902729433245099,
+          "energy": 0.058745872458587534,
+          "cnt": 0.0,
+          "passes_screen": false
+        },
+        {
+          "period": 4,
+          "intensity": 0.13501229729836506,
+          "field": 0.38096183591323607,
+          "stokes": 0.135016964715037,
+          "population": 0.0003722163464803925,
+          "population_abs": 0.00038702224976816524,
+          "energy": 0.07682309782983132,
+          "cnt": 0.0,
+          "passes_screen": false
+        },
+        {
+          "period": 5,
+          "intensity": 0.16275448653389166,
+          "field": 0.4793902049980642,
+          "stokes": 0.16276056386035515,
+          "population": 0.00046527902051799613,
+          "population_abs": 0.0004837687580171446,
+          "energy": 0.0941895602419669,
+          "cnt": 0.0,
+          "passes_screen": false
+        },
+        {
+          "period": 6,
+          "intensity": 0.18774297828066142,
+          "field": 0.5771052138289113,
+          "stokes": 0.18774868554863153,
+          "population": 0.0005583450322327663,
+          "population_abs": 0.000580504210203836,
+          "energy": 0.11086965783524105,
+          "cnt": 0.0,
+          "passes_screen": false
+        },
+        {
+          "period": 7,
+          "intensity": 0.2099824754476926,
+          "field": 0.67005806657917,
+          "stokes": 0.20998806425045344,
+          "population": 0.0006514079404195918,
+          "population_abs": 0.0006772353244257623,
+          "energy": 0.12688523362798332,
+          "cnt": 0.0,
+          "passes_screen": false
+        },
+        {
+          "period": 8,
+          "intensity": 0.22961629317486196,
+          "field": 0.7527982920639296,
+          "stokes": 0.22962270372977714,
+          "population": 0.0007444722235287984,
+          "population_abs": 0.0007739511233596508,
+          "energy": 0.1422577520772088,
+          "cnt": 0.0,
+          "passes_screen": false
+        },
+        {
+          "period": 9,
+          "intensity": 0.24691560106077373,
+          "field": 0.820204536196088,
+          "stokes": 0.24692186739068875,
+          "population": 0.0008375296589784674,
+          "population_abs": 0.000870660877038687,
+          "energy": 0.15700887994065904,
+          "cnt": 0.0,
+          "passes_screen": false
+        },
+        {
+          "period": 10,
+          "intensity": 0.2622299885910438,
+          "field": 0.8694890334788833,
+          "stokes": 0.2622357173493259,
+          "population": 0.0009305864762864223,
+          "population_abs": 0.0009673512299059883,
+          "energy": 0.17115810222997063,
+          "cnt": 0.0,
+          "passes_screen": false
+        },
+        {
+          "period": 11,
+          "intensity": 0.27593040046179673,
+          "field": 0.9013779563176968,
+          "stokes": 0.2759365424478869,
+          "population": 0.001023632698112476,
+          "population_abs": 0.001064033591799296,
+          "energy": 0.18472391008213407,
+          "cnt": 0.0,
+          "passes_screen": false
+        },
+        {
+          "period": 12,
+          "intensity": 0.28836012013781637,
+          "field": 0.9197446067612379,
+          "stokes": 0.2883664604426116,
+          "population": 0.0011166762711262443,
+          "population_abs": 0.0011606926924560002,
+          "energy": 0.19772528752335217,
+          "cnt": 0.0,
+          "passes_screen": false
+        },
+        {
+          "period": 13,
+          "intensity": 0.2998033621331022,
+          "field": 0.929986561131103,
+          "stokes": 0.29980921627713725,
+          "population": 0.001209705504046257,
+          "population_abs": 0.0012573415682769484,
+          "energy": 0.21017961991621836,
+          "cnt": 0.0,
+          "passes_screen": false
+        },
+        {
+          "period": 14,
+          "intensity": 0.31048127834049,
+          "field": 0.9373363652256235,
+          "stokes": 0.3104872723450188,
+          "population": 0.0013027299962435337,
+          "population_abs": 0.0013539635863856203,
+          "energy": 0.22210281388471265,
+          "cnt": 0.0,
+          "passes_screen": false
+        },
+        {
+          "period": 15,
+          "intensity": 0.320560206388416,
+          "field": 0.9457513553339829,
+          "stokes": 0.3205666224355604,
+          "population": 0.0013957364107073785,
+          "population_abs": 0.0014505728015983266,
+          "energy": 0.23351125366502534,
+          "cnt": 0.0,
+          "passes_screen": false
+        },
+        {
+          "period": 16,
+          "intensity": 0.33015759985423815,
+          "field": 0.9577070417289645,
+          "stokes": 0.3301637213675506,
+          "population": 0.0014887359325110926,
+          "population_abs": 0.0015471518876229995,
+          "energy": 0.24442038566247182,
+          "cnt": 0.0,
+          "passes_screen": false
+        }
+      ]
+    },
+    {
+      "round": 4600,
+      "periods": [
+        {
+          "period": 1,
+          "intensity": 0.003271553401073745,
+          "field": 0.06362846958420877,
+          "stokes": 0.0032748607211283195,
+          "population": 1.1356855857824789e-05,
+          "population_abs": 1.3079496721801753e-05,
+          "energy": 0.0038629665467772023,
+          "cnt": 0.0,
+          "passes_screen": false
+        },
+        {
+          "period": 2,
+          "intensity": 0.006529807266823088,
+          "field": 0.12123036797365859,
+          "stokes": 0.0065364279450071715,
+          "population": 2.2620025921667336e-05,
+          "population_abs": 2.605074648831529e-05,
+          "energy": 0.00770631398320365,
+          "cnt": 0.0,
+          "passes_screen": false
+        },
+        {
+          "period": 3,
+          "intensity": 0.009774912148385195,
+          "field": 0.1701515494558823,
+          "stokes": 0.009784800551373107,
+          "population": 3.377928830214737e-05,
+          "population_abs": 3.8901679732528116e-05,
+          "energy": 0.011534115393295075,
+          "cnt": 0.0,
+          "passes_screen": false
+        },
+        {
+          "period": 4,
+          "intensity": 0.013001272465385206,
+          "field": 0.21299548148437555,
+          "stokes": 0.013014471971726347,
+          "population": 4.482440955603215e-05,
+          "population_abs": 5.162013305037849e-05,
+          "energy": 0.015332824707352533,
+          "cnt": 0.0,
+          "passes_screen": false
+        },
+        {
+          "period": 5,
+          "intensity": 0.016211355546865796,
+          "field": 0.25551062297019533,
+          "stokes": 0.016227750755590936,
+          "population": 5.574517083785349e-05,
+          "population_abs": 6.419386959166662e-05,
+          "energy": 0.019116213904763923,
+          "cnt": 0.0,
+          "passes_screen": false
+        },
+        {
+          "period": 6,
+          "intensity": 0.019398157972895475,
+          "field": 0.301256642526807,
+          "stokes": 0.01941783192595719,
+          "population": 6.653139537741956e-05,
+          "population_abs": 7.661060035901723e-05,
+          "energy": 0.022860906815494464,
+          "cnt": 0.0,
+          "passes_screen": false
+        },
+        {
+          "period": 7,
+          "intensity": 0.02256460943587105,
+          "field": 0.34853457907813534,
+          "stokes": 0.022587405866154844,
+          "population": 7.717297770080423e-05,
+          "population_abs": 8.88580068723055e-05,
+          "energy": 0.026590633124138452,
+          "cnt": 0.0,
+          "passes_screen": false
+        },
+        {
+          "period": 8,
+          "intensity": 0.025704707255689692,
+          "field": 0.39286689842460926,
+          "stokes": 0.025730745665702062,
+          "population": 8.765991481535785e-05,
+          "population_abs": 0.00010092376543269221,
+          "energy": 0.0302740472141948,
+          "cnt": 0.0,
+          "passes_screen": false
+        },
+        {
+          "period": 9,
+          "intensity": 0.028818895708991776,
+          "field": 0.43155564293142495,
+          "stokes": 0.028847985161914412,
+          "population": 9.798233894230841e-05,
+          "population_abs": 0.0001127955724804508,
+          "energy": 0.03393941775189946,
+          "cnt": 0.0,
+          "passes_screen": false
+        },
+        {
+          "period": 10,
+          "intensity": 0.031905658034510516,
+          "field": 0.46570570182652843,
+          "stokes": 0.031937959145093314,
+          "population": 0.00010813055213654346,
+          "population_abs": 0.0001244611714242838,
+          "energy": 0.03755421430019246,
+          "cnt": 0.0,
+          "passes_screen": false
+        },
+        {
+          "period": 11,
+          "intensity": 0.0349589524056045,
+          "field": 0.4983363732986117,
+          "stokes": 0.0349942001780483,
+          "population": 0.00011809506310515233,
+          "population_abs": 0.00013590838129373672,
+          "energy": 0.04114529029728631,
+          "cnt": 0.0,
+          "passes_screen": false
+        },
+        {
+          "period": 12,
+          "intensity": 0.03798625437599225,
+          "field": 0.5308424468118687,
+          "stokes": 0.03802465758479889,
+          "population": 0.0001278666257645275,
+          "population_abs": 0.0001471251266704776,
+          "energy": 0.04468476737927907,
+          "cnt": 0.0,
+          "passes_screen": false
+        },
+        {
+          "period": 13,
+          "intensity": 0.040970037031879424,
+          "field": 0.5616769636969008,
+          "stokes": 0.0410112775307085,
+          "population": 0.00013743627976283947,
+          "population_abs": 0.00015809946916345297,
+          "energy": 0.04819165675832082,
+          "cnt": 0.0,
+          "passes_screen": false
+        },
+        {
+          "period": 14,
+          "intensity": 0.04393224323106603,
+          "field": 0.5884727114404851,
+          "stokes": 0.043976576448479146,
+          "population": 0.0001467953933451324,
+          "population_abs": 0.0001688196408856646,
+          "energy": 0.05164972999280182,
+          "cnt": 0.0,
+          "passes_screen": false
+        },
+        {
+          "period": 15,
+          "intensity": 0.046837922557258306,
+          "field": 0.6108498722037774,
+          "stokes": 0.04688498909453716,
+          "population": 0.0001559357080583863,
+          "population_abs": 0.0001792740793634673,
+          "energy": 0.05506261153212488,
+          "cnt": 0.0,
+          "passes_screen": false
+        },
+        {
+          "period": 16,
+          "intensity": 0.049729877133477506,
+          "field": 0.6307416552451923,
+          "stokes": 0.049779983487821984,
+          "population": 0.00016484938536858294,
+          "population_abs": 0.0001894514640018441,
+          "energy": 0.05843378943773614,
+          "cnt": 0.0,
+          "passes_screen": false
+        }
+      ]
+    },
+    {
+      "round": 5100,
+      "periods": [
+        {
+          "period": 1,
+          "intensity": 0.029231105323878823,
+          "field": 0.0943743590547286,
+          "stokes": 0.029250252189929556,
+          "population": 0.00010119046868331,
+          "population_abs": 0.00010609776967929196,
+          "energy": 0.029120684509527095,
+          "cnt": 0.0,
+          "passes_screen": false
+        },
+        {
+          "period": 2,
+          "intensity": 0.057129685257703414,
+          "field": 0.18530731719683133,
+          "stokes": 0.05714316027425292,
+          "population": 0.00020238973158637915,
+          "population_abs": 0.00021219512818981823,
+          "energy": 0.05685154276628357,
+          "cnt": 0.0,
+          "passes_screen": false
+        },
+        {
+          "period": 3,
+          "intensity": 0.08375571974702156,
+          "field": 0.27164296154871004,
+          "stokes": 0.08375737962104139,
+          "population": 0.0003035983433410675,
+          "population_abs": 0.0003182915303940881,
+          "energy": 0.08326164018243165,
+          "cnt": 0.0,
+          "passes_screen": false
+        },
+        {
+          "period": 4,
+          "intensity": 0.1091658436035542,
+          "field": 0.3523568863139822,
+          "stokes": 0.10916878505634124,
+          "population": 0.00040481419035100425,
+          "population_abs": 0.0004243866979298794,
+          "energy": 0.10841619718756879,
+          "cnt": 0.0,
+          "passes_screen": false
+        },
+        {
+          "period": 5,
+          "intensity": 0.1334149071118501,
+          "field": 0.4265685543249164,
+          "stokes": 0.13342111258082387,
+          "population": 0.0005060390860486784,
+          "population_abs": 0.0005304799544406658,
+          "energy": 0.132377549372256,
+          "cnt": 0.0,
+          "passes_screen": false
+        },
+        {
+          "period": 6,
+          "intensity": 0.1565557919944577,
+          "field": 0.4936009783610091,
+          "stokes": 0.15655860222137585,
+          "population": 0.0006072697426915625,
+          "population_abs": 0.0006365711444583644,
+          "energy": 0.1552039493337577,
+          "cnt": 0.0,
+          "passes_screen": false
+        },
+        {
+          "period": 7,
+          "intensity": 0.17863853955082282,
+          "field": 0.5530293872829382,
+          "stokes": 0.17864007472014296,
+          "population": 0.0007085090272516657,
+          "population_abs": 0.0007426594753791038,
+          "energy": 0.1769498900260139,
+          "cnt": 0.0,
+          "passes_screen": false
+        },
+        {
+          "period": 8,
+          "intensity": 0.19971136169333964,
+          "field": 0.6046891134260444,
+          "stokes": 0.19971534966497803,
+          "population": 0.0008097527388525048,
+          "population_abs": 0.000848744890637354,
+          "energy": 0.19766754638960216,
+          "cnt": 0.0,
+          "passes_screen": false
+        },
+        {
+          "period": 9,
+          "intensity": 0.21982110206164587,
+          "field": 0.648727765139968,
+          "stokes": 0.2198245034152326,
+          "population": 0.0009110044747870755,
+          "population_abs": 0.000954826508350104,
+          "energy": 0.21740611762130724,
+          "cnt": 0.0,
+          "passes_screen": false
+        },
+        {
+          "period": 10,
+          "intensity": 0.2390121023920034,
+          "field": 0.6856323314631276,
+          "stokes": 0.23901381938396254,
+          "population": 0.0010122595061112345,
+          "population_abs": 0.0010609043407795449,
+          "energy": 0.23621129800857144,
+          "cnt": 0.0,
+          "passes_screen": false
+        },
+        {
+          "period": 11,
+          "intensity": 0.2573264461984929,
+          "field": 0.7161877118533664,
+          "stokes": 0.2573293461680206,
+          "population": 0.0011135217105263827,
+          "population_abs": 0.0011669774476703587,
+          "energy": 0.25412662128559593,
+          "cnt": 0.0,
+          "passes_screen": false
+        },
+        {
+          "period": 12,
+          "intensity": 0.274804914539691,
+          "field": 0.7414148782242261,
+          "stokes": 0.2748084480137426,
+          "population": 0.0012147863417273335,
+          "population_abs": 0.0012730458741233575,
+          "energy": 0.27119358080846934,
+          "cnt": 0.0,
+          "passes_screen": false
+        },
+        {
+          "period": 13,
+          "intensity": 0.29148616893835944,
+          "field": 0.7624898842016617,
+          "stokes": 0.29148844420544195,
+          "population": 0.0013160569848134436,
+          "population_abs": 0.0013791086618496484,
+          "energy": 0.2874506647576518,
+          "cnt": 0.0,
+          "passes_screen": false
+        },
+        {
+          "period": 14,
+          "intensity": 0.3074062833349341,
+          "field": 0.7805924961759815,
+          "stokes": 0.307408723855895,
+          "population": 0.0014173295061198534,
+          "population_abs": 0.0014851658384503752,
+          "energy": 0.30293414982620914,
+          "cnt": 0.0,
+          "passes_screen": false
+        },
+        {
+          "period": 15,
+          "intensity": 0.32259984062759867,
+          "field": 0.7967715961835883,
+          "stokes": 0.3226032335602246,
+          "population": 0.0015186065049007263,
+          "population_abs": 0.0015912164824462005,
+          "energy": 0.3176788853885961,
+          "cnt": 0.0,
+          "passes_screen": false
+        },
+        {
+          "period": 16,
+          "intensity": 0.33709978180142974,
+          "field": 0.8118527323200626,
+          "stokes": 0.33710259529049175,
+          "population": 0.0016198852159019143,
+          "population_abs": 0.0016972605438739796,
+          "energy": 0.33171739780554843,
+          "cnt": 0.0,
+          "passes_screen": false
+        }
+      ]
+    },
+    {
+      "round": 5600,
+      "periods": [
+        {
+          "period": 1,
+          "intensity": 0.024636173374532288,
+          "field": 0.0698290642167661,
+          "stokes": 0.02463672287624395,
+          "population": 9.025864894620128e-05,
+          "population_abs": 9.49009400048606e-05,
+          "energy": 0.024153850322029102,
+          "cnt": 0.0,
+          "passes_screen": false
+        },
+        {
+          "period": 2,
+          "intensity": 0.04918361157058544,
+          "field": 0.1380875073526318,
+          "stokes": 0.04918466235074312,
+          "population": 0.00018052392748581477,
+          "population_abs": 0.00018979970579613425,
+          "energy": 0.04823656169891111,
+          "cnt": 0.0,
+          "passes_screen": false
+        },
+        {
+          "period": 3,
+          "intensity": 0.07361064216643272,
+          "field": 0.2043709911937964,
+          "stokes": 0.07361216794897829,
+          "population": 0.0002707913130794722,
+          "population_abs": 0.0002846950058671416,
+          "energy": 0.07221943957247623,
+          "cnt": 0.0,
+          "passes_screen": false
+        },
+        {
+          "period": 4,
+          "intensity": 0.09788528951268473,
+          "field": 0.2683135584443213,
+          "stokes": 0.09788728046271902,
+          "population": 0.00036106335970515966,
+          "population_abs": 0.00037958376088165213,
+          "energy": 0.09607343281717196,
+          "cnt": 0.0,
+          "passes_screen": false
+        },
+        {
+          "period": 5,
+          "intensity": 0.12197539872168697,
+          "field": 0.32959424316666924,
+          "stokes": 0.12197782731707402,
+          "population": 0.0004513319734645813,
+          "population_abs": 0.0004744656172233075,
+          "energy": 0.11976927518643277,
+          "cnt": 0.0,
+          "passes_screen": false
+        },
+        {
+          "period": 6,
+          "intensity": 0.14584870917456022,
+          "field": 0.38794469752782446,
+          "stokes": 0.14585154803658845,
+          "population": 0.0005416032986744156,
+          "population_abs": 0.000569336491884842,
+          "energy": 0.14327745262740854,
+          "cnt": 0.0,
+          "passes_screen": false
+        },
+        {
+          "period": 7,
+          "intensity": 0.16947297519529236,
+          "field": 0.4431555615982404,
+          "stokes": 0.16947621204636942,
+          "population": 0.0006318655971745847,
+          "population_abs": 0.0006641970956930976,
+          "energy": 0.1665682242909836,
+          "cnt": 0.0,
+          "passes_screen": false
+        },
+        {
+          "period": 8,
+          "intensity": 0.19281617765910924,
+          "field": 0.4950812811103242,
+          "stokes": 0.1928197910022908,
+          "population": 0.0007221286889199719,
+          "population_abs": 0.0007590421723880914,
+          "energy": 0.18961180282011192,
+          "cnt": 0.0,
+          "passes_screen": false
+        },
+        {
+          "period": 9,
+          "intensity": 0.21584666955188705,
+          "field": 0.5436449955382043,
+          "stokes": 0.21585063327596601,
+          "population": 0.0008123770790089919,
+          "population_abs": 0.0008538736985904682,
+          "energy": 0.2123783659707732,
+          "cnt": 0.0,
+          "passes_screen": false
+        },
+        {
+          "period": 10,
+          "intensity": 0.23853322710895306,
+          "field": 0.5888408132602921,
+          "stokes": 0.23853753002469852,
+          "population": 0.0009026243924867294,
+          "population_abs": 0.0009486849977570211,
+          "energy": 0.23483801820439631,
+          "cnt": 0.0,
+          "passes_screen": false
+        },
+        {
+          "period": 11,
+          "intensity": 0.26084510665339256,
+          "field": 0.6307319624267761,
+          "stokes": 0.2608497334115948,
+          "population": 0.000992851218915867,
+          "population_abs": 0.0010434795945142294,
+          "energy": 0.25696097797348916,
+          "cnt": 0.0,
+          "passes_screen": false
+        },
+        {
+          "period": 12,
+          "intensity": 0.28275204863054076,
+          "field": 0.6694465243958057,
+          "stokes": 0.2827569746035654,
+          "population": 0.001083075162111054,
+          "population_abs": 0.001138249063665775,
+          "energy": 0.27871766139396503,
+          "cnt": 0.0,
+          "passes_screen": false
+        },
+        {
+          "period": 13,
+          "intensity": 0.3042242314352334,
+          "field": 0.705169706361991,
+          "stokes": 0.30422944595417106,
+          "population": 0.0011732726982323302,
+          "population_abs": 0.0012329988370631817,
+          "energy": 0.3000785942055668,
+          "cnt": 0.0,
+          "passes_screen": false
+        },
+        {
+          "period": 14,
+          "intensity": 0.32523233310435085,
+          "field": 0.7381315177424294,
+          "stokes": 0.3252378272717355,
+          "population": 0.0012634656185277838,
+          "population_abs": 0.0013277183361649625,
+          "energy": 0.32101456169477616,
+          "cnt": 0.0,
+          "passes_screen": false
+        },
+        {
+          "period": 15,
+          "intensity": 0.34574762398174114,
+          "field": 0.768592289128341,
+          "stokes": 0.3457533754717877,
+          "population": 0.0013536260520390832,
+          "population_abs": 0.001422415337442251,
+          "energy": 0.3414967777485103,
+          "cnt": 0.0,
+          "passes_screen": false
+        },
+        {
+          "period": 16,
+          "intensity": 0.36574194275778543,
+          "field": 0.7968270831540678,
+          "stokes": 0.36574793956736823,
+          "population": 0.0014437802256366933,
+          "population_abs": 0.0015170766231685784,
+          "energy": 0.3614967805403497,
+          "cnt": 0.0,
+          "passes_screen": false
+        }
+      ]
+    },
+    {
+      "round": 6100,
+      "periods": [
+        {
+          "period": 1,
+          "intensity": 0.018938847938420326,
+          "field": 0.1944041190303006,
+          "stokes": 0.018943974771243644,
+          "population": 9.42786638910608e-05,
+          "population_abs": 9.735660133092239e-05,
+          "energy": 0.019324251195219855,
+          "cnt": 0.0,
+          "passes_screen": false
+        },
+        {
+          "period": 2,
+          "intensity": 0.038224633690136095,
+          "field": 0.38334868179767023,
+          "stokes": 0.038235143837968846,
+          "population": 0.00018848262477731126,
+          "population_abs": 0.00019465555910236354,
+          "energy": 0.03901458321720863,
+          "cnt": 0.0,
+          "passes_screen": false
+        },
+        {
+          "period": 3,
+          "intensity": 0.057840882527398337,
+          "field": 0.5613344943392772,
+          "stokes": 0.057856571914090014,
+          "population": 0.00028266352212834707,
+          "population_abs": 0.0002919161017123084,
+          "energy": 0.05908153963006568,
+          "cnt": 0.0,
+          "passes_screen": false
+        },
+        {
+          "period": 4,
+          "intensity": 0.07780269798512443,
+          "field": 0.724439926302836,
+          "stokes": 0.07782414336720377,
+          "population": 0.00037663743407414504,
+          "population_abs": 0.0003890040833796071,
+          "energy": 0.07951374016343715,
+          "cnt": 0.0,
+          "passes_screen": false
+        },
+        {
+          "period": 5,
+          "intensity": 0.098081016136117,
+          "field": 0.8708753091968278,
+          "stokes": 0.09810769244166992,
+          "population": 0.0004705732836215766,
+          "population_abs": 0.0004860150973691191,
+          "energy": 0.1003311938934901,
+          "cnt": 0.0,
+          "passes_screen": false
+        },
+        {
+          "period": 6,
+          "intensity": 0.11870838284842188,
+          "field": 1.000760545676996,
+          "stokes": 0.11874118612387811,
+          "population": 0.0005641712329503248,
+          "population_abs": 0.0005827397410127499,
+          "energy": 0.12151345399874369,
+          "cnt": 0.0,
+          "passes_screen": false
+        },
+        {
+          "period": 7,
+          "intensity": 0.13964694994851462,
+          "field": 1.1157083544009212,
+          "stokes": 0.13968501651825016,
+          "population": 0.0006577155780043465,
+          "population_abs": 0.0006793485872940153,
+          "energy": 0.14308652917257936,
+          "cnt": 0.0,
+          "passes_screen": false
+        },
+        {
+          "period": 8,
+          "intensity": 0.1609435641405256,
+          "field": 1.2175356852140407,
+          "stokes": 0.16098811429434945,
+          "population": 0.0007507933299696314,
+          "population_abs": 0.0007755590961199266,
+          "energy": 0.16502565741099762,
+          "cnt": 0.0,
+          "passes_screen": false
+        },
+        {
+          "period": 9,
+          "intensity": 0.18255611372603306,
+          "field": 1.3075963850433647,
+          "stokes": 0.1826059311839479,
+          "population": 0.0008438011039764103,
+          "population_abs": 0.0008716145557566835,
+          "energy": 0.18735649085084427,
+          "cnt": 0.0,
+          "passes_screen": false
+        },
+        {
+          "period": 10,
+          "intensity": 0.20453619762362313,
+          "field": 1.3822203835090305,
+          "stokes": 0.2045928255256212,
+          "population": 0.0009362166570895194,
+          "population_abs": 0.0009671622807367886,
+          "energy": 0.21005777436527917,
+          "cnt": 0.0,
+          "passes_screen": false
+        },
+        {
+          "period": 11,
+          "intensity": 0.22684378092801327,
+          "field": 1.4110414694603781,
+          "stokes": 0.22690564192187745,
+          "population": 0.0010285447355158728,
+          "population_abs": 0.0010625151302786628,
+          "energy": 0.2331451831096536,
+          "cnt": 0.0,
+          "passes_screen": false
+        },
+        {
+          "period": 12,
+          "intensity": 0.2495206387602062,
+          "field": 1.4044609612493264,
+          "stokes": 0.24958960693165155,
+          "population": 0.0011201588583463035,
+          "population_abs": 0.0011572541362434574,
+          "energy": 0.2566122488864868,
+          "cnt": 0.0,
+          "passes_screen": false
+        },
+        {
+          "period": 13,
+          "intensity": 0.272539262032112,
+          "field": 1.394516911440404,
+          "stokes": 0.2726134107154601,
+          "population": 0.001211666592840773,
+          "population_abs": 0.0012517577048325457,
+          "energy": 0.2804513901720169,
+          "cnt": 0.0,
+          "passes_screen": false
+        },
+        {
+          "period": 14,
+          "intensity": 0.2959153141087941,
+          "field": 1.381214894537471,
+          "stokes": 0.29599686789570084,
+          "population": 0.0013023433390048095,
+          "population_abs": 0.001345545315447616,
+          "energy": 0.3046860646670799,
+          "cnt": 0.0,
+          "passes_screen": false
+        },
+        {
+          "period": 15,
+          "intensity": 0.3196491216399625,
+          "field": 1.3479298102499226,
+          "stokes": 0.31973582279622437,
+          "population": 0.001392893069584644,
+          "population_abs": 0.0014390560192593105,
+          "energy": 0.3292680940573305,
+          "cnt": 0.0,
+          "passes_screen": false
+        },
+        {
+          "period": 16,
+          "intensity": 0.3437133544773536,
+          "field": 1.3495789931413968,
+          "stokes": 0.34380777649933814,
+          "population": 0.0014825002663329764,
+          "population_abs": 0.0015317533359742175,
+          "energy": 0.35427025837823845,
+          "cnt": 0.0,
+          "passes_screen": false
+        }
+      ]
+    },
+    {
+      "round": 6600,
+      "periods": [
+        {
+          "period": 1,
+          "intensity": 0.0225965162407533,
+          "field": 0.3415964221489093,
+          "stokes": 0.0226036638253737,
+          "population": 0.00012445265706424394,
+          "population_abs": 0.00012936664125939856,
+          "energy": 0.02184382800824103,
+          "cnt": 0.0,
+          "passes_screen": false
+        },
+        {
+          "period": 2,
+          "intensity": 0.044566877952033075,
+          "field": 0.666351323226443,
+          "stokes": 0.04458120709997438,
+          "population": 0.00024885360403897736,
+          "population_abs": 0.0002586707838175828,
+          "energy": 0.04318166872543505,
+          "cnt": 0.0,
+          "passes_screen": false
+        },
+        {
+          "period": 3,
+          "intensity": 0.06579019972495581,
+          "field": 0.9571523643796831,
+          "stokes": 0.0658116541097955,
+          "population": 0.0003730638983956543,
+          "population_abs": 0.0003878381942372666,
+          "energy": 0.06401330229236712,
+          "cnt": 0.0,
+          "passes_screen": false
+        },
+        {
+          "period": 4,
+          "intensity": 0.08621545781207693,
+          "field": 1.1935987110335973,
+          "stokes": 0.08624398247789082,
+          "population": 0.0004971511761071122,
+          "population_abs": 0.0005168214960389328,
+          "energy": 0.08433905146461851,
+          "cnt": 0.0,
+          "passes_screen": false
+        },
+        {
+          "period": 5,
+          "intensity": 0.10589082099905979,
+          "field": 1.3027725305907003,
+          "stokes": 0.10592555462910401,
+          "population": 0.0006208672966945453,
+          "population_abs": 0.0006455262100767412,
+          "energy": 0.10415973218928798,
+          "cnt": 0.0,
+          "passes_screen": false
+        },
+        {
+          "period": 6,
+          "intensity": 0.12496669841625192,
+          "field": 1.2840770646849347,
+          "stokes": 0.12500802669868724,
+          "population": 0.000744398235744877,
+          "population_abs": 0.0007739352979287961,
+          "energy": 0.12347660042624375,
+          "cnt": 0.0,
+          "passes_screen": false
+        },
+        {
+          "period": 7,
+          "intensity": 0.1435902140817159,
+          "field": 1.2748024631312573,
+          "stokes": 0.14363710802583476,
+          "population": 0.0008673687723074273,
+          "population_abs": 0.0009019138104927604,
+          "energy": 0.1422912955816249,
+          "cnt": 0.0,
+          "passes_screen": false
+        },
+        {
+          "period": 8,
+          "intensity": 0.16184869220754267,
+          "field": 1.2717481088849716,
+          "stokes": 0.16190155976381662,
+          "population": 0.0009901069200577489,
+          "population_abs": 0.0010295017681566376,
+          "energy": 0.16060578168954498,
+          "cnt": 0.0,
+          "passes_screen": false
+        },
+        {
+          "period": 9,
+          "intensity": 0.1797715881922982,
+          "field": 1.2746233970546827,
+          "stokes": 0.17983173416441892,
+          "population": 0.0011120824973639622,
+          "population_abs": 0.0011564922495903573,
+          "energy": 0.1784222879472267,
+          "cnt": 0.0,
+          "passes_screen": false
+        },
+        {
+          "period": 10,
+          "intensity": 0.19732717050803233,
+          "field": 1.2777762351060513,
+          "stokes": 0.19739531212064082,
+          "population": 0.0012337989354508842,
+          "population_abs": 0.0012830199919745544,
+          "energy": 0.19574324994130665,
+          "cnt": 0.0,
+          "passes_screen": false
+        },
+        {
+          "period": 11,
+          "intensity": 0.21451638446005328,
+          "field": 1.284809585884717,
+          "stokes": 0.21458959612600964,
+          "population": 0.0013545338328137379,
+          "population_abs": 0.0014087639945769004,
+          "energy": 0.21257125187358838,
+          "cnt": 0.0,
+          "passes_screen": false
+        },
+        {
+          "period": 12,
+          "intensity": 0.2313207369267005,
+          "field": 1.2893644692232094,
+          "stokes": 0.2314017783094854,
+          "population": 0.0014750083684568966,
+          "population_abs": 0.001534001510496541,
+          "energy": 0.22890896889900936,
+          "cnt": 0.0,
+          "passes_screen": false
+        },
+        {
+          "period": 13,
+          "intensity": 0.24773665701366931,
+          "field": 1.3622056820316215,
+          "stokes": 0.24782552929071955,
+          "population": 0.0015942620991877094,
+          "population_abs": 0.0016582456397539191,
+          "energy": 0.24475910827696956,
+          "cnt": 0.0,
+          "passes_screen": false
+        },
+        {
+          "period": 14,
+          "intensity": 0.2637714009573165,
+          "field": 1.440068100449097,
+          "stokes": 0.26386812529122927,
+          "population": 0.0017132843167956462,
+          "population_abs": 0.0017819730892132402,
+          "energy": 0.2601243489759377,
+          "cnt": 0.0,
+          "passes_screen": false
+        },
+        {
+          "period": 15,
+          "intensity": 0.2794390011357973,
+          "field": 1.343922216594828,
+          "stokes": 0.27954364144771193,
+          "population": 0.0018308231432736636,
+          "population_abs": 0.001904470613850573,
+          "energy": 0.275007281191733,
+          "cnt": 0.0,
+          "passes_screen": false
+        },
+        {
+          "period": 16,
+          "intensity": 0.2947562117174892,
+          "field": 1.3199468801253342,
+          "stokes": 0.29486886173872584,
+          "population": 0.0019481933064596272,
+          "population_abs": 0.002026479269559567,
+          "energy": 0.2894103486105549,
+          "cnt": 0.0,
+          "passes_screen": false
+        }
+      ]
+    },
+    {
+      "round": 7100,
+      "periods": [
+        {
+          "period": 1,
+          "intensity": 0.018147501678951176,
+          "field": 0.2658157819937593,
+          "stokes": 0.018155992258241757,
+          "population": 8.131445382172128e-05,
+          "population_abs": 8.446559934471853e-05,
+          "energy": 0.016695817529851498,
+          "cnt": 0.0,
+          "passes_screen": false
+        },
+        {
+          "period": 2,
+          "intensity": 0.03598268062853997,
+          "field": 0.5148717190700708,
+          "stokes": 0.03599984002549998,
+          "population": 0.0001606864355395548,
+          "population_abs": 0.00016690114971840142,
+          "energy": 0.033111276922096367,
+          "cnt": 0.0,
+          "passes_screen": false
+        },
+        {
+          "period": 3,
+          "intensity": 0.05348632509650017,
+          "field": 0.7394654679020006,
+          "stokes": 0.053511341106864195,
+          "population": 0.000238050291908381,
+          "population_abs": 0.0002472384015335116,
+          "energy": 0.04924822667932538,
+          "cnt": 0.0,
+          "passes_screen": false
+        },
+        {
+          "period": 4,
+          "intensity": 0.07064592822176342,
+          "field": 0.9341475807794354,
+          "stokes": 0.07067961387209475,
+          "population": 0.0003133478280941828,
+          "population_abs": 0.0003254168766337884,
+          "energy": 0.06511121993865132,
+          "cnt": 0.0,
+          "passes_screen": false
+        },
+        {
+          "period": 5,
+          "intensity": 0.08745674674238159,
+          "field": 1.094966905515928,
+          "stokes": 0.08749926885054879,
+          "population": 0.0003865280160532798,
+          "population_abs": 0.00040138356131391717,
+          "energy": 0.08070084661394106,
+          "cnt": 0.0,
+          "passes_screen": false
+        },
+        {
+          "period": 6,
+          "intensity": 0.10392665877712838,
+          "field": 1.2142029703859833,
+          "stokes": 0.10397628917957984,
+          "population": 0.0004575466714304285,
+          "population_abs": 0.0004750925669797512,
+          "energy": 0.0960231226729159,
+          "cnt": 0.0,
+          "passes_screen": false
+        },
+        {
+          "period": 7,
+          "intensity": 0.12008123744189902,
+          "field": 1.2603402992410297,
+          "stokes": 0.12013977478736873,
+          "population": 0.000526366106824328,
+          "population_abs": 0.0005465047666247669,
+          "energy": 0.11107725265943735,
+          "cnt": 0.0,
+          "passes_screen": false
+        },
+        {
+          "period": 8,
+          "intensity": 0.13592170454876026,
+          "field": 1.271848618978753,
+          "stokes": 0.13598935410390806,
+          "population": 0.000592954768755327,
+          "population_abs": 0.0006155874147509843,
+          "energy": 0.12587086727877217,
+          "cnt": 0.0,
+          "passes_screen": false
+        },
+        {
+          "period": 9,
+          "intensity": 0.15147298850289845,
+          "field": 1.2852667504114619,
+          "stokes": 0.151547195436609,
+          "population": 0.0006572868650112611,
+          "population_abs": 0.0006823137576653648,
+          "energy": 0.1404015403911708,
+          "cnt": 0.0,
+          "passes_screen": false
+        },
+        {
+          "period": 10,
+          "intensity": 0.16674735911077504,
+          "field": 1.3029452141207505,
+          "stokes": 0.16683079537453488,
+          "population": 0.0007193419883232298,
+          "population_abs": 0.000746662640320972,
+          "energy": 0.15467879623483582,
+          "cnt": 0.0,
+          "passes_screen": false
+        },
+        {
+          "period": 11,
+          "intensity": 0.181743565130587,
+          "field": 1.3221261696146076,
+          "stokes": 0.18183312926954073,
+          "population": 0.0007791047416092105,
+          "population_abs": 0.0008086181151265581,
+          "energy": 0.16869820006521719,
+          "cnt": 0.0,
+          "passes_screen": false
+        },
+        {
+          "period": 12,
+          "intensity": 0.19648438084589726,
+          "field": 1.339672006638328,
+          "stokes": 0.19658322616813273,
+          "population": 0.0008365643693653491,
+          "population_abs": 0.0008681690574597889,
+          "energy": 0.18247159270753077,
+          "cnt": 0.0,
+          "passes_screen": false
+        },
+        {
+          "period": 13,
+          "intensity": 0.2109499011761432,
+          "field": 1.3407211527132907,
+          "stokes": 0.2110543811787805,
+          "population": 0.0008917143991730992,
+          "population_abs": 0.0009253087919872671,
+          "energy": 0.19599199993018623,
+          "cnt": 0.0,
+          "passes_screen": false
+        },
+        {
+          "period": 14,
+          "intensity": 0.22517002837760822,
+          "field": 1.3118730862396708,
+          "stokes": 0.2252837306546058,
+          "population": 0.0009445522966761115,
+          "population_abs": 0.0009800347332485915,
+          "energy": 0.2092741689844989,
+          "cnt": 0.0,
+          "passes_screen": false
+        },
+        {
+          "period": 15,
+          "intensity": 0.2391184819446954,
+          "field": 1.2999142379173099,
+          "stokes": 0.23923723583104306,
+          "population": 0.0009950791367020423,
+          "population_abs": 0.0010323480432564702,
+          "energy": 0.2223078778732247,
+          "cnt": 0.0,
+          "passes_screen": false
+        },
+        {
+          "period": 16,
+          "intensity": 0.2528270933204873,
+          "field": 1.2801804820707878,
+          "stokes": 0.25295490457568426,
+          "population": 0.0010432992924498201,
+          "population_abs": 0.001082253308072878,
+          "energy": 0.23511156258749555,
+          "cnt": 0.0,
+          "passes_screen": false
+        }
+      ]
+    },
+    {
+      "round": 7600,
+      "periods": [
+        {
+          "period": 1,
+          "intensity": 0.014155870997905363,
+          "field": 0.07086558512784741,
+          "stokes": 0.0141592757700783,
+          "population": 4.434151876929485e-05,
+          "population_abs": 4.6796423723516334e-05,
+          "energy": 0.01404108183531727,
+          "cnt": 0.0,
+          "passes_screen": false
+        },
+        {
+          "period": 2,
+          "intensity": 0.02806687396315454,
+          "field": 0.13798599819130447,
+          "stokes": 0.028073542371507363,
+          "population": 8.861718557828406e-05,
+          "population_abs": 9.351840670435152e-05,
+          "energy": 0.02786501792223839,
+          "cnt": 0.0,
+          "passes_screen": false
+        },
+        {
+          "period": 3,
+          "intensity": 0.041710357280453164,
+          "field": 0.19935819228739107,
+          "stokes": 0.04172015536880258,
+          "population": 0.0001328086838541056,
+          "population_abs": 0.00014014676049101116,
+          "energy": 0.04146671649736544,
+          "cnt": 0.0,
+          "passes_screen": false
+        },
+        {
+          "period": 4,
+          "intensity": 0.055070791367744405,
+          "field": 0.2534425007956921,
+          "stokes": 0.055083596055758806,
+          "population": 0.00017689768315347782,
+          "population_abs": 0.000186662290683981,
+          "energy": 0.054841674202997015,
+          "cnt": 0.0,
+          "passes_screen": false
+        },
+        {
+          "period": 5,
+          "intensity": 0.06814084925779228,
+          "field": 0.3080792164086019,
+          "stokes": 0.06815655093287075,
+          "population": 0.00022086582805239992,
+          "population_abs": 0.00023304578527671982,
+          "energy": 0.06798594539986491,
+          "cnt": 0.0,
+          "passes_screen": false
+        },
+        {
+          "period": 6,
+          "intensity": 0.08092044944513903,
+          "field": 0.3622546679034563,
+          "stokes": 0.0809389519204744,
+          "population": 0.00026469472717489473,
+          "population_abs": 0.00027927800314286877,
+          "energy": 0.08089611187923262,
+          "cnt": 0.0,
+          "passes_screen": false
+        },
+        {
+          "period": 7,
+          "intensity": 0.09341455151539445,
+          "field": 0.41408570337594763,
+          "stokes": 0.09343576738570014,
+          "population": 0.0003083659423311616,
+          "population_abs": 0.0003253396626375915,
+          "energy": 0.09356925313393172,
+          "cnt": 0.0,
+          "passes_screen": false
+        },
+        {
+          "period": 8,
+          "intensity": 0.10563093175877744,
+          "field": 0.4637182793863458,
+          "stokes": 0.1056547747994818,
+          "population": 0.0003518609777560771,
+          "population_abs": 0.00037121143030194315,
+          "energy": 0.10600291733739253,
+          "cnt": 0.0,
+          "passes_screen": false
+        },
+        {
+          "period": 9,
+          "intensity": 0.11757874983260098,
+          "field": 0.51144342855566,
+          "stokes": 0.11760512614640418,
+          "population": 0.0003951612694721722,
+          "population_abs": 0.0004168739096949148,
+          "energy": 0.11819509312756027,
+          "cnt": 0.0,
+          "passes_screen": false
+        },
+        {
+          "period": 10,
+          "intensity": 0.12926787354397354,
+          "field": 0.5570520928250845,
+          "stokes": 0.12929667492044572,
+          "population": 0.00043824817482376215,
+          "population_abs": 0.0004623076304014484,
+          "energy": 0.13014418225097513,
+          "cnt": 0.0,
+          "passes_screen": false
+        },
+        {
+          "period": 11,
+          "intensity": 0.1407084626617254,
+          "field": 0.5999749778431335,
+          "stokes": 0.14073956505006557,
+          "population": 0.0004811029622250737,
+          "population_abs": 0.0005074930372622743,
+          "energy": 0.14184897309926925,
+          "cnt": 0.0,
+          "passes_screen": false
+        },
+        {
+          "period": 12,
+          "intensity": 0.15191050504661247,
+          "field": 0.6404138889896376,
+          "stokes": 0.15194377255588243,
+          "population": 0.0005237068011383657,
+          "population_abs": 0.0005524104798430018,
+          "energy": 0.1533086151366837,
+          "cnt": 0.0,
+          "passes_screen": false
+        },
+        {
+          "period": 13,
+          "intensity": 0.16288338950519654,
+          "field": 0.6786822575455835,
+          "stokes": 0.16291868239928298,
+          "population": 0.0005660407522676219,
+          "population_abs": 0.0005970402021276966,
+          "energy": 0.16452259417425263,
+          "cnt": 0.0,
+          "passes_screen": false
+        },
+        {
+          "period": 14,
+          "intensity": 0.17363564576169585,
+          "field": 0.7151438934498732,
+          "stokes": 0.17367282913550916,
+          "population": 0.0006080857579385187,
+          "population_abs": 0.000641362332404305,
+          "energy": 0.1754907084398537,
+          "cnt": 0.0,
+          "passes_screen": false
+        },
+        {
+          "period": 15,
+          "intensity": 0.18417469288449245,
+          "field": 0.750160712863815,
+          "stokes": 0.1842136438971027,
+          "population": 0.0006498226326513841,
+          "population_abs": 0.0006853568733276028,
+          "energy": 0.18621304544081407,
+          "cnt": 0.0,
+          "passes_screen": false
+        },
+        {
+          "period": 16,
+          "intensity": 0.19450627893728328,
+          "field": 0.7840653777494065,
+          "stokes": 0.19454688969768558,
+          "population": 0.0006912320538254814,
+          "population_abs": 0.000729003692175989,
+          "energy": 0.19668995965883906,
+          "cnt": 0.0,
+          "passes_screen": false
+        }
+      ]
+    },
+    {
+      "round": 8100,
+      "periods": [
+        {
+          "period": 1,
+          "intensity": 0.015491015677479633,
+          "field": 0.058303250692843006,
+          "stokes": 0.015493074897219686,
+          "population": 5.065465983278534e-05,
+          "population_abs": 5.340430697453602e-05,
+          "energy": 0.015868573196160307,
+          "cnt": 0.0,
+          "passes_screen": false
+        },
+        {
+          "period": 2,
+          "intensity": 0.030929685412817064,
+          "field": 0.11561644995563346,
+          "stokes": 0.03093373744665456,
+          "population": 0.00010130257879197499,
+          "population_abs": 0.00010680288892161993,
+          "energy": 0.031703577619245804,
+          "cnt": 0.0,
+          "passes_screen": false
+        },
+        {
+          "period": 3,
+          "intensity": 0.046296458732963806,
+          "field": 0.17154746265363294,
+          "stokes": 0.04630243731878793,
+          "population": 0.00015195244605554505,
+          "population_abs": 0.00016019326717831017,
+          "energy": 0.0474889395589686,
+          "cnt": 0.0,
+          "passes_screen": false
+        },
+        {
+          "period": 4,
+          "intensity": 0.061572088631047545,
+          "field": 0.22575191672631176,
+          "stokes": 0.06157992786586644,
+          "population": 0.00020257733335437693,
+          "population_abs": 0.00021356641251657482,
+          "energy": 0.06320845435007438,
+          "cnt": 0.0,
+          "passes_screen": false
+        },
+        {
+          "period": 5,
+          "intensity": 0.07673800257902622,
+          "field": 0.2779420795815334,
+          "stokes": 0.07674763723658608,
+          "population": 0.00025320363896443943,
+          "population_abs": 0.00026692324953292434,
+          "energy": 0.07884581215308573,
+          "cnt": 0.0,
+          "passes_screen": false
+        },
+        {
+          "period": 6,
+          "intensity": 0.09177660464603128,
+          "field": 0.3278909962583919,
+          "stokes": 0.0917879705812731,
+          "population": 0.0003037868206539763,
+          "population_abs": 0.0003202511720907797,
+          "energy": 0.09438462421972504,
+          "cnt": 0.0,
+          "passes_screen": false
+        },
+        {
+          "period": 7,
+          "intensity": 0.10667145578311132,
+          "field": 0.375432525209196,
+          "stokes": 0.10668449032073647,
+          "population": 0.00035437072336733674,
+          "population_abs": 0.0003735548800937183,
+          "energy": 0.10980844966817038,
+          "cnt": 0.0,
+          "passes_screen": false
+        },
+        {
+          "period": 8,
+          "intensity": 0.12140729192607862,
+          "field": 0.4204608143724287,
+          "stokes": 0.12142193419424918,
+          "population": 0.0004048935204263554,
+          "population_abs": 0.00042681770221109083,
+          "energy": 0.12510082275900936,
+          "cnt": 0.0,
+          "passes_screen": false
+        },
+        {
+          "period": 9,
+          "intensity": 0.13596986929721053,
+          "field": 0.46293066963944046,
+          "stokes": 0.13598606041508504,
+          "population": 0.0004554160907211424,
+          "population_abs": 0.000480048701833935,
+          "energy": 0.1402452805790404,
+          "cnt": 0.0,
+          "passes_screen": false
+        },
+        {
+          "period": 10,
+          "intensity": 0.15034566314874426,
+          "field": 0.5028578409900542,
+          "stokes": 0.1503633462529976,
+          "population": 0.0005058598035925769,
+          "population_abs": 0.0005332264373114626,
+          "energy": 0.15522539097960242,
+          "cnt": 0.0,
+          "passes_screen": false
+        },
+        {
+          "period": 11,
+          "intensity": 0.1645214769923886,
+          "field": 0.5403159450446239,
+          "stokes": 0.16454059706415342,
+          "population": 0.0005563020074038966,
+          "population_abs": 0.0005863651413698934,
+          "energy": 0.17002478062306436,
+          "cnt": 0.0,
+          "passes_screen": false
+        },
+        {
+          "period": 12,
+          "intensity": 0.17848403529700627,
+          "field": 0.5754287133293365,
+          "stokes": 0.17850453885877413,
+          "population": 0.0006066479006250128,
+          "population_abs": 0.000639437678254029,
+          "energy": 0.1846271630525289,
+          "cnt": 0.0,
+          "passes_screen": false
+        },
+        {
+          "period": 13,
+          "intensity": 0.19221963200673745,
+          "field": 0.6083591855281483,
+          "stokes": 0.19224146674061757,
+          "population": 0.0006569905829240496,
+          "population_abs": 0.0006924644756253207,
+          "energy": 0.1990163667686622,
+          "cnt": 0.0,
+          "passes_screen": false
+        },
+        {
+          "period": 14,
+          "intensity": 0.20571389331407322,
+          "field": 0.6392990629111415,
+          "stokes": 0.20573700765816239,
+          "population": 0.000707219869842137,
+          "population_abs": 0.0007454115588149124,
+          "energy": 0.21317636333254986,
+          "cnt": 0.0,
+          "passes_screen": false
+        },
+        {
+          "period": 15,
+          "intensity": 0.21895169073573426,
+          "field": 0.6684604757474962,
+          "stokes": 0.21897603356857195,
+          "population": 0.0007574437380458494,
+          "population_abs": 0.0007983067984113079,
+          "energy": 0.22709129550067075,
+          "cnt": 0.0,
+          "passes_screen": false
+        },
+        {
+          "period": 16,
+          "intensity": 0.2319172141789867,
+          "field": 0.696069651053128,
+          "stokes": 0.23194273462350595,
+          "population": 0.0008075375656183488,
+          "population_abs": 0.0008511080120761072,
+          "energy": 0.24074550534773298,
+          "cnt": 0.0,
+          "passes_screen": false
+        }
+      ]
+    },
+    {
+      "round": 8600,
+      "periods": [
+        {
+          "period": 1,
+          "intensity": 0.027013280548915657,
+          "field": 0.17437975923651403,
+          "stokes": 0.027021290145887073,
+          "population": 0.00010301438201362218,
+          "population_abs": 0.00010831331493632579,
+          "energy": 0.027455436461330862,
+          "cnt": 0.0,
+          "passes_screen": false
+        },
+        {
+          "period": 2,
+          "intensity": 0.05473998402325022,
+          "field": 0.3437222859255202,
+          "stokes": 0.0547566096973227,
+          "population": 0.00020214638587970224,
+          "population_abs": 0.00021256521974832854,
+          "energy": 0.055662348312780274,
+          "cnt": 0.0,
+          "passes_screen": false
+        },
+        {
+          "period": 3,
+          "intensity": 0.08321264970358615,
+          "field": 0.5048385319332027,
+          "stokes": 0.083237317626281,
+          "population": 0.0002973133532864313,
+          "population_abs": 0.00031266551493014383,
+          "energy": 0.08461768575704776,
+          "cnt": 0.0,
+          "passes_screen": false
+        },
+        {
+          "period": 4,
+          "intensity": 0.11240384489652103,
+          "field": 0.6554199564841757,
+          "stokes": 0.11243680513232103,
+          "population": 0.00038844895815991285,
+          "population_abs": 0.0004085412554042378,
+          "energy": 0.11435839403455628,
+          "cnt": 0.0,
+          "passes_screen": false
+        },
+        {
+          "period": 5,
+          "intensity": 0.14237767721134034,
+          "field": 0.7940872983050092,
+          "stokes": 0.1424198671974459,
+          "population": 0.0004755025649495058,
+          "population_abs": 0.0005001361017396011,
+          "energy": 0.14486284185597098,
+          "cnt": 0.0,
+          "passes_screen": false
+        },
+        {
+          "period": 6,
+          "intensity": 0.17307561430209173,
+          "field": 0.9203101579101832,
+          "stokes": 0.17312566802661822,
+          "population": 0.0005584384992035772,
+          "population_abs": 0.0005874095754465625,
+          "energy": 0.1761816192330754,
+          "cnt": 0.0,
+          "passes_screen": false
+        },
+        {
+          "period": 7,
+          "intensity": 0.20458618721093413,
+          "field": 1.0342218286086868,
+          "stokes": 0.2046467757136651,
+          "population": 0.0006372352471517174,
+          "population_abs": 0.0006703362359335996,
+          "energy": 0.2082831188276384,
+          "cnt": 0.0,
+          "passes_screen": false
+        },
+        {
+          "period": 8,
+          "intensity": 0.23683160446148033,
+          "field": 1.136375520879092,
+          "stokes": 0.23690005746377943,
+          "population": 0.0007118846004919486,
+          "population_abs": 0.0007489047962442319,
+          "energy": 0.24121877467151753,
+          "cnt": 0.0,
+          "passes_screen": false
+        },
+        {
+          "period": 9,
+          "intensity": 0.26991025175847233,
+          "field": 1.2274992975332804,
+          "stokes": 0.2699901268011638,
+          "population": 0.0007823907617820664,
+          "population_abs": 0.0008231171939174775,
+          "energy": 0.2749635912377999,
+          "cnt": 0.0,
+          "passes_screen": false
+        },
+        {
+          "period": 10,
+          "intensity": 0.30374283669580804,
+          "field": 1.308293744883081,
+          "stokes": 0.30383056895727967,
+          "population": 0.0008487694247994245,
+          "population_abs": 0.000892987632277964,
+          "energy": 0.3095483005756565,
+          "cnt": 0.0,
+          "passes_screen": false
+        },
+        {
+          "period": 11,
+          "intensity": 0.3384147746853858,
+          "field": 1.3792596141459796,
+          "stokes": 0.3385148340695443,
+          "population": 0.000911046843024562,
+          "population_abs": 0.0009585416062320995,
+          "energy": 0.3449805815072027,
+          "cnt": 0.0,
+          "passes_screen": false
+        },
+        {
+          "period": 12,
+          "intensity": 0.3738725534150661,
+          "field": 1.440347098068476,
+          "stokes": 0.37398045583648354,
+          "population": 0.0009692588980794567,
+          "population_abs": 0.001019814925280138,
+          "energy": 0.38123861925299796,
+          "cnt": 0.0,
+          "passes_screen": false
+        },
+        {
+          "period": 13,
+          "intensity": 0.4101553028423434,
+          "field": 1.4890688545649813,
+          "stokes": 0.4102764506916534,
+          "population": 0.0010234501785717374,
+          "population_abs": 0.0010768527450212284,
+          "energy": 0.4183999197348025,
+          "cnt": 0.0,
+          "passes_screen": false
+        },
+        {
+          "period": 14,
+          "intensity": 0.4472737122665577,
+          "field": 1.5198288218918257,
+          "stokes": 0.44740268240913783,
+          "population": 0.0010736730784028433,
+          "population_abs": 0.001129708616972036,
+          "energy": 0.45634630610220595,
+          "cnt": 0.0,
+          "passes_screen": false
+        },
+        {
+          "period": 15,
+          "intensity": 0.48517528312062425,
+          "field": 1.5458081650150832,
+          "stokes": 0.4853184240571746,
+          "population": 0.001119986922222457,
+          "population_abs": 0.001178443565070686,
+          "energy": 0.49527508313349955,
+          "cnt": 0.0,
+          "passes_screen": false
+        },
+        {
+          "period": 16,
+          "intensity": 0.5239860959065091,
+          "field": 1.570081470092575,
+          "stokes": 0.5241370313468913,
+          "population": 0.001162457124376321,
+          "population_abs": 0.0012231251958306766,
+          "energy": 0.534954282277045,
+          "cnt": 0.0,
+          "passes_screen": false
+        }
+      ]
+    },
+    {
+      "round": 9100,
+      "periods": [
+        {
+          "period": 1,
+          "intensity": 0.04127793169847552,
+          "field": 0.3607506694121184,
+          "stokes": 0.04129403187661533,
+          "population": 0.00024149961368280789,
+          "population_abs": 0.0002534372270392993,
+          "energy": 0.0414298550974348,
+          "cnt": 0.0,
+          "passes_screen": false
+        },
+        {
+          "period": 2,
+          "intensity": 0.08423389963924216,
+          "field": 0.6980871528137447,
+          "stokes": 0.08426795106016552,
+          "population": 0.00048291479157960517,
+          "population_abs": 0.0005068063083043528,
+          "energy": 0.08455272163224614,
+          "cnt": 0.0,
+          "passes_screen": false
+        },
+        {
+          "period": 3,
+          "intensity": 0.12895207893315605,
+          "field": 0.9912408068488543,
+          "stokes": 0.12900235140193286,
+          "population": 0.0007235735355649175,
+          "population_abs": 0.000759511089221121,
+          "energy": 0.12945195529744002,
+          "cnt": 0.0,
+          "passes_screen": false
+        },
+        {
+          "period": 4,
+          "intensity": 0.17542930343882143,
+          "field": 1.2281515164498156,
+          "stokes": 0.17550016241829833,
+          "population": 0.0009640885995397628,
+          "population_abs": 0.0010120124909782646,
+          "energy": 0.1761297849739345,
+          "cnt": 0.0,
+          "passes_screen": false
+        },
+        {
+          "period": 5,
+          "intensity": 0.22380747147460292,
+          "field": 1.4003557689648924,
+          "stokes": 0.22389463876419102,
+          "population": 0.0012031539383131678,
+          "population_abs": 0.0012631917452199382,
+          "energy": 0.22472488568055637,
+          "cnt": 0.0,
+          "passes_screen": false
+        },
+        {
+          "period": 6,
+          "intensity": 0.27401374580063387,
+          "field": 1.4545915451442686,
+          "stokes": 0.2741207840816604,
+          "population": 0.0014420174426868374,
+          "population_abs": 0.0015140355313828513,
+          "energy": 0.27517142806258854,
+          "cnt": 0.0,
+          "passes_screen": false
+        },
+        {
+          "period": 7,
+          "intensity": 0.3262739603388807,
+          "field": 1.4819378761193145,
+          "stokes": 0.3264008493371639,
+          "population": 0.0016787540357152797,
+          "population_abs": 0.0017629120846375246,
+          "energy": 0.3276928975083713,
+          "cnt": 0.0,
+          "passes_screen": false
+        },
+        {
+          "period": 8,
+          "intensity": 0.38044494899930387,
+          "field": 1.5100346220632292,
+          "stokes": 0.38058758975881096,
+          "population": 0.0019152321548891764,
+          "population_abs": 0.0020113262226305606,
+          "energy": 0.3821535561199707,
+          "cnt": 0.0,
+          "passes_screen": false
+        },
+        {
+          "period": 9,
+          "intensity": 0.4367786201406177,
+          "field": 1.540540178960566,
+          "stokes": 0.4369481502377696,
+          "population": 0.002148929356599766,
+          "population_abs": 0.0022571468299246167,
+          "energy": 0.43879909359619806,
+          "cnt": 0.0,
+          "passes_screen": false
+        },
+        {
+          "period": 10,
+          "intensity": 0.49514392871813545,
+          "field": 1.565994289793192,
+          "stokes": 0.4953292092176541,
+          "population": 0.0023823133703599992,
+          "population_abs": 0.0025023850688240534,
+          "energy": 0.4975132038377379,
+          "cnt": 0.0,
+          "passes_screen": false
+        },
+        {
+          "period": 11,
+          "intensity": 0.5557396660691267,
+          "field": 1.5791546376334835,
+          "stokes": 0.555954833099944,
+          "population": 0.002612292152288599,
+          "population_abs": 0.00274442788404361,
+          "energy": 0.5584793485826747,
+          "cnt": 0.0,
+          "passes_screen": false
+        },
+        {
+          "period": 12,
+          "intensity": 0.6185314788853358,
+          "field": 1.6146279087879976,
+          "stokes": 0.6187623673817754,
+          "population": 0.0028419053531486805,
+          "population_abs": 0.0029857770282814,
+          "energy": 0.6216901022559476,
+          "cnt": 0.0,
+          "passes_screen": false
+        },
+        {
+          "period": 13,
+          "intensity": 0.6835592796258352,
+          "field": 1.6264570333094925,
+          "stokes": 0.6838231349444297,
+          "population": 0.0030675245032626666,
+          "population_abs": 0.0032233583607150784,
+          "energy": 0.6871551994625236,
+          "cnt": 0.0,
+          "passes_screen": false
+        },
+        {
+          "period": 14,
+          "intensity": 0.7510104868027719,
+          "field": 1.6395140001597772,
+          "stokes": 0.7512900077659788,
+          "population": 0.003292728382239264,
+          "population_abs": 0.003460144786832431,
+          "energy": 0.7551079385585744,
+          "cnt": 0.0,
+          "passes_screen": false
+        },
+        {
+          "period": 15,
+          "intensity": 0.8206153456129194,
+          "field": 1.656990762688471,
+          "stokes": 0.8209309698358254,
+          "population": 0.0035133898645834222,
+          "population_abs": 0.003692625013285711,
+          "energy": 0.825246089086028,
+          "cnt": 0.0,
+          "passes_screen": false
+        },
+        {
+          "period": 16,
+          "intensity": 0.8929573593796529,
+          "field": 1.6770213099923434,
+          "stokes": 0.893288567047328,
+          "population": 0.003733589459751459,
+          "population_abs": 0.003924220306751658,
+          "energy": 0.8981658820253011,
+          "cnt": 0.0,
+          "passes_screen": false
+        }
+      ]
+    },
+    {
+      "round": 9600,
+      "periods": [
+        {
+          "period": 1,
+          "intensity": 0.05829383487187609,
+          "field": 0.7491038748666368,
+          "stokes": 0.05832980123496998,
+          "population": 0.0003252841405787017,
+          "population_abs": 0.0003419425806074905,
+          "energy": 0.056892869491186326,
+          "cnt": 0.0,
+          "passes_screen": false
+        },
+        {
+          "period": 2,
+          "intensity": 0.1199700617439238,
+          "field": 1.234551701595132,
+          "stokes": 0.12004781282580758,
+          "population": 0.0006503831429060476,
+          "population_abs": 0.0006836002304616562,
+          "energy": 0.11700227966380994,
+          "cnt": 0.0,
+          "passes_screen": false
+        },
+        {
+          "period": 3,
+          "intensity": 0.185153133019606,
+          "field": 1.236065772980868,
+          "stokes": 0.18526726411187594,
+          "population": 0.0009740568956889878,
+          "population_abs": 0.0010242497559592723,
+          "energy": 0.1804654001748902,
+          "cnt": 0.0,
+          "passes_screen": false
+        },
+        {
+          "period": 4,
+          "intensity": 0.2540779160019616,
+          "field": 1.2719591021568886,
+          "stokes": 0.2542423255495509,
+          "population": 0.001297389702377951,
+          "population_abs": 0.0013640648855174353,
+          "energy": 0.24747581461832246,
+          "cnt": 0.0,
+          "passes_screen": false
+        },
+        {
+          "period": 5,
+          "intensity": 0.3268392228874485,
+          "field": 1.3557895434565663,
+          "stokes": 0.3270403180772689,
+          "population": 0.0016179693693857073,
+          "population_abs": 0.0017018517740740036,
+          "energy": 0.3181247972988557,
+          "cnt": 0.0,
+          "passes_screen": false
+        },
+        {
+          "period": 6,
+          "intensity": 0.4036952099562733,
+          "field": 1.409458441746181,
+          "stokes": 0.40395575687440083,
+          "population": 0.0019381000090818727,
+          "population_abs": 0.0020383154205906306,
+          "energy": 0.3927014127577042,
+          "cnt": 0.0,
+          "passes_screen": false
+        },
+        {
+          "period": 7,
+          "intensity": 0.48477069317971944,
+          "field": 1.4496874839395006,
+          "stokes": 0.4850681248526028,
+          "population": 0.002254143617079538,
+          "population_abs": 0.002371706721272626,
+          "energy": 0.47116398352204825,
+          "cnt": 0.0,
+          "passes_screen": false
+        },
+        {
+          "period": 8,
+          "intensity": 0.5702532723087624,
+          "field": 1.4788487451856842,
+          "stokes": 0.570619971541615,
+          "population": 0.002569707542565819,
+          "population_abs": 0.002703385080445986,
+          "energy": 0.5540144581553899,
+          "cnt": 0.0,
+          "passes_screen": false
+        },
+        {
+          "period": 9,
+          "intensity": 0.6604244895692397,
+          "field": 1.518299533977567,
+          "stokes": 0.6608281682779746,
+          "population": 0.0028798395179995347,
+          "population_abs": 0.003030911043594875,
+          "energy": 0.6410215025922308,
+          "cnt": 0.0,
+          "passes_screen": false
+        },
+        {
+          "period": 10,
+          "intensity": 0.7552271913578632,
+          "field": 1.5489388199992347,
+          "stokes": 0.755710535201297,
+          "population": 0.0031895662421699156,
+          "population_abs": 0.0033564692633194504,
+          "energy": 0.7327901235628724,
+          "cnt": 0.0,
+          "passes_screen": false
+        },
+        {
+          "period": 11,
+          "intensity": 0.8553188024643059,
+          "field": 1.5893890939113406,
+          "stokes": 0.8558391186940645,
+          "population": 0.0034924993876310102,
+          "population_abs": 0.003676747298938965,
+          "energy": 0.8291356690665372,
+          "cnt": 0.0,
+          "passes_screen": false
+        },
+        {
+          "period": 12,
+          "intensity": 0.9602729771962439,
+          "field": 1.6243107949687805,
+          "stokes": 0.9608282470199733,
+          "population": 0.003795231691396551,
+          "population_abs": 0.0039949696549402836,
+          "energy": 0.9304237264529904,
+          "cnt": 0.0,
+          "passes_screen": false
+        },
+        {
+          "period": 13,
+          "intensity": 1.0709904425719063,
+          "field": 1.656980165983243,
+          "stokes": 1.0716381810301179,
+          "population": 0.0040900231254405416,
+          "population_abs": 0.004306724904774462,
+          "energy": 1.0369079407400412,
+          "cnt": 0.0,
+          "passes_screen": false
+        },
+        {
+          "period": 14,
+          "intensity": 1.187084490987601,
+          "field": 1.682791081215082,
+          "stokes": 1.1877670259961408,
+          "population": 0.004384494857557497,
+          "population_abs": 0.0046165306924209615,
+          "energy": 1.1483056185482625,
+          "cnt": 0.0,
+          "passes_screen": false
+        },
+        {
+          "period": 15,
+          "intensity": 1.3089660351081513,
+          "field": 1.7155409273389912,
+          "stokes": 1.3097522577934855,
+          "population": 0.0046703684621386,
+          "population_abs": 0.00491861265870619,
+          "energy": 1.2657609291121519,
+          "cnt": 0.0,
+          "passes_screen": false
+        },
+        {
+          "period": 16,
+          "intensity": 1.4371094340838715,
+          "field": 1.7596384461778478,
+          "stokes": 1.4379302121921744,
+          "population": 0.004955407519387539,
+          "population_abs": 0.005219067386843745,
+          "energy": 1.38843854189822,
+          "cnt": 0.0,
+          "passes_screen": false
+        }
+      ]
+    },
+    {
+      "round": 10100,
+      "periods": [
+        {
+          "period": 1,
+          "intensity": 0.010785450686730182,
+          "field": 0.27802192446123114,
+          "stokes": 0.010790652736778419,
+          "population": 3.216451884665869e-05,
+          "population_abs": 3.375186540188757e-05,
+          "energy": 0.008929222071373921,
+          "cnt": 0.0,
+          "passes_screen": false
+        },
+        {
+          "period": 2,
+          "intensity": 0.021449564945707333,
+          "field": 0.5405218622771311,
+          "stokes": 0.021459869486943565,
+          "population": 6.431029879323249e-05,
+          "population_abs": 6.748847595894336e-05,
+          "energy": 0.017772647616673742,
+          "cnt": 0.0,
+          "passes_screen": false
+        },
+        {
+          "period": 3,
+          "intensity": 0.031981654966084995,
+          "field": 0.7691700560376968,
+          "stokes": 0.031997149940537845,
+          "population": 9.643195208338317e-05,
+          "population_abs": 0.00010119394952778915,
+          "energy": 0.02653664076797202,
+          "cnt": 0.0,
+          "passes_screen": false
+        },
+        {
+          "period": 4,
+          "intensity": 0.04236992856255507,
+          "field": 0.9352059686758234,
+          "stokes": 0.04239041126764348,
+          "population": 0.00012849915466749207,
+          "population_abs": 0.00013485345818264882,
+          "energy": 0.035204142038275155,
+          "cnt": 0.0,
+          "passes_screen": false
+        },
+        {
+          "period": 5,
+          "intensity": 0.052616327186483215,
+          "field": 1.0233859830428058,
+          "stokes": 0.052642003976995616,
+          "population": 0.00016051962943853805,
+          "population_abs": 0.00016845131193321539,
+          "energy": 0.04379429294168957,
+          "cnt": 0.0,
+          "passes_screen": false
+        },
+        {
+          "period": 6,
+          "intensity": 0.0627105321053569,
+          "field": 1.0988853688604912,
+          "stokes": 0.06274108023743838,
+          "population": 0.00019244943242890621,
+          "population_abs": 0.00020197189008364091,
+          "energy": 0.052278464200417485,
+          "cnt": 0.0,
+          "passes_screen": false
+        },
+        {
+          "period": 7,
+          "intensity": 0.07267178299670478,
+          "field": 1.1030009445478441,
+          "stokes": 0.07270750207044906,
+          "population": 0.00022431101607701866,
+          "population_abs": 0.00023540153077483694,
+          "energy": 0.060685545465640645,
+          "cnt": 0.0,
+          "passes_screen": false
+        },
+        {
+          "period": 8,
+          "intensity": 0.08248590667536923,
+          "field": 1.002994477202378,
+          "stokes": 0.08252634258327186,
+          "population": 0.00025604485391888295,
+          "population_abs": 0.0002687215859213943,
+          "energy": 0.06898015039230132,
+          "cnt": 0.0,
+          "passes_screen": false
+        },
+        {
+          "period": 9,
+          "intensity": 0.09218427848582433,
+          "field": 0.8467777262112797,
+          "stokes": 0.09222981490906484,
+          "population": 0.0002876906361986451,
+          "population_abs": 0.0003019232670959937,
+          "energy": 0.07719536033988961,
+          "cnt": 0.0,
+          "passes_screen": false
+        },
+        {
+          "period": 10,
+          "intensity": 0.10174594404479652,
+          "field": 0.7700380469599392,
+          "stokes": 0.10179600365912055,
+          "population": 0.00031917040383314197,
+          "population_abs": 0.000334981657645117,
+          "energy": 0.08529507347788923,
+          "cnt": 0.0,
+          "passes_screen": false
+        },
+        {
+          "period": 11,
+          "intensity": 0.11120263020097122,
+          "field": 0.8507860775889601,
+          "stokes": 0.11125768839527883,
+          "population": 0.0003505444734233004,
+          "population_abs": 0.0003678966859280708,
+          "energy": 0.09331022818613088,
+          "cnt": 0.0,
+          "passes_screen": false
+        },
+        {
+          "period": 12,
+          "intensity": 0.120531262250723,
+          "field": 0.9839515275188492,
+          "stokes": 0.12059063852436452,
+          "population": 0.0003817127255893797,
+          "population_abs": 0.0004006329315546786,
+          "energy": 0.10121074189159707,
+          "cnt": 0.0,
+          "passes_screen": false
+        },
+        {
+          "period": 13,
+          "intensity": 0.12975321975048387,
+          "field": 1.1203076149443283,
+          "stokes": 0.12981748565159779,
+          "population": 0.0004127603596330074,
+          "population_abs": 0.0004332038655386894,
+          "energy": 0.10901809987601585,
+          "cnt": 0.0,
+          "passes_screen": false
+        },
+        {
+          "period": 14,
+          "intensity": 0.13885352366035142,
+          "field": 1.2132020610341097,
+          "stokes": 0.13892191169511023,
+          "population": 0.00044356050421852106,
+          "population_abs": 0.0004655583515875694,
+          "energy": 0.11671605360255044,
+          "cnt": 0.0,
+          "passes_screen": false
+        },
+        {
+          "period": 15,
+          "intensity": 0.14783633073570188,
+          "field": 1.2097675821191953,
+          "stokes": 0.14790950030394134,
+          "population": 0.00047422834933811853,
+          "population_abs": 0.0004977291917337423,
+          "energy": 0.12430831700277534,
+          "cnt": 0.0,
+          "passes_screen": false
+        },
+        {
+          "period": 16,
+          "intensity": 0.1567052674989161,
+          "field": 1.1198937513869285,
+          "stokes": 0.15678237274966028,
+          "population": 0.0005046048334326372,
+          "population_abs": 0.0005296433662259625,
+          "energy": 0.1318012278495414,
+          "cnt": 0.0,
+          "passes_screen": false
+        }
+      ]
+    },
+    {
+      "round": 10600,
+      "periods": [
+        {
+          "period": 1,
+          "intensity": 0.009563387748031602,
+          "field": 0.058392427885755674,
+          "stokes": 0.009564875268232092,
+          "population": 4.022721043794864e-05,
+          "population_abs": 4.2294244350871146e-05,
+          "energy": 0.00946318566522586,
+          "cnt": 0.0,
+          "passes_screen": false
+        },
+        {
+          "period": 2,
+          "intensity": 0.01884729687876805,
+          "field": 0.11577595149118694,
+          "stokes": 0.018850211397362565,
+          "population": 8.044795334070751e-05,
+          "population_abs": 8.458035006819742e-05,
+          "energy": 0.018636622095912547,
+          "cnt": 0.0,
+          "passes_screen": false
+        },
+        {
+          "period": 3,
+          "intensity": 0.027840927732047566,
+          "field": 0.1715065048152278,
+          "stokes": 0.027845209506658558,
+          "population": 0.00012066781698207364,
+          "population_abs": 0.0001268634418239989,
+          "energy": 0.027522429383237124,
+          "cnt": 0.0,
+          "passes_screen": false
+        },
+        {
+          "period": 4,
+          "intensity": 0.03653822758766602,
+          "field": 0.2250814958734283,
+          "stokes": 0.03654381856884812,
+          "population": 0.00016086528720232418,
+          "population_abs": 0.0001691220667069393,
+          "energy": 0.03612278897755539,
+          "cnt": 0.0,
+          "passes_screen": false
+        },
+        {
+          "period": 5,
+          "intensity": 0.044939037350701275,
+          "field": 0.27615654513430654,
+          "stokes": 0.04494588205452908,
+          "population": 0.00020105940846996146,
+          "population_abs": 0.00021137475489485524,
+          "energy": 0.044439928735267475,
+          "cnt": 0.0,
+          "passes_screen": false
+        },
+        {
+          "period": 6,
+          "intensity": 0.05304898379934143,
+          "field": 0.3245312268689346,
+          "stokes": 0.05305702970974363,
+          "population": 0.0002412153078957672,
+          "population_abs": 0.0002535864949706479,
+          "energy": 0.0524761088485034,
+          "cnt": 0.0,
+          "passes_screen": false
+        },
+        {
+          "period": 7,
+          "intensity": 0.060878200810319735,
+          "field": 0.3701594628542977,
+          "stokes": 0.060887398250581815,
+          "population": 0.00028136523157636697,
+          "population_abs": 0.0002957895582601511,
+          "energy": 0.06023360858717486,
+          "cnt": 0.0,
+          "passes_screen": false
+        },
+        {
+          "period": 8,
+          "intensity": 0.06843923601725038,
+          "field": 0.4131316472580565,
+          "stokes": 0.06844953744643367,
+          "population": 0.0003214612701402122,
+          "population_abs": 0.0003379349369269091,
+          "energy": 0.06771471386342143,
+          "cnt": 0.0,
+          "passes_screen": false
+        },
+        {
+          "period": 9,
+          "intensity": 0.07574465676525348,
+          "field": 0.4535681486334953,
+          "stokes": 0.07575601595614016,
+          "population": 0.00036154847103794666,
+          "population_abs": 0.0003800691731252748,
+          "energy": 0.0749217056542385,
+          "cnt": 0.0,
+          "passes_screen": false
+        },
+        {
+          "period": 10,
+          "intensity": 0.08280489668989459,
+          "field": 0.4917690079105127,
+          "stokes": 0.08281726805705909,
+          "population": 0.0004015663568335891,
+          "population_abs": 0.00042212863025914427,
+          "energy": 0.08185684928316339,
+          "cnt": 0.0,
+          "passes_screen": false
+        },
+        {
+          "period": 11,
+          "intensity": 0.08962679950407887,
+          "field": 0.5280065582867471,
+          "stokes": 0.08964013791022632,
+          "population": 0.0004415722293898833,
+          "population_abs": 0.00046417484591187996,
+          "energy": 0.08852238450886896,
+          "cnt": 0.0,
+          "passes_screen": false
+        },
+        {
+          "period": 12,
+          "intensity": 0.09621313628225542,
+          "field": 0.5626312037905079,
+          "stokes": 0.09622739732960679,
+          "population": 0.00048149365888821037,
+          "population_abs": 0.0005061287269466641,
+          "energy": 0.09492051634252097,
+          "cnt": 0.0,
+          "passes_screen": false
+        },
+        {
+          "period": 13,
+          "intensity": 0.1025631195313384,
+          "field": 0.5960186179831379,
+          "stokes": 0.10257826024404708,
+          "population": 0.0005213995067756419,
+          "population_abs": 0.0005480677270383039,
+          "energy": 0.1010534065241454,
+          "cnt": 0.0,
+          "passes_screen": false
+        },
+        {
+          "period": 14,
+          "intensity": 0.10867366857696525,
+          "field": 0.6285446854044664,
+          "stokes": 0.1086896483408155,
+          "population": 0.0005612061551470331,
+          "population_abs": 0.0005898962720151113,
+          "energy": 0.10692316560426074,
+          "cnt": 0.0,
+          "passes_screen": false
+        },
+        {
+          "period": 15,
+          "intensity": 0.11454098677025422,
+          "field": 0.6605100698592007,
+          "stokes": 0.1145577680327241,
+          "population": 0.0006009931808362057,
+          "population_abs": 0.0006317088497787005,
+          "energy": 0.11253184557780183,
+          "cnt": 0.0,
+          "passes_screen": false
+        },
+        {
+          "period": 16,
+          "intensity": 0.12016197336542059,
+          "field": 0.6921652954629699,
+          "stokes": 0.12017952191473169,
+          "population": 0.0006406666923996687,
+          "population_abs": 0.0006733921823627309,
+          "energy": 0.11788143301171028,
+          "cnt": 0.0,
+          "passes_screen": false
+        }
+      ]
+    },
+    {
+      "round": 11100,
+      "periods": [
+        {
+          "period": 1,
+          "intensity": 0.01962702462914969,
+          "field": 0.09131944758668276,
+          "stokes": 0.019632217400838304,
+          "population": 4.7706765722826875e-05,
+          "population_abs": 5.024717581003646e-05,
+          "energy": 0.020048652273553236,
+          "cnt": 0.0,
+          "passes_screen": false
+        },
+        {
+          "period": 2,
+          "intensity": 0.03963190452284072,
+          "field": 0.18022232842465072,
+          "stokes": 0.03964220180345874,
+          "population": 9.501808899754899e-05,
+          "population_abs": 0.00010007924043686778,
+          "energy": 0.04049527727409363,
+          "cnt": 0.0,
+          "passes_screen": false
+        },
+        {
+          "period": 3,
+          "intensity": 0.060017072030204836,
+          "field": 0.26576977142272373,
+          "stokes": 0.06003295177087842,
+          "population": 0.00014191077053880323,
+          "population_abs": 0.00014947171806978243,
+          "energy": 0.0613390205059976,
+          "cnt": 0.0,
+          "passes_screen": false
+        },
+        {
+          "period": 4,
+          "intensity": 0.08078129430331701,
+          "field": 0.3473066275957185,
+          "stokes": 0.08080228537775525,
+          "population": 0.00018836118904264296,
+          "population_abs": 0.00019839968655144258,
+          "energy": 0.08258863942013939,
+          "cnt": 0.0,
+          "passes_screen": false
+        },
+        {
+          "period": 5,
+          "intensity": 0.10192727195624764,
+          "field": 0.42449577326500193,
+          "stokes": 0.10195424335544467,
+          "population": 0.00023434528055272247,
+          "population_abs": 0.0002468377556764656,
+          "energy": 0.10423572991214769,
+          "cnt": 0.0,
+          "passes_screen": false
+        },
+        {
+          "period": 6,
+          "intensity": 0.12345509381779077,
+          "field": 0.4973111135171505,
+          "stokes": 0.1234871789836959,
+          "population": 0.0002798385176818697,
+          "population_abs": 0.0002947600453393484,
+          "energy": 0.1262979586798334,
+          "cnt": 0.0,
+          "passes_screen": false
+        },
+        {
+          "period": 7,
+          "intensity": 0.14536353708852445,
+          "field": 0.565990248555577,
+          "stokes": 0.1454020073740724,
+          "population": 0.00032481588871156517,
+          "population_abs": 0.00034214016355604837,
+          "energy": 0.14875345468229173,
+          "cnt": 0.0,
+          "passes_screen": false
+        },
+        {
+          "period": 8,
+          "intensity": 0.16766006408062062,
+          "field": 0.630954462543592,
+          "stokes": 0.1677036463431098,
+          "population": 0.00036925187659654114,
+          "population_abs": 0.0003889511843878646,
+          "energy": 0.17163639517620055,
+          "cnt": 0.0,
+          "passes_screen": false
+        },
+        {
+          "period": 9,
+          "intensity": 0.19033161400333753,
+          "field": 0.6927106119276175,
+          "stokes": 0.19038199126400585,
+          "population": 0.00041312043790844275,
+          "population_abs": 0.00043516562580359075,
+          "energy": 0.19490175068762827,
+          "cnt": 0.0,
+          "passes_screen": false
+        },
+        {
+          "period": 10,
+          "intensity": 0.21340265927060326,
+          "field": 0.7517537259124797,
+          "stokes": 0.21345814211933486,
+          "population": 0.0004563949817615427,
+          "population_abs": 0.00048075542752645806,
+          "energy": 0.2186118285146632,
+          "cnt": 0.0,
+          "passes_screen": false
+        },
+        {
+          "period": 11,
+          "intensity": 0.23683598494752447,
+          "field": 0.8084883689055221,
+          "stokes": 0.23689867508749185,
+          "population": 0.0004990483487742451,
+          "population_abs": 0.0005256919289221562,
+          "energy": 0.24268447083855338,
+          "cnt": 0.0,
+          "passes_screen": false
+        },
+        {
+          "period": 12,
+          "intensity": 0.2606870201406376,
+          "field": 0.8631809777800367,
+          "stokes": 0.2607548039451617,
+          "population": 0.0005410527901288059,
+          "population_abs": 0.0005699458469949903,
+          "energy": 0.26722626904862645,
+          "cnt": 0.0,
+          "passes_screen": false
+        },
+        {
+          "period": 13,
+          "intensity": 0.284877210372757,
+          "field": 0.915946836314068,
+          "stokes": 0.28495261293047386,
+          "population": 0.0005823799467997493,
+          "population_abs": 0.0006134872545664471,
+          "energy": 0.2921138693627383,
+          "cnt": 0.0,
+          "passes_screen": false
+        },
+        {
+          "period": 14,
+          "intensity": 0.30951182897163715,
+          "field": 0.9667674126256234,
+          "stokes": 0.3095923067531801,
+          "population": 0.0006230008290277471,
+          "population_abs": 0.0006562855587177729,
+          "energy": 0.3174752531411149,
+          "cnt": 0.0,
+          "passes_screen": false
+        },
+        {
+          "period": 15,
+          "intensity": 0.3344534129816227,
+          "field": 1.0155288316017097,
+          "stokes": 0.33453884764473785,
+          "population": 0.0006628857961223543,
+          "population_abs": 0.0006983094795843803,
+          "energy": 0.34318525432728286,
+          "cnt": 0.0,
+          "passes_screen": false
+        },
+        {
+          "period": 16,
+          "intensity": 0.3598671449225876,
+          "field": 1.0620708006706765,
+          "stokes": 0.3599606988620835,
+          "population": 0.0007020045366861414,
+          "population_abs": 0.0007395270296008949,
+          "energy": 0.36934722750958726,
+          "cnt": 0.0,
+          "passes_screen": false
+        }
+      ]
+    }
+  ],
+  "started_utc": "2026-09-19T05:35:55.032553+00:00",
+  "gpu_rate_validation_max_relative": 2.4424906541753444e-15,
+  "initial_grid_probe": {
+    "rounds": 8,
+    "intensity": 3.217389896251286e-05,
+    "field": 0.0007976672564903615,
+    "stokes": 0.00042151990222416216,
+    "population": 5.521682207982e-07,
+    "population_abs": 5.774488737175787e-07,
+    "energy": 1.9568157442195755e-05,
+    "below_screen_tolerances": true
+  },
+  "accepted_additional_rounds": 10586,
+  "total_rounds": 11186,
+  "gain_age_min": 7.000243879345026,
+  "gain_memory_max": 0.0009116596034938744,
+  "final_periods": [
+    {
+      "period": 1,
+      "intensity": 0.019497791620689896,
+      "field": 0.11929641363221631,
+      "stokes": 0.019503000303357512,
+      "population": 9.446733733450338e-05,
+      "population_abs": 9.923220827456891e-05,
+      "energy": 0.020702181974009748,
+      "cnt": 0.0,
+      "passes_screen": false
+    },
+    {
+      "period": 2,
+      "intensity": 0.038605758212629765,
+      "field": 0.2355086829468923,
+      "stokes": 0.03861591438735627,
+      "population": 0.0001888521131053335,
+      "population_abs": 0.0001983807626678713,
+      "energy": 0.04097187210864761,
+      "cnt": 0.0,
+      "passes_screen": false
+    },
+    {
+      "period": 3,
+      "intensity": 0.05732642610752115,
+      "field": 0.34572324686167505,
+      "stokes": 0.05734174190048255,
+      "population": 0.0002832082329817318,
+      "population_abs": 0.0002975192778937874,
+      "energy": 0.06081230528045456,
+      "cnt": 0.0,
+      "passes_screen": false
+    },
+    {
+      "period": 4,
+      "intensity": 0.07565273149238604,
+      "field": 0.44778952517802884,
+      "stokes": 0.0756726366094576,
+      "population": 0.0003773333667937458,
+      "population_abs": 0.0003964075915499077,
+      "energy": 0.08023031321064378,
+      "cnt": 0.0,
+      "passes_screen": false
+    },
+    {
+      "period": 5,
+      "intensity": 0.09359925008398601,
+      "field": 0.5406029573295104,
+      "stokes": 0.09362425976605165,
+      "population": 0.0004714104161937072,
+      "population_abs": 0.000495275154442254,
+      "energy": 0.09922960701942896,
+      "cnt": 0.0,
+      "passes_screen": false
+    },
+    {
+      "period": 6,
+      "intensity": 0.11115722356188341,
+      "field": 0.6241000582542485,
+      "stokes": 0.11118647386932888,
+      "population": 0.0005651080647666455,
+      "population_abs": 0.0005937282375657604,
+      "energy": 0.11781504383341967,
+      "cnt": 0.0,
+      "passes_screen": false
+    },
+    {
+      "period": 7,
+      "intensity": 0.12835312750519173,
+      "field": 0.6989052004900234,
+      "stokes": 0.1283874243210746,
+      "population": 0.000658739933348092,
+      "population_abs": 0.000692148525893832,
+      "energy": 0.13599552497572287,
+      "cnt": 0.0,
+      "passes_screen": false
+    },
+    {
+      "period": 8,
+      "intensity": 0.1451758603447186,
+      "field": 0.7657432566034464,
+      "stokes": 0.1452140616886175,
+      "population": 0.000751843957839583,
+      "population_abs": 0.0007899938031920017,
+      "energy": 0.15376803981705733,
+      "cnt": 0.0,
+      "passes_screen": false
+    },
+    {
+      "period": 9,
+      "intensity": 0.16165707728075834,
+      "field": 0.8249131943156999,
+      "stokes": 0.16170026512387953,
+      "population": 0.0008448670499702234,
+      "population_abs": 0.0008877922737384747,
+      "energy": 0.17115342005380219,
+      "cnt": 0.0,
+      "passes_screen": false
+    },
+    {
+      "period": 10,
+      "intensity": 0.1777853005814836,
+      "field": 0.876145244000265,
+      "stokes": 0.17783206955287426,
+      "population": 0.0009372138014246638,
+      "population_abs": 0.0009848603738800144,
+      "energy": 0.18813308613329016,
+      "cnt": 0.0,
+      "passes_screen": false
+    },
+    {
+      "period": 11,
+      "intensity": 0.19358612588869775,
+      "field": 0.9189733959604512,
+      "stokes": 0.19363781702618044,
+      "population": 0.001029467779159181,
+      "population_abs": 0.001081865087869227,
+      "energy": 0.2047481590096002,
+      "cnt": 0.0,
+      "passes_screen": false
+    },
+    {
+      "period": 12,
+      "intensity": 0.20905433746357185,
+      "field": 0.9534383751583385,
+      "stokes": 0.20910929633482325,
+      "population": 0.0011208968597084383,
+      "population_abs": 0.0011779075110136539,
+      "energy": 0.22095536828305729,
+      "cnt": 0.0,
+      "passes_screen": false
+    },
+    {
+      "period": 13,
+      "intensity": 0.22419811707505713,
+      "field": 0.98066665271756,
+      "stokes": 0.2242579257549937,
+      "population": 0.0012112595791729992,
+      "population_abs": 0.0012728232797485362,
+      "energy": 0.2368257342003376,
+      "cnt": 0.0,
+      "passes_screen": false
+    },
+    {
+      "period": 14,
+      "intensity": 0.23902854847706914,
+      "field": 1.002856185423891,
+      "stokes": 0.23909131915998294,
+      "population": 0.0013004038938313968,
+      "population_abs": 0.0013664529258248237,
+      "energy": 0.2522907413852481,
+      "cnt": 0.0,
+      "passes_screen": false
+    },
+    {
+      "period": 15,
+      "intensity": 0.2535280285853649,
+      "field": 1.0225668652261368,
+      "stokes": 0.25359556717322185,
+      "population": 0.0013881830259470582,
+      "population_abs": 0.0014586425521867508,
+      "energy": 0.26743291915503864,
+      "cnt": 0.0,
+      "passes_screen": false
+    },
+    {
+      "period": 16,
+      "intensity": 0.26773437963362395,
+      "field": 1.0417276998009548,
+      "stokes": 0.26780458289904363,
+      "population": 0.0014744560583582274,
+      "population_abs": 0.0015492444539312311,
+      "energy": 0.28218928511906216,
+      "cnt": 0.0,
+      "passes_screen": false
+    }
+  ],
+  "final_grid_probe": {
+    "status": "resource_limit"
+  },
+  "classification": "no_period_1_to_16_recurrence_detected",
+  "certified_stable": false,
+  "finished_utc": "2026-09-19T05:58:48.574433+00:00"
+}

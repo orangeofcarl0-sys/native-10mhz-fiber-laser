@@ -1,0 +1,362 @@
+{
+  "topology": "CNT_OC",
+  "oc": 0.8,
+  "pump_W": 0.05,
+  "gdd_ps2": 0.2,
+  "n": 8192,
+  "dt_ps": 0.125,
+  "source_sha256": {
+    "steady_state.py": "6d0deb234ebf461d01821f12d06bf864429a6075cff7f667394f7c00b865eb51",
+    "spectral_engine.py": "4862a61a2fbb1ede96db62991e741e7ab75cbcb22c6cb5501d43dd8f1cd37a45",
+    "run_steady_pilot.py": "25a82f2ecd0377ee353fe38ad1ca119fda4ff93b7e4ca09292cf3cd6e877ebfe"
+  },
+  "trials": [
+    {
+      "width_ps": 10.0,
+      "initial_cavity_energy_pJ": 100.0,
+      "status": "line_search_stalled",
+      "seconds": 31.349330099998042,
+      "evaluations": 531,
+      "residual": 0.4359455661214728,
+      "relative_field_residual": 1.9006668355419172,
+      "population_gap": 0.16630904964943205,
+      "output_energy_nJ": 0.12261036841119097,
+      "peaks": 1,
+      "time_edge": 1.8839523378387884e-05,
+      "spectral_edge": 4.172219751696918e-09,
+      "phase_rad": -0.768202497199057,
+      "shift_ps": -0.001833336630747027,
+      "history": [
+        {
+          "step": 0,
+          "residual": 1.1064914515012683,
+          "calls": 1,
+          "linear_info": 2,
+          "alpha": 0.0625
+        },
+        {
+          "step": 1,
+          "residual": 0.6914344450420132,
+          "calls": 54,
+          "linear_info": 2,
+          "alpha": 0.125
+        },
+        {
+          "step": 2,
+          "residual": 0.5936063143757787,
+          "calls": 107,
+          "linear_info": 2,
+          "alpha": 0.125
+        },
+        {
+          "step": 3,
+          "residual": 0.5134826767505766,
+          "calls": 160,
+          "linear_info": 2,
+          "alpha": 0.125
+        },
+        {
+          "step": 4,
+          "residual": 0.4485798433519721,
+          "calls": 213,
+          "linear_info": 2,
+          "alpha": 0.015625
+        },
+        {
+          "step": 5,
+          "residual": 0.4416629882211808,
+          "calls": 266,
+          "linear_info": 2,
+          "alpha": 0.0078125
+        },
+        {
+          "step": 6,
+          "residual": 0.43826159822163,
+          "calls": 319,
+          "linear_info": 2,
+          "alpha": 0.00390625
+        },
+        {
+          "step": 7,
+          "residual": 0.43657501577948554,
+          "calls": 372,
+          "linear_info": 2,
+          "alpha": 0.0009765625
+        },
+        {
+          "step": 8,
+          "residual": 0.4361552366850595,
+          "calls": 425,
+          "linear_info": 2,
+          "alpha": 0.00048828125
+        },
+        {
+          "step": 9,
+          "residual": 0.4359455661214728,
+          "calls": 478,
+          "linear_info": 2
+        }
+      ],
+      "certified_stable": false
+    },
+    {
+      "width_ps": 30.0,
+      "initial_cavity_energy_pJ": 100.0,
+      "status": "iteration_budget_reached",
+      "seconds": 55.527432300004875,
+      "evaluations": 991,
+      "residual": 0.06889456513621074,
+      "relative_field_residual": 0.03820503437495703,
+      "population_gap": 0.06367213101870761,
+      "output_energy_nJ": 1.036682469774538,
+      "peaks": 1,
+      "time_edge": 1.6281498390724027e-06,
+      "spectral_edge": 1.0152227314595479e-11,
+      "phase_rad": 1.108546071929818,
+      "shift_ps": -0.030333283383558656,
+      "history": [
+        {
+          "step": 0,
+          "residual": 0.9947098578265618,
+          "calls": 1,
+          "linear_info": 0,
+          "alpha": 0.0625
+        },
+        {
+          "step": 1,
+          "residual": 0.8295417592830078,
+          "calls": 22,
+          "linear_info": 0,
+          "alpha": 1.0
+        },
+        {
+          "step": 2,
+          "residual": 0.35078691362070547,
+          "calls": 36,
+          "linear_info": 2,
+          "alpha": 1.0
+        },
+        {
+          "step": 3,
+          "residual": 0.08125824936628813,
+          "calls": 89,
+          "linear_info": 2,
+          "alpha": 1.0
+        },
+        {
+          "step": 4,
+          "residual": 0.07166481631191589,
+          "calls": 142,
+          "linear_info": 2,
+          "alpha": 1.0
+        },
+        {
+          "step": 5,
+          "residual": 0.07034681024393331,
+          "calls": 195,
+          "linear_info": 2,
+          "alpha": 1.0
+        },
+        {
+          "step": 6,
+          "residual": 0.06980826528648165,
+          "calls": 248,
+          "linear_info": 2,
+          "alpha": 1.0
+        },
+        {
+          "step": 7,
+          "residual": 0.06953368179159294,
+          "calls": 301,
+          "linear_info": 2,
+          "alpha": 1.0
+        },
+        {
+          "step": 8,
+          "residual": 0.06941047461417624,
+          "calls": 354,
+          "linear_info": 2,
+          "alpha": 1.0
+        },
+        {
+          "step": 9,
+          "residual": 0.06925390248968309,
+          "calls": 407,
+          "linear_info": 2,
+          "alpha": 1.0
+        },
+        {
+          "step": 10,
+          "residual": 0.06911432986680265,
+          "calls": 460,
+          "linear_info": 2,
+          "alpha": 1.0
+        },
+        {
+          "step": 11,
+          "residual": 0.06906920655408366,
+          "calls": 513,
+          "linear_info": 2,
+          "alpha": 1.0
+        },
+        {
+          "step": 12,
+          "residual": 0.06903317143830157,
+          "calls": 566,
+          "linear_info": 2,
+          "alpha": 1.0
+        },
+        {
+          "step": 13,
+          "residual": 0.06900819595364262,
+          "calls": 619,
+          "linear_info": 2,
+          "alpha": 1.0
+        },
+        {
+          "step": 14,
+          "residual": 0.06898741259334581,
+          "calls": 672,
+          "linear_info": 2,
+          "alpha": 1.0
+        },
+        {
+          "step": 15,
+          "residual": 0.06896866614124418,
+          "calls": 725,
+          "linear_info": 2,
+          "alpha": 1.0
+        },
+        {
+          "step": 16,
+          "residual": 0.06895126949618591,
+          "calls": 778,
+          "linear_info": 2,
+          "alpha": 1.0
+        },
+        {
+          "step": 17,
+          "residual": 0.06893773153811861,
+          "calls": 831,
+          "linear_info": 2,
+          "alpha": 1.0
+        },
+        {
+          "step": 18,
+          "residual": 0.06892846879207225,
+          "calls": 884,
+          "linear_info": 2,
+          "alpha": 1.0
+        },
+        {
+          "step": 19,
+          "residual": 0.06891753190520392,
+          "calls": 937,
+          "linear_info": 2,
+          "alpha": 1.0
+        },
+        {
+          "step": 20,
+          "residual": 0.06889456513621074,
+          "calls": 990
+        }
+      ],
+      "certified_stable": false
+    },
+    {
+      "width_ps": 30.0,
+      "initial_cavity_energy_pJ": 400.0,
+      "status": "line_search_stalled",
+      "seconds": 32.689789900003234,
+      "evaluations": 584,
+      "residual": 0.17892512595523707,
+      "relative_field_residual": 1.680809342432942,
+      "population_gap": 0.10200603783102491,
+      "output_energy_nJ": 0.10353778383806354,
+      "peaks": 5,
+      "time_edge": 0.0005708419402026596,
+      "spectral_edge": 8.540690769168839e-09,
+      "phase_rad": -0.5493590039996196,
+      "shift_ps": -0.05508277983865601,
+      "history": [
+        {
+          "step": 0,
+          "residual": 1.161976823275594,
+          "calls": 1,
+          "linear_info": 2,
+          "alpha": 0.25
+        },
+        {
+          "step": 1,
+          "residual": 0.7012561032996781,
+          "calls": 54,
+          "linear_info": 2,
+          "alpha": 1.0
+        },
+        {
+          "step": 2,
+          "residual": 0.25256602928904404,
+          "calls": 107,
+          "linear_info": 2,
+          "alpha": 0.125
+        },
+        {
+          "step": 3,
+          "residual": 0.21289645692041673,
+          "calls": 160,
+          "linear_info": 2,
+          "alpha": 0.125
+        },
+        {
+          "step": 4,
+          "residual": 0.18444989119074975,
+          "calls": 213,
+          "linear_info": 2,
+          "alpha": 0.015625
+        },
+        {
+          "step": 5,
+          "residual": 0.18157586640150156,
+          "calls": 266,
+          "linear_info": 2,
+          "alpha": 0.0078125
+        },
+        {
+          "step": 6,
+          "residual": 0.18016599178862558,
+          "calls": 319,
+          "linear_info": 2,
+          "alpha": 0.00390625
+        },
+        {
+          "step": 7,
+          "residual": 0.1794676622280484,
+          "calls": 372,
+          "linear_info": 2,
+          "alpha": 0.001953125
+        },
+        {
+          "step": 8,
+          "residual": 0.17912012906073094,
+          "calls": 425,
+          "linear_info": 2,
+          "alpha": 0.0009765625
+        },
+        {
+          "step": 9,
+          "residual": 0.17894676795395736,
+          "calls": 478,
+          "linear_info": 2,
+          "alpha": 0.0001220703125
+        },
+        {
+          "step": 10,
+          "residual": 0.17892512595523707,
+          "calls": 531,
+          "linear_info": 2
+        }
+      ],
+      "certified_stable": false
+    }
+  ]
+}
