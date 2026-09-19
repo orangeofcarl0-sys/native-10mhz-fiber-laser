@@ -1,0 +1,22 @@
+[
+  {
+    "bins": 65,
+    "field_fraction": 0.7951733896559728,
+    "residual_fraction": 0.37628963746941796
+  },
+  {
+    "bins": 129,
+    "field_fraction": 0.8476947612205735,
+    "residual_fraction": 0.6167331082717538
+  },
+  {
+    "bins": 257,
+    "field_fraction": 0.9197583787585426,
+    "residual_fraction": 0.8244115304142388
+  },
+  {
+    "bins": 513,
+    "field_fraction": 0.992417469627181,
+    "residual_fraction": 0.9877399559606056
+  }
+]

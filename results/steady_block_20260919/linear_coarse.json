@@ -1,0 +1,26 @@
+[
+  {
+    "cutoff": 32,
+    "info": 2,
+    "relative_linear_residual": 0.22432096780323096,
+    "calls": 400,
+    "construction_calls": 277,
+    "seconds": 27.20650079997722,
+    "coarse_dimension": 277,
+    "coarse_rank": 277,
+    "coarse_condition": 5424.431536073209,
+    "residual_outside_subspace": 0.9840065388731735
+  },
+  {
+    "cutoff": 64,
+    "info": 2,
+    "relative_linear_residual": 0.10221386012422502,
+    "calls": 656,
+    "construction_calls": 533,
+    "seconds": 45.51042700000107,
+    "coarse_dimension": 533,
+    "coarse_rank": 533,
+    "coarse_condition": 8212.457787315387,
+    "residual_outside_subspace": 0.9693075232683582
+  }
+]

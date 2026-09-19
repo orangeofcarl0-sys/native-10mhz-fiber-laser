@@ -1,0 +1,30 @@
+[
+  {
+    "selected_bins": 257,
+    "info": 2,
+    "relative_linear_residual": 0.18793806719322204,
+    "calls": 1168,
+    "construction_calls": 1045,
+    "seconds": 22.746360899996944,
+    "batch_error": 7.4678896330525e-15,
+    "coarse_dimension": 1045,
+    "cutoff": 32,
+    "coarse_rank": 1045,
+    "coarse_condition": 3286.953570140432,
+    "residual_outside_subspace": 0.41902912847964247
+  },
+  {
+    "selected_bins": 513,
+    "info": 2,
+    "relative_linear_residual": 0.1439853539127406,
+    "calls": 2192,
+    "construction_calls": 2069,
+    "seconds": 40.13908389999415,
+    "batch_error": 7.4678896330525e-15,
+    "coarse_dimension": 2069,
+    "cutoff": 32,
+    "coarse_rank": 2069,
+    "coarse_condition": 10315.257382648731,
+    "residual_outside_subspace": 0.11072411863306651
+  }
+]

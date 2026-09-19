@@ -1,0 +1,7 @@
+{
+  "cpu_tests": 34,
+  "certified_stable": false,
+  "input_sha256": "ba5b56cd78bcc335bed375393827ca2d2f4420a5ecac3040c1dc35db7182e3c8",
+  "archive_sha256": "3ba1f49b3caf28ff0d6ecb941fc25362c65cb1ebbd6a8e6ed4ab9493c654f810",
+  "snapshot_notes": "left_source preserves the first nonlinear left-preconditioned pilot; final_source matches the broad-band Newton core hashes. Intermediate center-band prototypes used serial construction; final repository uses equivalent batched probes. Timings are version-specific."
+}

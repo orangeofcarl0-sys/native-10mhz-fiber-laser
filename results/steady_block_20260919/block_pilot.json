@@ -1,0 +1,110 @@
+{
+  "input_sha256": "ba5b56cd78bcc335bed375393827ca2d2f4420a5ecac3040c1dc35db7182e3c8",
+  "settings": {
+    "topology": "CNT_OC",
+    "oc": 0.8,
+    "pump_W": 0.05,
+    "gdd_ps2": 0.2,
+    "n": 8192,
+    "dt_ps": 0.125,
+    "max_steps": 10,
+    "inner": 60
+  },
+  "code_sha256": {
+    "steady_state.py": "b252661a32468301e2f5144fa484c0c7404b15c682373d26fea0e425ac487677",
+    "steady_preconditioner.py": "7188b7741922ce664fa8108f44b778c8120b2f1a645138652174d9e035d332ae",
+    "run_preconditioned_pilot.py": "7c685bcd75741d943550586f35073b0f5c3f67d31921433a63560dfa3ad7f14d"
+  },
+  "trials": [
+    {
+      "precondition": false,
+      "status": "line_search_stalled",
+      "seconds": 44.58144629999879,
+      "evaluations": 761,
+      "residual": 0.008376303769850586,
+      "relative_field_residual": 0.00833906570566823,
+      "population_gap": 0.0006325391590318308,
+      "output_energy_nJ": 1.8173697074539705,
+      "peaks": 2,
+      "time_edge": 1.5759279068574648e-08,
+      "spectral_edge": 1.0989044609500436e-13,
+      "history": [
+        {
+          "step": 0,
+          "residual": 0.04604898161748928,
+          "calls": 2,
+          "linear_info": 2,
+          "linear_relative_residual": 0.15598873381305475,
+          "alpha": 1.0
+        },
+        {
+          "step": 1,
+          "residual": 0.008941212402887887,
+          "calls": 126,
+          "linear_info": 2,
+          "linear_relative_residual": 0.9653661150043343,
+          "alpha": 1.0
+        },
+        {
+          "step": 2,
+          "residual": 0.008615727255558241,
+          "calls": 250,
+          "linear_info": 2,
+          "linear_relative_residual": 0.9800854866982257,
+          "alpha": 1.0
+        },
+        {
+          "step": 3,
+          "residual": 0.008385690831839515,
+          "calls": 374,
+          "linear_info": 2,
+          "linear_relative_residual": 0.9990687519866762,
+          "alpha": 1.0
+        },
+        {
+          "step": 4,
+          "residual": 0.008376878065262822,
+          "calls": 498,
+          "linear_info": 2,
+          "linear_relative_residual": 0.9999106611209049,
+          "alpha": 0.5
+        },
+        {
+          "step": 5,
+          "residual": 0.008376303769850586,
+          "calls": 623,
+          "linear_info": 2,
+          "linear_relative_residual": 0.9999788904212016
+        }
+      ],
+      "certified_stable": false
+    },
+    {
+      "precondition": true,
+      "status": "line_search_stalled",
+      "seconds": 10.683269500004826,
+      "evaluations": 158,
+      "residual": 0.04604898161748928,
+      "relative_field_residual": 0.046048580487123576,
+      "population_gap": 0.00034576722618490097,
+      "output_energy_nJ": 1.8075655687237386,
+      "peaks": 2,
+      "time_edge": 7.0541636154812765e-09,
+      "spectral_edge": 1.6474978165474194e-13,
+      "history": [
+        {
+          "step": 0,
+          "residual": 0.04604898161748928,
+          "calls": 2,
+          "schur_condition": 31.20574549836264,
+          "optical_fit_abs": 1.0097211002143778,
+          "optical_fit_phase": 0.2260926055736955,
+          "damping": 0.03,
+          "linear_info": 2,
+          "linear_relative_residual": 1.0698726874265467
+        }
+      ],
+      "certified_stable": false
+    }
+  ]
+}

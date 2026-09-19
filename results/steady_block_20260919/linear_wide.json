@@ -1,0 +1,12 @@
+{
+  "info": 0,
+  "relative_linear_residual": 0.018587270857212606,
+  "calls": 3099,
+  "construction_calls": 3093,
+  "seconds": 53.96770849998575,
+  "coarse_dimension": 3093,
+  "cutoff": 384,
+  "coarse_rank": 3093,
+  "coarse_condition": 10175.995568747594,
+  "residual_outside_subspace": 0.02644040115227816
+}

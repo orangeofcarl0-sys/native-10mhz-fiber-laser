@@ -1,0 +1,31 @@
+{
+  "diagnostics": {
+    "schur_condition": 31.20574549836264,
+    "optical_fit_abs": 1.0097211002143778,
+    "optical_fit_phase": 0.2260926055736955,
+    "damping": 0.03
+  },
+  "trials": [
+    {
+      "side": "none",
+      "info": 2,
+      "relative_linear_residual": 0.15598873381305475,
+      "calls": 123,
+      "seconds": 7.332144899992272
+    },
+    {
+      "side": "left",
+      "info": 2,
+      "relative_linear_residual": 1.0698726874265467,
+      "calls": 123,
+      "seconds": 7.325971299986122
+    },
+    {
+      "side": "right",
+      "info": 2,
+      "relative_linear_residual": 0.5247005761137482,
+      "calls": 123,
+      "seconds": 6.682435299997451
+    }
+  ]
+}

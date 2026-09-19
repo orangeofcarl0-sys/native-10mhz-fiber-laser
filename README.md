@@ -200,3 +200,13 @@ python run_full_maps.py
 设置独立 `LASER_OUTPUT_DIR` 后运行 `python run_steady_pilot.py`（需要CuPy）。`continue_steady_pilot.py` 还需 `LASER_SCAN_DIR/fine_group_08.mat` 的已有原始状态；运行后用 `build_steady_report.py` 生成离线报告。CPU检查为 `python -m unittest test_steady_state`，GPU残差/方向导数对照为 `python validate_steady_gpu.py`。
 
 本次五次求解均未取得合格稳态锚点。较好的重启结果相对光场残差约0.82%，仍为两个局部峰、1.81 nJ；无预条件线性求解后期停滞。没有将求解失败解释为物理无解，也没有运行不满足前提的Floquet认证。见 `docs/steady_state_report.html`、`results/steady_pilot_20260919/`。
+
+## 预条件对照与批量雅可比探测
+
+`steady_preconditioner.py` 提供平均光学块/Schur补和完整传播器傅里叶子空间两种实验预条件。`CavityResidual.batch` 支持独立探测批量运行；差分仍使用完整细网格。`solve(..., precondition='coarse', coarse_cutoff=384, rebuild_every=3)` 启用宽带右预条件，默认仍不启用预条件。求解迭代和雅可比探测不是物理圈数。
+
+同一点线性真实残差从0.156降至0.0186，但构建成本3093次映射，总约54秒。12步完整Newton耗时约290秒，最终联合残差0.00971，未优于基线0.00838，也未得到稳态单脉冲。后期线性精度合格而线搜索步长缩至1/32，需要继续检查非线性全局化。34项CPU测试通过；不能把局部峰数1或线性精度改善写成锁模认证。
+
+复现时设置 `LASER_STEADY_DIR=results/steady_block_20260919/input`，另设独立 `LASER_OUTPUT_DIR`。已提供这一个数值初始态，不需要下载完整MAT扫描。依次运行 `run_preconditioned_pilot.py`、`check_block_linear.py`、`check_coarse_linear.py`、`inspect_steady_spectrum.py`、`check_selected_linear.py`、`check_wide_linear.py`、`run_wide_newton.py`，最后用 `build_block_report.py` 生成离线报告。需要匹配的CuPy环境。早期成对非线性试验使用左预条件，执行源码另存；现版本使用右预条件，重跑时以实际输出为准。
+
+报告：`docs/block_preconditioner_report.html`；诊断JSON、可复现输入、末态和源码快照：`results/steady_block_20260919/`。不同原型的串行/批量构建耗时不能用作纯粹的选频性能对照，原历史报告保持不变。
