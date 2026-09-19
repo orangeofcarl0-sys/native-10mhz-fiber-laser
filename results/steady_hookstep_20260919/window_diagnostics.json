@@ -1,0 +1,9 @@
+{
+  "original_residual": 0.009708560402464544,
+  "wide_residual": 0.009708562497756413,
+  "relative_norm_change": 2.1581900733202986e-07,
+  "residual_vector_relative_change": 0.0006299273129573722,
+  "original_window_ps": 1024,
+  "wide_window_ps": 2048,
+  "dt_ps": 0.125
+}

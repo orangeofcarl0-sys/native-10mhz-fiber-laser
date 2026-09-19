@@ -210,3 +210,11 @@ python run_full_maps.py
 复现时设置 `LASER_STEADY_DIR=results/steady_block_20260919/input`，另设独立 `LASER_OUTPUT_DIR`。已提供这一个数值初始态，不需要下载完整MAT扫描。依次运行 `run_preconditioned_pilot.py`、`check_block_linear.py`、`check_coarse_linear.py`、`inspect_steady_spectrum.py`、`check_selected_linear.py`、`check_wide_linear.py`、`run_wide_newton.py`，最后用 `build_block_report.py` 生成离线报告。需要匹配的CuPy环境。早期成对非线性试验使用左预条件，执行源码另存；现版本使用右预条件，重跑时以实际输出为准。
 
 报告：`docs/block_preconditioner_report.html`；诊断JSON、可复现输入、末态和源码快照：`results/steady_block_20260919/`。不同原型的串行/批量构建耗时不能用作纯粹的选频性能对照，原历史报告保持不变。
+
+## Newton–GMRES–Hookstep 全局化对照
+
+新增 `steady_hookstep.py`，以真实缩放步长 ||DZy|| 约束右预条件子空间解。共享Arnoldi的12步成对实验：线搜索联合残差0.0106954，Hookstep为0.00460335（降低57%），映射调用15789→12679，耗时274.9→208.7秒。多数接受步rho为0.65–1.05，最后一步0.147；接受半径0.0125–0.2，末态规范条件数2.14，未触发规范重设。仍未获得认证稳态，1.820 nJ也超出目标能量。
+
+原轨迹重放逐步残差差异为零。第11步方向差分误差约8.4e-6，完整Newton步严重偏离局部模型，人口边界不限制；窗口加倍的残差向量差约0.063%。粗子空间归一化梯度0.162，不支持已到投影驻点的判断，但不能据此证明全空间有根或无根。
+
+设置独立 `LASER_OUTPUT_DIR` 后依次执行 `replay_steady_directions.py`、`run_globalization_diagnostics.py`、`run_hookstep_pair.py`、`build_hookstep_report.py`（前三项需CuPy）。输入来自已发布 `results/steady_block_20260919/`。39项CPU回归测试通过。报告 `docs/hookstep_report.html`；原始方向、末态、诊断和执行源码快照位于 `results/steady_hookstep_20260919/`。旧报告保持不变。

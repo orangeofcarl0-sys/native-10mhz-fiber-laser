@@ -99,7 +99,7 @@ class CavityResidual:
 
 
 def solve(residual, x, max_steps=25, tolerance=1e-7, inner=25, precondition=False,
-          coarse_cutoff=32, rebuild_every=1, progress=None):
+          coarse_cutoff=32, rebuild_every=1, progress=None, observer=None):
     """Damped matrix-free Newton; physical bounds enforced by line search.
 
     LGMRES approximates J dx=-r. Record residuals and calls, not fictitious RT.
@@ -143,6 +143,8 @@ def solve(residual, x, max_steps=25, tolerance=1e-7, inner=25, precondition=Fals
         dx = direction if preconditioner is None else preconditioner @ direction
         history[-1]["linear_info"] = int(info)
         history[-1]["linear_relative_residual"] = float(np.linalg.norm(jv(dx)+r)/norm)
+        if observer is not None:
+            observer(step, x.copy(), r.copy(), dx.copy())
         accepted = False
         for k in range(14):
             alpha = 0.5**k

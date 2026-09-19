@@ -1,0 +1,23 @@
+{
+  "files_sha256": {
+    "coarse_soft_modes.npz": "4e6b7649cb32a388a791af047cde01aff60e644bfee02aa71d8739093b8b7236",
+    "coarse_stationarity.json": "29a8391c09716abb05a7df88fc4cfc526db45d943c2e78b4bd7928d0918203a8",
+    "executed_source.zip": "2b0d6bc5877669ad23e57a2f2ec21b77d23e99eb4e8e5b8aabce20b500ae7792",
+    "hookstep.npz": "d1ef321732bf32a5e49256fffe719fc7e783b6ee5f903cbe33906d98dad079b1",
+    "hookstep_pair.json": "66d7d507b61ff3fe0488bcd0c99eead2154ec94122b002faa0c3b91bde231055",
+    "line_search.npz": "2e4991743c9fcb7bc940176228d34291740ebde59c7cf3bca35cfef06de654ef",
+    "original_replay.json": "cbd3e3f257584ddd46666f0a8fd3650d90b403ee4e9410f038ded6a551f3c468",
+    "original_step_10.npz": "4e92db8346da45112724f6f7e6458a17a81b191e097d2a1b1b92047cc1b2651b",
+    "original_step_11.npz": "9eecf73ade5a08370a3bb6759831b8a4c4d45f1a565a32a830e9a66c30d988d2",
+    "original_step_8.npz": "135cb714250e697edf816e014e4123af61eab2dae42c9a52e67881c79c5f643b",
+    "original_step_9.npz": "d5557c79f602bb16768c67d7819014d19aafe90d6a6b7e21304d5622950f376b",
+    "report_qa.json": "58279c203adb66bd4d7891dd22203bae89279f79a9af25b7897324d4d3f15d8b",
+    "taylor_diagnostics.json": "64f1a7091d4b807d8ccb4dcafc34c3d179334b029a7b7bc284c83224c686d10d",
+    "window_diagnostics.json": "9796e0239a58214f00af933f0a9ec6fd381c5abc8f979d5dfa633ce9b3df2780"
+  },
+  "paired_source_hashes_verified": true,
+  "replay_source_hashes_verified": true,
+  "input": "results/steady_block_20260919/input/best_pilot_larger_krylov.npz",
+  "initial_state": "results/steady_block_20260919/spectral_support.npz",
+  "note": "Replay source is separately preserved; paired solver source includes later optional coarse audit. No physical parameter changes; no certified stable solution."
+}

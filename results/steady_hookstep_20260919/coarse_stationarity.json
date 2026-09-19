@@ -1,0 +1,42 @@
+{
+  "projected_gradient_norm": 0.00678050684445623,
+  "normalized_projected_gradient": 0.16175113190150248,
+  "projected_residual": 0.009710057624128418,
+  "sigma_max": 4.317109089314131,
+  "sigma_min": 0.00045965310432475844,
+  "soft_modes": [
+    {
+      "singular_value": 0.00045965310432475844,
+      "field_fraction": 0.9984816022791941,
+      "population_fraction": 6.297709466587716e-09,
+      "phase_fraction": 1.1909587772439634e-05,
+      "time_fraction": 0.001506481835325825,
+      "field_wing_fraction": 0.9916259999420065
+    },
+    {
+      "singular_value": 0.001769405380704162,
+      "field_fraction": 0.9999994583120204,
+      "population_fraction": 7.467588903406867e-10,
+      "phase_fraction": 9.139146144374812e-09,
+      "time_fraction": 5.31802077297868e-07,
+      "field_wing_fraction": 0.00050363067078726
+    },
+    {
+      "singular_value": 0.0020980294374233197,
+      "field_fraction": 0.9999992276787886,
+      "population_fraction": 1.7474300582909073e-08,
+      "phase_fraction": 2.8811216203754713e-07,
+      "time_fraction": 4.6673474994319153e-07,
+      "field_wing_fraction": 0.0010580374252002177
+    },
+    {
+      "singular_value": 0.0031192089738416033,
+      "field_fraction": 0.9999976803882775,
+      "population_fraction": 4.169489153284791e-10,
+      "phase_fraction": 8.55934352319486e-09,
+      "time_fraction": 2.3106354333697045e-06,
+      "field_wing_fraction": 0.008850188430610903
+    }
+  ],
+  "limitation": "Projected gradient and algebraic singular modes do not prove a full-space local minimum, absence of roots, or a physical bifurcation."
+}

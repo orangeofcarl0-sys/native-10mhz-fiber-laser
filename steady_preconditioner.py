@@ -112,7 +112,7 @@ def spectral_coordinates(n, cells, cutoff, indices=None):
     return restrict, lift, 2*size+cells+2
 
 
-def build_coarse(residual, x, r, cutoff=32, indices=None):
+def build_coarse(residual, x, r, cutoff=32, indices=None, audit=None):
     """Full real Jacobian in a Fourier subspace, identity-negated complement.
 
     All differentiated maps run on the ORIGINAL fine grid. Only the inverse is
@@ -130,6 +130,8 @@ def build_coarse(residual, x, r, cutoff=32, indices=None):
         for offset,response in enumerate(responses):
             matrix[:,start+offset]=restrict((response-r)/1e-6)
     u,s,vh = np.linalg.svd(matrix,full_matrices=False)
+    if audit is not None:
+        audit(matrix,restrict(r),s,vh)
     keep = s > s[0]*1e-10
     inverse = (vh[keep].T/s[keep])@u[:,keep].T
     def apply(v):
