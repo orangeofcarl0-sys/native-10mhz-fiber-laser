@@ -2,9 +2,11 @@
 
 20.42 m 固定总腔长的 EDF + SMF + NDF + OC + CNT 矢量腔映射模型。比较 **OC→CNT** 与 **CNT→OC**，扫描输出耦合、净色散和泵浦，寻找 **0.1–0.5 nJ** 单脉冲候选区。Python/NumPy CPU 为基准，CuPy GPU 为可选加速；不需要 MATLAB。
 
+**新增 P0 自适应求解器：** `attractor_search.py` 提供泵浦相关初态、多种子/双向延续、受限慢增益搜索、越界回退重算、无源自适应步长和 EDF 网格自适应，以及复场/偏振/反转周期检查。详见 [新算法与使用方法](docs/adaptive_solver.md)。新路径目前是 CPU 参考实现；旧 CuPy 地图及以下历史结论未被新算法重新计算替换。
+
 **当前结论：尚未确认稳定单脉冲可行区。** 640 个不同物理参数点分别用粗、细网格计算，细网格有 8 个短时目标能量单峰状态，严格稳定初筛通过数为 0。376 个细网格点触发数值边界，属于未解析，不能认定为物理不可行。这里没有实物实验数据。
 
-下载 [完整离线 HTML 报告](docs/report.html) 后在浏览器打开；包含 27 节、40 张可切换地图和独立诊断图。GitHub 文件预览不执行 HTML。
+下载 [完整离线 HTML 报告](docs/report.html) 后在浏览器打开；包含 28 节、40 张可切换地图和独立诊断图。GitHub 文件预览不执行 HTML。
 
 ## 安装与快速验证
 
@@ -18,6 +20,10 @@ python -m pip install -r requirements.txt
 python self_check.py
 python validate_batch.py
 python energy_budget.py
+python -m unittest test_adaptive -v
+python validate_edf_mesh.py
+python validate_adaptive_recovery.py
+python validate_search_paths.py
 ```
 
 `self_check.py` 检查腔长/色散、两拓扑初始化公平性、Kerr 和无源传播能量守恒、OC 能量预算、已知平移/相位恢复及归档结果计数。`validate_batch.py` 对照独立单案例传播与批量传播：两拓扑、3 组 OC/pump、10 圈。静态能量预算另外检查空间步长收敛和泵浦光子转换上界。

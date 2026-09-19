@@ -1,0 +1,8 @@
+{
+  "pump_path_points": 4,
+  "gdd_path_points": 4,
+  "seed_cases": 4,
+  "independent_sweep_endpoints": true,
+  "unconverged_warm_starts_labelled": true,
+  "passed": true
+}

@@ -1,0 +1,19 @@
+{
+  "scope": "synthetic high-peak near-Nyquist stress test, not a cavity solution",
+  "output_field_relative_error": 5.154661801805457e-15,
+  "initial_dt_ps": 0.5,
+  "final_dt_ps": 0.25,
+  "accepted_rounds": 1,
+  "events": [
+    {
+      "round": 1,
+      "action": "rollback_refine",
+      "time_edge": 1.0801450522412444e-28,
+      "spectral_edge": 1.4482095004763387e-09,
+      "old_dt": 0.5,
+      "new_dt": 0.25,
+      "old_n": 2048,
+      "new_n": 4096
+    }
+  ]
+}

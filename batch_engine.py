@@ -68,6 +68,8 @@ class BatchEngine:
             return R @ a, pump, pop
         gaps = []
         taus = []
+        rates_a = []
+        rates_b = []
         for j in range(steps):
             inv = pop[:, j].copy()
             old = (
@@ -103,12 +105,17 @@ class BatchEngine:
                 / e.ions
             )
             equilibrium = A / B
-            pop[:, j] = inv + (equilibrium - inv) * (-np.expm1(-B / e.rep))
+            if c.get("gain_mode", "dynamic") != "frozen":
+                pop[:, j] = inv + (equilibrium - inv) * (-np.expm1(-B / e.rep))
             pump *= np.exp(-c["alpha_p_m"] * (1 - inv) * dz)
             gaps.append(abs(inv - equilibrium))
             taus.append(1 / B)
+            rates_a.append(A)
+            rates_b.append(B)
         self.last_gap = np.max(gaps, axis=0)
         self.last_tau = np.max(taus, axis=0)
+        self.rates_a = np.array(rates_a).T
+        self.rates_b = np.array(rates_b).T
         return a, pump, pop
 
     def split(self, a):

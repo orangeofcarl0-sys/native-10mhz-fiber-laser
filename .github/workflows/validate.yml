@@ -12,3 +12,6 @@ jobs:
       - run: python self_check.py
       - run: python validate_batch.py
       - run: python energy_budget.py
+      - run: python -m unittest test_adaptive -v
+      - run: python validate_edf_mesh.py
+      - run: python validate_search_paths.py
