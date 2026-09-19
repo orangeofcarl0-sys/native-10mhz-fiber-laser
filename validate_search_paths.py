@@ -13,6 +13,7 @@ rows = continuation(
     direct_rounds=4,
     n=512,
     name="path_smoke_pump",
+    allow_unconverged=True,
 )
 assert [r["direction"] for r in rows] == ["up", "up", "down", "down"]
 assert (
@@ -34,6 +35,7 @@ gdd = continuation(
     direct_rounds=4,
     n=512,
     name="path_smoke_gdd",
+    allow_unconverged=True,
 )
 assert [r["gdd_ps2"] for r in gdd] == [0.1, 0.2, 0.2, 0.1]
 seeds = multi_seed(

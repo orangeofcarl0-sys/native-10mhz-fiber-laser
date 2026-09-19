@@ -28,6 +28,8 @@ class BatchEngine:
         result = self.core.step(cp.asarray(a), cp.asarray(pop), cp.asarray(q))
         self.last_gap = cp.asnumpy(self.core.last_gap)
         self.last_tau = cp.asnumpy(self.core.last_tau)
+        if hasattr(self.core, "rates_b"):
+            self.rates_b = cp.asnumpy(self.core.rates_b)
         result = tuple(cp.asnumpy(x) for x in result)
         if not all(np.isfinite(x).all() for x in result):
             raise FloatingPointError("Nonfinite GPU state or invalid CNT transmission")

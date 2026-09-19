@@ -127,7 +127,7 @@ extern "C" __global__ void gain_half(const double2* f,double2* out,
 _rate_update = cp.RawKernel(
     r"""
 extern "C" __global__ void rate_update(const double* old,const double* next,
- double* pump,double* pop,double* gap,double* tau,int batch,int cells,int cell,
+ double* pump,double* pop,double* gap,double* tau,double* rates_b,int batch,int cells,int cell,
  double ap,double as,double em,double hp,double hs,double ions,double life,
  double rep,double dz,int frozen){
  int b=blockIdx.x*blockDim.x+threadIdx.x;if(b>=batch)return;
@@ -135,6 +135,7 @@ extern "C" __global__ void rate_update(const double* old,const double* next,
  double signal=sqrt(old[b]*next[b]);
  double A=(ap*pmid/hp+as*signal/hs)/ions;
  double B=1./life+(ap*pmid/hp+(as+em)*signal/hs)/ions;
+ rates_b[b*cells+cell]=B;
  if(!frozen)pop[b*cells+cell]=inv+(A/B-inv)*(-expm1(-B/rep));
  pump[b]*=exp(-ap*(1.-inv)*dz);
  gap[b]=fmax(gap[b],fabs(inv-A/B));tau[b]=fmax(tau[b],1./B);
@@ -177,7 +178,9 @@ def gain_half(f, half, profile, pop, cell, c, dz):
     return out
 
 
-def rate_update(old, new, pump, pop, gap, tau, cell, c, e, dz):
+def rate_update(old, new, pump, pop, gap, tau, cell, c, e, dz, rates_b=None):
+    if rates_b is None:
+        rates_b = cp.empty_like(pop)
     _rate_update(
         ((len(pump) + 255) // 256,),
         (256,),
@@ -188,6 +191,7 @@ def rate_update(old, new, pump, pop, gap, tau, cell, c, e, dz):
             pop,
             gap,
             tau,
+            rates_b,
             host.int32(len(pump)),
             host.int32(pop.shape[1]),
             host.int32(cell),

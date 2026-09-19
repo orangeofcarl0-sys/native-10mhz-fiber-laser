@@ -19,6 +19,7 @@ from adaptive_solver import (
     remap_population,
 )
 from config import ROOT, config, map_initial
+from gain_age import advance as advance_gain_age, summary as gain_age_summary
 
 
 def accelerated_gain(pop, A, B, rep, max_change=0.002):
@@ -89,6 +90,8 @@ def classify(fields, populations, dt, relaxation_age=0.0, max_period=16):
         energy_max_pJ=float(energy.max()),
         peaks_max=int(peaks.max()),
         relaxation_age=float(relaxation_age),
+        gain_age_min=float(relaxation_age),
+        gain_memory_max=float(np.exp(-relaxation_age)),
     )
     if energy.max() < 1e-8:
         return dict(status="decayed", period=None, **metrics)
@@ -127,7 +130,7 @@ def classify(fields, populations, dt, relaxation_age=0.0, max_period=16):
             return dict(
                 status=(
                     "local_recurrence_validated"
-                    if relaxation_age >= 5
+                    if relaxation_age >= 7
                     else "provisional_recurrence"
                 ),
                 period=period,
@@ -184,12 +187,13 @@ def run_point(
     fields = deque(maxlen=80)
     populations = deque(maxlen=80)
     age = 0.0
+    cell_age = np.zeros_like(pop)
     direct_done = 0
     status = "search_budget_exhausted"
     generation = solver.grid_generation
 
     def advance(frozen, phase):
-        nonlocal a, pop, q, generation, age, direct_done
+        nonlocal a, pop, q, generation, age, cell_age, direct_done
         a, out, pop, q, sa = solver.step(a, pop, q, frozen=frozen)
         if generation != solver.grid_generation:
             fields.clear()
@@ -197,10 +201,14 @@ def run_point(
             generation = solver.grid_generation
             if phase == "direct":
                 age = 0.0  # Certification must age on the accepted final grid.
+                cell_age = np.zeros_like(pop)
         e = float(np.sum(abs(out) ** 2) * solver.dt)
         tau = float(solver.engine.last_tau[0])
         if phase == "direct":
-            age += 1 / (solver.engine.e.rep * tau)
+            cell_age = advance_gain_age(
+                cell_age, solver.engine.rates_b, 1 / solver.engine.e.rep
+            )
+            age = float(cell_age.min())
             direct_done += 1
             fields.append(out[0].copy())
             populations.append(pop[0].copy())
@@ -211,6 +219,7 @@ def run_point(
                 energy_pJ=e,
                 tau_s=tau,
                 gain_gap=float(solver.engine.last_gap[0]),
+                **gain_age_summary(cell_age),
                 time_edge=float(solver.last_edges[0]),
                 spectral_edge=float(solver.last_edges[1]),
                 dt_ps=solver.dt,
@@ -280,6 +289,7 @@ def run_point(
         fields.clear()
         populations.clear()
         age = 0.0
+        cell_age = np.zeros_like(pop)
         for _ in range(direct_rounds):
             out = advance(False, "direct")
             if direct_done % 64 == 0:
@@ -302,6 +312,8 @@ def run_point(
         direct_rounds=direct_done,
         direct_time_s=direct_done / solver.engine.e.rep,
         relaxation_age=age,
+        **gain_age_summary(cell_age),
+        gain_memory_scope="Conditional along realized rates; not coupled cavity sensitivity",
         final_dt_ps=solver.dt,
         final_n=solver.n,
         initial_edf_step_m=edf_step,
@@ -316,14 +328,32 @@ def run_point(
     )
     savemat(
         ROOT / f"{name}.mat",
-        dict(a=a, pop=pop, q=q, dt=solver.dt, c=solver.c, rounds=solver.round),
+        dict(
+            a=a,
+            pop=pop,
+            q=q,
+            gain_age_cells=cell_age,
+            dt=solver.dt,
+            c=solver.c,
+            rounds=solver.round,
+        ),
         do_compression=True,
     )
     return result, (a, pop, q), solver.dt
 
 
-def continuation(topology, gdd, oc, values, *, axis="pump", pump_mW=20.0, **kwargs):
-    """Both sweep directions start independently. Failed states are never reused."""
+def continuation(
+    topology,
+    gdd,
+    oc,
+    values,
+    *,
+    axis="pump",
+    pump_mW=20.0,
+    allow_unconverged=False,
+    **kwargs,
+):
+    """Stop an unconverged branch by default; exploratory warm starts are opt-in."""
     results = []
     base_name = kwargs.pop("name", "continuation")
     initial_dt = kwargs.pop("dt", 0.5)
@@ -354,6 +384,9 @@ def continuation(topology, gdd, oc, values, *, axis="pump", pump_mW=20.0, **kwar
             )
             previous = r["status"]
             results.append(r)
+            if not allow_unconverged and r["status"] != "local_recurrence_validated":
+                r["branch_stopped_without_converged_anchor"] = True
+                break
             if r["status"] == "numerically_unresolved":
                 state = None
             else:

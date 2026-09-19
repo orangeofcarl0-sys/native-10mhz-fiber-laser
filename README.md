@@ -180,3 +180,13 @@ python run_full_maps.py
 构建完整历史报告还需已有的稳态预算及历史HTML片段；它们必须标明历史来源，不能伪装成本次续算。
 
 2026-09-19 已完成全量20组（约32.3分钟）：细网格264点通过数值边界检查，8点目标范围末段单峰，严格筛选0点。新旧细网格有2点停止状态改变，已逐点记录。详见 `results/full_scan_20260919/` 和报告第31节；这些结果不代表已找到稳定锁模解。
+
+## 逐单元增益年龄与长程入口
+
+`gain_age.py` 累积真实接受圈的 Gamma[j]=sum B[j,k]T_R，输出 `gain_age_min` 和 `gain_memory_max=exp(-gain_age_min)`。这是给定速率历史的条件松弛系数，不是完整耦合系统的初态敏感度。GPU融合更新现在直接输出每个EDF单元的B；CPU/GPU诊断有独立回归检查。
+
+`run_gain_relaxation.py` 读取 `LASER_SCAN_DIR/fine_group_08.mat` 中 g08_c53@600 的完整状态，结果写入独立 `LASER_OUTPUT_DIR`。先追加10000真实圈，若年龄不足7可延长到20000；失败重试不累计年龄。预算完成不等于稳定。`audit_gain_terminal.py` 复核末态局部网格，`build_gain_relaxation_report.py` 生成独立HTML。未知的前600圈年龄不回填。
+
+原有自适应入口也改为逐单元累计，并采用年龄7门槛。`continuation` 默认遇到未收敛点就停止该方向；探索性传递需显式 `allow_unconverged=True`，不能作为稳定支路。历史报告保持原口径。
+
+机制复核见 `docs/mechanism_review.html`：CNT调制偏弱与EDF慢暂态均有证据，尚未将前者认定为唯一根因。

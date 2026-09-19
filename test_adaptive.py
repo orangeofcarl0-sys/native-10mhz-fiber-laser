@@ -97,7 +97,7 @@ class AdaptiveTests(unittest.TestCase):
         self.assertEqual(
             classify(fields, populations, 0.5, 0.1)["status"], "provisional_recurrence"
         )
-        self.assertEqual(classify(fields, populations, 0.5, 6.0)["period"], 1)
+        self.assertEqual(classify(fields, populations, 0.5, 7.0)["period"], 1)
 
     def test_period_two_and_polarization_changes(self):
         x = self.a[0]
