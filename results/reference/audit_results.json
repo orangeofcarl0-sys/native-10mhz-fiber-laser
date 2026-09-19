@@ -1,0 +1,20 @@
+{
+  "grids": [
+    {
+      "prefix": "",
+      "points": 640,
+      "boundary_pass": 104,
+      "target_single": 3,
+      "screen_candidate": 0
+    },
+    {
+      "prefix": "fine_",
+      "points": 640,
+      "boundary_pass": 264,
+      "target_single": 8,
+      "screen_candidate": 0
+    }
+  ],
+  "paired_initial_checks": 10,
+  "all_passed": true
+}

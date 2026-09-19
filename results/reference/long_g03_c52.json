@@ -1,0 +1,44 @@
+[
+  {
+    "group": 3,
+    "index": 52,
+    "factor": 0.9,
+    "rounds": 4500,
+    "status": "time_boundary",
+    "energy_pJ": 306.873282236699,
+    "energy_min_pJ": 4.60174510289663,
+    "energy_max_pJ": 7837.521640874804,
+    "energy_cv": 1.9318605288151762,
+    "single_tail": false,
+    "residual": 0.06000377889660591,
+    "inversion_gap": 0.15060590325249268
+  },
+  {
+    "group": 3,
+    "index": 52,
+    "factor": 1.0,
+    "rounds": 4620,
+    "status": "time_boundary",
+    "energy_pJ": 619.62882280335,
+    "energy_min_pJ": 7.099189102920515,
+    "energy_max_pJ": 8013.42550925422,
+    "energy_cv": 1.8369038598468614,
+    "single_tail": false,
+    "residual": 0.08754342916984763,
+    "inversion_gap": 0.08489204613591672
+  },
+  {
+    "group": 3,
+    "index": 52,
+    "factor": 1.1,
+    "rounds": 4820,
+    "status": "time_boundary",
+    "energy_pJ": 188.56885007218838,
+    "energy_min_pJ": 14.670126106425487,
+    "energy_max_pJ": 8135.515543403995,
+    "energy_cv": 2.063557153242789,
+    "single_tail": false,
+    "residual": 0.1085987079966155,
+    "inversion_gap": 0.19480352750168695
+  }
+]

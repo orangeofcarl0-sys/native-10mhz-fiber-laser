@@ -1,0 +1,29 @@
+[
+  {
+    "group": 2,
+    "index": 41,
+    "rounds": 20,
+    "low_energy_pJ": 585.2998053851633,
+    "high_energy_pJ": 585.2996501249706,
+    "relative_energy_difference": 2.6526616339962363e-07,
+    "aligned_intensity_difference": 8.51750404744855e-06
+  },
+  {
+    "group": 3,
+    "index": 52,
+    "rounds": 20,
+    "low_energy_pJ": 870.7540931879491,
+    "high_energy_pJ": 870.7534800188022,
+    "relative_energy_difference": 7.041822525312679e-07,
+    "aligned_intensity_difference": 4.072823252910294e-06
+  },
+  {
+    "group": 8,
+    "index": 52,
+    "rounds": 20,
+    "low_energy_pJ": 683.9473372119683,
+    "high_energy_pJ": 683.947032189008,
+    "relative_energy_difference": 4.4597453583980225e-07,
+    "aligned_intensity_difference": 1.5865303802717637e-05
+  }
+]

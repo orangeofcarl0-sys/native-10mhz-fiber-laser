@@ -1,0 +1,92 @@
+[
+  {
+    "group": 0,
+    "coarse_valid": 0,
+    "display_valid": 12,
+    "dt_ps": 0.125,
+    "common": 0,
+    "median_relative_energy": null,
+    "max_relative_energy": null
+  },
+  {
+    "group": 1,
+    "coarse_valid": 0,
+    "display_valid": 19,
+    "dt_ps": 0.125,
+    "common": 0,
+    "median_relative_energy": null,
+    "max_relative_energy": null
+  },
+  {
+    "group": 2,
+    "coarse_valid": 12,
+    "display_valid": 39,
+    "dt_ps": 0.125,
+    "common": 12,
+    "median_relative_energy": 4.599643367499518e-05,
+    "max_relative_energy": 0.00023376837639688334
+  },
+  {
+    "group": 3,
+    "coarse_valid": 22,
+    "display_valid": 40,
+    "dt_ps": 0.125,
+    "common": 22,
+    "median_relative_energy": 2.4260056693672446e-05,
+    "max_relative_energy": 7.85049826139534e-05
+  },
+  {
+    "group": 4,
+    "coarse_valid": 28,
+    "display_valid": 38,
+    "dt_ps": 0.125,
+    "common": 28,
+    "median_relative_energy": 1.932074292866224e-05,
+    "max_relative_energy": 7.845436688959143e-05
+  },
+  {
+    "group": 5,
+    "coarse_valid": 0,
+    "display_valid": 0,
+    "dt_ps": 0.125,
+    "common": 0,
+    "median_relative_energy": null,
+    "max_relative_energy": null
+  },
+  {
+    "group": 6,
+    "coarse_valid": 0,
+    "display_valid": 15,
+    "dt_ps": 0.125,
+    "common": 0,
+    "median_relative_energy": null,
+    "max_relative_energy": null
+  },
+  {
+    "group": 7,
+    "coarse_valid": 8,
+    "display_valid": 37,
+    "dt_ps": 0.125,
+    "common": 8,
+    "median_relative_energy": 0.0009217606102111934,
+    "max_relative_energy": 0.0018568674332032499
+  },
+  {
+    "group": 8,
+    "coarse_valid": 16,
+    "display_valid": 38,
+    "dt_ps": 0.125,
+    "common": 16,
+    "median_relative_energy": 0.0006092487208375461,
+    "max_relative_energy": 0.0013843642557283087
+  },
+  {
+    "group": 9,
+    "coarse_valid": 18,
+    "display_valid": 26,
+    "dt_ps": 0.125,
+    "common": 18,
+    "median_relative_energy": 0.0003753998047385953,
+    "max_relative_energy": 0.001135617953059147
+  }
+]

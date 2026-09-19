@@ -1,0 +1,7 @@
+{
+  "max_field_relative": 6.606683381958271e-15,
+  "cases": 6,
+  "rounds": 10,
+  "seconds_16_cases_20_rounds": 15.199492999992799,
+  "batch_seconds_per_case_round": 0.047498415624977496
+}

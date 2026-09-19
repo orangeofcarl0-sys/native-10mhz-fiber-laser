@@ -1,0 +1,7 @@
+{
+  "parameter_sets": 10,
+  "initial_states": 80,
+  "trajectories": 6,
+  "rounds": 10,
+  "max_relative_field_error": 0.0
+}
