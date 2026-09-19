@@ -1,0 +1,38 @@
+{
+  "source_verification": {
+    "down_270": {
+      "run_cauchy_audit.py": true,
+      "steady_cauchy.py": true,
+      "steady_hookstep.py": true,
+      "steady_support_lu.py": true,
+      "steady_state.py": true,
+      "steady_parameters.py": true,
+      "input": true,
+      "gradient_input": true,
+      "local_basis": true
+    },
+    "down_275": {
+      "run_cauchy_audit.py": true,
+      "steady_cauchy.py": true,
+      "steady_hookstep.py": true,
+      "steady_support_lu.py": true,
+      "steady_state.py": true,
+      "steady_parameters.py": true,
+      "input": true,
+      "gradient_input": true,
+      "local_basis": true
+    }
+  },
+  "notes": [
+    "Inputs are prior published endpoints; this experiment never advances states.",
+    "Raw execution source bytes preserved in executed_sources.zip; published file hashes may use Git-normalized bytes."
+  ],
+  "files": {
+    "down_270.json": "e28810117170a88dfb4b06395705751c4c840d6fc5dbfd2716a19bcbe8578a36",
+    "down_270_directions.npz": "03fad7b0ce54d33e243e4587859b3818eed3f59d2eac90d13d3b7446bd76d9d8",
+    "down_275.json": "9532eb132aec530b1d2c098fd6e882fb61b7d317373a70c116b0429512c255e2",
+    "down_275_directions.npz": "63338bbae1d37bcb3ee3734b4cbf711e6cac4b55def6ff3320e45d13de954a9f",
+    "executed_sources.zip": "22f7a210c703f1299df1f8bb3129622f284112cc8baf38dde3527a5bd91cc2ee",
+    "report_qa.json": "16ab1412cb79d1100b2d60e531b24ac24d820a36cb88ffe95ad8c4d87179f430"
+  }
+}

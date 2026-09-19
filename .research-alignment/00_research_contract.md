@@ -33,3 +33,5 @@ Newton全局化：见14_hookstep.md。先重放并独立验证第8–11步导数
 2026-09-19: fixed-pump linear support benchmark and narrow warm-start search; energy stays outside merit. See18_fixed_pump_linear.md.
 
 Current continuation: three fixed-state merit/curvature/coarse-difference controls; see19_merit_geometry.md. No extra nonlinear search without diagnostic justification.
+
+Current work: four fixed-state Cauchy/span controls; no long-run continuation; see20_cauchy_span.md.

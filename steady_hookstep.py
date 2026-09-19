@@ -9,7 +9,7 @@ from steady_diagnostics import blocks,gauge_geometry,reanchor
 from steady_preconditioner import build_coarse
 
 
-def arnoldi(jv,r,preconditioner,limit=120,tolerance=.03):
+def arnoldi(jv,r,preconditioner,limit=120,tolerance=.03,return_basis=False):
     beta=np.linalg.norm(r)
     v=np.zeros((len(r),limit+1));v[:,0]=-r/beta
     z=np.zeros((len(r),limit));h=np.zeros((limit+1,limit))
@@ -28,7 +28,8 @@ def arnoldi(jv,r,preconditioner,limit=120,tolerance=.03):
         relative=np.linalg.norm(target-h[:j+2,:j+1]@y)/beta
         if relative<=tolerance or h[j+1,j]<=1e-13:
             break
-    return h[:j+2,:j+1],z[:,:j+1],y,float(relative)
+    result=(h[:j+2,:j+1],z[:,:j+1],y,float(relative))
+    return result+(v[:,:j+2],) if return_basis else result
 
 
 def hookstep(h,z,beta,radius,weights):
