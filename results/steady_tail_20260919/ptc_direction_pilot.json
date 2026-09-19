@@ -1,0 +1,268 @@
+{
+  "initial_residual": 0.003781983499560045,
+  "rows": [
+    {
+      "mu": 0.0,
+      "arnoldi_relative": 0.029274238723550023,
+      "true_shifted_relative": 0.029302517780099086,
+      "unshifted_relative": 0.029302517780099086,
+      "direction_blocks": {
+        "field": 67.86323941071643,
+        "population_rms": 0.0028215773644457488,
+        "phase_rad": 0.29673280751615766,
+        "time_scaled": 0.14873780502504927,
+        "shift_ps": 0.3553165958613373,
+        "total": 67.86405119480574
+      },
+      "trials": [
+        {
+          "cap": 0.0125,
+          "alpha": 0.0001841917742888409,
+          "feasible": true,
+          "residual": 0.0037828335644005035,
+          "actual_reduction": -3.2152925052875717e-09,
+          "unshifted_prediction": 2.6321121020710727e-09,
+          "rho": -1.221563664692558
+        },
+        {
+          "cap": 0.025,
+          "alpha": 0.0003683835485776818,
+          "feasible": true,
+          "residual": 0.0037873791546575468,
+          "actual_reduction": -2.0420835095034693e-08,
+          "unshifted_prediction": 5.263739337208521e-09,
+          "rho": -3.879530080580381
+        },
+        {
+          "cap": 0.05,
+          "alpha": 0.0007367670971553635,
+          "feasible": true,
+          "residual": 0.0038359911306602872,
+          "actual_reduction": -2.0571438177997247e-07,
+          "unshifted_prediction": 1.0525539206698637e-08,
+          "rho": -19.54430815753859
+        },
+        {
+          "cap": 0.1,
+          "alpha": 0.001473534194310727,
+          "feasible": true,
+          "residual": 0.0045736725083256645,
+          "actual_reduction": -3.3075405112347655e-06,
+          "unshifted_prediction": 2.1043320542516034e-08,
+          "rho": -157.1776899255131
+        }
+      ]
+    },
+    {
+      "mu": 0.001,
+      "arnoldi_relative": 0.02941939423402702,
+      "true_shifted_relative": 0.029420978484286986,
+      "unshifted_relative": 12.375100641834168,
+      "direction_blocks": {
+        "field": 46.802985933343074,
+        "population_rms": 0.0021631259778905534,
+        "phase_rad": 0.20823500865164588,
+        "time_scaled": 0.09377110806694852,
+        "shift_ps": 0.2240078163240509,
+        "total": 46.80354315428865
+      },
+      "trials": [
+        {
+          "cap": 0.0125,
+          "alpha": 0.00026707379735746813,
+          "feasible": true,
+          "residual": 0.0037818855825860706,
+          "actual_reduction": 3.7031558603078295e-10,
+          "unshifted_prediction": 6.173714810171113e-09,
+          "rho": 0.059982619446673005
+        },
+        {
+          "cap": 0.025,
+          "alpha": 0.0005341475947149363,
+          "feasible": true,
+          "residual": 0.003785312982673264,
+          "actual_reduction": -1.2597592925158443e-08,
+          "unshifted_prediction": 1.2188867292444926e-08,
+          "rho": -1.0335327002015076
+        },
+        {
+          "cap": 0.05,
+          "alpha": 0.0010682951894298725,
+          "feasible": true,
+          "residual": 0.003829912332097695,
+          "actual_reduction": -1.8241464030478014e-07,
+          "unshifted_prediction": 2.3743485273265073e-08,
+          "rho": -7.682723837943758
+        },
+        {
+          "cap": 0.1,
+          "alpha": 0.002136590378859745,
+          "feasible": true,
+          "residual": 0.00454472082566502,
+          "actual_reduction": -3.17554409614445e-06,
+          "unshifted_prediction": 4.494997330006576e-08,
+          "rho": -70.6461842579071
+        }
+      ]
+    },
+    {
+      "mu": 0.01,
+      "arnoldi_relative": 0.029007876478265162,
+      "true_shifted_relative": 0.029008361568028797,
+      "unshifted_relative": 20.988310401827462,
+      "direction_blocks": {
+        "field": 7.937736630427328,
+        "population_rms": 0.0004161313682293072,
+        "phase_rad": 0.04599316379513491,
+        "time_scaled": 0.0025820714629540323,
+        "shift_ps": 0.0061682558938732455,
+        "total": 7.937870307922776
+      },
+      "trials": [
+        {
+          "cap": 0.0125,
+          "alpha": 0.00157472968379488,
+          "feasible": true,
+          "residual": 0.003773576170768382,
+          "actual_reduction": 3.1761037176739636e-08,
+          "unshifted_prediction": 3.892431900035277e-08,
+          "rho": 0.8159689878312781
+        },
+        {
+          "cap": 0.025,
+          "alpha": 0.00314945936758976,
+          "feasible": true,
+          "residual": 0.00377198241396383,
+          "actual_reduction": 3.777392984602123e-08,
+          "unshifted_prediction": 6.21122318668296e-08,
+          "rho": 0.6081560541409882
+        },
+        {
+          "cap": 0.05,
+          "alpha": 0.00629891873517952,
+          "feasible": true,
+          "residual": 0.003807799676978418,
+          "actual_reduction": -9.79695945262499e-08,
+          "unshifted_prediction": 6.127883919813684e-08,
+          "rho": -1.5987508217882274
+        },
+        {
+          "cap": 0.1,
+          "alpha": 0.01259783747035904,
+          "feasible": true,
+          "residual": 0.004465201645131539,
+          "actual_reduction": -2.817313270370478e-06,
+          "unshifted_prediction": -1.29224819745798e-07,
+          "rho": null
+        }
+      ]
+    },
+    {
+      "mu": 0.1,
+      "arnoldi_relative": 0.028374519930318937,
+      "true_shifted_relative": 0.0283745192452351,
+      "unshifted_relative": 3.255573094793419,
+      "direction_blocks": {
+        "field": 0.12311052190912804,
+        "population_rms": 0.00022182485497009854,
+        "phase_rad": 0.0043457399512555756,
+        "time_scaled": 0.0031785776019190855,
+        "shift_ps": 0.007593236790100387,
+        "total": 0.12322840022616352
+      },
+      "trials": [
+        {
+          "cap": 0.0125,
+          "alpha": 0.10143765541919317,
+          "feasible": true,
+          "residual": 0.003798343819264831,
+          "actual_reduction": -6.200828920144931e-08,
+          "unshifted_prediction": -2.598593926268119e-08,
+          "rho": null
+        },
+        {
+          "cap": 0.025,
+          "alpha": 0.20287531083838634,
+          "feasible": true,
+          "residual": 0.004137474739645431,
+          "actual_reduction": -1.407649015129792e-06,
+          "unshifted_prediction": -1.6182925895300084e-06,
+          "rho": null
+        },
+        {
+          "cap": 0.05,
+          "alpha": 0.40575062167677267,
+          "feasible": true,
+          "residual": 0.005171067531808449,
+          "actual_reduction": -6.218270113789542e-06,
+          "unshifted_prediction": -9.501868023078575e-06,
+          "rho": null
+        },
+        {
+          "cap": 0.1,
+          "alpha": 0.8115012433535453,
+          "feasible": true,
+          "residual": 0.006911313671227721,
+          "actual_reduction": -1.6731428735577378e-05,
+          "unshifted_prediction": -4.406486742223142e-05,
+          "rho": null
+        }
+      ]
+    },
+    {
+      "mu": 1.0,
+      "arnoldi_relative": 0.017234987624344743,
+      "true_shifted_relative": 0.01723498774611927,
+      "unshifted_relative": 1.5975884927083415,
+      "direction_blocks": {
+        "field": 0.0060395779201017005,
+        "population_rms": 3.9977944398389786e-05,
+        "phase_rad": 0.0012558257236498305,
+        "time_scaled": 0.0055238734249598645,
+        "shift_ps": 0.013195864366796985,
+        "total": 0.008280602366505515
+      },
+      "trials": [
+        {
+          "cap": 0.0125,
+          "alpha": 1.0,
+          "feasible": true,
+          "residual": 0.006045012619379066,
+          "actual_reduction": -1.111938918875386e-05,
+          "unshifted_prediction": -1.110150455638633e-05,
+          "rho": null
+        },
+        {
+          "cap": 0.025,
+          "alpha": 1.0,
+          "feasible": true,
+          "residual": 0.006045012619379066,
+          "actual_reduction": -1.111938918875386e-05,
+          "unshifted_prediction": -1.110150455638633e-05,
+          "rho": null
+        },
+        {
+          "cap": 0.05,
+          "alpha": 1.0,
+          "feasible": true,
+          "residual": 0.006045012619379066,
+          "actual_reduction": -1.111938918875386e-05,
+          "unshifted_prediction": -1.110150455638633e-05,
+          "rho": null
+        },
+        {
+          "cap": 0.1,
+          "alpha": 1.0,
+          "feasible": true,
+          "residual": 0.006045012619379066,
+          "actual_reduction": -1.111938918875386e-05,
+          "unshifted_prediction": -1.110150455638633e-05,
+          "rho": null
+        }
+      ]
+    }
+  ],
+  "seconds": 83.38804980000714,
+  "evaluations": 3334,
+  "scope": "same-state direction pilot; no multi-step PTC trajectory or physical stability claim"
+}

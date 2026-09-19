@@ -218,3 +218,11 @@ python run_full_maps.py
 原轨迹重放逐步残差差异为零。第11步方向差分误差约8.4e-6，完整Newton步严重偏离局部模型，人口边界不限制；窗口加倍的残差向量差约0.063%。粗子空间归一化梯度0.162，不支持已到投影驻点的判断，但不能据此证明全空间有根或无根。
 
 设置独立 `LASER_OUTPUT_DIR` 后依次执行 `replay_steady_directions.py`、`run_globalization_diagnostics.py`、`run_hookstep_pair.py`、`build_hookstep_report.py`（前三项需CuPy）。输入来自已发布 `results/steady_block_20260919/`。39项CPU回归测试通过。报告 `docs/hookstep_report.html`；原始方向、末态、诊断和执行源码快照位于 `results/steady_hookstep_20260919/`。旧报告保持不变。
+
+## Hookstep末态窗口与软方向续验
+
+报告 `docs/tail_window_report.html`。原Hookstep末态加宽1.024→2.048 ns，残差范数变化仅0.0075%，但全残差向量变化1.22%。相同局域扰动子空间的最小奇异值约1.197e-4，宽窗未使其消失；完整Jv约为投影奇异值4.5倍，不能认定完整物理雅可比存在同样小的奇异值。
+
+宽窗追加23步，因五步下降1.923%且5/5接受rho>0.5触发预设停止。残差0.0046037→0.0037820、输出1.81364 nJ，仍不是认证稳态。新末态扩展至4.096 ns，全残差向量变化0.0087%。PTC同态方向试验最好只再下降0.264%；大移位压小方向却增加原残差，未运行多步PTC或multiple shooting。
+
+复现：设置独立 `LASER_OUTPUT_DIR`，依次运行 `run_tail_diagnostics.py`、`continue_tail_hookstep.py`、`check_tail_final_window.py`、`check_tail_derivative.py`；若停止原因为停滞，再运行 `check_tail_ptc.py`，最后 `build_tail_report.py`。数值脚本需要CuPy。输入是已发布 `results/steady_hookstep_20260919/hookstep.npz`。`steady_window.py`只改变预条件逆的局域表示，完整宽窗残差与Krylov保持全维；`steady_ptc.py`使用场负、反转正、规范零质量的人工流符号，不等于真实慢增益动力学。44项CPU测试通过。结果见 `results/steady_tail_20260919/`。

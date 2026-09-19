@@ -58,8 +58,21 @@ def hookstep(h,z,beta,radius,weights):
     return step,float(.5*(beta*beta-np.dot(model,model))),float(lam)
 
 
+def progress_window(history,window=5):
+    """Operational stop diagnostic, not proof of a flat valley or missing root."""
+    if len(history)<=window:return None
+    gain=1-history[-1]['residual']/history[-1-window]['residual']
+    rhos=[h['trials'][h['accepted_trial']]['rho'] for h in history[-1-window:-1]
+          if 'accepted_trial' in h]
+    good=sum(v>.5 for v in rhos)
+    return dict(relative_decrease=float(gain),good_rho_count=good,
+                label='progress' if gain>.1 else 'slow' if gain>=.02 else 'stagnating',
+                stop=bool(gain<.02 and good>=4))
+
+
 def solve_globalized(residual,x,mode='hookstep',max_steps=12,cutoff=384,
-                     radius=.1,rebuild_every=3,reanchor_threshold=None,progress=None):
+                     radius=.1,rebuild_every=3,reanchor_threshold=None,progress=None,
+                     stop_window=None,preconditioner_builder=None,observer=None):
     """Shared Arnoldi/preconditioner control; mode changes only globalization.
 
     Field normalized by initial template norm; population uses RMS units;
@@ -74,13 +87,17 @@ def solve_globalized(residual,x,mode='hookstep',max_steps=12,cutoff=384,
         row=dict(step=iteration,residual=float(norm),calls=residual.evaluations,
                  gauge=gauge_geometry(residual,x),radius=float(radius))
         history.append(row)
+        if stop_window is not None:
+            row['progress_window']=progress_window(history,stop_window)
         if progress:progress(row)
         if norm<1e-7:return x,history,'residual_converged'
+        if row.get('progress_window') and row['progress_window']['stop']:
+            return x,history,'progress_stagnated'
         if iteration==max_steps:break
         rebuild=force_rebuild or iteration%rebuild_every==0 or (
             iteration>0 and history[-2]['true_newton_linear_residual']>.1)
         if rebuild:
-            preconditioner,diagnostics=build_coarse(residual,x,r,cutoff=cutoff)
+            preconditioner,diagnostics=(preconditioner_builder or build_coarse)(residual,x,r,cutoff=cutoff)
         row.update(diagnostics);row['precondition_rebuilt']=rebuild
         force_rebuild=False
         def jv(v):
@@ -91,6 +108,7 @@ def solve_globalized(residual,x,mode='hookstep',max_steps=12,cutoff=384,
         row.update(krylov_dimension=len(y),arnoldi_linear_residual=linear,
                    true_newton_linear_residual=float(np.linalg.norm(r+jn)/norm),
                    newton_blocks=blocks(residual,newton),trials=[])
+        if observer:observer(iteration,x.copy(),r.copy(),newton.copy())
         accepted=False
         for attempt in range(14):
             if mode=='hookstep':

@@ -1,0 +1,19 @@
+{
+  "original_residual": 0.004603352199669935,
+  "wide_residual": 0.004603697179442053,
+  "relative_norm_change": 7.494099020766143e-05,
+  "center_vector_relative_change": 0.008639637881789963,
+  "full_vector_relative_change": 0.012218294818746337,
+  "outer_residual_norm": 3.9771307455350725e-05,
+  "original_relative_field": 0.004541610019318009,
+  "wide_relative_field": 0.004541956729536005,
+  "original_blocks": {
+    "field": 0.004561015655245656,
+    "population": 0.0006228653337828277,
+    "gauge": 5.142254532210661e-06
+  },
+  "original_time_edge": 6.767609114423717e-07,
+  "dt_ps": 0.125,
+  "original_window_ps": 1024,
+  "wide_window_ps": 2048
+}

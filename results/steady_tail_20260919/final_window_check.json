@@ -1,0 +1,10 @@
+{
+  "original_window_ps": 2048.0,
+  "wide_window_ps": 4096.0,
+  "original_residual": 0.003781983499560045,
+  "wide_residual": 0.0037819835132450177,
+  "relative_norm_change": 3.6184644169878766e-09,
+  "center_vector_relative_change": 6.12745321226085e-05,
+  "full_vector_relative_change": 8.665854870667701e-05,
+  "outer_residual_norm": 2.3175678207142211e-07
+}

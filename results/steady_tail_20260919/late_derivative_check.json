@@ -1,0 +1,7 @@
+{
+  "step": 22,
+  "direction_norm": 53.409506056829166,
+  "forward_central_relative_difference": 0.0006649751984203632,
+  "central_linear_relative_residual": 0.02993750811637413,
+  "forward_linear_relative_residual": 0.029940326927908066
+}

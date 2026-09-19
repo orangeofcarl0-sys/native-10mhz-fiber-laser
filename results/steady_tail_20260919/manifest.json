@@ -1,0 +1,22 @@
+{
+  "input": "results/steady_hookstep_20260919/hookstep.npz",
+  "continuation_source_hashes_verified": true,
+  "source_snapshot_note": "Current reproducible source; continuation hashes checked. Initial window diagnostic loaded the zero-offset EmbeddedResidual before it was extended for nonzero exterior states; default zero-offset numerical behavior is unchanged and tested. No byte-hash claim for that earlier loaded module.",
+  "tests": 44,
+  "certified_stable": false,
+  "files_sha256": {
+    "continuation_last_direction.npz": "890c2dfbc4946a85dd0422a985d9cb4782584a8537682b1cff7f1cb65c398044",
+    "endpoint_residuals.npz": "3d14629bebdc0adb4229b69180519a0c6e0e71ffefd4c6bfaab679dd8e132b94",
+    "endpoint_soft_modes.json": "bf15632224f3a2b184f5339e050b50b6cb9ab69f90191deb165482d09256912a",
+    "endpoint_window.json": "46d885d61b3a4283d9c2a117a2563ae3521c3e7968fa1ca175c3896a238ae581",
+    "final_window_check.json": "f16278d7dd20f795dde97e4d511dba6d0486bd2fe723166f6a4615d954433457",
+    "late_derivative_check.json": "12493a28d3e0b67a28c7fa392459a9fd2cb47372fdf3dd8a9a9fe15bbba3c7c7",
+    "original_soft_modes.npz": "b9f7e68ed41773611f3fc5dad58d966e7d82b01e9cc4cf3b24858c21b9e7bf22",
+    "ptc_direction_pilot.json": "a009b566224fa864f928388aeec25a4c4534fe030a7f7b6ba8aa30add409dbf0",
+    "report_qa.json": "08eb41ff20c922a79f998ca4db368d3449e18fef0045076dfcd59cc78dceba89",
+    "source_snapshot.zip": "9cf5ec1004ff7469f2905dfe863777323a9f6f6404943a74506d203fc510c948",
+    "tail_continuation.json": "70e778415b57cafccd86c301cd792e8a265a31df28020073a647e5f0ce55be33",
+    "tail_continuation.npz": "ff5a6bd06e189ded6050c101346823452b9b53575f6fedb079b9a24ddaa229c8",
+    "wide_matched_subspace_soft_modes.npz": "8c9a68176b93d59686e828ee18668b99008835adcd0029d090db630f73e93a9f"
+  }
+}
