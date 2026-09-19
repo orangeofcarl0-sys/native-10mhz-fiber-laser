@@ -1,0 +1,9 @@
+{
+  "max_cnt_field_relative": 5.3642437804280914e-17,
+  "max_20round_field_relative": 1.228043625364251e-09,
+  "cnt_cases": 36,
+  "trajectory_rounds": 80,
+  "rotated_birefringent_test": true,
+  "changing_batch_pass": true,
+  "invalid_transmission_rollback_pass": true
+}

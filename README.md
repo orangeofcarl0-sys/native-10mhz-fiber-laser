@@ -97,7 +97,7 @@ python build_p1p2_report.py
 `validate_gpu.py` 和 `validate_resident.py` 需要可用 CuPy/CUDA（`build_p1p2_report.py` 本身不需要 GPU，但读取其结果）。
 `ResidentEngine(c, dt, a, pop, q, pumps, oc).run(rounds)` 返回紧凑诊断，
 `checkpoint()` 显式取回场；检查 `failed` 后才能使用结果。它是 FP64 固定网格初筛接口，
-没有替代 CPU 自适应回放，也尚未自动接入原 `scan.py`。
+没有替代 CPU 自适应回放。原 `scan.py` 已默认使用新的频谱传播兼容核心；常驻分块扫描见下方新入口。
 
 `floquet.multipliers` 是有收敛门槛的通用实返回映射工具：状态必须无量纲化，
 返回映射须固定网格、去除共同相位/时间规范，周期轨道需组成完整一周期。
@@ -105,8 +105,8 @@ python build_p1p2_report.py
 目前仅完成已知线性映射验证，**没有激光腔 Floquet 稳定性结果**。
 
 32圈共享增益扰动只观察到卫星比例短时下降，不能认证长期单脉冲。
-小批量 GPU 常驻计时没有显著一致加速；记录见 `results/p1p2_validation/`。
-CNT prefix、FP32、自动多保真调度尚未实施。
+上一轮小批量 GPU 常驻计时没有显著一致加速；历史记录见 `results/p1p2_validation/`。
+本轮已实现 CNT prefix、EDF 融合与频谱传递，详见下方；FP32、自动多保真调度未实施。
 
 自行安装与显卡、CUDA 驱动/运行时匹配的 CuPy。CPU 安装不包含 CuPy，也不依赖任何本机 MATLAB CUDA DLL。
 
@@ -138,3 +138,26 @@ python build_report.py
 ```
 
 联合细化未扰动分支完成新增1500圈（累计2100圈），无边界停止，末500圈能量0.063–1.943nJ、CV约124%，仍为多峰。原/双倍窗口首次离带均为累计705圈；细化也为705圈。原网格的频谱停止时间不应被解释为物理寿命；已计算的轨迹尚不满足稳定单脉冲，后续长期吸引态未确定。
+
+## 频谱传播与融合 GPU 内核
+
+详见 [详细分析与模型对应](docs/gpu_optimization.md)。默认 `MAP_GPU=1` 已使用新核心；
+设置配置 `gpu_pipeline="reference"` 可回退旧 GPU 核心。原独立 CPU 标量模型未更改。
+
+```sh
+python -m unittest test_adaptive test_shared_gain test_spectral -v
+python validate_spectral_gpu.py
+python benchmark_spectral_gpu.py
+python validate_resident_workflow.py
+python -c "from scan_resident import scan; print(scan(3, rounds=600, block=20))"
+python build_gpu_optimization_report.py
+```
+
+除CPU单元测试及报告构建外，上述命令需要CuPy/CUDA。新常驻扫描独立输出
+`resident_screen_group_*.npz/json`，不会覆盖原地图；每个案例有 `failed` 和 `completed`。
+运行中的粗略峰数只用于初筛，最后另算SciPy精确峰数；仍需完整自适应认证。
+
+实测 RTX 5050 Laptop / CuPy 14.2：64案例单圈FP64核心提速约1.58–1.95倍。
+包括上传、诊断和下载的10圈常驻工作流：2048点2.439→1.247秒，8192点3.917→2.459秒。
+这是本机、指定批量和参数的中位数，不是其他硬件或640点完整长期搜索的性能保证。
+原始计时样本、数值回归和工作流结果见 `results/gpu_optimization/`。

@@ -1,0 +1,16 @@
+{
+  "timestamp_utc": "2026-09-19T01:40:12.187870+00:00",
+  "baseline_commit": "801fd03",
+  "precision": "complex128 / float64",
+  "cpu_unit_tests": 20,
+  "files_sha256": {
+    "spectral_engine.py": "ce4c4f3710b97b42fa26271dcbc72a02fda2d42ff8bc1d90cda43f80705923d7",
+    "gpu_kernels.py": "dfa4bc677bdca14aae8e9c08028d5092101344811536f148aca129850b4ed86f",
+    "gpu_engine.py": "c1527d90c9f7eb0b070dd0fae7e0cfc0a56c15cbdc5a3f0a128c37cf622d30bb",
+    "gpu_batch_core.py": "2ff9ba8a3a95335ed6d8065e94d22f1cc914a791b94e4e3c30f49c21e31b1fce",
+    "benchmark_spectral_gpu.py": "9ad1b5eeff79389354ef950e25e2b010606e981eb7aeea4c317006c2625a6163",
+    "validate_spectral_gpu.py": "5da32333a9ed11e1eee59bc286a71739785cb2e1ed50656d809019b32b69f2c7",
+    "validate_resident_workflow.py": "6a0dc0527c184d98c465897184bf10f4b3bb2ca59e2c3b4993c600e9d6a7e711",
+    "scan_resident.py": "2adda9f45a5c678d2fa62416d771a49fad1c7e9f2098a0cb94c3485558468da5"
+  }
+}

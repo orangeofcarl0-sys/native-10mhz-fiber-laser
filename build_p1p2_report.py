@@ -86,7 +86,7 @@ html = (
 <table><tr><th>拓扑</th><th>主机接口 / s</th><th>常驻接口 / s</th></tr>"""
     + rows
     + """</table>
-<p>当前小批量未显示一致显著加速，不能据此声称整体扫描提速。常驻路径用于固定网格初筛，仅在圈末检测边界；CPU自适应回放仍用于严格复核。未将 FP32、CNT prefix、自动多保真调度作为已完成能力。</p>"""
+<p>当前小批量未显示一致显著加速，不能据此声称整体扫描提速。常驻路径用于固定网格初筛，仅在圈末检测边界；CPU自适应回放仍用于严格复核。本节记录上一轮基线；后续已实现CNT prefix与频谱传递，详见第30节。FP32和自动多保真调度仍未实施。</p>"""
 )
 (ROOT / "p1p2_algorithm_validation.html").write_text(html, encoding="utf8")
 print("Wrote p1p2_algorithm_validation.html")

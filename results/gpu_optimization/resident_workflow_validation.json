@@ -1,0 +1,68 @@
+{
+  "rows": [
+    {
+      "samples": 2048,
+      "batch": 64,
+      "rounds": 10,
+      "seconds": {
+        "reference": [
+          2.4570247999945423,
+          2.438501199998427,
+          2.382456999999704
+        ],
+        "spectral": [
+          1.2466124999918975,
+          1.2254642999905627,
+          1.2619717000052333
+        ]
+      },
+      "seconds_median": {
+        "reference": 2.438501199998427,
+        "spectral": 1.2466124999918975
+      },
+      "field_relative_error": 3.0579586637626367e-13
+    },
+    {
+      "samples": 8192,
+      "batch": 64,
+      "rounds": 10,
+      "seconds": {
+        "reference": [
+          3.867523799999617,
+          3.9165099000092596,
+          3.9948586000100477
+        ],
+        "spectral": [
+          2.459293899999466,
+          2.3932000999921,
+          2.5056260999990627
+        ]
+      },
+      "seconds_median": {
+        "reference": 3.9165099000092596,
+        "spectral": 2.459293899999466
+      },
+      "field_relative_error": 1.6042606924439895e-13
+    }
+  ],
+  "screen_smoke": {
+    "group": 3,
+    "rounds": 40,
+    "samples": 2048,
+    "dt_ps": 0.5,
+    "columns": [
+      "intracavity_energy_pJ",
+      "spectral_edge",
+      "time_edge",
+      "failed",
+      "output_energy_pJ",
+      "rough_peak_count",
+      "inversion_gap"
+    ],
+    "failed_cases": 21,
+    "final_exact_single_peaks": 43,
+    "scope": "Fixed-grid screening only. Rough peaks are not SciPy prominence peaks.",
+    "full_cavity_single_pulse_certified": false,
+    "diagnostics": "Boundary check at round-trip end; CPU adaptive replay required for candidates"
+  }
+}

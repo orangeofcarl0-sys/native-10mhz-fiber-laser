@@ -1,0 +1,20 @@
+{
+  "group": 3,
+  "rounds": 40,
+  "samples": 2048,
+  "dt_ps": 0.5,
+  "columns": [
+    "intracavity_energy_pJ",
+    "spectral_edge",
+    "time_edge",
+    "failed",
+    "output_energy_pJ",
+    "rough_peak_count",
+    "inversion_gap"
+  ],
+  "failed_cases": 21,
+  "final_exact_single_peaks": 43,
+  "scope": "Fixed-grid screening only. Rough peaks are not SciPy prominence peaks.",
+  "full_cavity_single_pulse_certified": false,
+  "diagnostics": "Boundary check at round-trip end; CPU adaptive replay required for candidates"
+}
