@@ -1,0 +1,44 @@
+[
+  {
+    "group": 3,
+    "index": 11,
+    "factor": 0.9,
+    "rounds": 1500,
+    "status": "completed",
+    "energy_pJ": 88.00166215143477,
+    "energy_min_pJ": 60.250539070908495,
+    "energy_max_pJ": 1879.9043811917277,
+    "energy_cv": 1.1817311046756371,
+    "single_tail": false,
+    "residual": 0.6256423251486245,
+    "inversion_gap": 0.23788580199474174
+  },
+  {
+    "group": 3,
+    "index": 11,
+    "factor": 1.0,
+    "rounds": 1500,
+    "status": "completed",
+    "energy_pJ": 76.62175588737165,
+    "energy_min_pJ": 63.03630685015598,
+    "energy_max_pJ": 1943.3929183984487,
+    "energy_cv": 1.2445088515236835,
+    "single_tail": false,
+    "residual": 0.6646422203220851,
+    "inversion_gap": 0.24640393811000938
+  },
+  {
+    "group": 3,
+    "index": 11,
+    "factor": 1.1,
+    "rounds": 1500,
+    "status": "completed",
+    "energy_pJ": 72.47431681017979,
+    "energy_min_pJ": 71.69713000108268,
+    "energy_max_pJ": 1880.7169813677358,
+    "energy_cv": 1.2382563625614054,
+    "single_tail": false,
+    "residual": 0.6489403654683246,
+    "inversion_gap": 0.2489322799017386
+  }
+]

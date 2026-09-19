@@ -89,3 +89,18 @@ Linux/macOS shell 用 `export MAP_GPU=1`。运行前先通过 `validate_gpu.py`�
 这是参数化研究模型，不是指定国产器件的认证数字孪生。NDF/CNT 等有效参数未联合实验标定；无 ASE 自启动；时间窗 1.024 ns 小于约 100 ns 腔周期，无法排除窗口外其他脉冲；600 圈约 60 μs 也不足以保证增益达到长期稳态。净色散仅扫描五个切片，不能排除其他参数中的窄稳定区域。
 
 仓库未附开源许可证；公开可见不等同于授予任意使用或再分发许可。
+
+
+## 补充验证：最低短时波动候选
+
+对 OC→CNT、OC30%、GDD+0.2 ps²、pump20mW 增加 9 条延续轨迹：原窗口、双倍窗口、时间/无源空间联合细化，各含 0.9/1/1.1 能量倍率。
+
+```sh
+python -c "from continue_cases import run; run(3,11,6000,'fine_')"
+python -c "from continue_cases import run; run(3,11,6000,'fine_',2048,'_wide')"
+python -c "from continue_cases import run; run(3,11,1500,'fine_',1024,'_refined',.0625,.125)"
+python validate_best_candidate.py
+python build_report.py
+```
+
+联合细化未扰动分支完成新增1500圈（累计2100圈），无边界停止，末500圈能量0.063–1.943nJ、CV约124%，仍为多峰。原/双倍窗口首次离带均为累计705圈；细化也为705圈。原网格的频谱停止时间不应被解释为物理寿命；已计算的轨迹尚不满足稳定单脉冲，后续长期吸引态未确定。

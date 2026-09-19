@@ -1,0 +1,44 @@
+[
+  {
+    "group": 3,
+    "index": 11,
+    "factor": 0.9,
+    "rounds": 600,
+    "status": "spectral_boundary",
+    "energy_pJ": 1657.4370021921804,
+    "energy_min_pJ": 40.50759793762378,
+    "energy_max_pJ": 2694.8799228707167,
+    "energy_cv": 1.1706407810498325,
+    "single_tail": false,
+    "residual": 0.6957568759965337,
+    "inversion_gap": 0.08596793145829518
+  },
+  {
+    "group": 3,
+    "index": 11,
+    "factor": 1.0,
+    "rounds": 580,
+    "status": "spectral_boundary",
+    "energy_pJ": 2404.7283192757222,
+    "energy_min_pJ": 48.374980529318776,
+    "energy_max_pJ": 2525.050922752975,
+    "energy_cv": 1.1123887364579792,
+    "single_tail": false,
+    "residual": 0.5921495852434688,
+    "inversion_gap": 0.09232091791955516
+  },
+  {
+    "group": 3,
+    "index": 11,
+    "factor": 1.1,
+    "rounds": 580,
+    "status": "spectral_boundary",
+    "energy_pJ": 1693.5598167294697,
+    "energy_min_pJ": 56.821515928372335,
+    "energy_max_pJ": 2380.40034396361,
+    "energy_cv": 1.0624876394832017,
+    "single_tail": false,
+    "residual": 0.6647680845328374,
+    "inversion_gap": 0.08659104199704087
+  }
+]

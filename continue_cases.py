@@ -16,21 +16,33 @@ if os.environ.get("MAP_GPU") == "1":
 from batch_engine import aligned_residual
 
 
-def run(group, index=52, rounds=6000, source_prefix=""):
+def run(
+    group,
+    index=52,
+    rounds=6000,
+    source_prefix="",
+    window_ps=1024,
+    suffix="",
+    dt_ps=None,
+    passive_step=0.25,
+):
     source = f"{source_prefix}group_{group:02d}.mat"
     m = loadmat(ROOT / source, simplify_cells=True)
     assert (
         m["completed"][index] == m["trace"].shape[0]
     ), "Resume only a completed screening state"
     c = m["c"]
-    c["passive_step_m"] = 0.25
-    dt = min(0.25, float(m["dt"]))
-    n = round(1024 / dt)
+    c["passive_step_m"] = passive_step
+    dt = min(0.25, float(m["dt"])) if dt_ps is None else float(dt_ps)
+    n = round(window_ps / dt)
     t = (np.arange(n) - n / 2) * dt
+    old_n = round(len(m["t"]) * float(m["dt"]) / dt)
+    assert n >= old_n and (n - old_n) % 2 == 0
+    seed = np.zeros((2, n), complex)
+    offset = (n - old_n) // 2
+    seed[:, offset : offset + old_n] = resample(m["a"][index], old_n, axis=-1)
     factors = np.array([0.9, 1.0, 1.1])
-    a = np.repeat(resample(m["a"][index], n, axis=-1)[None], 3, axis=0) * np.sqrt(
-        factors[:, None, None]
-    )
+    a = np.repeat(seed[None], 3, axis=0) * np.sqrt(factors[:, None, None])
     original_energy = np.sum(abs(m["a"][index]) ** 2) * m["dt"]
     assert np.allclose(
         np.sum(abs(a) ** 2, axis=(1, 2)) * dt, original_energy * factors, rtol=1e-10
@@ -50,7 +62,7 @@ def run(group, index=52, rounds=6000, source_prefix=""):
     completed = np.zeros(3, int)
     states = ["running"] * 3
     start = time.time()
-    name = f"long_g{group:02d}_c{index:02d}"
+    name = f"long_g{group:02d}_c{index:02d}{suffix}"
     for k in range(rounds):
         a, out, pop, q, sa = engine.step(a, pop, q)
         p = np.sum(abs(out) ** 2, axis=1)

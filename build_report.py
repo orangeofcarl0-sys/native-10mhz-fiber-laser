@@ -556,7 +556,7 @@ if longfiles:
                 for r in longrows
             ],
         )
-        + "<p>从各组第600圈内部场继续，能量分别乘0.9、1.0、1.1；反转与CNT状态保持继承。时间步长0.125或0.25 ps，不比源状态更粗；无源空间步长0.25 m。c52对应OC80%/pump30 mW；c09对应OC30%/pump10 mW。这里只检验已有脉冲状态的延续，不等价于独立冷启动。</p>"
+        + "<p>从各组第600圈内部场继续，能量分别乘0.9、1.0、1.1；反转与CNT状态保持继承。时间步长0.125或0.25 ps，不比源状态更粗；无源空间步长0.25 m。c52对应OC80%/pump30 mW；c09对应OC30%/pump10 mW；c11对应OC30%/pump20 mW。这里只检验已有脉冲状态的延续，不等价于独立冷启动。</p>"
         + f"<p>目前有{len(late_targets)}条延续轨迹在最后500圈同时保持目标能量和单主峰。若波形重复性未通过，只能列为末段目标单峰状态；确认呼吸态还需检查多周期重复性、场分布与更长记录，不能仅凭能量周期性命名。</p>",
     )
     for path in longfiles:
@@ -655,6 +655,11 @@ if longfiles:
                 + savefig(path.stem + "_spectrum")
                 + "<p>这是局部时间窗内输出场的傅里叶包络，未解析10 MHz间隔的光梳线。光谱与时域图来自同一输出场；不把该包络当作已验证的射频谱或光梳线宽。</p>",
             )
+if (ROOT / "best_candidate_validation.html").exists():
+    section(
+        "最低短时波动候选：延长演化、时间窗与网格验证",
+        (ROOT / "best_candidate_validation.html").read_text(encoding="utf8"),
+    )
 budget = read(ROOT / "steady_energy_budget.json")
 budgettable = []
 for fraction in OC:
