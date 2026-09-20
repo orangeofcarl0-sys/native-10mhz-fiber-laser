@@ -1,0 +1,37 @@
+{
+  "initial_residual": 0.001096712976543593,
+  "initial_radius": 0.00625,
+  "physical_base": {
+    "pump": 0.0275,
+    "gdd": 0.2,
+    "oc": 0.8,
+    "psat": 40.0
+  },
+  "maximum_outer": 40,
+  "maximum_k": 64,
+  "checkpoints": [
+    8,
+    16,
+    24,
+    32,
+    40,
+    48,
+    56,
+    64
+  ],
+  "saturation": "Two consecutive 8-column marginal model gains in [0,0.01) at initial outer radius",
+  "retries": "Reuse frozen current-state basis when radius shrinks; no state update until guards pass",
+  "root_threshold": 1e-07,
+  "milestones": [
+    0.001,
+    0.0001,
+    1e-05,
+    1e-07
+  ],
+  "excluded": "history, root-Z, C-preconditioner, annulus, persisted seed, parameter changes",
+  "multiple_shooting_diagnostic": "After >=30 accepted steps, last10 all k>=48 and saturated, median rho>0.5, last5 mean relative decrease<0.0005, R>=1e-4. Diagnostic only; no automatic formulation change.",
+  "input_sha256": {
+    "results\\steady_adjoint_continuation_20260920\\trajectory.npz": "5dc1a96a85cbea4af3f75e69c19fc56ff83e7c27d0222bdebfa9af9caf23b606",
+    "results\\steady_tail_20260919\\tail_continuation.npz": "ff5a6bd06e189ded6050c101346823452b9b53575f6fedb079b9a24ddaa229c8"
+  }
+}

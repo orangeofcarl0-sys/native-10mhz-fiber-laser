@@ -60,3 +60,7 @@ Current: integrate full adjoint gradient with existing history/GMRES/Hookstep,
 
 ## GKB frozen audit
 See [phase 30](30_gkb_audit.md). Latest endpoint, four spaces, three radii, no outer run.
+
+
+## Pure adaptive GKB continuation
+See [phase 31](31_pure_gkb_outer.md). Forty outer steps, cap64, fixed latest endpoint and physical settings; no legacy search spaces.

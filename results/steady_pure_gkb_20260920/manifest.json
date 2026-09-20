@@ -1,0 +1,23 @@
+{
+  "definition": "SHA256 of Git index bytes, excludes this manifest; raw executed numerical sources preserved separately in executed_sources.zip.",
+  "files": {
+    ".github/workflows/validate.yml": "e0ff41d32283334ec088d1c9d2158b2ae8739553d542c8beea70484d240e6fe7",
+    ".research-alignment/00_research_contract.md": "535a73a29b1a2ef97a93ed639a1a610dfd4adb883c05a95e3dea083d0f7dbd3c",
+    ".research-alignment/31_pure_gkb_outer.md": "0ed4646072605a1cf6ecabd56c2c7b5e147984c4d1572f6cf139cc0613ae6f61",
+    "README.md": "9d55eb5069f9fb7e08dfe77a4fdeae3a07331ce33a19a3e232892316cdafb879",
+    "check_gkb_continuation.py": "b53b9a74b96849e3515db0655b2e8a59aeca986029c7f39ed275c4f3e474593d",
+    "docs/pure_gkb_continuation_report.html": "59d4455f49314c20cfb0c2091e68bc9b03e104af80ecbe9765ed966c0823d3d2",
+    "report_gkb_continuation.py": "8a62fa6e08ccf2c14b0060da91937e4fa7d7161d27eb33e55a390258fc60b837",
+    "results/steady_pure_gkb_20260920/continuation.json": "d0e1990f17aef8c2b8440ad8ceac2bfaff4874dc96d6a1c666a50cecb5678bdd",
+    "results/steady_pure_gkb_20260920/executed_sources.zip": "d4fb17b5eca2eed615d48aef0e466ffd2ab87de1a6b698a6487c85b45aec0389",
+    "results/steady_pure_gkb_20260920/final.npz": "1fe29a8f6541a3deb26f9f40c9a75b8dd3ea905a757479e5e0b925352e4da215",
+    "results/steady_pure_gkb_20260920/independent_checks.json": "550d0a08418cc507d450e62a319bf146e8801ae797e0f1e4245c086fe765b296",
+    "results/steady_pure_gkb_20260920/protocol.json": "39c1d1ff2f4af0b5c6f4e40399a07c6deefaf7d4338a5d5aa53cef4ace532923",
+    "results/steady_pure_gkb_20260920/report_qa.json": "8b5ee5d9e9afc3e33516a903b332d7598eeafce6728c66beeaa411d93c2af87d",
+    "results/steady_pure_gkb_20260920/trajectory.npz": "1a107c1059138ade654610bc43612f560ed1a88e1ca68ed490d28d179d358314",
+    "run_gkb_continuation.py": "6a13197d04520697ae2c051880b44ed257844bb17fc3899532603dc5bff4cf63",
+    "steady_gkb.py": "5b6371ab24316ca7469fb72c53ac429cae71a331c42618232fb272df238b3a55",
+    "steady_gkb_outer.py": "c2546d21b1b17e0d95329c177cdeb02bb0e15685f70011843ae5e808fa9bd1fb",
+    "test_gkb_outer.py": "2e829a19f91455cc96bbd597bfad59831037cf262ee45be26eb97fdd9f685be8"
+  }
+}

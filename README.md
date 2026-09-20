@@ -612,3 +612,28 @@ Run `run_gkb_audit.py`, `check_gkb_audit.py`, then `report_gkb_audit.py` with
 runtime. Published vectors are losslessly split into four NPZ files; the checker
 supports both split publication and the original combined local archive.
 The existing outer solver is unchanged. 101 CPU tests pass.
+
+
+## Pure adaptive GKB outer continuation (2026-09-20)
+
+`steady_gkb_outer.py` uses only Jv/JTv, double full reorthogonalization, and SVD
+trust-region solves. No history, root-Z, C-preconditioner, annulus or persisted
+seed. Check every 8 columns; stop after two consecutive marginal gains below
+1%, otherwise cap at 64. Original state/gauge/physical settings remain fixed.
+
+Forty steps were accepted, from R=0.001096712976543593 to
+0.0009746756121000674 (11.13% reduction). R<1e-3 was first reached at step 10;
+1e-4, 1e-5, and 1e-7 were not reached. All 40 steps used 64 columns without
+satisfying saturation. Last-five residual decrease averaged 0.04920%/step,
+while last-eight-column model gains remained 11.5–11.9%. The predeclared
+multiple-shooting diagnostic is therefore false; this is not a stable-pulse
+certificate or evidence that the full least-squares space is exhausted.
+
+[Offline report](docs/pure_gkb_continuation_report.html),
+[contract](.research-alignment/31_pure_gkb_outer.md),
+[raw results](results/steady_pure_gkb_20260920).
+Run `run_gkb_continuation.py`, `check_gkb_continuation.py`, and
+`report_gkb_continuation.py` with `LASER_OUTPUT_DIR` pointing to the result
+folder and the configured GPU runtime. 41 states and 40 accepted steps were
+independently replayed; 103 CPU tests passed. All rejected candidates are
+retained in the records (this run had none).

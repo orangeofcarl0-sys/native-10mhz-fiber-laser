@@ -11,7 +11,7 @@ def reorthogonalize(w, basis):
     return w
 
 
-def gkb(jv, jtv, b, maximum=32):
+def gkb(jv, jtv, b, maximum=32, radius=None):
     """Return U,V,JV,B; retain actual responses to audit inexact Jv.
 
     B is the nominal bidiagonal recurrence. Full reorthogonalization
@@ -20,12 +20,13 @@ def gkb(jv, jtv, b, maximum=32):
     beta = np.linalg.norm(b)
     if beta == 0:
         raise ValueError('A nonzero right hand side is required')
+    begin = time.perf_counter()
     u = (b / beta)[:, None]
     first = jtv(u[:, 0])
     v = np.empty((len(first), 0))
     responses = []
     diagonal = []; subdiagonal = []; rows = []
-    begin = time.perf_counter()
+    previous = None; streak = 0
     for k in range(maximum):
         w = first.copy() if k == 0 else jtv(u[:, k])
         if k:
@@ -43,12 +44,27 @@ def gkb(jv, jtv, b, maximum=32):
         if beta_next < 1e-14:
             break
         u = np.column_stack([u, w/beta_next])
+        if radius is not None and (k+1) % 8 == 0:
+            small = np.zeros((k+2,k+1))
+            for j in range(k+1):
+                small[j,j]=diagonal[j];small[j+1,j]=subdiagonal[j]
+            target=np.zeros(k+2);target[0]=beta
+            prediction=svd_trust(small,target,radius)[1]
+            gain=None if previous is None else (prediction-previous)/max(prediction,1e-100)
+            streak=streak+1 if gain is not None and 0<=gain<.01 else 0
+            rows[-1].update(prediction=prediction,marginal_gain=gain,low_gain_streak=streak)
+            previous=prediction
+            if streak>=2:
+                rows[-1]['saturated']=True
+                break
     count = v.shape[1]
     B = np.zeros((u.shape[1], count))
     for k in range(count):
         B[k, k] = diagonal[k]
         if k+1 < len(B):
             B[k+1, k] = subdiagonal[k]
+    if not responses:
+        raise ValueError('GKB has no nonzero descent direction')
     return u, v, np.column_stack(responses), B, rows
 
 
