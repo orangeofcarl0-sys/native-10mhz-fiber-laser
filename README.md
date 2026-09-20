@@ -637,3 +637,29 @@ Run `run_gkb_continuation.py`, `check_gkb_continuation.py`, and
 folder and the configured GPU runtime. 41 states and 40 accepted steps were
 independently replayed; 103 CPU tests passed. All rejected candidates are
 retained in the records (this run had none).
+
+
+## Frozen depth192 and recycled-space audit (2026-09-20)
+
+At the latest R=0.0009746756121000674 endpoint and fixed radius 0.025, fresh
+GKB checkpoints 64–192 were compared with the previous state's 64-dimensional
+space, whose responses were recomputed under the current Jacobian.
+
+K192 is still unsaturated (last 16-column model gain 4.92%), but K144–K192
+increase the actual merit and are rejected. K96 gives the best actual decrease
+among audited accepted candidates. K64+R64 reaches 98.63% of K128 model reduction
+at 62.07% of its warm cost, but only 75.99% of K192's model reduction. K96 provides
+about 2.49x the union's actual decrease at 59.8s versus 52.4s, so model coverage
+alone does not select the next outer algorithm. Radius and physical settings
+were not changed and no outer trajectory was run.
+
+[Offline report](docs/gkb_depth_recycling_report.html),
+[contract](.research-alignment/32_gkb_depth_recycling.md),
+[results](results/steady_gkb_depth_recycling_20260920).
+Run `run_gkb_depth_recycling.py`, `benchmark_gkb_recycling.py`,
+`check_gkb_depth_recycling.py`, then `report_gkb_depth_recycling.py` with the
+configured GPU runtime and `LASER_OUTPUT_DIR`. The benchmark repeats timing
+without simultaneous validation jobs; first-pass timings remain in the JSON.
+The local full basis archive is deliberately not duplicated in Git. Published
+input hashes, source scripts, small matrices and candidate states support
+reconstruction and independent candidate replay. 104 CPU tests pass.

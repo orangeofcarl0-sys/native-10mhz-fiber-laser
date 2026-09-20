@@ -64,3 +64,7 @@ See [phase 30](30_gkb_audit.md). Latest endpoint, four spaces, three radii, no o
 
 ## Pure adaptive GKB continuation
 See [phase 31](31_pure_gkb_outer.md). Forty outer steps, cap64, fixed latest endpoint and physical settings; no legacy search spaces.
+
+
+## Frozen depth and recycling audit
+See [phase32](32_gkb_depth_recycling.md): latest pure-GKB endpoint, depth192 and current-response old64, fixed radius .025. No outer continuation.

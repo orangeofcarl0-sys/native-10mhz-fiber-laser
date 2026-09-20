@@ -1,0 +1,22 @@
+{
+  "definition": "SHA256 of Git index bytes; excludes this manifest. Raw numerical execution archive and local large-basis hash are separate.",
+  "files": {
+    ".github/workflows/validate.yml": "9b24c4508b04d73c6ff5067f61a4e531ffce2b1a81ce5931441dce9701e5bc8e",
+    ".research-alignment/00_research_contract.md": "df8e307b0dbbb821aca91745ae28f299b74d7ba28b588a7df31f918ce0c2dc41",
+    ".research-alignment/32_gkb_depth_recycling.md": "5b678309329455bd1cd2c8c87475e699adb850be65d9dd94c2c3dd7bd59d8b00",
+    "README.md": "8069a531c629c6f7dcc4c34a87628297d54c90710419a1ec81610d64c43732c9",
+    "benchmark_gkb_recycling.py": "b5cd7b25c6d860c0aaef10080d32f510319027c31c3979c44a38a2bfaeb3410b",
+    "check_gkb_depth_recycling.py": "6ff9c57200115c346b18309a92e4506167db7ed7552f632d25fcc94f6c9aff1f",
+    "docs/gkb_depth_recycling_report.html": "14352680e5524059a584203a62b949a298fed691baed70dd20a44917a9d07618",
+    "report_gkb_depth_recycling.py": "a6effe63bf30d2ce9850eaed1e5f71940e3e43987f7b4b1c02b2cbbb84883256",
+    "results/steady_gkb_depth_recycling_20260920/audit.json": "35d90b7bc2889d8157d4bdd7791206552041479bef516812f291cbe6ad2a9cf8",
+    "results/steady_gkb_depth_recycling_20260920/candidate_vectors.npz": "12cf750355f558ffd3cf72d52dfe047313bf342bf320bcb8262e334a192b56c6",
+    "results/steady_gkb_depth_recycling_20260920/executed_sources.zip": "54c2173d807b7db8a6aa8506d16c71d05eb147c3714dd60fa087b708e6626b19",
+    "results/steady_gkb_depth_recycling_20260920/independent_checks.json": "b9ff9f0da8f6f7eb8ffecadbce130bf8cd929f1826ccfcea12af08819d44279f",
+    "results/steady_gkb_depth_recycling_20260920/protocol.json": "55391ef00cc96c1694691145dfb3f35373004318de937f12fe04b9c9355fbf30",
+    "results/steady_gkb_depth_recycling_20260920/report_qa.json": "f5751cb551a870d38eac695ff789cb99a0aa6cd0c6102068ff9854f9b1856855",
+    "run_gkb_depth_recycling.py": "14f662745f71c3b6237a6ddc9029548ea93e21108aca99e42efffeca186f8c8a",
+    "steady_gkb_recycling.py": "0d872decf2260682143bb0b7e75befeb744afdd4e748e802ab65d0332b6f7d19",
+    "test_gkb_recycling.py": "bb8cfee6dfb283ec0d6b30ccfb36aa496cde76473051c5a654f06043859a97af"
+  }
+}

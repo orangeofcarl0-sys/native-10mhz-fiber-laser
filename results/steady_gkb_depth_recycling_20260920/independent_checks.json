@@ -1,0 +1,73 @@
+{
+  "candidates_replayed": 11,
+  "latest_and_previous_states_identical": true,
+  "checks": [
+    {
+      "name": "K64",
+      "actual": 4.432546836916639e-10,
+      "kkt_relative": 6.099639888500663e-13,
+      "maximum_prediction_error": 1.6763430876753915e-07
+    },
+    {
+      "name": "K80",
+      "actual": 2.2397031452937652e-09,
+      "kkt_relative": 1.6601262805653335e-12,
+      "maximum_prediction_error": 1.9076854784749742e-07
+    },
+    {
+      "name": "K96",
+      "actual": 3.4229282686079587e-09,
+      "kkt_relative": 2.7582142398353064e-12,
+      "maximum_prediction_error": 8.509805948797577e-08
+    },
+    {
+      "name": "K112",
+      "actual": 3.3768989516960357e-09,
+      "kkt_relative": 3.331681320485893e-12,
+      "maximum_prediction_error": 7.523396106101643e-08
+    },
+    {
+      "name": "K128",
+      "actual": 1.038776037140881e-09,
+      "kkt_relative": 4.692871469858884e-12,
+      "maximum_prediction_error": 8.198286294280877e-08
+    },
+    {
+      "name": "K144",
+      "actual": -1.263767891319806e-09,
+      "kkt_relative": 6.30791734274746e-12,
+      "maximum_prediction_error": 2.340721767524201e-07
+    },
+    {
+      "name": "K160",
+      "actual": -2.0379504229400797e-09,
+      "kkt_relative": 6.892808423042409e-12,
+      "maximum_prediction_error": 1.2036632945910952e-07
+    },
+    {
+      "name": "K176",
+      "actual": -1.7797103478575984e-09,
+      "kkt_relative": 6.76023467372913e-12,
+      "maximum_prediction_error": 1.3572746049295148e-07
+    },
+    {
+      "name": "K192",
+      "actual": -2.5027684076683927e-09,
+      "kkt_relative": 8.300439967185427e-12,
+      "maximum_prediction_error": 5.731328145408554e-08
+    },
+    {
+      "name": "R64",
+      "actual": 8.123475626925191e-13,
+      "kkt_relative": 2.3238574197964288e-12,
+      "maximum_prediction_error": 2.53238107550402e-06
+    },
+    {
+      "name": "K64+R64",
+      "actual": 1.3728742505840182e-09,
+      "kkt_relative": 8.453860598561439e-12,
+      "maximum_prediction_error": 2.9251472866143047e-07
+    }
+  ],
+  "maximum_prediction_error": 2.53238107550402e-06
+}

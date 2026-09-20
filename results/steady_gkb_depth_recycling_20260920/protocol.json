@@ -1,0 +1,32 @@
+{
+  "initial_residual": 0.0009746756121000674,
+  "old_residual": 0.0009751378702407029,
+  "radius": 0.025,
+  "physical_base": {
+    "pump": 0.0275,
+    "gdd": 0.2,
+    "oc": 0.8,
+    "psat": 40.0
+  },
+  "checkpoints": [
+    64,
+    80,
+    96,
+    112,
+    128,
+    144,
+    160,
+    176,
+    192
+  ],
+  "trials": [],
+  "timing": {},
+  "input_sha256": {
+    "results\\steady_pure_gkb_20260920\\trajectory.npz": "1a107c1059138ade654610bc43612f560ed1a88e1ca68ed490d28d179d358314",
+    "results\\steady_pure_gkb_20260920\\continuation.json": "9669c30651d61bd8feeed6898e336a114de2851152e2ce7ce6a7cdffea0219ee",
+    "results\\steady_tail_20260919\\tail_continuation.npz": "ff5a6bd06e189ded6050c101346823452b9b53575f6fedb079b9a24ddaa229c8"
+  },
+  "old_state_definition": "states[-2], the state from which accepted step40 was constructed; current=states[-1]",
+  "decision": "Two consecutive16-column gains<1%; recycling >90% prediction and <=80% warm cost vs each of K128/K192, with guards. No outer continuation.",
+  "published_vectors": "Small B, states, old/new candidate steps. Full basis archive retained locally; deterministic reconstruction script provided."
+}
