@@ -593,3 +593,22 @@ python report_adjoint_continuation.py
 
 Use a fresh LASER_OUTPUT_DIR and configured CuPy. Raw execution sources and
 input hashes are archived separately from the final Git-byte manifest.
+
+
+## Frozen GKB / Gauss–Newton audit (2026-09-20)
+
+Latest endpoint held fixed: R=0.001096712976543593. Four spaces and three radii,
+32 GKB columns, 75 independently replayed candidates. Pure GKB gives 35.74x and
+55.04x actual merit reduction versus fresh-C root GMRES + gradient + history at
+the two radii where the baseline descends. The largest-radius baseline fails;
+its negative reduction is not a meaningful ratio denominator. Both B and C
+pass the predeclared two-radius gate. No outer continuation was run.
+
+See [offline report](docs/gkb_audit_report.html) and
+[contract](.research-alignment/30_gkb_audit.md). `steady_gkb.py` implements double
+full reorthogonalization and the SVD trust solve. Run `python -m unittest test_gkb`.
+Run `run_gkb_audit.py`, `check_gkb_audit.py`, then `report_gkb_audit.py` with
+`LASER_OUTPUT_DIR` set to the desired result directory and the configured GPU
+runtime. Published vectors are losslessly split into four NPZ files; the checker
+supports both split publication and the original combined local archive.
+The existing outer solver is unchanged. 101 CPU tests pass.

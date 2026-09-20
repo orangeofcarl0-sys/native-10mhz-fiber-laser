@@ -56,3 +56,7 @@ No continuation or reseed tuning. See28_discrete_adjoint.md.
 
 Current: integrate full adjoint gradient with existing history/GMRES/Hookstep,
 40-step latest-endpoint continuation. See29_adjoint_continuation.md.
+
+
+## GKB frozen audit
+See [phase 30](30_gkb_audit.md). Latest endpoint, four spaces, three radii, no outer run.

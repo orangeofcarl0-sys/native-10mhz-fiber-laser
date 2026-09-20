@@ -1,0 +1,36 @@
+{
+  "initial_residual": 0.001096712976543622,
+  "physical_base": {
+    "pump": 0.0275,
+    "gdd": 0.2,
+    "oc": 0.8,
+    "psat": 40.0
+  },
+  "radii": [
+    0.003125,
+    0.00625,
+    0.0125
+  ],
+  "dimensions": [
+    1,
+    2,
+    4,
+    8,
+    12,
+    16,
+    24,
+    32
+  ],
+  "input_sha256": {
+    "results\\steady_adjoint_continuation_20260920\\trajectory.npz": "5dc1a96a85cbea4af3f75e69c19fc56ff83e7c27d0222bdebfa9af9caf23b606",
+    "results\\steady_adjoint_continuation_20260920\\continuation.json": "1c0dd1d3c2d8072969e28eb5eb972a3257d447fdfe56f18afc2a062d83e0c860",
+    "results\\steady_tail_20260919\\tail_continuation.npz": "ff5a6bd06e189ded6050c101346823452b9b53575f6fedb079b9a24ddaa229c8"
+  },
+  "baseline": "Fresh C preconditioner at frozen endpoint; same original Arnoldi limit240/tol0.008; no current C gradient.",
+  "bank_rule": "Prune pending13 once using A at radius0.00625, then freeze same12 across all arms/radii.",
+  "decision": "B32 or C32 passes all guards and actual/A>1.5 at >=2 radii; no automatic outer run in this audit.",
+  "limitation": "A single frozen state cannot exclude single-shooting or prove a formulation bottleneck.",
+  "source": "https://web.stanford.edu/group/SOL/software/lsqr/",
+  "trials": [],
+  "ladder": []
+}

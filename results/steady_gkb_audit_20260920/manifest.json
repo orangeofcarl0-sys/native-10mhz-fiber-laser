@@ -1,0 +1,24 @@
+{
+  "definition": "SHA256 of staged Git bytes; manifest excludes itself; executed_sources.zip separately preserves raw sources at execution start.",
+  "files": {
+    ".github/workflows/validate.yml": "ef6866c40c0c5132fc16020e70eac5a99bbe7bd08e6e92f12e97a5c5171e4eef",
+    ".research-alignment/00_research_contract.md": "ea65f1c38b1b60ccacdc9f50e97a21832837e99b13d2a7dc8f0433c1d933afb4",
+    ".research-alignment/30_gkb_audit.md": "8b75a9dbbdb9234366b70e9d2acea9a8e091aed647645a104efb3a88ebf84344",
+    "README.md": "470e29ff644edbb37f63d247544c8c513588065fff7103fecf471628717a31db",
+    "check_gkb_audit.py": "c70ef8cf9678621a557e75d0ffb827aaf81b0a50c8184d1a8dbc829ad882dd36",
+    "docs/gkb_audit_report.html": "af3ae736fa886102e5ed7f12fce1b86db43fd4cb3b13fe9bc05a8b844ce2723a",
+    "report_gkb_audit.py": "81dce90d4cee4d6842af18075ce87a738c343efc6bf548e177de912bb471dedf",
+    "results/steady_gkb_audit_20260920/audit.json": "62bd6e9521356ede05e220253ea6a072af1000d84b4b5f3ac7c35d18e1f3ba02",
+    "results/steady_gkb_audit_20260920/executed_sources.zip": "2cbb6ef5d241ca2d59665b0cf5360ddcd26dab056059ca0e91ef0ced8234454b",
+    "results/steady_gkb_audit_20260920/independent_checks.json": "c9f368b0fee5299f20930d131ce452fb92d29d7d15c280c8bb5aeed58fd180b5",
+    "results/steady_gkb_audit_20260920/protocol.json": "6e8beb1b07974cf23947df643f1b7bf2a9890a889b07b1a39b53c7bc80b76624",
+    "results/steady_gkb_audit_20260920/report_qa.json": "c74c519013d87d80806b039fa5e4527caacd4234c7511e038512e25b72d98892",
+    "results/steady_gkb_audit_20260920/vectors_gkb.npz": "342ab81bff546ca76129afbe72d8ba71711a46417d15bde88abea3dd94bc53a1",
+    "results/steady_gkb_audit_20260920/vectors_root.npz": "a96821a5e24a52b872d4e72442415aaff6447f9013305df275458f3ab5b90fa9",
+    "results/steady_gkb_audit_20260920/vectors_state.npz": "c29f2369bc243bbb058b99c51e642094c69de14e1b9594913dd182bdaa57c46e",
+    "results/steady_gkb_audit_20260920/vectors_steps.npz": "9444bf435b6b47261d832b2441dc8da51acae39b6906d3fff79690452d302274",
+    "run_gkb_audit.py": "73ac221241bd4ec15b97b7fdcea5b5d06f9a365f0c24628a601a98d0876e0115",
+    "steady_gkb.py": "7650901ce1b321549aed5eac74ba4de0bf119d7c18fc4ba05fb7efda37dd3b37",
+    "test_gkb.py": "389e731e4bd5fe193bbca66704a02fb05e3b3b11fb3fbad405d530be5869e484"
+  }
+}
