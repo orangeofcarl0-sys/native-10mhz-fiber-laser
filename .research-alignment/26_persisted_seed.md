@@ -23,7 +23,7 @@ mean gain<0.02%/step. No sweep is permitted even if triggered. Actual reseed
 frequency, recovered fresh-gradient value and adjoint economics remain untested.
 
 ## Recorded outcome
- 30; status: iteration_budget_reached.
+Accepted steps: 30; status: iteration_budget_reached.
 Residual: 0.00118839458173 -> 0.00113064270299.
 Last-five mean norm gain: 0.0842852%/step.
 GA>1.15 at 1/9 fresh states.
@@ -31,4 +31,3 @@ Prespecified progress criterion A: False; durability criterion B: False.
 No fresh annulus sweep occurred. Hypothetical trigger state indices (zero-based):
 []. These do not establish actual reseeding need,
 fresh-seed recovery or adjoint economics. No stable-pulse certificate is claimed.
-
