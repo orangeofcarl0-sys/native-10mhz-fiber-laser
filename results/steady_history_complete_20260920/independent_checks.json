@@ -1,0 +1,133 @@
+{
+  "candidate_count": 24,
+  "all_replayed": true,
+  "initial_difference": 0.0,
+  "exhaustive_models_replayed": 384,
+  "model_prediction_max_difference": 0.0,
+  "projection_crosscheck": {
+    "state": 0.0,
+    "response": 0.0
+  },
+  "rows": [
+    {
+      "group": "G5",
+      "radius": 0.00156,
+      "actual_difference": 0.0
+    },
+    {
+      "group": "G6",
+      "radius": 0.00156,
+      "actual_difference": 0.0
+    },
+    {
+      "group": "G7",
+      "radius": 0.00156,
+      "actual_difference": 0.0
+    },
+    {
+      "group": "G4+A",
+      "radius": 0.00156,
+      "actual_difference": 0.0
+    },
+    {
+      "group": "G5+A",
+      "radius": 0.00156,
+      "actual_difference": 0.0
+    },
+    {
+      "group": "G6+A",
+      "radius": 0.00156,
+      "actual_difference": 0.0
+    },
+    {
+      "group": "G7+A",
+      "radius": 0.00156,
+      "actual_difference": 0.0
+    },
+    {
+      "group": "E4",
+      "radius": 0.00156,
+      "actual_difference": 0.0
+    },
+    {
+      "group": "G5",
+      "radius": 0.003125,
+      "actual_difference": 0.0
+    },
+    {
+      "group": "G6",
+      "radius": 0.003125,
+      "actual_difference": 0.0
+    },
+    {
+      "group": "G7",
+      "radius": 0.003125,
+      "actual_difference": 0.0
+    },
+    {
+      "group": "G4+A",
+      "radius": 0.003125,
+      "actual_difference": 0.0
+    },
+    {
+      "group": "G5+A",
+      "radius": 0.003125,
+      "actual_difference": 0.0
+    },
+    {
+      "group": "G6+A",
+      "radius": 0.003125,
+      "actual_difference": 0.0
+    },
+    {
+      "group": "G7+A",
+      "radius": 0.003125,
+      "actual_difference": 0.0
+    },
+    {
+      "group": "E4",
+      "radius": 0.003125,
+      "actual_difference": 0.0
+    },
+    {
+      "group": "G5",
+      "radius": 0.00625,
+      "actual_difference": 0.0
+    },
+    {
+      "group": "G6",
+      "radius": 0.00625,
+      "actual_difference": 0.0
+    },
+    {
+      "group": "G7",
+      "radius": 0.00625,
+      "actual_difference": 0.0
+    },
+    {
+      "group": "G4+A",
+      "radius": 0.00625,
+      "actual_difference": 0.0
+    },
+    {
+      "group": "G5+A",
+      "radius": 0.00625,
+      "actual_difference": 0.0
+    },
+    {
+      "group": "G6+A",
+      "radius": 0.00625,
+      "actual_difference": 0.0
+    },
+    {
+      "group": "G7+A",
+      "radius": 0.00625,
+      "actual_difference": 0.0
+    },
+    {
+      "group": "E4",
+      "radius": 0.00625,
+      "actual_difference": 0.0
+    }
+  ]
+}

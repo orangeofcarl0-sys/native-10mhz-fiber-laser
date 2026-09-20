@@ -431,3 +431,32 @@ python report_active_history.py
 
 The input vectors are already archived; no historical replay is required.
 CPU validation: `python -m unittest test_active_history -v`.
+
+## Complete history bank and annulus novelty
+
+[Offline report](docs/history_complete_report.html) and
+[records](results/steady_history_complete_20260920) extend the same frozen S3
+state through G7 and G7+A. No continuation, parameter release or annulus sweep.
+The missing common Arnoldi basis is rebuilt; all prior fifteen models replay
+exactly. Current responses are recomputed for the persisted directions.
+
+All 128 subsets are enumerated at each of three radii. Greedy matches the best
+prediction at every equal cardinality. G7+A still achieves 2.52--2.57 times G7
+actual merit decrease. State/response novelty is 0.98856/0.97408; SVD tolerances
+1e-8--1e-12 agree, retaining 46 dimensions. The response projection excludes the
+residual target column. A normalized shared-coefficient fit also has large error.
+This supports a useful extra direction at this state, not a reseeding schedule,
+physical dimension claim, or proof that good steps live primarily in the annulus.
+
+All 24 new candidates pass; full-map and 384 small-model replays match exactly.
+The compressed model is saved for future subset diagnostics without rebuilding.
+With CuPy configured and a fresh LASER_OUTPUT_DIR:
+
+```text
+python run_history_complete.py
+python check_history_complete.py
+python report_history_complete.py
+```
+
+CPU unit check: `python -m unittest test_history_complete -v`.
+No period-one root or stable-pulse certificate is claimed.
