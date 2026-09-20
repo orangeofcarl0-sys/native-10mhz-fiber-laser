@@ -49,3 +49,7 @@ Current frozen-state extension: full seven-direction bank, annulus novelty and e
 Current: 30-step persisted annulus seed lifetime experiment with bounded full history and diagnostic-only reseed triggers. See26_persisted_seed.md.
 
 Current: four frozen retrospective fresh-annulus sweeps; step indices 5,11,20,27; no continuation or trigger changes. See27_fresh_retrospective.md.
+
+Current: general discrete VJP, layered derivative verification, four-state
+streaming comparison, GPU checkpoint benchmark and frozen gradient controls.
+No continuation or reseed tuning. See28_discrete_adjoint.md.

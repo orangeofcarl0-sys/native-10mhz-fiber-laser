@@ -524,3 +524,38 @@ python report_fresh_retrospective.py
 State archives include full candidate steps and current seed responses;
 model archives allow independent reduced-model replay. Raw execution sources,
 input hashes and independent full-map replay are archived with results.
+
+## Discrete adjoint and frozen gradient controls
+
+[Implementation](docs/discrete_adjoint.md), [offline report](docs/discrete_adjoint_report.html),
+and [archived results](results/steady_adjoint_20260920).
+General `CavityResidual.vjp(x,v)` differentiates the packed real residual;
+`DiscreteAdjoint.value_and_vjp(x)` computes R and J^T R with segment replay.
+CPU/GPU checks cover shell, linear maps, Kerr, CNT recurrence and EDF pump/rates.
+97 CPU unit tests pass, including both OC/CNT orders. Arbitrary cotangent block
+tests pass at all four full-resolution states; all five FD scales are recorded.
+
+| State | Annulus error | Core forward-FD error | Stream/adjoint time | Adjoint/forward | Full/annulus predicted | Full/annulus actual |
+|---|---|---|---|---|---|---|
+| 5 | 2.66e-08 | 9.66e-06 | 386.9 | 6.69 | 1.8405 | 1.8413 |
+| 11 | 3.1e-08 | 4.05e-06 | 443.8 | 6.65 | 1.6295 | 1.9238 |
+| 20 | 2.44e-08 | 6.04e-06 | 525.2 | 6.48 | 1.7751 | 1.7811 |
+| 27 | 2.33e-08 | 6.6e-06 | 349.2 | 7.69 | 2.1014 | 2.1468 |
+
+Warm synchronized timing includes the adjoint primal. Forward/VJP use five
+repetitions; streaming is one full 6144-column central sweep per state. Isolated
+pool reserved memory is not total process/device memory. Core uses the archived
+forward-difference convention; annulus uses central differences.
+All candidates preserve Z,C,history and radius. No new trajectory, trigger
+change, normal-equation solver or physical stability certification is included.
+Full-direction gains do not locate their information to frequencies outside
+750 GHz, since core/inversion/gauge components also differ.
+
+Reproduce with an empty LASER_OUTPUT_DIR and configured CuPy:
+
+```text
+python run_adjoint_validation.py
+python run_adjoint_frozen.py
+python check_adjoint.py
+python report_adjoint.py
+```

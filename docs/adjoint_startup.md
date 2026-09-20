@@ -1,5 +1,8 @@
 # Discrete adjoint startup contract
 
+This is the historical startup contract. The implemented API and its validation
+workflow are documented in [discrete_adjoint.md](discrete_adjoint.md).
+
 The four-state retrospective experiment meets the frozen 3/4 gate: fresh
 annulus gains are 1.2842, 1.8421, 3.0114 and 8.9496 while old gains stay below
 1.003. All twelve full-map candidates pass. This motivates developing a current
@@ -11,7 +14,8 @@ the persisted seed, not a measured rotation rate between consecutive fresh seeds
 
 Implement `vjp(x, v) = J(x).T @ v` for the real packed/scaled residual in
 `steady_state.CavityResidual`, using real inner products (equivalently
-Re(conj(u) @ v) for complex optical fields). Target `v=R(x)` first. Recover
+Re(conj(u) @ v) for complex optical fields). Accept arbitrary `v` from day one;
+the first application is `v=R(x)`. Recover
 the audited annulus gradient by restricting the full gradient through the same
 orthonormal coordinates in `steady_descent_sources.annulus_coordinates`.
 Keep the existing grid, field/population scales and fixed gauges unchanged.

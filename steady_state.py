@@ -78,6 +78,11 @@ class CavityResidual:
         pop = x[4*self.n:-2] * np.sqrt(self.cells)
         return np.isfinite(x).all() and np.all((pop > 0) & (pop < 1))
 
+    def vjp(self, x, v):
+        """Discrete real-coordinate J(x)^T v; does not alter solver policy."""
+        from discrete_adjoint import DiscreteAdjoint
+        return DiscreteAdjoint(self).value_and_vjp(x, v)[1]
+
     def __call__(self, x):
         a, pop, phase, shift = self.unpack(x)
         e, xp = self.engine, self.engine.xp

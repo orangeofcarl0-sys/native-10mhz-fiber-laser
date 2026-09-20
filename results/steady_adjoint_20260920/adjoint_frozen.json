@@ -1,0 +1,613 @@
+{
+  "baseline": "5d7230838f4d2fff7e7bf8ac67c44b4ce78a6ff4",
+  "input_sha256": {
+    "results\\steady_persisted_seed_20260920\\trajectory.npz": "744c239879390ce043b1d40c8c7ad5999015f3cf149babc1a18106c51d265fa3",
+    "results\\steady_persisted_seed_20260920\\continuation.json": "66c2e2046aa6333be22214a411e31602b83e823fa35fef2fef8f0c4d1dd6c5c1",
+    "results\\steady_fresh_retrospective_20260920\\fresh_retrospective.json": "ed4221418cc882f3dce3c5453c01a04ca7c0bc58c503eddbbb82813a7ae3ddaa",
+    "results\\steady_tail_20260919\\tail_continuation.npz": "ff5a6bd06e189ded6050c101346823452b9b53575f6fedb079b9a24ddaa229c8",
+    "results\\steady_active_history_20260920\\active_vectors.npz": "bc226532824dff5dd7ca753a70668e0af00098ead65a9a6a967e6159267fc037",
+    "results\\steady_fresh_retrospective_20260920\\state_5.npz": "c7dcc218a87366e8c6678a95e11346d360be85082913a94a2d970f4f780d57ab",
+    "results\\steady_fresh_retrospective_20260920\\state_11.npz": "834fa898a49268f6bbd1bfad6688e36e22df9e2df54e810122d338829c14eac2",
+    "results\\steady_fresh_retrospective_20260920\\state_20.npz": "14ce88dc6199b1b7ef4fe5456348179af9ac851c1d0a9493d6915cb967d5cbcb",
+    "results\\steady_fresh_retrospective_20260920\\state_27.npz": "92fd389b223be571d197a951f05f62d055197154e13de5c8bf419b5a125700be"
+  },
+  "memory_definition": "Peak reserved bytes of an isolated CuPy pool retained to call end; upper bound on live pool tensors, excludes CUDA context and pre-existing arrays/FFT plans. Not whole-process peak.",
+  "timing_definition": "Synchronized wall clock, warm kernels/plans. Forward and value+VJP medians of five; one full 6144-column central streaming sweep per state. VJP includes primal residual.",
+  "states": [
+    {
+      "step": 5,
+      "radius": 0.0125,
+      "history_ids": [
+        "prior_1",
+        "prior_7",
+        "prior_11",
+        "prior_14",
+        "prior_17",
+        "prior_18",
+        "prior_28",
+        "run_1"
+      ],
+      "forward": {
+        "seconds": [
+          0.07575229999929434,
+          0.07498739999937243,
+          0.07449690000066767,
+          0.06427489999987301,
+          0.07096799999999348
+        ],
+        "median_seconds": 0.07449690000066767,
+        "peak_reserved_bytes": 4718592
+      },
+      "adjoint": {
+        "seconds": [
+          0.5716553999991447,
+          0.4755019000003813,
+          0.5160445000001346,
+          0.4982912999985274,
+          0.46220370000082767
+        ],
+        "median_seconds": 0.4982912999985274,
+        "peak_reserved_bytes": 44041216
+      },
+      "streaming": {
+        "seconds": [
+          192.77460210000208
+        ],
+        "median_seconds": 192.77460210000208,
+        "peak_reserved_bytes": 83886080
+      },
+      "speedup": 386.87129817552864,
+      "forward_cost": 6.688752149338584,
+      "annulus_relative": 2.658996143324269e-08,
+      "core_relative": 9.664920761855757e-06,
+      "core_build": {
+        "support_label": "C",
+        "coarse_dimension": 6165,
+        "factorization": "LU",
+        "coarse_difference": "forward",
+        "coarse_epsilon": 1e-06,
+        "coarse_condition_1_estimate": 13934622.510131858,
+        "factor_probe_residual": 3.8890577624903565e-12,
+        "temporal_relative": 0.0,
+        "spectral_relative": 0.11458716103271087,
+        "coarse_relative": 0.9934131982848143,
+        "orthogonality": 0.0,
+        "squared_partition": 1.0000000000000002,
+        "support_ps": 2048.0,
+        "bandwidth_GHz": 375.0
+      },
+      "linear_error": 0.007224061329767309,
+      "trials": [
+        {
+          "name": "history",
+          "prediction": 3.366501491321219e-09,
+          "gain": 1.0,
+          "actual": 3.3575446200177243e-09,
+          "rho": 0.997339412643486,
+          "passed": true,
+          "step_norm": 0.012499999999996741,
+          "checks": [
+            {
+              "h": 1e-05,
+              "prediction": 3.3665016629264218e-09,
+              "relative": 5.0974343331730876e-08
+            },
+            {
+              "h": 3e-06,
+              "prediction": 3.366501275622862e-09,
+              "relative": 6.40719624021446e-08
+            },
+            {
+              "h": 1e-06,
+              "prediction": 3.3665006860236744e-09,
+              "relative": 2.3920902651042824e-07
+            }
+          ]
+        },
+        {
+          "name": "annulus",
+          "prediction": 4.323353846787852e-09,
+          "gain": 1.2842275156964527,
+          "actual": 4.314781231811367e-09,
+          "rho": 0.9980171377869396,
+          "passed": true,
+          "step_norm": 0.012499999999997725,
+          "checks": [
+            {
+              "h": 1e-05,
+              "prediction": 4.323354283896946e-09,
+              "relative": 1.0110416813379062e-07
+            },
+            {
+              "h": 3e-06,
+              "prediction": 4.323353875895249e-09,
+              "relative": 6.732596548321165e-09
+            },
+            {
+              "h": 1e-06,
+              "prediction": 4.323353527700096e-09,
+              "relative": 7.380560725497039e-08
+            }
+          ]
+        },
+        {
+          "name": "full",
+          "prediction": 7.957012533047667e-09,
+          "gain": 2.363585031392591,
+          "actual": 7.945002975016916e-09,
+          "rho": 0.9984906950968253,
+          "passed": true,
+          "step_norm": 0.012499999999995423,
+          "checks": [
+            {
+              "h": 1e-05,
+              "prediction": 7.957012907880272e-09,
+              "relative": 4.710720301909349e-08
+            },
+            {
+              "h": 3e-06,
+              "prediction": 7.957012527965662e-09,
+              "relative": 6.386826408173568e-10
+            },
+            {
+              "h": 1e-06,
+              "prediction": 7.957012137014111e-09,
+              "relative": 4.977163916091835e-08
+            }
+          ]
+        }
+      ],
+      "full_to_annulus_prediction": 1.8404721924298508,
+      "full_to_annulus_actual": 1.8413454931251667
+    },
+    {
+      "step": 11,
+      "radius": 0.0125,
+      "history_ids": [
+        "prior_1",
+        "prior_7",
+        "prior_11",
+        "prior_14",
+        "prior_17",
+        "prior_18",
+        "prior_28",
+        "run_1",
+        "run_6",
+        "run_8"
+      ],
+      "forward": {
+        "seconds": [
+          0.05922830000054091,
+          0.06402370000068913,
+          0.05936950000250363,
+          0.05995959999927436,
+          0.05974209999840241
+        ],
+        "median_seconds": 0.05974209999840241,
+        "peak_reserved_bytes": 4718592
+      },
+      "adjoint": {
+        "seconds": [
+          0.3984197999998287,
+          0.397025999998732,
+          0.3871329999965383,
+          0.42574449999665376,
+          0.3866961999992782
+        ],
+        "median_seconds": 0.397025999998732,
+        "peak_reserved_bytes": 44041216
+      },
+      "streaming": {
+        "seconds": [
+          176.18866499999785
+        ],
+        "median_seconds": 176.18866499999785,
+        "peak_reserved_bytes": 83886080
+      },
+      "speedup": 443.77110063461976,
+      "forward_cost": 6.645665284771527,
+      "annulus_relative": 3.0964480411454294e-08,
+      "core_relative": 4.051662358940422e-06,
+      "core_build": {
+        "support_label": "C",
+        "coarse_dimension": 6165,
+        "factorization": "LU",
+        "coarse_difference": "forward",
+        "coarse_epsilon": 1e-06,
+        "coarse_condition_1_estimate": 4941920.498355945,
+        "factor_probe_residual": 9.910663188396922e-13,
+        "temporal_relative": 0.0,
+        "spectral_relative": 0.11010920437926039,
+        "coarse_relative": 0.9939194952866992,
+        "orthogonality": 0.0,
+        "squared_partition": 1.0000000000000007,
+        "support_ps": 2048.0,
+        "bandwidth_GHz": 375.0
+      },
+      "linear_error": 0.0072363504045285165,
+      "trials": [
+        {
+          "name": "history",
+          "prediction": 2.6001990804749764e-09,
+          "gain": 1.0,
+          "actual": 9.928708401918254e-10,
+          "rho": 0.38184416249022685,
+          "passed": true,
+          "step_norm": 0.012500000004730302,
+          "checks": [
+            {
+              "h": 1e-05,
+              "prediction": 2.6001988750571208e-09,
+              "relative": 7.900081850971644e-08
+            },
+            {
+              "h": 3e-06,
+              "prediction": 2.6001990418023344e-09,
+              "relative": 1.4872954286916604e-08
+            },
+            {
+              "h": 1e-06,
+              "prediction": 2.6001990526380095e-09,
+              "relative": 1.0705705993133697e-08
+            }
+          ]
+        },
+        {
+          "name": "annulus",
+          "prediction": 4.789877364418835e-09,
+          "gain": 1.8421194747687826,
+          "actual": 3.2344850662825252e-09,
+          "rho": 0.6752751313237373,
+          "passed": true,
+          "step_norm": 0.012499999999998257,
+          "checks": [
+            {
+              "h": 1e-05,
+              "prediction": 4.789877027120054e-09,
+              "relative": 7.041908489719469e-08
+            },
+            {
+              "h": 3e-06,
+              "prediction": 4.78987684267831e-09,
+              "relative": 1.0892565413707327e-07
+            },
+            {
+              "h": 1e-06,
+              "prediction": 4.789876878959501e-09,
+              "relative": 1.0135109875737093e-07
+            }
+          ]
+        },
+        {
+          "name": "full",
+          "prediction": 7.805210351250273e-09,
+          "gain": 3.0017741371651057,
+          "actual": 6.222387938312542e-09,
+          "rho": 0.7972095124016501,
+          "passed": true,
+          "step_norm": 0.01249999999999996,
+          "checks": [
+            {
+              "h": 1e-05,
+              "prediction": 7.805210154845754e-09,
+              "relative": 2.516325762817237e-08
+            },
+            {
+              "h": 3e-06,
+              "prediction": 7.805210217163176e-09,
+              "relative": 1.7179177916187296e-08
+            },
+            {
+              "h": 1e-06,
+              "prediction": 7.805210642232845e-09,
+              "relative": 3.728055473418134e-08
+            }
+          ]
+        }
+      ],
+      "full_to_annulus_prediction": 1.629521960046527,
+      "full_to_annulus_actual": 1.923764621199531
+    },
+    {
+      "step": 20,
+      "radius": 0.003125,
+      "history_ids": [
+        "prior_1",
+        "prior_7",
+        "prior_11",
+        "prior_14",
+        "prior_18",
+        "prior_28",
+        "run_1",
+        "run_6",
+        "run_8",
+        "run_12",
+        "run_15",
+        "run_16"
+      ],
+      "forward": {
+        "seconds": [
+          0.060386500001186505,
+          0.059096900000440655,
+          0.06035110000084387,
+          0.057633299998997245,
+          0.06438540000090143
+        ],
+        "median_seconds": 0.06035110000084387,
+        "peak_reserved_bytes": 4718592
+      },
+      "adjoint": {
+        "seconds": [
+          0.39106549999996787,
+          0.38301030000002356,
+          0.3941725000004226,
+          0.3960155999993731,
+          0.36963380000088364
+        ],
+        "median_seconds": 0.39106549999996787,
+        "peak_reserved_bytes": 44303360
+      },
+      "streaming": {
+        "seconds": [
+          205.38205519999974
+        ],
+        "median_seconds": 205.38205519999974,
+        "peak_reserved_bytes": 83886080
+      },
+      "speedup": 525.1858197668079,
+      "forward_cost": 6.479840466776905,
+      "annulus_relative": 2.4426162860006688e-08,
+      "core_relative": 6.041641720177589e-06,
+      "core_build": {
+        "support_label": "C",
+        "coarse_dimension": 6165,
+        "factorization": "LU",
+        "coarse_difference": "forward",
+        "coarse_epsilon": 1e-06,
+        "coarse_condition_1_estimate": 4511523.563442118,
+        "factor_probe_residual": 1.3356594569751398e-12,
+        "temporal_relative": 0.0,
+        "spectral_relative": 0.12433711493317011,
+        "coarse_relative": 0.9922400323762878,
+        "orthogonality": 0.0,
+        "squared_partition": 1.0000000000000009,
+        "support_ps": 2048.0,
+        "bandwidth_GHz": 375.0
+      },
+      "linear_error": 0.007897151373162622,
+      "trials": [
+        {
+          "name": "history",
+          "prediction": 1.6447669570284182e-09,
+          "gain": 1.0,
+          "actual": 1.5753558064549636e-09,
+          "rho": 0.9577987931500892,
+          "passed": true,
+          "step_norm": 0.003124999999999985,
+          "checks": [
+            {
+              "h": 1e-05,
+              "prediction": 1.6447670167348233e-09,
+              "relative": 3.6300829651411526e-08
+            },
+            {
+              "h": 3e-06,
+              "prediction": 1.6447670658135662e-09,
+              "relative": 6.614015898729444e-08
+            },
+            {
+              "h": 1e-06,
+              "prediction": 1.644767189260862e-09,
+              "relative": 1.4119474059169166e-07
+            }
+          ]
+        },
+        {
+          "name": "annulus",
+          "prediction": 4.953018598931164e-09,
+          "gain": 3.0113801701608396,
+          "actual": 4.907169635205687e-09,
+          "rho": 0.9907432280316146,
+          "passed": true,
+          "step_norm": 0.0031250000000000006,
+          "checks": [
+            {
+              "h": 1e-05,
+              "prediction": 4.953018690026992e-09,
+              "relative": 1.839198172657738e-08
+            },
+            {
+              "h": 3e-06,
+              "prediction": 4.9530187448429945e-09,
+              "relative": 2.9459172695407516e-08
+            },
+            {
+              "h": 1e-06,
+              "prediction": 4.953018698164474e-09,
+              "relative": 2.0034915577456728e-08
+            }
+          ]
+        },
+        {
+          "name": "full",
+          "prediction": 8.791864535774438e-09,
+          "gain": 5.345355764964175,
+          "actual": 8.740105344781394e-09,
+          "rho": 0.9941128311540249,
+          "passed": true,
+          "step_norm": 0.003124999999769734,
+          "checks": [
+            {
+              "h": 1e-05,
+              "prediction": 8.791864647006754e-09,
+              "relative": 1.2651732166212084e-08
+            },
+            {
+              "h": 3e-06,
+              "prediction": 8.79186473717974e-09,
+              "relative": 2.2908144381658552e-08
+            },
+            {
+              "h": 1e-06,
+              "prediction": 8.791864639353736e-09,
+              "relative": 1.1781266397141451e-08
+            }
+          ]
+        }
+      ],
+      "full_to_annulus_prediction": 1.7750517911787524,
+      "full_to_annulus_actual": 1.781088895333256
+    },
+    {
+      "step": 27,
+      "radius": 0.00625,
+      "history_ids": [
+        "prior_1",
+        "prior_7",
+        "prior_14",
+        "prior_18",
+        "run_1",
+        "run_6",
+        "run_8",
+        "run_12",
+        "run_15",
+        "run_16",
+        "run_21",
+        "run_25"
+      ],
+      "forward": {
+        "seconds": [
+          0.0713415000027453,
+          0.0679013999979361,
+          0.06626279999909457,
+          0.06690689999959432,
+          0.0685228999973333
+        ],
+        "median_seconds": 0.0679013999979361,
+        "peak_reserved_bytes": 4718592
+      },
+      "adjoint": {
+        "seconds": [
+          0.5220058000013523,
+          0.45419549999860465,
+          0.35510789999898407,
+          0.6268866999998863,
+          0.5848560000013094
+        ],
+        "median_seconds": 0.5220058000013523,
+        "peak_reserved_bytes": 44303360
+      },
+      "streaming": {
+        "seconds": [
+          182.28162130000055
+        ],
+        "median_seconds": 182.28162130000055,
+        "peak_reserved_bytes": 83886080
+      },
+      "speedup": 349.1946282963299,
+      "forward_cost": 7.687703052031607,
+      "annulus_relative": 2.3300931151281655e-08,
+      "core_relative": 6.600622521706e-06,
+      "core_build": {
+        "support_label": "C",
+        "coarse_dimension": 6165,
+        "factorization": "LU",
+        "coarse_difference": "forward",
+        "coarse_epsilon": 1e-06,
+        "coarse_condition_1_estimate": 8237900.929140526,
+        "factor_probe_residual": 3.52020639764088e-12,
+        "temporal_relative": 0.0,
+        "spectral_relative": 0.12535608926731093,
+        "coarse_relative": 0.9921118137002533,
+        "orthogonality": 0.0,
+        "squared_partition": 1.0000000000000002,
+        "support_ps": 2048.0,
+        "bandwidth_GHz": 375.0
+      },
+      "linear_error": 0.007431799441265387,
+      "trials": [
+        {
+          "name": "history",
+          "prediction": 3.960410150252682e-10,
+          "gain": 1.0,
+          "actual": 2.3875183101426024e-10,
+          "rho": 0.6028462254067989,
+          "passed": true,
+          "step_norm": 0.006249999999749977,
+          "checks": [
+            {
+              "h": 1e-05,
+              "prediction": 3.960410658422082e-10,
+              "relative": 1.2831231640457338e-07
+            },
+            {
+              "h": 3e-06,
+              "prediction": 3.960410793032929e-10,
+              "relative": 1.6230143421510238e-07
+            },
+            {
+              "h": 1e-06,
+              "prediction": 3.9604095961766347e-10,
+              "relative": 1.399037034256276e-07
+            }
+          ]
+        },
+        {
+          "name": "annulus",
+          "prediction": 3.5443904195904035e-09,
+          "gain": 8.949553922752836,
+          "actual": 3.406171823273232e-09,
+          "rho": 0.9610035633904167,
+          "passed": true,
+          "step_norm": 0.006249999999990191,
+          "checks": [
+            {
+              "h": 1e-05,
+              "prediction": 3.5443903770041045e-09,
+              "relative": 1.2015126445543566e-08
+            },
+            {
+              "h": 3e-06,
+              "prediction": 3.5443903680301184e-09,
+              "relative": 1.4547010644712429e-08
+            },
+            {
+              "h": 1e-06,
+              "prediction": 3.544390207140367e-09,
+              "relative": 5.993979538014197e-08
+            }
+          ]
+        },
+        {
+          "name": "full",
+          "prediction": 7.448198539741628e-09,
+          "gain": 18.806634305960504,
+          "actual": 7.312260332795774e-09,
+          "rho": 0.9817488475608533,
+          "passed": true,
+          "step_norm": 0.0062499999999895235,
+          "checks": [
+            {
+              "h": 1e-05,
+              "prediction": 7.44819854195802e-09,
+              "relative": 2.9757418012167175e-10
+            },
+            {
+              "h": 3e-06,
+              "prediction": 7.4481986656012744e-09,
+              "relative": 1.6897998298396217e-08
+            },
+            {
+              "h": 1e-06,
+              "prediction": 7.448198612637655e-09,
+              "relative": 9.787068169013768e-09
+            }
+          ]
+        }
+      ],
+      "full_to_annulus_prediction": 2.101404658633051,
+      "full_to_annulus_actual": 2.1467679002079536
+    }
+  ],
+  "seconds": 1238.754512899999
+}

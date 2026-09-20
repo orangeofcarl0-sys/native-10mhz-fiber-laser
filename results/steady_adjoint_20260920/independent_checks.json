@@ -1,0 +1,128 @@
+{
+  "primitives": {
+    "scales": [
+      0.0001,
+      3e-05,
+      1e-05,
+      3e-06,
+      1e-06
+    ],
+    "relative_errors": {
+      "Kerr": [
+        2.7710838722519657e-09,
+        2.3822534206633583e-10,
+        1.018759515351708e-11,
+        8.677671811155863e-11,
+        7.417069289353437e-10
+      ],
+      "CNT": [
+        2.6047276072545408e-11,
+        6.224712879159394e-13,
+        2.1292714482373998e-11,
+        3.943600401026993e-10,
+        1.2726208665599521e-09
+      ],
+      "EDF full": [
+        5.815868286167494e-10,
+        1.557956632134037e-09,
+        3.273715180720105e-09,
+        1.2625932735205009e-08,
+        1.5984491703835023e-08
+      ],
+      "EDF population output": [
+        2.3851661555802163e-11,
+        3.804822809732964e-11,
+        3.957447609485608e-10,
+        3.6676675594422428e-09,
+        1.2703393909274173e-08
+      ],
+      "EDF population input": [
+        3.068034765851216e-11,
+        1.3058309075292155e-10,
+        2.683812688066371e-10,
+        1.6124120340610283e-10,
+        9.373856102817632e-09
+      ]
+    }
+  },
+  "candidate_replays": [
+    {
+      "step": 5,
+      "name": "history",
+      "actual_error": 0.0,
+      "prediction_error": 0.0
+    },
+    {
+      "step": 5,
+      "name": "annulus",
+      "actual_error": 0.0,
+      "prediction_error": 0.0
+    },
+    {
+      "step": 5,
+      "name": "full",
+      "actual_error": 0.0,
+      "prediction_error": 0.0
+    },
+    {
+      "step": 11,
+      "name": "history",
+      "actual_error": 0.0,
+      "prediction_error": 0.0
+    },
+    {
+      "step": 11,
+      "name": "annulus",
+      "actual_error": 0.0,
+      "prediction_error": 0.0
+    },
+    {
+      "step": 11,
+      "name": "full",
+      "actual_error": 0.0,
+      "prediction_error": 0.0
+    },
+    {
+      "step": 20,
+      "name": "history",
+      "actual_error": 0.0,
+      "prediction_error": 0.0
+    },
+    {
+      "step": 20,
+      "name": "annulus",
+      "actual_error": 0.0,
+      "prediction_error": 0.0
+    },
+    {
+      "step": 20,
+      "name": "full",
+      "actual_error": 0.0,
+      "prediction_error": 0.0
+    },
+    {
+      "step": 27,
+      "name": "history",
+      "actual_error": 0.0,
+      "prediction_error": 0.0
+    },
+    {
+      "step": 27,
+      "name": "annulus",
+      "actual_error": 0.0,
+      "prediction_error": 0.0
+    },
+    {
+      "step": 27,
+      "name": "full",
+      "actual_error": 0.0,
+      "prediction_error": 0.0
+    }
+  ],
+  "hardware": {
+    "gpu": "NVIDIA GeForce RTX 5050 Laptop GPU",
+    "total_memory_bytes": 8546484224,
+    "cupy": "14.2.0",
+    "numpy": "2.4.6"
+  }
+}
