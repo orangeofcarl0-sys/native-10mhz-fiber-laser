@@ -53,3 +53,6 @@ Current: four frozen retrospective fresh-annulus sweeps; step indices 5,11,20,27
 Current: general discrete VJP, layered derivative verification, four-state
 streaming comparison, GPU checkpoint benchmark and frozen gradient controls.
 No continuation or reseed tuning. See28_discrete_adjoint.md.
+
+Current: integrate full adjoint gradient with existing history/GMRES/Hookstep,
+40-step latest-endpoint continuation. See29_adjoint_continuation.md.

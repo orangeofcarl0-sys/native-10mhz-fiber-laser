@@ -12,7 +12,7 @@ def next_radius(radius,rho,step_norm):
 
 
 def solve_augmented(residual,initial,augmented=True,max_steps=40,radius=.003125,
-                    builder=None,observer=None,linear_limit=240,gate_policy="newton",enrichment=None,model_factory=None):
+                    builder=None,observer=None,linear_limit=240,gate_policy="newton",enrichment=None,model_factory=None,value_gradient=None):
     """Same physical equation and trust controller for both arms; D=I.
 
     With gate_policy="step", constrained candidates require agreement within 5%
@@ -22,10 +22,14 @@ def solve_augmented(residual,initial,augmented=True,max_steps=40,radius=.003125,
     recomputed at every current state, and the same Cauchy safeguard is retained.
     Alternatively, model_factory constructs a current-state radius callback;
     its diagnostics are retained even when the actual Cauchy fallback is used.
+    value_gradient(x), when supplied, returns current packed (R, J^T R) once
+    per outer iteration. The builder then needs only supply a preconditioner;
+    current descent and Cauchy candidates no longer read its gradient cache.
     The 1% gate checks the unconstrained Newton direction using independent Jv.
     A fresh builder is retried before stopping on this gate. No minimum-progress
     stop is used. Model discrepancy and low rho trigger next-state rebuilding.
     """
+    if value_gradient is not None and not augmented:raise ValueError('Current gradient requires augmentation')
     if gate_policy not in {"newton","step"}:raise ValueError("Unknown gate policy")
     if enrichment is not None and not augmented:raise ValueError('Enrichment requires augmentation')
     if model_factory is not None and (not augmented or enrichment is not None):
@@ -37,6 +41,8 @@ def solve_augmented(residual,initial,augmented=True,max_steps=40,radius=.003125,
         if observer:observer(x,r,history)
     status='iteration_budget_reached'
     for iteration in range(max_steps):
+        if value_gradient is not None:
+            r,current_gradient=value_gradient(x)
         norm=float(np.linalg.norm(r))
         if norm<1e-7:status='residual_converged';break
         row=dict(step=iteration,residual=norm,radius=float(radius),trials=[],builds=[])
@@ -73,11 +79,16 @@ def solve_augmented(residual,initial,augmented=True,max_steps=40,radius=.003125,
                 if not rebuilt:refresh=['linear_gate'];continue
                 status='linear_accuracy_limited';break
             if augmented:
-                g=cache['gradient'] if rebuilt else cache['matrix'].T@cache['restrict'](r)
-                d=-cache['lift'](g);d/=max(np.linalg.norm(d),1e-100)
+                if value_gradient is None:
+                    g=cache['gradient'] if rebuilt else cache['matrix'].T@cache['restrict'](r)
+                    d=-cache['lift'](g)
+                else:
+                    d=-current_gradient.copy()
+                    row['gradient_norm']=float(np.linalg.norm(current_gradient))
+                d/=max(np.linalg.norm(d),1e-100)
                 jd=derivative(d);jd_check=derivative(d,1e-6)
                 slope=float(np.dot(r,jd));slope_check=float(np.dot(r,jd_check))
-                row.update(gradient_source='full_output_rebuild' if rebuilt else 'cheap_current_residual',
+                row.update(gradient_source=('full_adjoint' if value_gradient is not None else ('full_output_rebuild' if rebuilt else 'cheap_current_residual')),
                     descent_slope=slope,checked_descent_slope=slope_check)
                 if max(slope,slope_check)>=0:
                     if not rebuilt:refresh=['non_descent'];continue

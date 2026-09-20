@@ -6,6 +6,23 @@ from steady_support_lu import build_factored
 from steady_support import SUPPORTS
 
 class OuterTests(unittest.TestCase):
+    def test_full_gradient_provider_with_preconditioner_only_cache(self):
+        class F:
+            def __call__(self,x):return np.arange(1.,7.)*x
+            def feasible(self,x):return True
+        f=F();a=np.arange(1.,7.);calls=[]
+        def provider(x):calls.append(x.copy());return f(x),a*f(x)
+        def builder(f,x,r,cache):return np.diag(1/a),{}
+        x,h,status=solve_augmented(f,np.ones(6)*.01,max_steps=12,radius=.001,
+              builder=builder,linear_limit=6,gate_policy='step',value_gradient=provider)
+        self.assertEqual(status,'residual_converged')
+        self.assertTrue(any(not row['precondition_rebuilt'] for row in h))
+        for row in h:
+            self.assertEqual(row['gradient_source'],'full_adjoint')
+            self.assertAlmostEqual(row['gradient_norm'],np.linalg.norm(a*f(calls[row['step']])))
+            t=row['trials'][row['accepted_trial']]
+            self.assertTrue(t['candidate_model_pass']);self.assertGreaterEqual(t['G_C'],1-1e-6)
+
     def test_streamed_gradient_needs_no_extra_maps(self):
         class F:
             n=8;cells=1;dt=.5

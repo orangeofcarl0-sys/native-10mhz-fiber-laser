@@ -559,3 +559,37 @@ python run_adjoint_frozen.py
 python check_adjoint.py
 python report_adjoint.py
 ```
+
+## Full-adjoint forty-step continuation
+
+[Offline report](docs/adjoint_continuation_report.html) and
+[records](results/steady_adjoint_continuation_20260920) start at the latest
+persisted endpoint, with radius0.00625 and the same12 old history directions.
+`solve_augmented(...,value_gradient=...)` computes current R,J^T R each outer
+iteration. C supplies only its preconditioner; all other trust/step protections
+are unchanged. Every accepted full direction is promoted, also on non-rebuild
+steps. Leave-one-out pruning keeps<=12 histories in every actual model.
+The terminal pending bank can contain the last accepted direction awaiting
+next-state pruning. No annulus gradient or seed is used.
+
+Accepted steps: 40; status: iteration_budget_reached.
+Residual: 0.00113064270299 -> 0.00109671297654.
+Strong success R<1e-3: False.
+Last-five mean norm decrease: 0.0310556%/step.
+Last-five mean Gfull/H: 5.34782; regime: intermediate.
+H here excludes current C and contains only Z+history; gain ratios are not
+directly comparable with the previous four-state H that also contained C.
+Field/population/gauge blocks, gradient norm, coverage, Cauchy predictions,
+bank composition and every accepted/rejected trial are archived.
+
+Independent full-map/current-gradient/guard replay and98 CPU tests pass.
+No parameter release, normal-equation solver or physical pulse certificate.
+
+```text
+python run_adjoint_continuation.py
+python check_adjoint_continuation.py
+python report_adjoint_continuation.py
+```
+
+Use a fresh LASER_OUTPUT_DIR and configured CuPy. Raw execution sources and
+input hashes are archived separately from the final Git-byte manifest.
