@@ -1,0 +1,80 @@
+{
+  "states": 4,
+  "candidates_replayed": 12,
+  "direction_diagnostics_verified": true,
+  "threshold_count": 3,
+  "checks": [
+    {
+      "step": 5,
+      "group": "history",
+      "actual_difference": 0.0,
+      "prediction_difference": 0.0
+    },
+    {
+      "step": 5,
+      "group": "old",
+      "actual_difference": 0.0,
+      "prediction_difference": 0.0
+    },
+    {
+      "step": 5,
+      "group": "fresh",
+      "actual_difference": 0.0,
+      "prediction_difference": 0.0
+    },
+    {
+      "step": 11,
+      "group": "history",
+      "actual_difference": 0.0,
+      "prediction_difference": 0.0
+    },
+    {
+      "step": 11,
+      "group": "old",
+      "actual_difference": 0.0,
+      "prediction_difference": 0.0
+    },
+    {
+      "step": 11,
+      "group": "fresh",
+      "actual_difference": 0.0,
+      "prediction_difference": 0.0
+    },
+    {
+      "step": 20,
+      "group": "history",
+      "actual_difference": 0.0,
+      "prediction_difference": 0.0
+    },
+    {
+      "step": 20,
+      "group": "old",
+      "actual_difference": 0.0,
+      "prediction_difference": 0.0
+    },
+    {
+      "step": 20,
+      "group": "fresh",
+      "actual_difference": 0.0,
+      "prediction_difference": 0.0
+    },
+    {
+      "step": 27,
+      "group": "history",
+      "actual_difference": 0.0,
+      "prediction_difference": 0.0
+    },
+    {
+      "step": 27,
+      "group": "old",
+      "actual_difference": 0.0,
+      "prediction_difference": 0.0
+    },
+    {
+      "step": 27,
+      "group": "fresh",
+      "actual_difference": 0.0,
+      "prediction_difference": 0.0
+    }
+  ]
+}

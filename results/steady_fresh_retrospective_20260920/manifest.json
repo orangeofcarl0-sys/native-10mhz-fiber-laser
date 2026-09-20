@@ -1,0 +1,26 @@
+{
+  "hash_basis": "Git index bytes; excludes this manifest",
+  "sha256": {
+    ".research-alignment/00_research_contract.md": "ea514269597faabaee459fee3b1dc74c7c9f2e253f2b8e7631831997b1f2366d",
+    ".research-alignment/27_fresh_retrospective.md": "026813cb283142b505af1b2425db739da71cbabab001e79021bf85534516a333",
+    "README.md": "ee59ace25c9be5951443004423cda1220c1a44532abde79871156a845595d875",
+    "check_fresh_retrospective.py": "9e92bf096be531a0332909b143cf9bf51df8d05d784d349c3a665ddcace72df1",
+    "docs/adjoint_startup.md": "ed129e9bbbf3299e4a4ee90207c1d6415dbb8772c6cd334640e2c067cdba16dd",
+    "docs/fresh_retrospective_report.html": "1a7bd6d3c5a99c55c8088e2910d6152243abfe17cf43dc1148dbeb012c2d9ada",
+    "report_fresh_retrospective.py": "86480fd86b2736b98b468d575a7e5fa86ad5eeabda72a1fd8f06b85f041dad70",
+    "results/steady_fresh_retrospective_20260920/executed_sources.zip": "e9c9fe8e5e18c66a9495b29f28e93ef3ae1518c781f383987640d103c9755e62",
+    "results/steady_fresh_retrospective_20260920/fresh_retrospective.json": "858cc54fa7a1078f9058fde1244e547f77f39910d09818af6e8a9753b377c8a4",
+    "results/steady_fresh_retrospective_20260920/independent_checks.json": "fcd8d67266913533ad1b057fddc1e56d8ea1f302cae7eb9c8bb4c647c955b634",
+    "results/steady_fresh_retrospective_20260920/model_11.npz": "40301e03c6c0c486063321c933bd06d5a61fdc467618fd3453a9f00191e59a3d",
+    "results/steady_fresh_retrospective_20260920/model_20.npz": "d43bb833816567e66b2da53b3c35b63a3e7f2e4d90b978aa8f79a6df67d458ac",
+    "results/steady_fresh_retrospective_20260920/model_27.npz": "2e9070114093b9a82474364762021ec44d9984e9fd06303030f6cfede486fc3a",
+    "results/steady_fresh_retrospective_20260920/model_5.npz": "a4fa3f07df3648094b59e80799b863b91d252bb5e1ecaadaeebcc1e37a710f74",
+    "results/steady_fresh_retrospective_20260920/protocol.json": "0d99d2c2fefc86f445cf25e1f00d01ce4cb735d3f16a1f85c1701ba38a375311",
+    "results/steady_fresh_retrospective_20260920/report_qa.json": "d4820ea245982575c12b470332657e5217fa4b3efb95ec422fa4f2d89090999c",
+    "results/steady_fresh_retrospective_20260920/state_11.npz": "834fa898a49268f6bbd1bfad6688e36e22df9e2df54e810122d338829c14eac2",
+    "results/steady_fresh_retrospective_20260920/state_20.npz": "14ce88dc6199b1b7ef4fe5456348179af9ac851c1d0a9493d6915cb967d5cbcb",
+    "results/steady_fresh_retrospective_20260920/state_27.npz": "92fd389b223be571d197a951f05f62d055197154e13de5c8bf419b5a125700be",
+    "results/steady_fresh_retrospective_20260920/state_5.npz": "c7dcc218a87366e8c6678a95e11346d360be85082913a94a2d970f4f780d57ab",
+    "run_fresh_retrospective.py": "5e4e49270505d8ed6a0310dd816296ddd5c8fc056a9547680967773eabf73be8"
+  }
+}

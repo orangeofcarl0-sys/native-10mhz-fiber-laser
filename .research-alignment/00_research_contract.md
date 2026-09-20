@@ -47,3 +47,5 @@ Current: frozen S3 endpoint active-history audit only; see24_active_history.md. 
 Current frozen-state extension: full seven-direction bank, annulus novelty and exhaustive equal-cardinality comparisons. See25_history_complete.md. No continuation.
 
 Current: 30-step persisted annulus seed lifetime experiment with bounded full history and diagnostic-only reseed triggers. See26_persisted_seed.md.
+
+Current: four frozen retrospective fresh-annulus sweeps; step indices 5,11,20,27; no continuation or trigger changes. See27_fresh_retrospective.md.

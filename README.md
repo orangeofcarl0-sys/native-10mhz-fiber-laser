@@ -492,3 +492,35 @@ python report_persisted_seed.py
 their generating states. The final pending bank may include one newly accepted
 direction awaiting next-state capacity selection; every executed model uses<=12.
 CPU check: `python -m unittest test_seed_bank test_augmented_outer -v`.
+
+## Four frozen-state fresh-annulus controls
+
+[Offline report](docs/fresh_retrospective_report.html) and
+[numeric records](results/steady_fresh_retrospective_20260920).
+Zero-based saved states 5,11,20,27 correspond to report steps 6,12,21,28.
+Each old candidate was replayed before the sweep; state, history IDs, C direction,
+Arnoldi basis and radius were fixed. No continuation or trigger change.
+
+| Saved state | Gold | Gfresh | cos_x | cos_J | Fresh descent |
+|---|---|---|---|---|---|
+| 5 | 1.00005303 | 1.28422752 | -9.512757e-05 | -0.2482268 | 8.746542e-05 |
+| 11 | 1.00278560 | 1.84211947 | -3.943598e-05 | -0.2498778 | 7.418687e-05 |
+| 20 | 1.00121208 | 3.01138017 | 8.537639e-06 | -0.1833764 | 9.501684e-05 |
+| 27 | 1.00006233 | 8.94955392 | -1.548184e-05 | -0.1648918 | 9.761863e-05 |
+
+Prespecified threshold met: 3/4; validated recovery: 3/4.
+Gate to begin adjoint work (at least 3/4): True.
+All comparisons concern one frozen model per state; these do not measure an
+adjoint speedup, certify a physical root or establish a reseeding period.
+
+With CuPy configured and a fresh LASER_OUTPUT_DIR:
+
+```text
+python run_fresh_retrospective.py
+python check_fresh_retrospective.py
+python report_fresh_retrospective.py
+```
+
+State archives include full candidate steps and current seed responses;
+model archives allow independent reduced-model replay. Raw execution sources,
+input hashes and independent full-map replay are archived with results.
