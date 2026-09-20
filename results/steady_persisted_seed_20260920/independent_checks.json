@@ -1,0 +1,9 @@
+{
+  "accepted_states_replayed": 31,
+  "max_residual_difference": 0.0,
+  "output_relative_difference": 0.0,
+  "seed_slope_max_difference": 1.0570971181733668e-18,
+  "immutable_seed_verified": true,
+  "bank_capacity_and_deletions_verified": true,
+  "diagnostic_triggers_verified": true
+}

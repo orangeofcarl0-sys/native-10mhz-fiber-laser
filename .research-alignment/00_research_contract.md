@@ -45,3 +45,5 @@ Current: single-state descent-source controls and thresholded continuation; see2
 Current: frozen S3 endpoint active-history audit only; see24_active_history.md. No continuation.
 
 Current frozen-state extension: full seven-direction bank, annulus novelty and exhaustive equal-cardinality comparisons. See25_history_complete.md. No continuation.
+
+Current: 30-step persisted annulus seed lifetime experiment with bounded full history and diagnostic-only reseed triggers. See26_persisted_seed.md.

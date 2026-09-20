@@ -1,0 +1,13 @@
+{
+  "baseline_commit": "cba0e88cc93b55111ffb4145cf1626f65e0da053",
+  "files": {
+    "continuation.json": "1409befbae0d365d65a227eccd68c37cd7a4acab0cfb211904fc571a0deba665",
+    "continuation_final.npz": "c6c7c9a3c86b06467ccf88479a8878acc3865e34abc066025924813b2cc528ab",
+    "executed_sources.zip": "adedbffc7e530192ec2df11d918092e9a69e01b02d8ad499e8388ca9720d7db8",
+    "independent_checks.json": "3ffe0580e900b9f708f36cbfc6fd66768f821c2159bd062bda99807b7093aa57",
+    "protocol.json": "63161edf5a016d14a7001cc919968bedf4396044c0a0eb0bacff6dfa7470d7b2",
+    "report_qa.json": "8b5ee5d9e9afc3e33516a903b332d7598eeafce6728c66beeaa411d93c2af87d",
+    "trajectory.npz": "744c239879390ce043b1d40c8c7ad5999015f3cf149babc1a18106c51d265fa3"
+  },
+  "note": "Hashes of Git-index bytes; raw executed source bytes in zip and protocol."
+}

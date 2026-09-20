@@ -460,3 +460,35 @@ python report_history_complete.py
 
 CPU unit check: `python -m unittest test_history_complete -v`.
 No period-one root or stable-pulse certificate is claimed.
+
+## Persisted annulus seed lifetime
+
+[Offline report](docs/persisted_seed_report.html) and
+[records](results/steady_persisted_seed_20260920) follow one immutable seed from
+the same S3 endpoint, keeping all current history directions (capacity12).
+Fresh C directions enter the next model; over-capacity history is removed by
+minimum current leave-one-out model loss with seed present. Current C remains
+separate. All seed/history responses are recomputed at each state. The optional
+model_factory path preserves the existing step gate and Cauchy/full-map checks.
+
+Accepted steps: 30; status: iteration_budget_reached.
+Residual: 0.00118839458173 -> 0.00113064270299.
+Last-five mean norm gain: 0.0842852%/step.
+GA>1.15 at 1/9 fresh states.
+Prespecified progress criterion A: False; durability criterion B: False.
+No fresh annulus sweep occurred. Hypothetical trigger state indices (zero-based):
+[]. These do not establish actual reseeding need,
+fresh-seed recovery or adjoint economics. No stable-pulse certificate is claimed.
+
+With CuPy configured and a fresh LASER_OUTPUT_DIR:
+
+```text
+python run_persisted_seed.py
+python check_persisted_seed.py
+python report_persisted_seed.py
+```
+
+`trajectory.npz` contains accepted states, immutable seed, fresh C vectors and
+their generating states. The final pending bank may include one newly accepted
+direction awaiting next-state capacity selection; every executed model uses<=12.
+CPU check: `python -m unittest test_seed_bank test_augmented_outer -v`.
