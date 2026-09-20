@@ -400,3 +400,34 @@ so it is selected for30steps. All30are accepted with no fallback; residual falls
 1.2081439205e-3 to1.1883945817e-3 (1.634684%). Final5steps average0.015245% norm
 improvement. Endpoint residual and output replay exactly. No period-one root or
 stable-pulse certificate is obtained; S2 has not received a matched long-run trial.
+
+## Active-history audit at the S3 endpoint
+
+[Offline report](docs/active_history_report.html) and
+[records](results/steady_active_history_20260920) compare H3, G2, G3, G4, G3+A
+at one frozen state (residual 1.1883945817e-3), three radii, one C/Arnoldi model.
+Seven archived fresh histories receive new current-state Jacobian responses.
+Greedy selection maximizes predicted trust-model decrease; no slope/cosine filter.
+Two orthogonal compressions preserve the actual state norm and residual norm.
+The forced four-addition audit is separate from the prospective 5% stopping rule.
+
+All radii select histories from outer steps 18, 28, 14, 1 in that order. The first
+is uphill along its positive orientation; subspace coefficients can reverse it.
+G3 achieves only 32--34% of G4 actual reduction. None of the first four additions
+triggers the 5% rule. G3+A delivers 11.9--12.5 times G3 actual reduction, about
+four times G4. All 15 candidates pass and independently replay exactly.
+Both seven-column history and response matrices have numerical rank seven at
+relative tolerance 1%. This does not support a two/three-dimensional saturation.
+The oracle advantage is specific to this state; no periodic schedule is proved.
+G4+A and longer continuations are not tested. No root or stability certificate.
+
+With CuPy configured, use a fresh LASER_OUTPUT_DIR and run:
+
+```text
+python run_active_history.py
+python check_active_history.py
+python report_active_history.py
+```
+
+The input vectors are already archived; no historical replay is required.
+CPU validation: `python -m unittest test_active_history -v`.

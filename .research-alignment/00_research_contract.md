@@ -41,3 +41,5 @@ Current experiment: 27.5 mW paired 40-step original/augmented outer loops from i
 Step-relevant gate audit and conditional B continuation: see22_step_gate.md.
 
 Current: single-state descent-source controls and thresholded continuation; see23_descent_sources.md.
+
+Current: frozen S3 endpoint active-history audit only; see24_active_history.md. No continuation.
