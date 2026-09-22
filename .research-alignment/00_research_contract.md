@@ -72,3 +72,6 @@ See [phase32](32_gkb_depth_recycling.md): latest pure-GKB endpoint, depth192 and
 
 ## Frozen nonlinear radius map
 See [phase33](33_gkb_radius_map.md): saved spaces, 45 fresh/5 recycled radius solves and15 ray probes. No new derivatives or outer continuation.
+
+## Deep/recycled production comparison
+See [phase34](34_gkb_outer_ab.md): matched20 accepted steps, shared true-merit radius search, fresh192 vs fresh64+previous-fresh64. No depth adaptation, refresh trigger or formulation change.

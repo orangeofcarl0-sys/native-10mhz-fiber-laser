@@ -1,0 +1,29 @@
+{
+  "initial_residual": 0.0009746756121000674,
+  "initial_radius": 0.0125,
+  "accepted_budget": 20,
+  "arms": {
+    "fresh": "fresh192 every state",
+    "recycled": "fresh64 + previous accepted state fresh64, current J responses"
+  },
+  "physical_base": {
+    "pump": 0.0275,
+    "gdd": 0.2,
+    "oc": 0.8,
+    "psat": 40.0
+  },
+  "initial_recycled_cache": "Vold from depth audit; pure40 states[-2], used to build accepted step40",
+  "shrink": 0.5,
+  "expand": 1.5,
+  "shrink_rho": 0.25,
+  "expand_initial_rho": 0.8,
+  "expand_continue_rho": 0.5,
+  "acceptance": "feasible, positive actual/prediction, rho>0.1, Cauchy, final3-scale Js5% gate; choose largest actual among tried eligible candidates",
+  "epsilonNL": "diagnostic only",
+  "decision": "both arms complete20 or root; P_B/P_A>=.9 and algorithm_seconds_B/A<=.75",
+  "timing": "sequential same GPU; sum outer seconds excludes observer serialization; warm cached old basis, cold initialization reference reported separately",
+  "input_sha256": {
+    "results\\steady_pure_gkb_20260920\\trajectory.npz": "1a107c1059138ade654610bc43612f560ed1a88e1ca68ed490d28d179d358314",
+    "local_full_bases.npz": "29487e30b245ae954d1cc5468fb7d1ea4b1af0886b7d733b1ff29002e9566b43"
+  }
+}

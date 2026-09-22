@@ -1,0 +1,26 @@
+{
+  "hash_scope": "Git index bytes; manifest excluded",
+  "files": {
+    ".github/workflows/validate.yml": "2643c1e73ec120c675903e2fa995547af342b7cdb543b9ef035429ce4cf20856",
+    ".research-alignment/00_research_contract.md": "38294da0f4e19a53dce7e99304c469ee8254a71b53a8d5aaf148f5d1bf271b06",
+    ".research-alignment/34_gkb_outer_ab.md": "d5a99b222f59acbc211ea6a7eb39919b07929da984da2290dbd81f40003802f8",
+    "README.md": "75ecf829b8d32c54ef74bea4612f4279d457a9fc96ee42162042996388ff5e4a",
+    "check_gkb_outer_ab.py": "5582eeca6d55890ca1a4caf33f146f40f2d805dab12050996b6e3202bf54e5a7",
+    "docs/gkb_outer_ab_report.html": "8aa3d684b850480033306639786805c053bd05a64c07392143695632eb2c1107",
+    "report_gkb_outer_ab.py": "fe6edf173d76ddb9bf38f314aa0ccc4731b1a7362cd70866633de0fbf47356d0",
+    "results/steady_gkb_outer_ab_20260923/comparison.json": "c4afe945b8d5e1cb9fe422e1aa9dc7ab728ae8ff60a2dd2d51b4a1cb1e2815db",
+    "results/steady_gkb_outer_ab_20260923/executed_sources.zip": "238a8f076d8b5ab217e8a6f380c5b9967e48d553719d442ba6e3999e7cdb918e",
+    "results/steady_gkb_outer_ab_20260923/fresh/continuation.json": "e47e8d9ad8c18b7f165dd9087ed54eb0d7348d9a864944660089083e73681831",
+    "results/steady_gkb_outer_ab_20260923/fresh/final.npz": "cfcc083634b454168bf756f806f620132d889b2101171613de8619f2868d54e2",
+    "results/steady_gkb_outer_ab_20260923/fresh/trajectory.npz": "1dd13a7a8fe29ec72ef2c027fb982e9c547603631265c14e5fc9389c8c390b7f",
+    "results/steady_gkb_outer_ab_20260923/independent_checks.json": "cba59fabf6a0cf94e3d5683a729c0b267e14be88ae8724c3b7f8f8f28172539c",
+    "results/steady_gkb_outer_ab_20260923/protocol.json": "b92091dc3847a56e19d7949951f6fed580729d111d1253f250713f518a48fa85",
+    "results/steady_gkb_outer_ab_20260923/recycled/continuation.json": "6f7a9ffebf82b689d7fc0f9f500a93c644c7c55c87bcdcf70de648d21bb65742",
+    "results/steady_gkb_outer_ab_20260923/recycled/final.npz": "c416cd73fe0ce80c1a3bbaeff2819f03de28b4b57b2fed1eb09c8930135d0768",
+    "results/steady_gkb_outer_ab_20260923/recycled/trajectory.npz": "0f4894ea82238902645a41bbddef31ad3603169052140ef7451a67f16d74d629",
+    "results/steady_gkb_outer_ab_20260923/report_qa.json": "0d97c9c7b3ab405d66a1db3d0c3b8dbcfa0cd98e69c1ab1b68c745c9f9941e97",
+    "run_gkb_outer_ab.py": "a635b0a396b4ce0715db7528fd3864c9cb2802d417d21c31573af78b10fa30c1",
+    "steady_gkb_globalized.py": "1855357ca3eca9245da691db80585c88eca1f7e384d5955fe0de40fc54adba79",
+    "test_gkb_globalized.py": "5252e284e76ec7d5fde437c6a3c19d268adff10cd06b373639c6f5f351db95f4"
+  }
+}

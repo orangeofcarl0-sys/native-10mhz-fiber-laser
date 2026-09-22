@@ -681,3 +681,29 @@ Public `results/steady_gkb_radius_map_20260922/candidates_part*.npz` jointly sto
 all states, steps, responses, and residuals; the checker reads these parts directly
 when `candidates.npz` is absent. JSON records include input hashes, model checks,
 ray extrapolation flags, multipliers, and finite-step defect decomposition.
+
+## Deep/recycled GKB with true-merit inner radius search
+
+The matched experiment is defined in `.research-alignment/34_gkb_outer_ab.md`.
+`steady_gkb_globalized.py` builds one search space per accepted state and re-solves
+its SVD trust problem while probing actual nonlinear merit. Arm A uses fresh192;
+arm B uses fresh64 plus the previous accepted state's fresh64, with every old
+response recomputed at the current state. The initial cached old64 is taken from
+the saved depth/recycling audit, not from the other arm's future trajectory.
+
+Set `LASER_BASIS_DIR` to the depth audit output and `LASER_OUTPUT_DIR` to a fresh
+output directory. In the configured GPU environment run `run_gkb_outer_ab.py`,
+then `check_gkb_outer_ab.py` and `report_gkb_outer_ab.py`. The two20-step arms run
+sequentially; avoid concurrent numerical jobs when interpreting timings. The
+checker replays every accepted state and independently rechecks its three-scale
+finite-difference predictions. Run `python -m unittest test_gkb_globalized` for
+known-root and radius-selection tests.
+
+[20-step A/B offline report](docs/gkb_outer_ab_report.html) and
+[archived results](results/steady_gkb_outer_ab_20260923): both arms complete20
+accepted updates. Fresh192 ends at9.315468e-4; recycled64+64 at9.562233e-4.
+Recycled progress ratio42.23%, algorithm-time ratio42.53%: the predefined90%
+progress gate fails. Retain fresh192 with inner-radius search as the baseline.
+All40 accepted updates independently replayed; eight relevant unit tests pass.
+This does not establish a period-one root or stability, and no hybrid trigger
+or new outer trajectory was added after the experiment.
