@@ -1,0 +1,70 @@
+{
+  "format": "sha256-of-git-index-bytes",
+  "excludes": "this manifest",
+  "files": [
+    {
+      "path": ".github/workflows/validate.yml",
+      "sha256": "2d09a59a3dca55e7d08479749130310c50934cea75a6436592d02143862863fd"
+    },
+    {
+      "path": ".research-alignment/00_research_contract.md",
+      "sha256": "ba664c3838cc05153c73da6aea9676aeb5ea0a8af74888f04b206ee6802858db"
+    },
+    {
+      "path": ".research-alignment/35_local_geometry.md",
+      "sha256": "ad9caf8d964fe437e6a5f1c66751efdcd6e54d8a0c165afe56e170a06c57457f"
+    },
+    {
+      "path": "README.md",
+      "sha256": "3ba75df468e3bfa63deecdefd8399d97c0f739fb2ceb10d897d3727fcefa296c"
+    },
+    {
+      "path": "check_local_geometry.py",
+      "sha256": "9908e9c7da16bddef6273993f0b1e448ecd309166cf26b4473bdfe35b363405c"
+    },
+    {
+      "path": "docs/local_geometry_report.html",
+      "sha256": "7657dd967b21d9a8fb68e205837f472b7895828c68c13f1ce13d674a94a7b147"
+    },
+    {
+      "path": "local_geometry.py",
+      "sha256": "997bffb10823edb877564600f2cafdfba541d4d203997a4c47915aac7ee2d6ad"
+    },
+    {
+      "path": "report_local_geometry.py",
+      "sha256": "f91253b4250f1c55bdb92228be45865f8739c91e362d32f155cd1cd20732ab74"
+    },
+    {
+      "path": "results/local_geometry_20260923/executed_sources.zip",
+      "sha256": "baccc29fda6a2160128173f1f4a10e83045801ec7649922d4a5a75eada6c53fd"
+    },
+    {
+      "path": "results/local_geometry_20260923/geometry.json",
+      "sha256": "4172dedf1a63522fc28bacf6097fc970778595b58f42f426ea5b2cdb978d9a6d"
+    },
+    {
+      "path": "results/local_geometry_20260923/independent_checks.json",
+      "sha256": "ec80bde370218136250065cc4fd29c68298da4d64b47efaec6d2a631d1fa536e"
+    },
+    {
+      "path": "results/local_geometry_20260923/protocol.json",
+      "sha256": "8cbff0de6d9cd0afe891be32455a4a263d35865ff388bcf0347780e545988f11"
+    },
+    {
+      "path": "results/local_geometry_20260923/report_qa.json",
+      "sha256": "d6872d90c9e90df745e8774dceacef8f4dc55995437d4a0d94c3747d0a936a17"
+    },
+    {
+      "path": "results/local_geometry_20260923/vectors.npz",
+      "sha256": "de8a1407149550c01000a7a6566be9039614c7d58e5378c744e17a4ae98b0a7e"
+    },
+    {
+      "path": "run_local_geometry.py",
+      "sha256": "3713ffb4d088e75cda9a1bf5b7eb7869ac4260c6f0c4666d9b573c84d5ba47a1"
+    },
+    {
+      "path": "test_local_geometry.py",
+      "sha256": "8bcfb9ccb07461b067e875c9cc2392710b021e421c0f34ab418769a054a52783"
+    }
+  ]
+}

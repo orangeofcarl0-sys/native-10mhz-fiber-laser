@@ -707,3 +707,24 @@ progress gate fails. Retain fresh192 with inner-radius search as the baseline.
 All40 accepted updates independently replayed; eight relevant unit tests pass.
 This does not establish a period-one root or stability, and no hybrid trigger
 or new outer trajectory was added after the experiment.
+
+## Period-one local geometry audit (2026-09-23)
+
+[Chinese offline report](docs/local_geometry_report.html),
+[contract](.research-alignment/35_local_geometry.md),
+[results](results/local_geometry_20260923). The frozen fresh192 endpoint has
+R=9.315468e-4, gradient norm6.940427e-6, estimated sigma_max2.835290, chi0.002628.
+Unconstrained GKB384 gives eta0.992745, but full linear normal residual remains
+0.880967 of the initial gradient: this is not a resolved range-exclusion floor.
+Critical K64/K96/K192/previous-step directions have positive omitted objective
+curvature24.6/35.0/32.7/34.4 percent of GN curvature. Small chi alone does not
+establish a nonzero minimum or absence of roots. H1/H2 may coexist; formulation
+and root existence remain unresolved. The predefined conditional pilot gate
+is not met. No multiple shooting, production-depth change, or outer run.
+
+With the established GPU environment and LASER_OUTPUT_DIR set to a new output
+folder, run `run_local_geometry.py`, `check_local_geometry.py`, then
+`report_local_geometry.py`. The input is the archived fresh arm trajectory.
+Published vectors.npz contains the frozen state, linear candidates/responses
+and reference Hessian vectors. Large local_basis.npz and local_hessians.npz stay
+local and can be regenerated. Unit checks: `python -m unittest test_local_geometry`.

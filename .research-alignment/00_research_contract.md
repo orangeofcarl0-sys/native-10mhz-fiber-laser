@@ -75,3 +75,8 @@ See [phase33](33_gkb_radius_map.md): saved spaces, 45 fresh/5 recycled radius so
 
 ## Deep/recycled production comparison
 See [phase34](34_gkb_outer_ab.md): matched20 accepted steps, shared true-merit radius search, fresh192 vs fresh64+previous-fresh64. No depth adaptation, refresh trigger or formulation change.
+
+## Period-one local geometry
+See [phase35](35_local_geometry.md): frozen fresh192 endpoint, stationarity,
+unconstrained linear diagnostic and directional full objective Hessian.
+No production upgrade or outer continuation.
