@@ -1,0 +1,34 @@
+{
+  "initial_residual": 0.0009746756121000674,
+  "radii": [
+    0.003125,
+    0.00625,
+    0.0125,
+    0.01875,
+    0.025
+  ],
+  "depths": [
+    64,
+    80,
+    96,
+    112,
+    128,
+    144,
+    160,
+    176,
+    192
+  ],
+  "input_sha256": {
+    "local_full_bases.npz": "29487e30b245ae954d1cc5468fb7d1ea4b1af0886b7d733b1ff29002e9566b43",
+    "candidate_vectors.npz": "12cf750355f558ffd3cf72d52dfe047313bf342bf320bcb8262e334a192b56c6",
+    "audit.json": "e12347c62adbf6cbe26c50f6ed78f3d95e8e2399873e39800b4f02e781511782"
+  },
+  "derivative_calls": 0,
+  "physical_base": {
+    "pump": 0.0275,
+    "gdd": 0.2,
+    "oc": 0.8,
+    "psat": 40.0
+  },
+  "scope": "Frozen basis and state. 45 fresh radius +5 recycled radius +15 ray. No outer, no new Jv/JTv. Ray K96 beyond original norm is extrapolation."
+}

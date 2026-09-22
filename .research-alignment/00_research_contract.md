@@ -68,3 +68,7 @@ See [phase 31](31_pure_gkb_outer.md). Forty outer steps, cap64, fixed latest end
 
 ## Frozen depth and recycling audit
 See [phase32](32_gkb_depth_recycling.md): latest pure-GKB endpoint, depth192 and current-response old64, fixed radius .025. No outer continuation.
+
+
+## Frozen nonlinear radius map
+See [phase33](33_gkb_radius_map.md): saved spaces, 45 fresh/5 recycled radius solves and15 ray probes. No new derivatives or outer continuation.

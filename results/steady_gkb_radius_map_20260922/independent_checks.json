@@ -1,0 +1,398 @@
+{
+  "candidates_replayed": 65,
+  "max_residual_difference": 0.0,
+  "max_identity_error": 3.9722763978444926e-22,
+  "derivative_calls": 0,
+  "checks": [
+    {
+      "name": "K64_D0",
+      "cross_term": -1.80960157990128e-11,
+      "defect_penalty": -7.646364007726679e-14,
+      "identity_error": 5.049450691576659e-23
+    },
+    {
+      "name": "K64_D1",
+      "cross_term": -1.80960157990128e-11,
+      "defect_penalty": -7.646364007726679e-14,
+      "identity_error": 5.049450691576659e-23
+    },
+    {
+      "name": "K64_D2",
+      "cross_term": -1.80960157990128e-11,
+      "defect_penalty": -7.646364007726679e-14,
+      "identity_error": 5.049450691576659e-23
+    },
+    {
+      "name": "K64_D3",
+      "cross_term": -1.80960157990128e-11,
+      "defect_penalty": -7.646364007726679e-14,
+      "identity_error": 5.049450691576659e-23
+    },
+    {
+      "name": "K64_D4",
+      "cross_term": -1.80960157990128e-11,
+      "defect_penalty": -7.646364007726679e-14,
+      "identity_error": 5.049450691576659e-23
+    },
+    {
+      "name": "K80_D0",
+      "cross_term": 4.407114423881777e-11,
+      "defect_penalty": -3.1948804382841616e-12,
+      "identity_error": 1.4774544339448121e-22
+    },
+    {
+      "name": "K80_D1",
+      "cross_term": 2.3726223981309654e-10,
+      "defect_penalty": -5.1670560620892716e-11,
+      "identity_error": 2.785272218830898e-23
+    },
+    {
+      "name": "K80_D2",
+      "cross_term": 4.0203392921306285e-10,
+      "defect_penalty": -1.268998856641395e-10,
+      "identity_error": 5.997059441009451e-24
+    },
+    {
+      "name": "K80_D3",
+      "cross_term": 4.0203392921306285e-10,
+      "defect_penalty": -1.268998856641395e-10,
+      "identity_error": 5.997059441009451e-24
+    },
+    {
+      "name": "K80_D4",
+      "cross_term": 4.0203392921306285e-10,
+      "defect_penalty": -1.268998856641395e-10,
+      "identity_error": 5.997059441009451e-24
+    },
+    {
+      "name": "K96_D0",
+      "cross_term": 5.164231209789272e-11,
+      "defect_penalty": -3.2125181714220564e-12,
+      "identity_error": 3.5683069129503094e-23
+    },
+    {
+      "name": "K96_D1",
+      "cross_term": 2.650254101127763e-10,
+      "defect_penalty": -5.1975890532755946e-11,
+      "identity_error": 2.552627671550359e-24
+    },
+    {
+      "name": "K96_D2",
+      "cross_term": 1.2497087870763727e-09,
+      "defect_penalty": -7.550684956045191e-10,
+      "identity_error": 2.342989085056451e-22
+    },
+    {
+      "name": "K96_D3",
+      "cross_term": 1.2497087870763727e-09,
+      "defect_penalty": -7.550684956045191e-10,
+      "identity_error": 2.342989085056451e-22
+    },
+    {
+      "name": "K96_D4",
+      "cross_term": 1.2497087870763727e-09,
+      "defect_penalty": -7.550684956045191e-10,
+      "identity_error": 2.342989085056451e-22
+    },
+    {
+      "name": "K112_D0",
+      "cross_term": 4.824402953558823e-11,
+      "defect_penalty": -3.2358871140438395e-12,
+      "identity_error": 8.996356565402775e-23
+    },
+    {
+      "name": "K112_D1",
+      "cross_term": 2.440830052432588e-10,
+      "defect_penalty": -5.2366166695579944e-11,
+      "identity_error": 3.9722763978444926e-22
+    },
+    {
+      "name": "K112_D2",
+      "cross_term": 1.213525829847439e-09,
+      "defect_penalty": -8.433836453467514e-10,
+      "identity_error": 6.21419435180462e-23
+    },
+    {
+      "name": "K112_D3",
+      "cross_term": 3.0313669732120424e-09,
+      "defect_penalty": -3.931394074915295e-09,
+      "identity_error": 1.6047303883528737e-22
+    },
+    {
+      "name": "K112_D4",
+      "cross_term": 3.0313669732120424e-09,
+      "defect_penalty": -3.931394074915295e-09,
+      "identity_error": 1.6047303883528737e-22
+    },
+    {
+      "name": "K128_D0",
+      "cross_term": 5.032696915939999e-11,
+      "defect_penalty": -3.2422104218818583e-12,
+      "identity_error": 4.13000616972643e-23
+    },
+    {
+      "name": "K128_D1",
+      "cross_term": 2.4750607954458937e-10,
+      "defect_penalty": -5.249305242687715e-11,
+      "identity_error": 8.739680159505583e-23
+    },
+    {
+      "name": "K128_D2",
+      "cross_term": 1.1979648464802852e-09,
+      "defect_penalty": -8.455325465436801e-10,
+      "identity_error": 6.389970231972139e-23
+    },
+    {
+      "name": "K128_D3",
+      "cross_term": 3.0978596236744995e-09,
+      "defect_penalty": -4.2951845694074975e-09,
+      "identity_error": 7.77549775799846e-23
+    },
+    {
+      "name": "K128_D4",
+      "cross_term": 4.79838943392983e-09,
+      "defect_penalty": -8.937883896465311e-09,
+      "identity_error": 8.768114493062093e-23
+    },
+    {
+      "name": "K144_D0",
+      "cross_term": 5.040624302837456e-11,
+      "defect_penalty": -3.2457140032480517e-12,
+      "identity_error": 1.8134965577944796e-23
+    },
+    {
+      "name": "K144_D1",
+      "cross_term": 2.439822195877886e-10,
+      "defect_penalty": -5.259945330259248e-11,
+      "identity_error": 8.662778211932294e-23
+    },
+    {
+      "name": "K144_D2",
+      "cross_term": 1.1824714772559143e-09,
+      "defect_penalty": -8.475659240854471e-10,
+      "identity_error": 3.4534790574088905e-23
+    },
+    {
+      "name": "K144_D3",
+      "cross_term": 3.0784186928244756e-09,
+      "defect_penalty": -4.305859360353204e-09,
+      "identity_error": 4.4667753077863494e-23
+    },
+    {
+      "name": "K144_D4",
+      "cross_term": 5.967298673262399e-09,
+      "defect_penalty": -1.2867061723349956e-08,
+      "identity_error": 2.9778502051908996e-23
+    },
+    {
+      "name": "K160_D0",
+      "cross_term": 4.8859663164014754e-11,
+      "defect_penalty": -3.252974115707656e-12,
+      "identity_error": 4.4825272823418026e-23
+    },
+    {
+      "name": "K160_D1",
+      "cross_term": 2.2917247404698362e-10,
+      "defect_penalty": -5.277504630853651e-11,
+      "identity_error": 2.502156729487553e-22
+    },
+    {
+      "name": "K160_D2",
+      "cross_term": 1.0844787315195584e-09,
+      "defect_penalty": -8.508027643697073e-10,
+      "identity_error": 1.0329417899255933e-22
+    },
+    {
+      "name": "K160_D3",
+      "cross_term": 2.791203786766594e-09,
+      "defect_penalty": -4.322706783845953e-09,
+      "identity_error": 3.143286327701505e-23
+    },
+    {
+      "name": "K160_D4",
+      "cross_term": 5.565135036342314e-09,
+      "defect_penalty": -1.3700335604458353e-08,
+      "identity_error": 6.28657265540301e-23
+    },
+    {
+      "name": "K176_D0",
+      "cross_term": 4.733920239065647e-11,
+      "defect_penalty": -3.2616202597010047e-12,
+      "identity_error": 1.6312583290913907e-23
+    },
+    {
+      "name": "K176_D1",
+      "cross_term": 2.2101950967535507e-10,
+      "defect_penalty": -5.296719598414031e-11,
+      "identity_error": 7.603599286952284e-23
+    },
+    {
+      "name": "K176_D2",
+      "cross_term": 1.0592515706262301e-09,
+      "defect_penalty": -8.543182808348255e-10,
+      "identity_error": 2.6573177178266014e-23
+    },
+    {
+      "name": "K176_D3",
+      "cross_term": 2.7675228571473745e-09,
+      "defect_penalty": -4.3409809740909185e-09,
+      "identity_error": 1.49719690872098e-22
+    },
+    {
+      "name": "K176_D4",
+      "cross_term": 5.588497722344957e-09,
+      "defect_penalty": -1.3758101794257933e-08,
+      "identity_error": 1.3896634290890865e-22
+    },
+    {
+      "name": "K192_D0",
+      "cross_term": 4.3610924691538135e-11,
+      "defect_penalty": -3.276032585429078e-12,
+      "identity_error": 2.463245313367749e-23
+    },
+    {
+      "name": "K192_D1",
+      "cross_term": 1.953578489540264e-10,
+      "defect_penalty": -5.331070199380786e-11,
+      "identity_error": 2.575569008851634e-22
+    },
+    {
+      "name": "K192_D2",
+      "cross_term": 9.040739528725899e-10,
+      "defect_penalty": -8.609638823640407e-10,
+      "identity_error": 3.2032569221115997e-22
+    },
+    {
+      "name": "K192_D3",
+      "cross_term": 2.3253735238269496e-09,
+      "defect_penalty": -4.3764821517679054e-09,
+      "identity_error": 7.692779696743157e-23
+    },
+    {
+      "name": "K192_D4",
+      "cross_term": 4.649002362321116e-09,
+      "defect_penalty": -1.3872535905074345e-08,
+      "identity_error": 6.617444900424222e-24
+    },
+    {
+      "name": "UNION_D0",
+      "cross_term": 7.199809276308323e-11,
+      "defect_penalty": -3.229893167885262e-12,
+      "identity_error": 1.6574106458212777e-22
+    },
+    {
+      "name": "UNION_D1",
+      "cross_term": 3.177208256130415e-10,
+      "defect_penalty": -5.233656990239634e-11,
+      "identity_error": 1.265198596293998e-22
+    },
+    {
+      "name": "UNION_D2",
+      "cross_term": 1.3786714623819748e-09,
+      "defect_penalty": -8.433002357478458e-10,
+      "identity_error": 1.4041390898087645e-22
+    },
+    {
+      "name": "UNION_D3",
+      "cross_term": 3.3006457315805444e-09,
+      "defect_penalty": -4.285124011969598e-09,
+      "identity_error": 2.5890753172909766e-22
+    },
+    {
+      "name": "UNION_D4",
+      "cross_term": 4.801579554098228e-09,
+      "defect_penalty": -8.536082636077159e-09,
+      "identity_error": 2.365736551901659e-22
+    },
+    {
+      "name": "RAY96_0",
+      "cross_term": 6.2225015444735e-11,
+      "defect_penalty": -3.2613651176302407e-12,
+      "identity_error": 1.6338351905699495e-22
+    },
+    {
+      "name": "RAY96_1",
+      "cross_term": 2.766604333048099e-10,
+      "defect_penalty": -5.2226364429760845e-11,
+      "identity_error": 5.51690694481656e-23
+    },
+    {
+      "name": "RAY96_2",
+      "cross_term": 1.3269836473288349e-09,
+      "defect_penalty": -8.371585320030794e-10,
+      "identity_error": 5.025122221259643e-23
+    },
+    {
+      "name": "RAY96_3",
+      "cross_term": 3.4762590269872318e-09,
+      "defect_penalty": -4.246651102079222e-09,
+      "identity_error": 1.4889251025954498e-22
+    },
+    {
+      "name": "RAY96_4",
+      "cross_term": 1.2497087870763727e-09,
+      "defect_penalty": -7.550684956045191e-10,
+      "identity_error": 2.342989085056451e-22
+    },
+    {
+      "name": "RAY128_0",
+      "cross_term": 5.915945296832634e-11,
+      "defect_penalty": -3.3017406591328066e-12,
+      "identity_error": 1.346591876099509e-22
+    },
+    {
+      "name": "RAY128_1",
+      "cross_term": 2.588375729120641e-10,
+      "defect_penalty": -5.2868433020414935e-11,
+      "identity_error": 1.5871528003361219e-23
+    },
+    {
+      "name": "RAY128_2",
+      "cross_term": 1.2096471404388017e-09,
+      "defect_penalty": -8.473079435736584e-10,
+      "identity_error": 1.689516401139559e-22
+    },
+    {
+      "name": "RAY128_3",
+      "cross_term": 3.1039851193393113e-09,
+      "defect_penalty": -4.297422541555699e-09,
+      "identity_error": 2.0183206946293875e-22
+    },
+    {
+      "name": "RAY128_4",
+      "cross_term": 4.79838943392983e-09,
+      "defect_penalty": -8.937883896465311e-09,
+      "identity_error": 8.768114493062093e-23
+    },
+    {
+      "name": "RAY192_0",
+      "cross_term": 4.0593368765537405e-11,
+      "defect_penalty": -3.370310118797046e-12,
+      "identity_error": 3.102088855787243e-23
+    },
+    {
+      "name": "RAY192_1",
+      "cross_term": 1.8201046687268922e-10,
+      "defect_penalty": -5.3955368249944644e-11,
+      "identity_error": 4.024750667953325e-23
+    },
+    {
+      "name": "RAY192_2",
+      "cross_term": 8.798357401600943e-10,
+      "defect_penalty": -8.643771949104065e-10,
+      "identity_error": 2.0648496040854953e-22
+    },
+    {
+      "name": "RAY192_3",
+      "cross_term": 2.305279997620569e-09,
+      "defect_penalty": -4.382233397090234e-09,
+      "identity_error": 2.324377521274008e-22
+    },
+    {
+      "name": "RAY192_4",
+      "cross_term": 4.649002362321116e-09,
+      "defect_penalty": -1.3872535905074345e-08,
+      "identity_error": 6.617444900424222e-24
+    }
+  ]
+}

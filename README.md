@@ -663,3 +663,21 @@ without simultaneous validation jobs; first-pass timings remain in the JSON.
 The local full basis archive is deliberately not duplicated in Git. Published
 input hashes, source scripts, small matrices and candidate states support
 reconstruction and independent candidate replay. 104 CPU tests pass.
+
+## Frozen GKB nonlinear radius map (2026-09-22)
+
+[Chinese offline report](docs/gkb_radius_map_report.html): fixed pure-GKB40 endpoint,
+45 fresh (depth, radius) candidates, 5 recycled candidates, and 15 ray probes.
+No new Jv/JTv and no outer continuation. K192 at radius0.0125 recovers rho1.009
+and actual decrease4.594e-9; recycled64+64 gives4.690e-9 at rho1.129.
+These are frozen-state results, not a converged root or a production speed claim.
+
+Reproduction: first run `run_gkb_depth_recycling.py` to reconstruct the large
+`local_full_bases.npz` archive (not stored in Git). Set `LASER_BASIS_DIR` to that
+output folder and `LASER_OUTPUT_DIR` to a new folder, then run
+`run_gkb_radius_map.py`, `check_gkb_radius_map.py`, `report_gkb_radius_map.py`
+with the established GPU environment. The new scan itself builds no derivatives.
+Public `results/steady_gkb_radius_map_20260922/candidates_part*.npz` jointly store
+all states, steps, responses, and residuals; the checker reads these parts directly
+when `candidates.npz` is absent. JSON records include input hashes, model checks,
+ray extrapolation flags, multipliers, and finite-step defect decomposition.
